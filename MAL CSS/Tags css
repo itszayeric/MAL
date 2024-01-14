@@ -1,0 +1,163 @@
+/* Tags stuff */
+/* tags position right of list */
+.data.tags span a[href$="=A"],
+.data.tags span a[href$="=B"],
+.data.tags span a[href$="=C"],
+.data.tags span a[href$="=D"],
+.data.tags span a[href$="=E"],
+.data.tags span a[href$="=F"],
+.data.tags span a[href$="=G"],
+.data.tags span a[href$="=H"],
+.data.tags span a[href$="=I"],
+.data.tags span a[href$="=J"],
+.data.tags span a[href$="=K"],
+.data.tags span a[href$="=L"],
+.data.tags span a[href$="=M"],
+.data.tags span a[href$="=N"],
+.data.tags span a[href$="=Where"],
+.data.tags span a[href$="=Unko"],
+.data.tags span a[href$="=Ded"],
+.data.tags span a[href$="=inf"] {
+    position: absolute;
+    left: -2px;top: -5px;bottom: -5px;right: -2px;
+    border: 0;
+    background: none !important;
+    margin: 0;
+    font-size: 0 !important;
+    pointer-events: none;
+}
+
+/* tags circle */
+.data.tags span a[href$="=A"]::before,
+.data.tags span a[href$="=B"]::before,
+.data.tags span a[href$="=C"]::before,
+.data.tags span a[href$="=D"]::before,
+.data.tags span a[href$="=E"]::before,
+.data.tags span a[href$="=F"]::before,
+.data.tags span a[href$="=G"]::before,
+.data.tags span a[href$="=H"]::before,
+.data.tags span a[href$="=I"]::before,
+.data.tags span a[href$="=J"]::before,
+.data.tags span a[href$="=K"]::before,
+.data.tags span a[href$="=L"]::before,
+.data.tags span a[href$="=M"]::before,
+.data.tags span a[href$="=N"]::before,
+.data.tags span a[href$="=Where"]::before,
+.data.tags span a[href$="=Unko"]::before,
+.data.tags span a[href$="=Ded"]::before,
+.data.tags span a[href$="=inf"]::before {
+    top: calc(50% - 15px);
+    left: 98.5%;
+    height: 30px;
+    width: 30px;
+    content: "";
+    margin: 0;
+    border: 2px solid var(--page-category);
+    border-radius: 50%;
+    position: absolute !important;
+    pointer-events: auto;
+}
+
+/* tags gifs */
+.data.tags span a[href$="=A"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/SBzp7Ng.gif), hsla(0,0%,12%,1) !important; /* diamond light blue */
+}
+.data.tags span a[href$="=B"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/fiyocro.gif), hsla(0,0%,12%,1) !important; /* diamond aqua blue */
+}
+.data.tags span a[href$="=C"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/I4N2t0I.gif), hsla(0,0%,12%,1) !important; /* diamond tetra rainbow */
+}
+.data.tags span a[href$="=D"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/5bEodut.gif), hsla(0,0%,12%,1) !important; /* diamond dark blue */
+}
+.data.tags span a[href$="=E"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/ClHyf2m.gif), hsla(0,0%,12%,1) !important; /* heart blue */
+}
+.data.tags span a[href$="=F"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/Ny0vNkp.png), hsla(0,0%,12%,1) !important; /* eye glitch */
+}
+.data.tags span a[href$="=G"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/E9GG6c3.gif), hsla(0,0%,12%,1) !important; /* fire blue */
+}
+.data.tags span a[href$="=H"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/Z3e1239.gif), hsla(0,0%,12%,1) !important; /* diamond purple */
+}
+.data.tags span a[href$="=I"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/1sABwvE.gif), hsla(0,0%,12%,1) !important; /* heart pink */
+}
+.data.tags span a[href$="=J"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/Boe7d5O.gif), hsla(0,0%,12%,1) !important; /* eye rolling */
+}
+.data.tags span a[href$="=K"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/vlpuITH.gif), hsla(0,0%,12%,1) !important; /* star blue */
+}
+.data.tags span a[href$="=L"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/GiOWlHg.gif), hsla(0,0%,12%,1) !important; /* exclamation red */
+}
+.data.tags span a[href$="=M"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/QHXiFqK.gif), hsla(0,0%,12%,1) !important; /* X red pulsing */
+}
+.data.tags span a[href$="=N"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/lUQVOhU.png), hsla(0,0%,12%,1) !important; /* flower */
+}
+.data.tags span a[href$="=Where"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/80kOOtT.gif), hsla(0,0%,12%,1) !important; /* question mark blue */
+}
+.data.tags span a[href$="=Ded"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/4No48yT.png), hsla(0,0%,12%,1) !important; /* skull red crying */
+}
+.data.tags span a[href$="=Unko"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/BeyZoL6.gif), hsla(0,0%,12%,1) !important; /* poop brown */
+}
+.data.tags span a[href$="=inf"]::before {
+    background: center / contain, top / 100% no-repeat url(https://i.imgur.com/bSzKehi.gif), hsla(0,0%,12%,1) !important; /* infinity */
+}
+
+
+/* tags description tooltip */
+.data.tags span a {
+	position: relative;
+}
+
+.data.tags span a::after {
+  visibility: hidden;
+  width: max-content;
+	background: linear-gradient(to right, var(--page-category) 3px, #181818 0);
+	color: #ebebeb;
+	white-space: pre-wrap;
+	text-align: center;
+	border-radius: 6px;
+	padding: 6px 6px 6px 8px; /* top right bott left */
+
+  /* Position the tooltip */
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 102%;
+	pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.data.tags:hover span a::after {
+  visibility: visible;
+  opacity: 1;
+	font-size: 12px;
+}
+
+
+/* tags descriptions */
+.data.tags a[href$="=Where"]::after {
+	content: "Cant find\a anywhere online,\a No subs"
+}
+.data.tags a[href$="=Unko"]::after {
+	content: "f806\a Shitshow"
+}
+.data.tags a[href$="=Ded"]::after {
+	content: "Author died,\a studio bankrupted,\a cancelled, etc"
+}
+.data.tags a[href$="=inf"]::after {
+  content: "\a Forever airing,\a will never end"
+}
