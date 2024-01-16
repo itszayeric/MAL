@@ -121,29 +121,31 @@
 }
 
 .data.tags span a::after {
-  visibility: hidden;
-  width: max-content;
+    visibility: hidden;
+    width: 125px;
 	background: linear-gradient(to right, var(--page-category) 3px, #181818 0);
+    box-shadow: var(--medium-shadow);
 	color: #ebebeb;
 	white-space: pre-wrap;
+    line-height: 1.2em;
 	text-align: center;
 	border-radius: 6px;
 	padding: 6px 6px 6px 8px; /* top right bott left */
 
-  /* Position the tooltip */
+    /* Position the tooltip */
 	position: absolute;
 	z-index: 2;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 102%;
 	pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .data.tags:hover span a::after {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 	font-size: 12px;
 }
 
@@ -153,11 +155,11 @@
 	content: "Cant find\a anywhere online,\a No subs"
 }
 .data.tags a[href$="=Unko"]::after {
-	content: "f806\a Shitshow"
+	content: "\a Shitshow"
 }
 .data.tags a[href$="=Ded"]::after {
-	content: "Author died,\a studio bankrupted,\a cancelled, etc"
+	content: "Author died,\a Studio bankrupted,\a Cancelled, etc"
 }
 .data.tags a[href$="=inf"]::after {
-  content: "\a Forever airing,\a will never end"
+    content: "\a Forever airing,\a Will never end"
 }
