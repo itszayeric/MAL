@@ -1,6 +1,6 @@
 /**
  * "Clarified" by Valerio Lyndon
- * v2.3.7
+ * v2.3.8
  * 
 ***TABLE*OF*CONTENTS***
  * 
@@ -78,6 +78,8 @@
   =========*/
 
 @\import "https://malscraper.azurewebsites.net/covers/anime/karmashizzle/presets/dataimagelinkbefore";
+
+@\import "https://onedrive.live.com/download?resid=574E3B5AD4248DC9%21327&authkey=!AFxo4CrNZQXfH_Q";
 
 @\import "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@700&family=Pixelify+Sans:wght@400&family=Ubuntu+Condensed:wght@400&family=Ubuntu:wght@300;400;500;700&family=Kodchasan:wght@400;600&display=swap";
 
@@ -284,7 +286,8 @@ body::after {
 	text-shadow: var(--image-shadow);
 }
 
-.header a {
+.header a,
+.header .header-info {
 	color: var(--image-text) !important;
 }
 
@@ -406,14 +409,14 @@ body::after {
 	z-index: 15;
 	display: block;
 	width: 150px;
-	background: var(--content-background);
+	background: none;
 	border: none;
-	box-shadow: var(--medium-shadow);
 	padding: 12px;
-	border-radius: 6px;
-	visibility: hidden;
-} .list-menu-float:hover {
-	visibility: visible;
+	pointer-events: none;
+}
+
+.list-menu-float:hover {
+	pointer-events: auto;
 }
 
 .list-menu-float::before {
@@ -425,14 +428,25 @@ body::after {
 	height: 32px;
 	background: var(--image-background);
 	border-radius: 3px;
-	visibility: visible;
 	opacity: 0.25;
+	pointer-events: auto;
 	transition: opacity .5s ease-out;
 }
+
 .list-menu-float:hover::before,
 .header:hover ~ .list-menu-float::before {
 	opacity: 1;
 	transition-duration: .08s;
+}
+
+.list-menu-float:hover::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background: var(--content-background);
+	border-radius: 6px;
+	box-shadow: var(--medium-shadow);
 }
 
 .list-menu-float .icon-menu.profile {
@@ -451,14 +465,15 @@ body::after {
 	white-space: nowrap;
 	text-shadow: var(--image-shadow);
 	opacity: .25;
-	visibility: visible;
 	transition: opacity .5s ease-out;
 }
+
 .list-menu-float:hover .icon-menu.profile {
 	color: var(--content-link) !important;
 	opacity: 1;
 	transition-duration: .08s;
 }
+
 .header:hover ~ .list-menu-float .icon-menu.profile {
 	opacity: 1;
 	transition-duration: .08s;
@@ -486,12 +501,14 @@ body::after {
 	background-color: transparent !important;
 	color: var(--content-text);
 	text-align: left;
-	/* opacity is only to fix flicker in firefox while using visibility on its own */
 	opacity: 0;
 	transition: none;
-} .list-menu-float .icon-menu:hover {
+}
+
+.list-menu-float .icon-menu:hover {
 	color: var(--content-link);
 }
+
 .list-menu-float:hover .icon-menu {
 	opacity: 1;
 }
@@ -524,7 +541,9 @@ body::after {
 	text-align: left;
 	opacity: 1 !important;
 	transition: none;
-} .list-menu-float .icon-menu:not(.setting):hover .text,
+}
+
+.list-menu-float .icon-menu:not(.setting):hover .text,
 .list-menu-float .icon-menu.setting .text a:hover {
 	text-decoration: none !important;
 }
@@ -536,7 +555,9 @@ body::after {
 .list-menu-float .icon-menu.setting .text :is(.link-list-setting, .link-style-setting) {
 	padding: 3px 0;
 	color: var(--content-text) !important;
-} .list-menu-float .icon-menu.setting .text :is(.link-list-setting, .link-style-setting):hover {
+}
+
+.list-menu-float .icon-menu.setting .text :is(.link-list-setting, .link-style-setting):hover {
 	color: var(--content-link) !important;
 }
 
@@ -1014,7 +1035,7 @@ tr.list-table-data:has(.tags) {
 	width: auto;
 	height: 20px;
 	border-radius: 3px;
-	margin: 0 0 4px;
+	margin: 0 0 3px; /* 'more' button pos */
 	float: left;
 	clear: both;
 	color: var(--content-text) !important;
