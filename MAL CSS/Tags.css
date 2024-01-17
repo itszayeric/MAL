@@ -268,7 +268,7 @@
     }
 
     /* arrow next of tooltip */
-    .data.tags span a[href$="=Where"]:before {
+    .data.tags span a[href$="=Unko"]:before {
         content: "";
         position: absolute;
         top: 50%;
@@ -280,12 +280,12 @@
         transform: translateY(-50%);
         transition: opacity 0.25s ease;
     }
-    .data.tags span a[href$="=Where"]:hover::before {
+    .data.tags span a[href$="=Unko"]:hover::before {
         opacity: 1;
     }
 
     /* tooltip */
-    .data.tags span a[href$="=Where"]::after {
+    .data.tags span a[href$="=Unko"]::after {
         position: absolute;
         top: 50%;
         left: 38px;
@@ -331,7 +331,7 @@
     }
 
     /* arrow next of tooltip */
-    .data.tags span a[href$="=Where"]:before {
+    .data.tags span a[href$="=Ded"]:before {
         content: "";
         position: absolute;
         top: 50%;
@@ -343,12 +343,12 @@
         transform: translateY(-50%);
         transition: opacity 0.25s ease;
     }
-    .data.tags span a[href$="=Where"]:hover::before {
+    .data.tags span a[href$="=Ded"]:hover::before {
         opacity: 1;
     }
 
     /* tooltip */
-    .data.tags span a[href$="=Where"]::after {
+    .data.tags span a[href$="=Ded"]::after {
         position: absolute;
         top: 50%;
         left: 38px;
@@ -394,7 +394,7 @@
     }
 
     /* arrow next of tooltip */
-    .data.tags span a[href$="=Where"]:before {
+    .data.tags span a[href$="=inf"]:before {
         content: "";
         position: absolute;
         top: 50%;
@@ -406,12 +406,12 @@
         transform: translateY(-50%);
         transition: opacity 0.25s ease;
     }
-    .data.tags span a[href$="=Where"]:hover::before {
+    .data.tags span a[href$="=inf"]:hover::before {
         opacity: 1;
     }
 
     /* tooltip */
-    .data.tags span a[href$="=Where"]::after {
+    .data.tags span a[href$="=inf"]::after {
         position: absolute;
         top: 50%;
         left: 38px;
