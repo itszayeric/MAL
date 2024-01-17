@@ -1,0 +1,437 @@
+/* Add Avatar */
+
+#status-menu:not(.fixed) .status-menu:not(.fixed) {
+	padding-left: 160px;
+}
+
+#status-menu:not(.fixed) .status-menu:not(.fixed)::before {
+	content: "";
+	width: 140px;
+	height: 140px;
+	border-radius: 0;
+	margin: -45px 0 0 -150px;
+	background:
+	url(https://i.ibb.co/DwqTrHj/ava-frame.png) no-repeat center / 160px,
+	url(https://i.ibb.co/XkZnFDg/ava-scan-lines.png) no-repeat center / 130px,
+	url(https://i.ibb.co/vYmTT6p/mangalist-ava.gif) no-repeat center / 130px;
+	border: 0;
+}
+
+
+/* cover preview on hover */
+
+.data.image a {
+    overflow: visible;
+}
+.data.image a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -205px;
+    z-index: 50;
+    width: 190px;
+    height: 0;
+    background: var(--content-background) no-repeat center/cover;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.data.image:hover a::before {
+    top: calc(50% - 135px);
+    height: 260px;
+    opacity: 1;
+}
+.data.image a::after,
+.data.image img {
+    border-radius: 50%;
+}
+.data.image::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 12px);
+    left: -18px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--content-highlight);
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+.data.image:hover::before {
+    opacity: 1;
+    transition-delay: 50ms;
+}
+.data.image a::before {
+    border: 3px solid var(--content-highlight);
+    box-sizing: border-box;
+}
+
+
+/* Category Header Colours */
+
+#status-menu .status-button:hover,
+#status-menu .status-button::before {
+	color: var(--category);
+}
+
+#status-menu .status-button::after {
+	background: var(--category);
+}
+
+#status-menu .status-button.on::after {
+	opacity: 1;
+}
+.status-button:nth-of-type(1) {
+	--category: var(--all-items);
+}
+.status-button:nth-of-type(2) {
+	--category: var(--current);
+}
+.status-button:nth-of-type(3) {
+	--category: var(--completed);
+}
+.status-button:nth-of-type(4) {
+	--category: var(--onhold);
+}
+.status-button:nth-of-type(5) {
+	--category: var(--dropped);
+}
+.status-button:nth-of-type(6) {
+	--category: var(--planned);
+}
+
+
+/* Category Accents */
+
+body {
+  --content-link: var(--page-category);
+  --inverse-background: var(--page-category);
+}
+
+.data {
+  --content-link: var(--local-category);
+  --inverse-background: var(--local-category);
+}
+
+
+/* Header Size */
+
+.header { height: 350px; }
+
+
+/* List Width */
+
+:root {
+	--list-width: 1060px;
+	--render-offset: calc(var(--list-width) * 0.5 + 8px) !important; /* for compact w/ Side Renders mod */
+}
+
+#status-menu:not(.fixed) .status-menu,
+	.list-unit .list-status-title,
+	.cover-block,
+#cover-image,
+	.list-table,
+	.list-table > tbody {
+	width: var(--list-width);
+}
+
+#status-menu:not(.fixed) .status-menu {
+	min-width: 900px;
+}
+
+#status-menu.fixed {
+	right: calc(50% - 60px - var(--list-width) * 0.5 - 15px);
+}
+
+#footer-block {
+	display: block;
+}
+
+
+/* SCROLLBAR */
+ 
+/* width */
+::-webkit-scrollbar {
+	width: 15px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background: #111; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background:linear-gradient(135deg, rgba(6, 128, 170, 1) 0%, rgba(79, 17, 180, 1) 100%);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background:linear-gradient(135deg, rgba(8, 176, 233, 1) 0%, rgba(106, 30, 230, 1) 100%);
+}
+/* corner */
+::-webkit-scrollbar-corner {
+	background: #111;
+}
+
+
+/* list color on hover */
+
+.list-table-data {
+	position: relative; /* so that the pseudo element will position in relation to this */
+	z-index: 0; /* prevent the -1 z-index on the pseudo element from going below the .list-item */
+}
+
+.list-table-data:before {
+	content: "";
+	position: absolute;
+	z-index: -1; /* position below the parent element (.list-table-data) */
+	inset: 0;
+	background-image: linear-gradient(90deg,
+	hsl(195, 90%, 60%) 0%,
+	hsl(210, 93%, 65%) 10%,
+	hsl(265, 90%, 69%) 20%,
+	hsl(290, 90%, 65%) 30%,
+	hsl(320, 90%, 65%) 40%,
+	hsl(340, 90%, 65%) 50%,
+	hsl(320, 90%, 65%) 60%,
+	hsl(290, 90%, 65%) 70%,
+	hsl(265, 90%, 69%) 80%,
+	hsl(210, 93%, 65%) 90%,
+	hsl(195, 90%, 60%) 100%);
+	box-shadow: 0px 0px 40px 8px #211E21 inset;
+    top: 0px;
+    left: 0px;
+    background-size: 400%;
+    width: calc(100% + 0px);
+    height: calc(100% + 0px);
+    animation: glowing 15s linear infinite;
+    opacity: 0;
+    transition: opacity .25s ease;
+    border-radius: 6px;
+}
+
+.list-table-data:hover:before {
+    opacity: 0.3;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    100% { background-position: -400% 0; }
+}
+
+
+/* FILTER POPUP BACKGROUND IMAGE */
+div#advanced-options {
+	background-image: url();
+	background-size: 100% 100%;
+	background-repeat: no-repeat !important;
+}
+
+
+/* search box border */
+
+#status-menu:not(.fixed) .search-container {
+	/* add border with transition */
+	border: 2px solid transparent;
+	transition: border 0.2s ease;
+	/* adjust sizing to allow for less cramped border - could be removed if desired */
+	top: 9px;
+	height: 32px;
+	background-clip: content-box;
+	border-radius: 5px;
+}
+#status-menu:not(.fixed) .search-container:focus-within {
+	/* set border colour upon selection */
+	border-color: var(--page-category);
+}
+
+#status-menu:not(.fixed) #search-box input {
+	/* remove outline to prevent conflicting border visuals */
+	outline: 0 !important;
+}
+
+
+/* floating search border */
+
+#status-menu.fixed #search-box.open {
+	border: 2px solid transparent;
+	transition: all .4s ease;
+	height: 45px;
+	width: 200px;
+	background-clip: content-box;
+	border-radius: 6px;
+}
+#status-menu.fixed #search-box.open:focus-within {
+	border-color: var(--page-category);
+}
+
+#status-menu.fixed #search-box.open input {
+	outline: 0 !important;
+}
+
+
+/* TITLE COLOR ON TABLE HOVER PER CATEGORY */
+
+.list-table .list-table-data .title .link {
+	color: var(--content-text) !important; }
+.list-table .list-table-data:hover .data.title .link:hover {
+	color: var(--page-category) !important; }
+	
+[data-query*='"status":7'] .list-table  .list-table-data:hover .title .link {
+	color: hsl(195, 50%, 70%) !important; }
+
+[data-query*='"status":1'] .list-table  .list-table-data:hover .title .link {
+	color: hsl(210, 50%, 75%) !important; }
+
+[data-query*='"status":2'] .list-table  .list-table-data:hover .title .link {
+	color: hsl(265, 45%, 75%) !important; }
+
+[data-query*='"status":3'] .list-table  .list-table-data:hover .title .link {
+	color: hsl(290, 50%, 75%) !important; }
+
+[data-query*='"status":4'] .list-table  .list-table-data:hover .title .link {
+	color: hsl(320, 50%, 75%) !important; }
+
+[data-query*='"status":6'] .list-table  .list-table-data:hover .title .link {
+	color: hsl(340, 50%, 75%) !important; }
+
+
+/* Top Rated Banners */
+
+.data.score-label {
+	--top-text: none;
+	--rated: transparent;
+	--toggle: hidden;
+}
+.data .score-8 {
+	--top-text: "TOP RATED";
+	--rated: var(--eight);
+}
+.data .score-9 {
+	--top-text: "TOP RATED";
+	--rated: var(--nine);
+}
+.data .score-10 {
+	--top-text: "TOP RATED";
+	--rated: var(--ten);
+}
+
+.data .score-label::before,
+.data .score-label::after {
+	content: var(--top-text);
+	position: absolute;
+	z-index: 50;
+	opacity: 0;
+	transition: all .3s ease;
+}
+.data.image:hover ~ .score .score-label::before,
+.data.image:hover ~ .score .score-label::after {
+	margin-top: -130px;
+	opacity: 1;
+}
+
+.data .score-label::before {
+	left: -205px;
+	top: calc(50% - 5px);
+	width: 190px;
+	height: 20px;
+	border-top: 3px solid hsla(var(--rated), 1);
+	border-radius: 10px 10px 0 0;
+	font-size: 0;
+	pointer-events: none;
+	box-shadow:
+	 	0 -4px 3px -3px hsl(var(--rated)),
+		inset 0 8px 3px -6px var(--content-highlight);
+		/* shadows top, bottom of line*/
+}
+.data .score-label::after {
+	left: calc(-205px + 190px/2);
+	top: calc(50% - 12px);
+	min-width: 100px;
+	height: 16px;
+	padding: 0 10px;
+	border-radius: 3px;
+	background: hsl(var(--rated));
+	box-shadow:
+		-3px 0px 3px -2.5px hsla(var(--rated), 0.9),
+		3px 0px 3px -2.5px hsla(var(--rated), 0.9),
+		0 3px 3px -0.5px var(--content-highlight),
+		0 -3px 3px -1px hsla(var(--rated), 0.9);
+		/* shadows to left, right, bottom, top of box*/
+	color: var(--content-highlight);
+	font: bold 14px/15px "Pixelify Sans";
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 2px rgba(245, 245, 245, 0.4);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.data.score {
+	position: static;
+}
+
+
+/* Auto-hiding Tags & Genres */
+
+.data:is(.tags,.genre) {
+	display: grid !important;
+	grid-auto-columns: max-content;
+	grid-auto-flow: column;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows .18s ease 0s;
+}
+.data.tags {
+	grid-auto-columns: 1fr;
+}
+#list-container .list-table-data:hover .data:is(.tags,.genre) {
+	grid-template-rows: 1fr;
+	transition-delay: .4s;
+}
+.data.tags div, .data.genre span {
+	overflow: hidden;
+}
+.data.tags a {
+	white-space: wrap;
+	word-break: break-word;
+
+}
+
+/* try to unfuck demographic */
+
+.data.genre ~ .genre {
+	display: block !important;
+}
+.data.genre ~ .genre span {
+	overflow: visible;
+}
+
+/* loading bar */
+
+.data.tags div:not(:empty)::before {
+	content: "";
+	position: absolute;
+	inset: auto 14px -1px 25px;
+	width: 0;
+	height: 2px;
+	border-radius: 100px;
+	background: var(--page-category);
+}
+.list-table-data:hover .data.tags div::before {
+	animation:
+		.4s ease-in-out 0s barfill both,
+		.15s ease-in-out .40s barfade both;
+}
+
+@keyframes barfill {
+	from {
+		width: 0;
+	} to {
+		width: calc(100% - 24px);
+	}
+}
+
+@keyframes barfade {
+	from {
+		opacity: 1;
+	} to {
+		opacity: 0;
+	}
+}
