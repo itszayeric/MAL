@@ -1,4 +1,4 @@
-/* "Clarity" (R22) -> "Guchuko" (3.7) 
+/* "Clarity" (R22) -> "Guchuko" (3.7a) 
 	Rewritten by sunnysummerday */
 
 @\import "https://fonts.googleapis.com/css?family=ABeeZee";
@@ -35,185 +35,116 @@
 /* Patterns can be any resolution */
 /* Avatars should be 500px/500px */
 /* 'Dimension' requires exact image dimensions to seamlessly loop! */
-/* 'Resize' scales the image down for better quality/less blur */
-/* 'Speed' changes how slow/fast a pattern loops */
-/* 'Zoom' shows more or less of an avatar */
+/* 'Resize' should be half the size for better quality - not required */
+/* 'Speed' changes how slow/fast a pattern loops - disable by putting 0s */
+/* 'Zoom': Lower size shows more of avatar - 200px to 300px looks best */
+/* 'LeftRight': 0% = Left side, 50% = Centered, 100% = Right */
+/* 'StandEnd': Animation starts and ends here - 0% = Top of avatar */
+/* 'Distance': Animation stops here and returns - 100% = Bottom of avatar */
 
 /* All Anime */
 [data-query*="status\":7"] {
-    --pattern: url(https://i.imgur.com/pP8LRUw.png);
+			     --pattern: url(https://i.imgur.com/pP8LRUw.png);
+			     --avatar: url(https://i.imgur.com/iiDtSxe.png);
+			     --dimension: 625px 455px;
+			     --resize: 312px 228px;
+			     --speed: 15s;
+			     --zoom: 240px 240px;
+			     --leftright: 10%;
+			     --startend: 20%;
+			     --distance: 50%;
+			     --bgw: url(https://i.imgur.com/Dboy6PM.png);
 }
-
-[data-query*="status\":7"] {
-    --dimension: 625px 455px;
-    /* Requires exact image dimensions to seamlessly loop! */
-    --resize: 312px 228px;
-    /* Use half the size of the image for better quality */
-    --speed: 15s;
-}
-
-/* Increase speed by lowering number */
-
-/* all */
-[data-query*="status\":7"] {
-    --avatar: url(https://i.imgur.com/geZ2Dds.png);
-	--bgw: url(https://i.imgur.com/Dboy6PM.png);
-}
-
-[data-query*="status\":7"] {
-    --zoom: 370px 370px;
-    /* Size: Lower size shows more of image - keep above 200px */
-    --leftright: 65%;
-    /* Position: 0% = Left side, 50% = Centered, 100% = Right */
-    --startend: 20%;
-    /* Animation start and end: 0% = Top of image */
-    --distance: 35%;
-}
-
-/* Animation distance: Stops here and returns */
 
 /* Watching */
 [data-query*="status\":1"] {
-    --pattern: url(https://i.imgur.com/alq2Qt4.png);
-}
-
-[data-query*="status\":1"] {
-    --dimension: 400px 400px;
-    --resize: 200px 200px;
-    --speed: 10s;
-}
-
-[data-query*="status\":1"] {
-    --avatar: url(https://i.imgur.com/uZg274o.png);
-    --bgw: url(https://i.imgur.com/qfYVgLM.png);
-}
-
-[data-query*="status\":1"] {
-    --zoom: 350px 350px;
-    --leftright: 60%;
-    --startend: 0%;
-    --distance: 15%;
+			     --pattern: url(https://i.imgur.com/alq2Qt4.png);
+			     --dimension: 400px 400px;
+			     --resize: 200px 200px;
+			     --speed: 10s;
+			     --avatar: url(https://i.imgur.com/L2BqXRZ.png);
+			     --zoom: 215px 215px;
+			     --leftright: 60%;
+			     --startend: 0%;
+			     --distance: 40%;
+                 --bgw: url(https://i.imgur.com/qfYVgLM.png);
 }
 
 /* Completed */
 [data-query*="status\":2"] {
-    --pattern: url(https://i.imgur.com/GHMe1Uq.png);
-}
-
-[data-query*="status\":2"] {
-    --dimension: 400px 400px;
-    --resize: 200px 200px;
-    --speed: 10s;
-}
-
-[data-query*="status\":2"] {
-    --avatar: url(https://i.imgur.com/Ahx1DBm.png);
-	--bgw: url(https://i.imgur.com/s7n5YvD.png);
-}
-
-[data-query*="status\":2"] {
-    --zoom: 300px 300px;
-    --leftright: 80%;
-    --startend: 0%;
-    --distance: 20%;
+			     --pattern: url(https://i.imgur.com/GHMe1Uq.png);
+			     --dimension: 400px 400px;
+			     --resize: 200px 200px;
+			     --speed: 10s;
+			     --avatar: url(https://i.imgur.com/Ahx1DBm.png);
+			     --zoom: 300px 300px;
+			     --leftright: 80%;
+			     --startend: 0%;
+			     --distance: 20%;
+	             --bgw: url(https://i.imgur.com/s7n5YvD.png);
 }
 
 /* Onhold */
 [data-query*="status\":3"] {
-    --pattern: url(https://i.imgur.com/SAZASNT.png);
-}
-
-[data-query*="status\":3"] {
-    --dimension: 400px 400px;
-    --resize: 200px 200px;
-    --speed: 10s;
-}
-
-[data-query*="status\":3"] {
-    --avatar: url(https://i.imgur.com/4cDk2Rc.png);
-	--bgw: url(https://i.imgur.com/EI4gryh.png);
-}
-
-[data-query*="status\":3"] {
-    --zoom: 250px 250px;
-    --leftright: 75%;
-    --startend: 30%;
-    --distance: 60%;
+			     --pattern: url(https://i.imgur.com/SAZASNT.png);
+			     --dimension: 400px 400px;
+			     --resize: 200px 200px;
+			     --speed: 10s;
+			     --avatar: url(https://i.imgur.com/4cDk2Rc.png);
+			     --zoom: 250px 250px;
+			     --leftright: 75%;
+			     --startend: 30%;
+			     --distance: 60%;
+	             --bgw: url(https://i.imgur.com/EI4gryh.png);
 }
 
 /* Dropped */
 [data-query*="status\":4"] {
-    --pattern: url(https://i.imgur.com/jJAYDAo.png);
-}
-
-[data-query*="status\":4"] {
-    --dimension: 400px 400px;
-    --resize: 200px 200px;
-    --speed: 10s;
-}
-
-[data-query*="status\":4"] {
-    --avatar: url(https://i.imgur.com/279R3FO.png);
-	--bgw: url(https://i.imgur.com/SlhTIeA.png);
-}
-
-[data-query*="status\":4"] {
-    --zoom: 225px 225px;
-    --leftright: 100%;
-    --startend: 0%;
-    --distance: 30%;
+			     --pattern: url(https://i.imgur.com/jJAYDAo.png);
+			     --dimension: 400px 400px;
+			     --resize: 200px 200px;
+			     --speed: 10s;
+			     --avatar: url(https://i.imgur.com/279R3FO.png);
+			     --zoom: 225px 225px;
+			     --leftright: 100%;
+			     --startend: 0%;
+			     --distance: 30%;
+	             --bgw: url(https://i.imgur.com/SlhTIeA.png);
 }
 
 /* Planned */
 [data-query*="status\":6"] {
-    --pattern: url(https://i.imgur.com/e73N8nH.png);
-}
-
-[data-query*="status\":6"] {
-    --dimension: 400px 400px;
-    --resize: 200px 200px;
-    --speed: 10s;
-}
-
-[data-query*="status\":6"] {
-    --avatar: url(https://i.imgur.com/JaT6UoL.png);
-	--bgw: url(https://i.imgur.com/71EGjun.png);
-}
-
-[data-query*="status\":6"] {
-    --zoom: 205px 205px;
-    --leftright: 90%;
-    --startend: 50%;
-    --distance: 90%;
+			     --pattern: url(https://i.imgur.com/e73N8nH.png);
+			     --dimension: 400px 400px;
+			     --resize: 200px 200px;
+			     --speed: 10s;
+			     --avatar: url(https://i.imgur.com/JaT6UoL.png);
+			     --zoom: 205px 205px;
+			     --leftright: 90%;
+			     --startend: 50%;
+			     --distance: 90%;
+	             --bgw: url(https://i.imgur.com/71EGjun.png);
 }
 
 /* categories */
 .status-button.all_anime:before {
     content: "\e3a4  Alll";
 }
-
 .status-button.watching:before {
     content: "\f599  Neow";
 }
-
 .status-button.completed:before {
     content: "\e389  Done";
 }
-
 .status-button.onhold:before {
     content: "\f11a  Halt";
 }
-
 .status-button.dropped:before {
     content: "\e379  Nope";
 }
-
 .status-button.plantowatch:before {
-    content: "\e39b  Plan";
+    content: "\e39b  Soon";
 }
-
-/* Change font size if names are too short/long */
-
 .status-menu .status-button:before {
     font-size: 27px;
 }
@@ -240,7 +171,7 @@
     border: 8px solid var(--bg2);
     border-radius: 50%;
     background: url(https://i.ibb.co/XkZnFDg/ava-scan-lines.png) no-repeat center / 160px,
-    url(https://i.imgur.com/mAvNgl1.png) no-repeat center / 165px,
+    url(https://i.imgur.com/UFJrE8b.png) no-repeat center / 200px,
     var(--bg);
     box-shadow: var(--shadow-small);
     content: "";
@@ -665,7 +596,9 @@ body.ownlist.manga footer {
     border-radius: 5px;
     box-shadow: var(--shadow-big);
     margin: 0 auto 8px;
-    letter-spacing: 1px;
+	color: var(--t-dark);
+	font: bold 12px ABeeZee;
+    letter-spacing: 0.3px;
     line-height: 33px;
     height: 32px;
     width: 880px;
@@ -919,7 +852,7 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .status-button.all_anime:before {
-    color: #bababa
+    color: var(--text-dim)
 }
 
 .status-menu-container .search-container {
@@ -1044,7 +977,7 @@ tbody:first-of-type:hover .header-title.progress a {
 
 .list-table .list-table-data .data {
   background: var(--i-grain-t);
-	border: none;
+  border: none;
   padding: 0;
   font-size: 11px
 }
@@ -1154,7 +1087,7 @@ tbody:first-of-type:hover .header-title.progress a {
     background: var(--status);
     border-radius: 4px;
     box-shadow: var(--shadow-small);
-    color: white;
+    color: var(--t-dark);
     display: block !important;
     font: bold 12px / 20px Advent Pro !important;
     height: 20px;
@@ -2106,7 +2039,7 @@ div#advanced-options {
 
 #advanced-options [class*="-widget"] select {
     padding-right: 24px;
-    background: transparent url("https://i.imgur.com/xKHDnKq.png") no-repeat center right / 24px auto
+    background: transparent url("https://i.imgur.com/5zEy8bX.png") no-repeat center right / 24px auto
 }
 
 #advanced-options [class*="-widget"] input:focus,
@@ -2502,28 +2435,35 @@ footer {
     background: var(--i-grain-3) repeat, #1e1e1e;
 }
 
+/* more stats text */
+.list-unit .list-stats a {
+  color: var(--t-dark);
+  font: bold 10px/32px ABeeZee; 
+}
+
 /* airing status bg color */
 .data.status[class$="ing"],
 .data.status[class$="ing"]~.data {
-    --cc2: hsl(164, 100%, 90%);
+    --cc2: hsl(164, 100%, 93%);
 }
 .data.status.completed,
 .data.status.completed~.data {
-    --cc2: hsl(197, 100%, 90%);
+    --cc2: hsl(197, 100%, 93%);
 }
 .data.status.onhold,
 .data.status.onhold~.data {
-    --cc2: hsl(41, 100%, 90%);
+    --cc2: hsl(41, 100%, 93%);
 }
 .data.status.dropped,
 .data.status.dropped~.data {
-    --cc2: hsl(343, 100%, 90%);
+    --cc2: hsl(343, 100%, 93%);
 }
 .data.status[class*="planto"],
 .data.status[class*="planto"]~.data {
-    --cc2: hsl(252, 100%, 90%);
+    --cc2: hsl(252, 100%, 93%);
 }
 
+/* airing status */
 .list-table .list-table-data .data.title :is(.rewatching,
 .rereading,
 .content-status) {
@@ -2564,19 +2504,19 @@ body.ownlist #fancybox-overlay {
     box-shadow: var(--shadow-small);
 }
 .data.tags a[href$="=mon"] {
-  background: #FFAE5E;}
+  background: hsl(149, 63%, 66%);}
 .data.tags a[href$="=tue"] {
-  background: #F9F871;}
+  background: hsl(185, 65%, 69%);}
 .data.tags a[href$="=wed"] {
-  background: #A2FA93;}
+  background: hsl(242, 38%, 70%);}
 .data.tags a[href$="=thu"] {
-  background: #00E3F0;}
+  background: hsl(307, 44%, 61%);}
 .data.tags a[href$="=fri"] {
-  background: #829DEF;}
+  background: hsl(360, 72%, 65%);}
 .data.tags a[href$="=sat"] {
-  background: hsl(286, 60%, 65%);}
+  background: hsl(27, 95%, 69%);}
 .data.tags a[href$="=sun"] {
-  background: hsl(323, 71%, 61%);
+  background: hsl(60, 74%, 77%);
 }
 .data.tags a[href$="=mon"]:before,
 .data.tags a[href$="=tue"]:before,
@@ -2587,7 +2527,7 @@ body.ownlist #fancybox-overlay {
 .data.tags a[href$="=sun"]:before {
   font: bold 11px/32px Segoe UI;
   font-variant: normal;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   color: var(--t-dark);
 }
 .data.tags a[href$="=mon"]:before {
@@ -2608,70 +2548,75 @@ body.ownlist #fancybox-overlay {
 
 /* Where */
 .data.tags a[href$="=Where"] {
+	--tbgc: hsl(215, 79%, 66%);
     position: absolute;
     left: 178px !important;
     top: 38px !important;
     width: 18px;
     height: 32px;
     padding: 0;
-    background: rgb(35, 148, 247);
+    background: var(--tbgc);
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow-small);
 }
 /* Unko */
 .data.tags a[href$="=Unko"] {
+	--tbgc: hsl(40, 80%, 66%);
     position: absolute;
     left: 178px !important;
     top: 140px !important;
     width: 18px;
     height: 32px;
     padding: 0;
-    background: rgb(230, 228, 159);
+    background: var(--tbgc);
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow-small);
 }
 /* Ded */
 .data.tags a[href$="=Ded"] {
+	--tbgc: hsl(350, 62%, 50%);
     position: absolute;
     left: 178px !important;
     top: 106px !important;
     width: 18px;
     height: 32px;
     padding: 0;
-    background: rgb(238, 88, 68);
+    background: var(--tbgc);
+/* rgb(238, 88, 68) */
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow-small);
 }
 /* inf */
 .data.tags a[href$="=inf"] {
+	--tbgc: hsl(240, 48%, 90%);
     position: absolute;
     left: 178px !important;
     top: 72px !important;
     width: 18px;
     height: 32px;
     padding: 0;
-    background: #F4F4F6;
+    background: var(--tbgc);
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow-small);
 }
 
 .data.tags a[href$="=Where"]:before {
-  font: bold 11px/32px FontAwesome;
+  font: bold 12px/32px FontAwesome;
   color: var(--t-dark);
   content: "\f059";
 }
 .data.tags a[href$="=Unko"]:before {
-  font: bold 11px/32px FontAwesome;
+  font: bold 12px/32px FontAwesome;
   color: var(--t-dark);
   content: "\f2fe";
 }
 .data.tags a[href$="=Ded"]:before {
-  font: bold 11px/32px FontAwesome;
+  font: bold 12px/32px FontAwesome;
   color: var(--t-dark);
   content: "\f54c";
 }
 .data.tags a[href$="=inf"]:before {
-  font: bold 11px/32px FontAwesome;
+  font: bold 12px/32px FontAwesome;
   color: var(--t-dark);
   content: "\f534";
 }
@@ -2690,6 +2635,7 @@ body.ownlist #fancybox-overlay {
   background: var(--bg2);
   box-shadow: var(--shadow-small);
   border-radius: 4px;
+  border:  solid 1px var(--tbgc);
   color: var(--text-dim);
   font: bold 12px ABeeZee;
   text-align: center;
@@ -2708,7 +2654,7 @@ body.ownlist #fancybox-overlay {
   content: "Cant find\a anywhere online,\a No subs/TL"
 }
 .data.tags a[href$="=Unko"]:after {
-  content: "Shitshow"
+  content: "Shit show"
 }
 .data.tags a[href$="=Ded"]:after {
   content: "Author died,\a Studio bankrupted,\a Cancelled, etc"
