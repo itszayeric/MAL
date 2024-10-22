@@ -1,5 +1,4 @@
-/* "Clarity" (R22) -> "Guchuko" (3.7a) 
-	Rewritten by sunnysummerday */
+/* "Clarity" (R22) -> "Guchuko" (3.7a) | Modded by sunnysummerday */
 
 @\import "https://fonts.googleapis.com/css?family=ABeeZee";
 @\import "https://fonts.googleapis.com/css?family=Advent+Pro";
@@ -27,7 +26,7 @@
     --shadow-small: 0 1px 2px rgba(0, 0, 0, .2);
     --i-grain: url(https://i.imgur.com/p42nqAy.png);
     --i-grain-t: url(https://i.imgur.com/WHp1EwW.png);
-	  --i-grain-3: url(https://i.imgur.com/ByfCJ9Q.png) ;
+    --i-grain-3: url(https://i.imgur.com/ByfCJ9Q.png);
 }
 
 /* info */
@@ -44,86 +43,86 @@
 
 /* All Anime */
 [data-query*="status\":7"] {
-			     --pattern: url(https://i.imgur.com/pP8LRUw.png);
-			     --avatar: url(https://i.imgur.com/iiDtSxe.png);
-			     --dimension: 625px 455px;
-			     --resize: 312px 228px;
-			     --speed: 15s;
-			     --zoom: 240px 240px;
-			     --leftright: 10%;
-			     --startend: 20%;
-			     --distance: 50%;
-			     --bgw: url(https://i.imgur.com/Dboy6PM.png);
+	--pattern: url(https://i.imgur.com/pP8LRUw.png);
+	--avatar: url(https://i.imgur.com/iiDtSxe.png);
+	--dimension: 625px 455px;
+	--resize: 312px 228px;
+	--speed: 15s;
+	--zoom: 240px 240px;
+	--leftright: 10%;
+	--startend: 20%;
+	--distance: 50%;
+	--bgw: url(https://i.imgur.com/Dboy6PM.png);
 }
 
 /* Watching */
 [data-query*="status\":1"] {
-			     --pattern: url(https://i.imgur.com/alq2Qt4.png);
-			     --dimension: 400px 400px;
-			     --resize: 200px 200px;
-			     --speed: 10s;
-			     --avatar: url(https://i.imgur.com/L2BqXRZ.png);
-			     --zoom: 215px 215px;
-			     --leftright: 60%;
-			     --startend: 0%;
-			     --distance: 40%;
-                 --bgw: url(https://i.imgur.com/qfYVgLM.png);
+	--pattern: url(https://i.imgur.com/alq2Qt4.png);
+	--dimension: 400px 400px;
+	--resize: 200px 200px;
+	--speed: 10s;
+	--avatar: url(https://i.imgur.com/L2BqXRZ.png);
+	--zoom: 215px 215px;
+	--leftright: 60%;
+	--startend: 0%;
+	--distance: 40%;
+	--bgw: url(https://i.imgur.com/qfYVgLM.png);
 }
 
 /* Completed */
 [data-query*="status\":2"] {
-			     --pattern: url(https://i.imgur.com/GHMe1Uq.png);
-			     --dimension: 400px 400px;
-			     --resize: 200px 200px;
-			     --speed: 10s;
-			     --avatar: url(https://i.imgur.com/Ahx1DBm.png);
-			     --zoom: 300px 300px;
-			     --leftright: 80%;
-			     --startend: 0%;
-			     --distance: 20%;
-	             --bgw: url(https://i.imgur.com/s7n5YvD.png);
+	--pattern: url(https://i.imgur.com/GHMe1Uq.png);
+	--dimension: 400px 400px;
+	--resize: 200px 200px;
+	--speed: 10s;
+	--avatar: url(https://i.imgur.com/Ahx1DBm.png);
+	--zoom: 300px 300px;
+	--leftright: 80%;
+	--startend: 0%;
+	--distance: 20%;
+	--bgw: url(https://i.imgur.com/s7n5YvD.png);
 }
 
 /* Onhold */
 [data-query*="status\":3"] {
-			     --pattern: url(https://i.imgur.com/SAZASNT.png);
-			     --dimension: 400px 400px;
-			     --resize: 200px 200px;
-			     --speed: 10s;
-			     --avatar: url(https://i.imgur.com/4cDk2Rc.png);
-			     --zoom: 250px 250px;
-			     --leftright: 75%;
-			     --startend: 30%;
-			     --distance: 60%;
-	             --bgw: url(https://i.imgur.com/EI4gryh.png);
+	--pattern: url(https://i.imgur.com/SAZASNT.png);
+	--dimension: 400px 400px;
+	--resize: 200px 200px;
+	--speed: 10s;
+	--avatar: url(https://i.imgur.com/4cDk2Rc.png);
+	--zoom: 250px 250px;
+	--leftright: 75%;
+	--startend: 30%;
+	--distance: 60%;
+	--bgw: url(https://i.imgur.com/EI4gryh.png);
 }
 
 /* Dropped */
 [data-query*="status\":4"] {
-			     --pattern: url(https://i.imgur.com/jJAYDAo.png);
-			     --dimension: 400px 400px;
-			     --resize: 200px 200px;
-			     --speed: 10s;
-			     --avatar: url(https://i.imgur.com/279R3FO.png);
-			     --zoom: 225px 225px;
-			     --leftright: 100%;
-			     --startend: 0%;
-			     --distance: 30%;
-	             --bgw: url(https://i.imgur.com/SlhTIeA.png);
+	--pattern: url(https://i.imgur.com/jJAYDAo.png);
+	--dimension: 400px 400px;
+	--resize: 200px 200px;
+	--speed: 10s;
+	--avatar: url(https://i.imgur.com/279R3FO.png);
+	--zoom: 225px 225px;
+	--leftright: 100%;
+	--startend: 0%;
+	--distance: 30%;
+	--bgw: url(https://i.imgur.com/SlhTIeA.png);
 }
 
 /* Planned */
 [data-query*="status\":6"] {
-			     --pattern: url(https://i.imgur.com/e73N8nH.png);
-			     --dimension: 400px 400px;
-			     --resize: 200px 200px;
-			     --speed: 10s;
-			     --avatar: url(https://i.imgur.com/JaT6UoL.png);
-			     --zoom: 205px 205px;
-			     --leftright: 90%;
-			     --startend: 50%;
-			     --distance: 90%;
-	             --bgw: url(https://i.imgur.com/71EGjun.png);
+	--pattern: url(https://i.imgur.com/e73N8nH.png);
+	--dimension: 400px 400px;
+	--resize: 200px 200px;
+	--speed: 10s;
+	--avatar: url(https://i.imgur.com/JaT6UoL.png);
+	--zoom: 205px 205px;
+	--leftright: 90%;
+	--startend: 50%;
+	--distance: 90%;
+	--bgw: url(https://i.imgur.com/71EGjun.png);
 }
 
 /* categories */
@@ -801,9 +800,9 @@ tbody:first-of-type:hover .header-title.progress a {
 .status-button:after {
     transition: 0.1s !important
 }
-
+/* line color below all anime */
 .status-button.all_anime:after {
-    background: var(--dark) !important
+    background: var(--text-dim) !important
 }
 
 .status-button:not(.on) {
@@ -2309,12 +2308,13 @@ footer {
 
 #copyright {
     padding: 0;
-    color: white;
+    color: var(--t-dark);
     font: 8.5px/16px ABeeZee
 }
 
 #copyright:before {
     content: "List design by sunnysummerday, adapted from Valerio Lyndon's 'Clarity'.";
+	var(--t-dark);
     font-size: 10px !important
 }
 
@@ -2323,7 +2323,7 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    content: "3.7";
+    content: "3.7a";
     font: bold 11px/32px ABeeZee;
     height: 32px;
     width: 32px;
@@ -2516,7 +2516,7 @@ body.ownlist #fancybox-overlay {
 .data.tags a[href$="=sat"] {
   background: hsl(27, 95%, 69%);}
 .data.tags a[href$="=sun"] {
-  background: hsl(60, 74%, 77%);
+  background: hsl(60, 74%, 73%);
 }
 .data.tags a[href$="=mon"]:before,
 .data.tags a[href$="=tue"]:before,
@@ -2551,7 +2551,47 @@ body.ownlist #fancybox-overlay {
 	--tbgc: hsl(215, 79%, 66%);
     position: absolute;
     left: 178px !important;
-    top: 38px !important;
+    top: 40px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow-small);
+}
+/* inf */
+.data.tags a[href$="=inf"] {
+	--tbgc: hsl(240, 48%, 90%);
+    position: absolute;
+    left: 178px !important;
+    top: 76px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow-small);
+}
+/* pp */
+.data.tags a[href$="=pp"] {
+	--tbgc: hsl(330, 66%, 66%);
+    position: absolute;
+    left: 178px !important;
+    top: 112px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow-small);
+}
+
+/* Ded */
+.data.tags a[href$="=Ded"] {
+	--tbgc: hsl(350, 62%, 53%);
+    position: absolute;
+    left: 178px !important;
+    top: 148px !important;
     width: 18px;
     height: 32px;
     padding: 0;
@@ -2564,34 +2604,7 @@ body.ownlist #fancybox-overlay {
 	--tbgc: hsl(40, 80%, 66%);
     position: absolute;
     left: 178px !important;
-    top: 140px !important;
-    width: 18px;
-    height: 32px;
-    padding: 0;
-    background: var(--tbgc);
-    border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-small);
-}
-/* Ded */
-.data.tags a[href$="=Ded"] {
-	--tbgc: hsl(350, 62%, 50%);
-    position: absolute;
-    left: 178px !important;
-    top: 106px !important;
-    width: 18px;
-    height: 32px;
-    padding: 0;
-    background: var(--tbgc);
-/* rgb(238, 88, 68) */
-    border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-small);
-}
-/* inf */
-.data.tags a[href$="=inf"] {
-	--tbgc: hsl(240, 48%, 90%);
-    position: absolute;
-    left: 178px !important;
-    top: 72px !important;
+    top: 184px !important;
     width: 18px;
     height: 32px;
     padding: 0;
@@ -2601,17 +2614,17 @@ body.ownlist #fancybox-overlay {
 }
 
 .data.tags a[href$="=Where"]:before {
-  font: bold 12px/32px FontAwesome;
+  font: bold 13px/32px FontAwesome;
   color: var(--t-dark);
   content: "\f059";
 }
 .data.tags a[href$="=Unko"]:before {
-  font: bold 12px/32px FontAwesome;
+  font: bold 14px/31px FontAwesome;
   color: var(--t-dark);
   content: "\f2fe";
 }
 .data.tags a[href$="=Ded"]:before {
-  font: bold 12px/32px FontAwesome;
+  font: bold 14px/32px FontAwesome;
   color: var(--t-dark);
   content: "\f54c";
 }
@@ -2620,15 +2633,21 @@ body.ownlist #fancybox-overlay {
   color: var(--t-dark);
   content: "\f534";
 }
+.data.tags a[href$="=pp"]:before {
+  font: bold 13px/32px FontAwesome;
+  color: var(--t-dark);
+  content: "\e0d2"; /*e356*/
+}
 
 /* tooltip */
 .data.tags a[href$="=Where"]::after,
 .data.tags a[href$="=Unko"]::after,
 .data.tags a[href$="=Ded"]::after,
-.data.tags a[href$="=inf"]::after {
+.data.tags a[href$="=inf"]::after,
+.data.tags a[href$="=pp"]::after {
   position: absolute;
-  top: calc(50% - 16px);
-  left: -85px;
+  top: 50%;
+  left: -75px;
   z-index: 100;
   width: 140px;
   padding: 6px;
@@ -2642,11 +2661,12 @@ body.ownlist #fancybox-overlay {
   white-space: pre-wrap;
   opacity: 0;
   line-height: 1.3em;
-  transform: translateX(-50%);
-  transition: opacity 0.3s ease;
+  transform: translateY(-50%) translateX(-50%);
+  transition: left 0.25s ease, opacity .25s ease-in-out;
   pointer-events: none;
 }
 .data.tags a:hover::after {
+  left: -85px;
   opacity: 1;
 }
 /* tags descriptions */
@@ -2657,8 +2677,14 @@ body.ownlist #fancybox-overlay {
   content: "Shit show"
 }
 .data.tags a[href$="=Ded"]:after {
-  content: "Author died,\a Studio bankrupted,\a Cancelled, etc"
+  content: "Author died,\a Studio bankrupted,\a Cancelled, \"Covid\" etc"
 }
 .data.tags a[href$="=inf"]:after {
   content: "Forever airing,\a Will never end"
 }
+.data.tags a[href$="=pp"]:after {
+  content: "Airing postponed due to production issue"
+}
+
+/* test */
+.data.title [href^="/anime/29978/"]:before{background: url(https://i.imgur.com/ir4mMs7.gif) no-repeat center / cover !important}
