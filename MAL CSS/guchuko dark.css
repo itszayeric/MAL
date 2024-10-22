@@ -29,99 +29,40 @@
     --i-grain-3: url(https://i.imgur.com/ByfCJ9Q.png);
 }
 
-/* info */
-
-/* Patterns can be any resolution */
-/* Avatars should be 500px/500px */
-/* 'Dimension' requires exact image dimensions to seamlessly loop! */
-/* 'Resize' should be half the size for better quality - not required */
-/* 'Speed' changes how slow/fast a pattern loops - disable by putting 0s */
-/* 'Zoom': Lower size shows more of avatar - 200px to 300px looks best */
-/* 'LeftRight': 0% = Left side, 50% = Centered, 100% = Right */
-/* 'StandEnd': Animation starts and ends here - 0% = Top of avatar */
-/* 'Distance': Animation stops here and returns - 100% = Bottom of avatar */
 
 /* All Anime */
 [data-query*="status\":7"] {
-	--pattern: url(https://i.imgur.com/pP8LRUw.png);
-	--avatar: url(https://i.imgur.com/iiDtSxe.png);
-	--dimension: 625px 455px;
-	--resize: 312px 228px;
-	--speed: 15s;
-	--zoom: 240px 240px;
-	--leftright: 10%;
-	--startend: 20%;
-	--distance: 50%;
+	--pattern: url(https://i.imgur.com/OCsE8CX.png) repeat center/2.5%;
 	--bgw: url(https://i.imgur.com/Dboy6PM.png);
 }
 
 /* Watching */
 [data-query*="status\":1"] {
-	--pattern: url(https://i.imgur.com/alq2Qt4.png);
-	--dimension: 400px 400px;
-	--resize: 200px 200px;
-	--speed: 10s;
-	--avatar: url(https://i.imgur.com/L2BqXRZ.png);
-	--zoom: 215px 215px;
-	--leftright: 60%;
-	--startend: 0%;
-	--distance: 40%;
+	--pattern: url(https://i.imgur.com/GfJsxV5.png) repeat center/31%;
 	--bgw: url(https://i.imgur.com/qfYVgLM.png);
 }
 
 /* Completed */
 [data-query*="status\":2"] {
-	--pattern: url(https://i.imgur.com/GHMe1Uq.png);
-	--dimension: 400px 400px;
-	--resize: 200px 200px;
-	--speed: 10s;
-	--avatar: url(https://i.imgur.com/Ahx1DBm.png);
-	--zoom: 300px 300px;
-	--leftright: 80%;
-	--startend: 0%;
-	--distance: 20%;
+	--pattern: url(https://i.imgur.com/SgEvKsm.png) repeat center/30%;
 	--bgw: url(https://i.imgur.com/s7n5YvD.png);
 }
 
 /* Onhold */
 [data-query*="status\":3"] {
-	--pattern: url(https://i.imgur.com/SAZASNT.png);
-	--dimension: 400px 400px;
-	--resize: 200px 200px;
-	--speed: 10s;
-	--avatar: url(https://i.imgur.com/4cDk2Rc.png);
-	--zoom: 250px 250px;
-	--leftright: 75%;
-	--startend: 30%;
-	--distance: 60%;
+	--pattern: url(https://i.imgur.com/7kTOmdE.png) repeat center/16%;
 	--bgw: url(https://i.imgur.com/EI4gryh.png);
 }
 
 /* Dropped */
 [data-query*="status\":4"] {
-	--pattern: url(https://i.imgur.com/jJAYDAo.png);
-	--dimension: 400px 400px;
-	--resize: 200px 200px;
-	--speed: 10s;
-	--avatar: url(https://i.imgur.com/279R3FO.png);
-	--zoom: 225px 225px;
-	--leftright: 100%;
-	--startend: 0%;
-	--distance: 30%;
+	--pattern: url(https://i.imgur.com/sTTfpjt.png) repeat center/50%;
 	--bgw: url(https://i.imgur.com/SlhTIeA.png);
 }
 
 /* Planned */
 [data-query*="status\":6"] {
-	--pattern: url(https://i.imgur.com/e73N8nH.png);
-	--dimension: 400px 400px;
-	--resize: 200px 200px;
-	--speed: 10s;
-	--avatar: url(https://i.imgur.com/JaT6UoL.png);
-	--zoom: 205px 205px;
-	--leftright: 90%;
-	--startend: 50%;
-	--distance: 90%;
+	--pattern: url(https://i.imgur.com/SfILbfB.png) repeat center/27%;
 	--bgw: url(https://i.imgur.com/71EGjun.png);
 }
 
@@ -151,15 +92,14 @@
 
 /* cover */
 .cover-block {
-    /*animation: pattern var(--speed) linear infinite;*/
-    background-image: url(https://i.imgur.com/dar9iKN.gif);
-    background-size: var(--resize);
+    background: var(--pattern);
     height: 100px;
     width: 100%;
     top: 0;
     position: absolute;
     z-index: -5
 }
+
 
 /* avatar */
 .status-menu:after {
@@ -2638,7 +2578,6 @@ body.ownlist #fancybox-overlay {
   color: var(--t-dark);
   content: "\e0d2"; /*e356*/
 }
-
 /* tooltip */
 .data.tags a[href$="=Where"]::after,
 .data.tags a[href$="=Unko"]::after,
@@ -2662,7 +2601,7 @@ body.ownlist #fancybox-overlay {
   opacity: 0;
   line-height: 1.3em;
   transform: translateY(-50%) translateX(-50%);
-  transition: left 0.25s ease, opacity .25s ease-in-out;
+  transition: left 0.25s ease, opacity .35s ease-in;
   pointer-events: none;
 }
 .data.tags a:hover::after {
@@ -2671,7 +2610,7 @@ body.ownlist #fancybox-overlay {
 }
 /* tags descriptions */
 .data.tags a[href$="=Where"]:after {
-  content: "Cant find\a anywhere online,\a No subs/TL"
+  content: "Cant find\a anywhere online,\a No English subs"
 }
 .data.tags a[href$="=Unko"]:after {
   content: "Shit show"
@@ -2683,8 +2622,20 @@ body.ownlist #fancybox-overlay {
   content: "Forever airing,\a Will never end"
 }
 .data.tags a[href$="=pp"]:after {
-  content: "Airing postponed due to production issue"
+  content: "Airing postponed due to production issues"
 }
 
 /* test */
-.data.title [href^="/anime/29978/"]:before{background: url(https://i.imgur.com/ir4mMs7.gif) no-repeat center / cover !important}
+.data.title [href^="/anime/29978/"] {
+	font-size: 0 !important;
+	pointer-events: none !important;
+}
+.data.title [href^="/anime/29978/"]:before {
+	background: url(https://i.imgur.com/ir4mMs7.gif) no-repeat center / cover !important;
+}
+.data.title [href^="/anime/29978/"]:after {
+	content: "//：ＴＥＳＴ";
+	font: bold 14px/40px Segoe UI !important;
+	text-transform: uppercase;
+ 	color: var(--t-dark);
+}
