@@ -1,4 +1,4 @@
-/* "Clarity" (R22) -> "Guchuko" (3.7a) | Modded by sunnysummerday */
+/* "Clarity" (R22) -> "Guchuko" (3.7c) | Modded by sunnysummerday */
 
 @\import "https://fonts.googleapis.com/css?family=ABeeZee";
 @\import "https://fonts.googleapis.com/css?family=Advent+Pro";
@@ -13,7 +13,6 @@
     --text: #999;
     --text-dim: #bababa;
     --t-dark: #1e1e1e;
-    --light: #333;
     --gray: #a5a5a5;
     --dark: #555;
     --watching: #6ad2fc;
@@ -32,38 +31,44 @@
 
 /* All Anime */
 [data-query*="status\":7"] {
-	--pattern: url(https://i.imgur.com/OCsE8CX.png) repeat center/2.5%;
-	--bgw: url(https://i.imgur.com/Dboy6PM.png);
+	--pattern: url(https://i.imgur.com/OCsE8CX.png) repeat center/2.6%;
+	--bgw: url(https://i.imgur.com/Dboy6PM.png) repeat center/auto;
+	--ava: url() no-repeat center / 180px;
 }
 
 /* Watching */
 [data-query*="status\":1"] {
 	--pattern: url(https://i.imgur.com/GfJsxV5.png) repeat center/31%;
-	--bgw: url(https://i.imgur.com/qfYVgLM.png);
+	--bgw: url(https://i.imgur.com/qfYVgLM.png) repeat center/auto;
+	--ava: url() no-repeat center / 190px;
 }
 
 /* Completed */
 [data-query*="status\":2"] {
-	--pattern: url(https://i.imgur.com/SgEvKsm.png) repeat center/30%;
-	--bgw: url(https://i.imgur.com/s7n5YvD.png);
+	--pattern: url(https://i.imgur.com/SiEUTjJ.png) repeat center/30%;
+	--bgw: url(https://i.imgur.com/s7n5YvD.png) repeat center/20%;
+	--ava: url() no-repeat center / 165px;
 }
 
 /* Onhold */
 [data-query*="status\":3"] {
 	--pattern: url(https://i.imgur.com/7kTOmdE.png) repeat center/16%;
-	--bgw: url(https://i.imgur.com/EI4gryh.png);
+	--bgw: url(https://i.imgur.com/EI4gryh.png) repeat center/auto;
+	--ava: url() no-repeat center / 160px;
 }
 
 /* Dropped */
 [data-query*="status\":4"] {
 	--pattern: url(https://i.imgur.com/sTTfpjt.png) repeat center/50%;
-	--bgw: url(https://i.imgur.com/SlhTIeA.png);
+	--bgw: url(https://i.imgur.com/SlhTIeA.png) repeat center/auto;
+	--ava: url() no-repeat center / 165px;
 }
 
 /* Planned */
 [data-query*="status\":6"] {
 	--pattern: url(https://i.imgur.com/SfILbfB.png) repeat center/27%;
-	--bgw: url(https://i.imgur.com/71EGjun.png);
+	--bgw: url(https://i.imgur.com/71EGjun.png) repeat center/8%;
+	--ava: url() no-repeat center / 160px;
 }
 
 /* categories */
@@ -89,7 +94,6 @@
     font-size: 27px;
 }
 
-
 /* cover */
 .cover-block {
     background: var(--pattern);
@@ -100,18 +104,12 @@
     z-index: -5
 }
 
-
 /* avatar */
 .status-menu:after {
-    /*animation: avatar 5s infinite;
-    background: var(--bg);
-    background-image: var(--avatar);
-    background-size: var(--zoom);*/
     border: 8px solid var(--bg2);
     border-radius: 50%;
     background: url(https://i.ibb.co/XkZnFDg/ava-scan-lines.png) no-repeat center / 160px,
-    url(https://i.imgur.com/UFJrE8b.png) no-repeat center / 200px,
-    var(--bg);
+    url(https://i.imgur.com/UFJrE8b.png) no-repeat center / 190px, var(--bg);
     box-shadow: var(--shadow-small);
     content: "";
     height: 150px;
@@ -159,7 +157,7 @@
 }
 
 body {
-    background: var(--bgw) repeat center top / auto fixed !important;
+    background: var(--bgw) fixed !important;
     font-family: ABeeZee
 }
 
@@ -373,7 +371,12 @@ body.ownlist.manga footer {
     position: relative;
     height: 0;
     width: 880px;
+    pointer-events: none;
     z-index: 38
+}
+
+.list-menu-float * {
+    pointer-events: all
 }
 
 .list-menu-float .icon-menu {
@@ -734,7 +737,7 @@ tbody:first-of-type:hover .header-title.progress a {
     font: normal 0/30px Amatic SC, FontAwesome !important;
     letter-spacing: 1px;
     text-transform: uppercase;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .status-button:after {
@@ -745,23 +748,23 @@ tbody:first-of-type:hover .header-title.progress a {
     background: var(--text-dim) !important
 }
 
-.status-button:not(.on) {
+.status-menu-container .status-menu .status-button:not(.on) {
     position: relative
 }
 
-.status-button:not(.on)::after {
+.status-menu-container .status-menu .status-button:not(.on)::after {
     content: "";
     height: 4px;
     width: 100%;
     position: absolute;
-    bottom: 10;
+    bottom: 0;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform 0.2s ease-in-out !important
 }
 
-.status-button:not(.on):hover::after {
+.status-menu-container .status-menu .status-button:not(.on):hover::after {
     transform-origin: left;
     transform: scaleX(1)
 }
@@ -810,7 +813,7 @@ tbody:first-of-type:hover .header-title.progress a {
 #search-box.open {
     background: var(--bg1);
     box-shadow: inset 0 1px 4px rgba(0,0,0,.7);
-    border: 2px solid var(--light);
+    border: 2px solid var(--bg1);
     width: 140px !important
 }
 
@@ -915,10 +918,10 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .list-table .list-table-data .data {
-  background: var(--i-grain-t);
-  border: none;
-  padding: 0;
-  font-size: 11px
+	background: var(--i-grain-t);
+	border: none;
+	padding: 0;
+	font-size: 11px
 }
 
 .list-table .list-table-data .data a {
@@ -926,35 +929,19 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .data.title>a:before {
-    background: center/cover no-repeat white;
-    border: 4px solid;
-    border-radius: 10px;
+    background: center/cover no-repeat var(--bg);
+    border: none;
+    border-radius: 4px 4px 10px 10px;
     box-shadow: var(--shadow-big);
     content: "";
-    height: 0;
+    height: 200px;
     width: 150px;
-    top: 50%;
-    left: -238px;
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.1s !important;
-    z-index: 50
-}
-
-.data.status:hover+.data.title>a:before {
-    top: calc(50% - 104px);
-    height: 200px;
-    opacity: 1
-}
-
-.data.title>.link:before {
-    border-radius: 4px 4px 10px 10px;
-    border: none;
-    height: 200px;
     top: 0;
     left: 0;
+    position: absolute;
     opacity: 1;
+    pointer-events: none;
+    transition: 0.1s !important;
     z-index: -1
 }
 
@@ -970,7 +957,7 @@ tbody:first-of-type:hover .header-title.progress a {
     background: var(--bg2);
     border-radius: 0 0 6px 0;
     height: 28px;
-    width: 58px;
+    width: 57.5px;
     right: 0;
     bottom: 0;
     left: inherit;
@@ -1050,7 +1037,6 @@ tbody:first-of-type:hover .header-title.progress a {
 
 .data.title {
     flex: 1 0 auto;
-    font: 11px/40px Segoe UI;
     padding: 0 !important;
     height: auto;
     width: 150px;
@@ -1059,32 +1045,34 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .data.title>.link {
-    color: white;
     display: inline-block !important;
-    font-size: 14px !important;
-    font-weight: normal !important;
     padding: 0 12px;
     max-width: 126px;
     overflow: hidden;
     overflow: -moz-hidden-unscrollable;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
+	font: bold 14px/40px ABeeZee !important;
+	color: var(--t-dark) !important;
+    /*text-transform: uppercase;*/
 }
 
 .data.title>.link:hover {
     color: white !important
 }
 
+/* airing */
 .content-status,
 .rewatching {
-    background: white;
+    background: var(--cc2);
     border: none;
-    color: var(--text) !important;
+    color: var(--t-dark) !important;
     margin-left: 0;
     padding: 0;
     font: bold 10px/16px ABeeZee !important;
     letter-spacing: 1px;
     text-align: center;
+	text-transform: uppercase;
     height: 16px;
     width: 150px;
     top: 40px;
@@ -1108,7 +1096,7 @@ tbody:first-of-type:hover .header-title.progress a {
     color: transparent;
     margin-right: -2px !important;
     padding: 2px 10px 0;
-    top: 135px;
+    top: 145px;
     right: 2px;
     position: absolute;
     transition: 0.1s ease-out !important;
@@ -1277,7 +1265,7 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .data.progress input {
-    background: var(--light);
+    background: var(--bg1);
     border-radius: 13px;
     border: none;
     color: var(--text);
@@ -1407,11 +1395,22 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .tags .edit {
-    background: var(--hover) !important
+    background: var(--status) !important
 }
 
-.plantowatch~.tags .edit {
-    display: block !important
+.watching~.tags .edit {
+    background: linear-gradient(to bottom right, var(--watching), var(--completed)) !important
+}
+
+.list-table .data.tags .edit:before {
+    content: "";
+    display: block;
+    height: 42px;
+    width: 42px;
+    top: -10px;
+    left: -10px;
+    position: absolute;
+    opacity: 0
 }
 
 .data.tags textarea {
@@ -1561,9 +1560,10 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .data.airing-started {
-    background: var(--bg);
-    border-bottom: 1px dashed var(--light) !important;
+    background: var(--bg) !important;
+    border-bottom: 1px dashed var(--bg1) !important;
     border-radius: 5px 5px 0 0;
+  	font: bold 14px/30px segoe ui;
     color: var(--text);
     top: 77px
 }
@@ -1571,7 +1571,8 @@ tbody:first-of-type:hover .header-title.progress a {
 .data.airing-finished {
     border-top: 1px dashed var(--bg) !important;
     border-radius: 0 0 5px 5px;
-    color: white;
+  	font: bold 14px/30px segoe ui;
+    color: var(--t-dark);
     top: 108.5px
 }
 
@@ -2076,8 +2077,8 @@ div#advanced-options {
 }
 
 #advanced-options .sort-widget input[type=radio]:not(:disabled)+label {
-    background: var(--light) !important;
-    border-color: var(--light) !important
+    background: var(--bg1) !important;
+    border-color: var(--bg1) !important
 }
 
 #advanced-options .sort-widget input[type=radio]:not(:disabled):checked+label {
@@ -2166,7 +2167,7 @@ div#tu_settings .tu_buttons {
 
 div#tu_settings input:disabled,
 div#tu_settings textarea:disabled {
-    background: var(--light) !important
+    background: var(--bg1) !important
 }
 
 div#tu_settings .tu_ajax>input,
@@ -2263,7 +2264,7 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    content: "3.7a";
+    content: "3.7c";
     font: bold 11px/32px ABeeZee;
     height: 32px;
     width: 32px;
@@ -2403,23 +2404,7 @@ footer {
     --cc2: hsl(252, 100%, 93%);
 }
 
-/* airing status */
-.list-table .list-table-data .data.title :is(.rewatching,
-.rereading,
-.content-status) {
-    background: var(--cc2) !important;
-    color: var(--t-dark) !important;
-    font-weight: bold !important;
-    text-transform: uppercase;
-}
-
-.data.title>.link {
-    color: var(--t-dark) !important;
-    font-family: ABeeZee !important;
-    font-weight: bold !important;
-    text-transform: uppercase;
-}
-
+/* filter overlay*/
 body.ownlist #fancybox-overlay {
     background: var(--i-grain) !important;
     opacity: 0.7 !important;
@@ -2448,9 +2433,9 @@ body.ownlist #fancybox-overlay {
 .data.tags a[href$="=tue"] {
   background: hsl(185, 65%, 69%);}
 .data.tags a[href$="=wed"] {
-  background: hsl(242, 38%, 70%);}
+  background: hsl(250, 55%, 70%);}
 .data.tags a[href$="=thu"] {
-  background: hsl(307, 44%, 61%);}
+  background: hsl(307, 55%, 61%);}
 .data.tags a[href$="=fri"] {
   background: hsl(360, 72%, 65%);}
 .data.tags a[href$="=sat"] {
