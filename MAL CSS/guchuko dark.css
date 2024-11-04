@@ -1,4 +1,4 @@
-/* Clarity (R22)  ➜  Guchuko (4.0) | Modded by sunnysummerday */
+/* Clarity (R22)  ➜  Guchuko (4.1) | Modded by sunnysummerday */
 
 @\import "https://fonts.googleapis.com/css?family=ABeeZee";
 @\import "https://fonts.googleapis.com/css?family=Advent+Pro";
@@ -35,7 +35,7 @@
 	--cfb: 1;
 	--bgw: url(https://i.imgur.com/Dboy6PM.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url() no-repeat center / 180px;
+	--ava: url(https://i.imgur.com/vFwArBr.png) no-repeat center / 170px;
 }
 
 /* Watching */
@@ -44,16 +44,16 @@
 	--cfb: 1;
 	--bgw: url(https://i.imgur.com/qfYVgLM.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url() no-repeat center / 190px;
+	--ava: url(https://i.imgur.com/6cUTlU0.png) no-repeat center / 155px;
 }
 
 /* Completed */
 [data-query*="status\":2"] {
 	--pattern: url(https://i.imgur.com/SiEUTjJ.png) repeat center/350px;
 	--cfb: 1.2;
-	--bgw: url(https://i.imgur.com/s7n5YvD.png) repeat center/20%;
+	--bgw: url(https://i.imgur.com/s7n5YvD.png) repeat center/300px;
 	--bfb: 0;
-	--ava: url() no-repeat center / 165px;
+	--ava: url(https://i.imgur.com/3g21seD.png) no-repeat center / 155px;
 }
 
 /* Onhold */
@@ -62,7 +62,7 @@
 	--cfb: 1.1;
 	--bgw: url(https://i.imgur.com/EI4gryh.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url() no-repeat center / 160px;
+	--ava: url(https://i.imgur.com/ilsbPcD.png) no-repeat center / 165px;
 }
 
 /* Dropped */
@@ -71,16 +71,16 @@
 	--cfb: 0.9;
 	--bgw: url(https://i.imgur.com/SlhTIeA.png) repeat center/auto;
 	--bfb: 0.1;
-	--ava: url() no-repeat center / 165px;
+	--ava: url(https://i.imgur.com/xxbYaXi.png) no-repeat center / 165px;
 }
 
 /* Planned */
 [data-query*="status\":6"] {
 	--pattern: url(https://i.imgur.com/SfILbfB.png) repeat center/280px;
 	--cfb: 1;
-	--bgw: url(https://i.imgur.com/71EGjun.png) repeat center/8%;
+	--bgw: url(https://i.imgur.com/71EGjun.png) repeat center/110px;
 	--bfb: 0.1;
-	--ava: url() no-repeat center / 160px;
+	--ava: url(https://i.imgur.com/fOta5Mv.png) no-repeat center / 145px;
 }
 
 /* categories */
@@ -108,21 +108,29 @@
 
 /* cover */
 .cover-block {
-	position: absolute;
-    background: var(--pattern);
-	filter: brightness(var(--cfb));
+    position: absolute;
+    background: var(--hover);
     height: 100px;
     width: 100%;
     top: 0;
+    overflow: hidden;
     z-index: -5
+}
+
+.cover-block:before {
+    content: "";
+    display: block;
+    background: var(--pattern);
+	filter: brightness(var(--cfb));
+    height: 100px
 }
 
 /* avatar */
 .status-menu:after {
     border: 8px solid var(--bg2);
     border-radius: 50%;
-    background: url(https://i.ibb.co/XkZnFDg/ava-scan-lines.png) no-repeat center / 160px,
-    url(https://i.imgur.com/UFJrE8b.png) no-repeat center / 190px, var(--bg);
+    background: url(https://i.ibb.co/XkZnFDg/ava-scan-lines.png) no-repeat center / 160px, var(--ava), var(--bg);
+	/* url(https://i.imgur.com/UFJrE8b.png) no-repeat center / 190px */
     box-shadow: var(--shadow-small);
     content: "";
     height: 150px;
@@ -1009,28 +1017,28 @@ tbody:first-of-type:hover .header-title.progress a {
     display: block;
     background: none;
     border: none;
-    border-radius: 15px;
+	border-radius: 0 0 5px 0;
     box-shadow: none;
     color: var(--gray) !important;
     font: bold 14px/27px Advent Pro !important;
-    height: 28px;
-    width: 58px !important
+    height: 26px;
+    width: 58px !important;
+	margin: 2px -1px;
 }
 
 .data.score select {
     display: block;
     position: absolute;
     background: var(--bg2) !important;
-    border: solid var(--status);
-    border-width: 0 0 0 3px;
     border-radius: 0 0 6px 0;
     color: var(--gray);
+	border: none;
     font: bold 14px/27px Advent Pro;
     padding: 0 0 0 19px;
     height: 18px;
-    width: 58px;
-    top: 4px;
-    left: 0;
+    width: 56px;
+    top: 5px;
+    left: 0px;
     outline: none;
     z-index: 102
 }
@@ -2109,8 +2117,7 @@ div#tu_settings .tu_buttons>.tu_button {
     border: 2px solid var(--bg);
     box-shadow: var(--shadow-small);
     color: var(--text);
-    font-size: 14px;
-    line-height: 28px;
+    font: 14px/28px ABeeZee, FontAwesome;
     text-align: center;
     padding: 0;
     height: 28px;
@@ -2132,13 +2139,11 @@ div#tu_settings .tu_buttons>.tu_button:hover {
 
 #advanced-options .btn-apply:before {
     content: "\f00c";
-    font-family: FontAwesome;
     margin-right: 4px
 }
 
 #advanced-options .btn-clear:before {
     content: "\f12d";
-    font-family: FontAwesome;
     margin-right: 4px
 }
 
@@ -2218,6 +2223,57 @@ div#tu_settings .tu_buttons>.tu_button {
     border-radius: 8px
 }
 
+#fancybox-wrap[style*="320px;"] #fancybox-outer {
+    background: var(--hover) !important;
+    border-radius: 8px 32px 16px 16px;
+    box-shadow: 0 0 0 5px var(--bg);
+    height: 90px;
+    width: 260px !important
+}
+
+#fancybox-wrap[style*="320px;"] #fancybox-inner {
+    position: static
+}
+
+#fancybox-wrap[style*="320px;"] #fancybox-inner div[style*="font"] {
+    position: absolute;
+    color: var(--text);
+    font-size: 0 !important;
+    height: 90px !important;
+    width: 260px !important
+}
+
+#fancybox-wrap[style*="320px;"] #fancybox-inner div[style*="5px;"] {
+    display: inline-grid;
+    margin-top: 0 !important;
+    height: 90px;
+    align-content: center;
+    justify-items: center
+}
+
+#fancybox-wrap[style*="320px;"] input[type="button"] {
+    background: var(--bg);
+    color: var(--text);
+    border-radius: 16px;
+    border: 2px solid var(--bg);
+    box-shadow: var(--shadow-small);
+    font: 12px/24px ABeeZee;
+    padding: 0 12px;
+    height: 28px;
+    cursor: pointer;
+    transition: 0.025s !important
+}
+
+#fancybox-wrap[style*="320px;"] input[type="button"]:nth-child(2) {
+    margin-top: 10px
+}
+
+#fancybox-wrap[style*="320px;"] input[type="button"]:hover {
+    background: var(--hover) !important;
+    color: white;
+    transform: rotate(-1deg) scale(1.1)
+}
+
 footer {
     margin: 0 auto;
     height: 82px;
@@ -2243,7 +2299,7 @@ footer {
     content: "";
     display: block;
     position: relative;
-    background: var(--bg);
+    background: var(--bg1);
     border-radius: 0 5px 5px 0;
     box-shadow: var(--shadow-big);
     height: 0;
@@ -2255,8 +2311,8 @@ footer {
     opacity: 0
 }
 
-#footer-block:hover,
-#footer-block:hover:after {
+footer:hover #footer-block,
+footer:hover #footer-block:after {
     height: 32px;
     transform: skewY(0deg) scale(1);
     opacity: 0.9
@@ -2275,7 +2331,7 @@ footer {
 }
 
 #copyright:after {
-    content: "4.0";
+    content: "4.1";
     position: absolute;
     background: var(--hover);
     -webkit-background-clip: text;
@@ -2287,6 +2343,18 @@ footer {
     top: 8px;
     left: 100%;
     z-index: 1
+}
+
+#copyright,
+#copyright:after,
+#copyright:before {
+    visibility: hidden
+}
+
+footer:hover #copyright,
+footer:hover #copyright:after,
+footer:hover #copyright:before {
+    visibility: visible
 }
 
 @keyframes pattern {
@@ -2435,8 +2503,21 @@ body.ownlist #fancybox-overlay {
     padding: 0;
     background: var(--tdbg);
     border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-small);
+    box-shadow: var(--shadow-big) !important;
+  	overflow: hidden;
 }
+
+.data.tags a[href$="mon"]:hover,
+.data.tags a[href$="tue"]:hover,
+.data.tags a[href$="wed"]:hover,
+.data.tags a[href$="thu"]:hover,
+.data.tags a[href$="fri"]:hover,
+.data.tags a[href$="sat"]:hover,
+.data.tags a[href$="sun"]:hover {
+    width: 80px;
+    left: 116px !important;
+}
+      
 .data.tags a[href$="=mon"] {
   background: hsl(149, 63%, 66%);}
 .data.tags a[href$="=tue"] {
@@ -2461,23 +2542,24 @@ body.ownlist #fancybox-overlay {
 .data.tags a[href$="=sun"]:before {
   font: bold 11px/32px Segoe UI;
   font-variant: normal;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.1em;
   color: var(--t-dark);
+  margin-left: 1.5px;
 }
 .data.tags a[href$="=mon"]:before {
-  content: "Mo"; }
+  content: "Monday"; }
 .data.tags a[href$="=tue"]:before {
-  content: "Tu"; }
+  content: "Tuesday"; }
 .data.tags a[href$="=wed"]:before {
-  content: "We"; }
+  content: "Wednesday"; }
 .data.tags a[href$="=thu"]:before {
-  content: "Th"; }
+  content: "Thursday"; }
 .data.tags a[href$="=fri"]:before {
-  content: "Fr"; }
+  content: "Friday"; }
 .data.tags a[href$="=sat"]:before {
-  content: "Sa"; }
+  content: "Saturday"; }
 .data.tags a[href$="=sun"]:before {
-  content: "Su";
+  content: "Sunday";
 }
 
 /* Where */
@@ -2491,7 +2573,7 @@ body.ownlist #fancybox-overlay {
     padding: 0;
     background: var(--tbgc);
     border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-small);
+    box-shadow: var(--shadow);
 }
 /* inf */
 .data.tags a[href$="=inf"] {
@@ -2504,7 +2586,7 @@ body.ownlist #fancybox-overlay {
     padding: 0;
     background: var(--tbgc);
     border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-small);
+    box-shadow: var(--shadow);
 }
 /* pp */
 .data.tags a[href$="=pp"] {
@@ -2517,7 +2599,7 @@ body.ownlist #fancybox-overlay {
     padding: 0;
     background: var(--tbgc);
     border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-small);
+    box-shadow: var(--shadow);
 }
 
 /* Ded */
@@ -2531,7 +2613,7 @@ body.ownlist #fancybox-overlay {
     padding: 0;
     background: var(--tbgc);
     border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-small);
+    box-shadow: var(--shadow);
 }
 /* Unko */
 .data.tags a[href$="=Unko"] {
@@ -2544,7 +2626,7 @@ body.ownlist #fancybox-overlay {
     padding: 0;
     background: var(--tbgc);
     border-radius: 5px 0 0 5px;
-    box-shadow: var(--shadow-small);
+    box-shadow: var(--shadow);
 }
 
 .data.tags a[href$="=Where"]:before {
@@ -2585,7 +2667,7 @@ body.ownlist #fancybox-overlay {
   width: 140px;
   padding: 6px;
   background: var(--bg2);
-  box-shadow: var(--shadow-small);
+  box-shadow: var(--shadow);
   border-radius: 4px;
   border:  solid 1px var(--tbgc);
   color: var(--text-dim);
