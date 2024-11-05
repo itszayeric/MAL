@@ -1,4 +1,4 @@
-/* Clarity (R22)  ➜  Guchuko (4.1) | Modded by sunnysummerday */
+/* Clarity (R22)  ➜  Guchuko (4.2) | Modded by sunnysummerday */
 
 @\import "https://fonts.googleapis.com/css?family=ABeeZee";
 @\import "https://fonts.googleapis.com/css?family=Advent+Pro";
@@ -106,49 +106,71 @@
     font-size: 27px;
 }
 
-/* cover */
-.cover-block {
-    position: absolute;
-    background: var(--hover);
-    height: 100px;
-    width: 100%;
-    top: 0;
-    overflow: hidden;
-    z-index: -5
+/* background */
+body::before,
+body::after {
+	content: "";
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: -11;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+body::before {
+ 	background: var(--bgw) fixed !important;
+    font-family: ABeeZee
 }
 
-.cover-block:before {
-    content: "";
-    display: block;
-    background: var(--pattern);
-	filter: brightness(var(--cfb));
-    height: 100px
+body::after {
+	background: rgba(0,0,0,1) !important;
+  	opacity: var(--bfb)
 }
 
-/* avatar */
-.status-menu:after {
-    border: 8px solid var(--bg2);
-    border-radius: 50%;
-    background: url(https://i.ibb.co/XkZnFDg/ava-scan-lines.png) no-repeat center / 160px, var(--ava), var(--bg);
-	/* url(https://i.imgur.com/UFJrE8b.png) no-repeat center / 190px */
-    box-shadow: var(--shadow-small);
-    content: "";
-    height: 150px;
-    width: 150px;
-    top: -51px;
-    left: -8px;
-    position: absolute;
-    opacity: 1
+a {
+    color: var(--text);
+    transition: 0.1s !important
 }
 
-.fixed .status-menu:after {
-    box-shadow: var(--shadow-small);
-    height: 48px;
-    width: 48px;
-	top: 0
+a:hover {
+    color: var(--accent)
 }
 
-#cover-image-container {
+.list-container {
+    position: static;
+    background: none;
+    border: none;
+    width: 100%
+}
+
+.list-block {
+    margin: 64px auto 0;
+    min-height: 0;
+    width: 880px
+}
+
+.status-menu-container.fixed+.list-block {
+    margin-top: 128px !important
+}
+
+.list-unit {
+    width: 100% !important
+}
+
+.list-table {
+    border: none !important
+}
+
+#recaptcha-terms,
+.icon-watch2,
+.initialize-tutorial,
+body.ownlist.manga .header-menu,
+body.ownlist.manga .header-title,
+body.ownlist.manga .list-menu-float,
+body.ownlist.manga .list-unit,
+body.ownlist.manga .status-menu,
+body.ownlist.manga footer {
     display: none !important
 }
 
@@ -177,162 +199,34 @@
     --status: var(--planned)
 }
 
-/* background */
-body::before,
-body::after {
-	content: "";
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: -11;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-}
-body::before {
- 	background: var(--bgw) fixed !important;
-    font-family: ABeeZee
-}
-body::after {
-	background: rgba(0,0,0,1) !important;
-  	opacity: var(--bfb)
-}
-
-.list-container {
-    position: static;
-    background: none;
-    border: none;
-    width: 100%
-}
-
-.list-block {
-    margin: 64px auto 0;
-    min-height: 0;
-    width: 880px
-}
-
-.status-menu-container.fixed+.list-block {
-    margin-top: 128px !important
-}
-
-.list-unit {
-    width: 100% !important
-}
-
-.list-table {
-    border: none !important
-}
-
-a {
-    color: var(--text);
-    transition: 0.1s !important
-}
-
-a:hover {
-    color: var(--accent)
-}
-
 [data-query*="status\":7"] {
-    --accent: var(--completed) !important
+	--accent: var(--watching) !important;
+    --theme: var(--watching) !important
 }
 
 [data-query*="status\":1"] {
-    --accent: var(--watching) !important
+    --accent: var(--watching) !important;
+    --theme: linear-gradient(to bottom right, var(--watching), var(--completed)) !important
 }
 
 [data-query*="status\":2"] {
-    --accent: var(--completed) !important
+    --accent: var(--completed) !important;
+    --theme: var(--completed) !important
 }
 
 [data-query*="status\":3"] {
-    --accent: var(--onhold) !important
+    --accent: var(--onhold) !important;
+    --theme: var(--onhold) !important
 }
 
 [data-query*="status\":4"] {
-    --accent: var(--dropped) !important
+    --accent: var(--dropped) !important;
+    --theme: var(--dropped) !important
 }
 
 [data-query*="status\":6"] {
-    --accent: var(--planned) !important
-}
-
-#recaptcha-terms,
-.icon-watch2,
-.initialize-tutorial,
-body.ownlist.manga .header-menu,
-body.ownlist.manga .header-title,
-body.ownlist.manga .list-menu-float,
-body.ownlist.manga .list-unit,
-body.ownlist.manga .status-menu,
-body.ownlist.manga footer {
-    display: none !important
-}
-
-.btn-menu a.username {
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    top: -7px;
-    left: 0;
-    z-index: 36
-}
-
-.header .header-title,
-.header-info,
-.icon-menu,
-.list-menu-float .icon-menu,
-.list-table>tbody:first-of-type:after,
-.stats a {
-    display: inline-block;
-    background: var(--bg2) !important;
-    border-radius: 13px;
-    box-shadow: var(--shadow-small);
-    color: var(--text) !important;
-    font: 0/26px ABeeZee;
-    text-indent: 0;
-    height: 26px;
-    width: 26px !important;
-    overflow: hidden;
-    transition: none !important;
-    white-space: nowrap
-}
-
-.header-info {
-    transition: 0.1s !important
-}
-
-.header .header-title:hover,
-.icon-menu:hover,
-.list-menu-float .icon-menu:hover,
-.stats a:hover {
-    background: var(--hover) !important;
-    color: white !important
-}
-
-[data-query*="status\":7"] {
-    --hover: var(--completed) !important
-}
-
-[data-query*="status\":1"] {
-    --hover: var(--watching) !important
-}
-
-[data-query*="status\":2"] {
-    --hover: var(--completed) !important
-}
-
-[data-query*="status\":3"] {
-    --hover: var(--onhold) !important
-}
-
-[data-query*="status\":4"] {
-    --hover: var(--dropped) !important
-}
-
-[data-query*="status\":6"] {
-    --hover: var(--planned) !important
+    --accent: var(--planned) !important;
+    --theme: var(--planned) !important
 }
 
 .header {
@@ -351,17 +245,12 @@ body.ownlist.manga footer {
     transition: 0.1s !important
 }
 
-.btn-menu {
-    font-size: 0 !important;
-    height: 0
-}
-
-.header-info {
+.header .header-info {
     position: static;
-    font-size: 12px;
     margin: 0 !important;
     padding: 0 8px;
     width: auto !important;
+    transition: 0.1s !important;
     opacity: 0
 }
 
@@ -378,353 +267,53 @@ body.ownlist.manga footer {
     color: var(--accent)
 }
 
-.header .header-title {
+.btn-menu {
+    display: none !important
+}
+
+/* cover */
+.cover-block {
     position: absolute;
-    top: 110px;
-    left: 166px;
-    order: 1;
-    z-index: 1
-}
-
-.header .header-title:before {
-    content: "\f015";
-    display: inline-block;
-    background: none !important;
-    font: bold 12px/26px FontAwesome;
-    text-align: center !important;
-    width: 26px
-}
-
-.header .header-title:hover:before {
-    color: white !important
-}
-
-.list-menu-float {
-    position: relative;
-    border: none;
-    font-size: 0;
-    text-align: left;
-    margin: 0 auto;
-    padding-left: 296px;
-    height: 0;
-    width: 880px;
-    pointer-events: none;
-    z-index: 38
-}
-
-.list-menu-float * {
-    pointer-events: all
-}
-
-.list-menu-float .icon-menu {
-    margin-right: 6px;
-    top: 74px
-}
-
-.list-menu-float .icon-menu .text {
-    display: inline-block;
-    color: var(--text) !important;
-    font-size: 14px !important;
-    height: 26px;
-    width: auto !important;
-    top: 0 !important;
-    left: 26px !important;
-    opacity: 1 !important
-}
-
-.list-menu-float .icon-menu:hover .text {
-    color: white !important
-}
-
-.list-menu-float .icon-menu svg.icon {
-    max-height: 13px;
-    max-width: 13px;
-    top: 7px !important;
-    left: 7px !important;
-    fill: var(--text)
-}
-
-.list-menu-float .icon-menu:hover svg.icon {
-    fill: white
-}
-
-[data-owner="1"] .list-menu-float .icon-menu.profile {
-    position: absolute;
-    background: none !important;
-    border-radius: 50%;
-    box-shadow: none;
-    font-size: 0;
-    height: 150px !important;
-    width: 150px !important;
-    top: -43px;
-    left: 98px
-}
-
-[data-owner=""] .icon-menu.profile:before {
-    content: "\f007";
-    display: block;
-    position: absolute;
-    color: var(--text);
-    font: 14px/26px FontAwesome;
-    text-align: center;
-    height: 26px;
-    width: 26px;
+    background: var(--theme);
+    height: 100px;
+    width: 100%;
     top: 0;
-    left: 0
-}
-
-[data-owner=""] .icon-menu.profile:hover:before {
-    color: white
-}
-
-.icon-menu.setting {
-    overflow: visible
-}
-
-.icon-menu.setting .text {
-    height: 26px !important;
-    width: 220px !important;
-    left: 0 !important;
-    overflow: visible;
-    pointer-events: none;
-    z-index: -1
-}
-
-.icon-menu.setting:hover .text {
-    pointer-events: auto
-}
-
-.icon-menu.setting .text a {
-    position: absolute !important;
-    background: var(--bg2) !important;
-    border: none !important;
-    border-radius: 13px;
-    box-shadow: var(--shadow-small);
-    color: var(--text) !important;
-    font: 11px/27px ABeeZee !important;
-    text-indent: 22px;
-    height: 26px !important;
-    width: 0 !important;
-    top: 0 !important;
-    left: 1px !important;
-    opacity: 0 !important;
     overflow: hidden;
-    transition: width 0.1s !important;
-    white-space: nowrap
+    z-index: -5
 }
 
-.icon-menu.setting:hover .text a {
-    width: 120px !important;
-    opacity: 1 !important
-}
-
-.icon-menu.setting:hover .text .link-list-setting {
-    left: 98px !important
-}
-
-.icon-menu.setting .text a:hover {
-    background: var(--hover) !important;
-    color: white !important;
-    transition: none !important
-}
-
-.list-menu-float .icon-menu.anime-list,
-.list-menu-float .icon-menu.export,
-.list-menu-float .icon-menu.export+form,
-.list-menu-float .icon-menu.logout,
-.list-menu-float .icon-menu.manga-list,
-.list-menu-float .icon-menu.quick-add {
-    display: none !important
-}
-
-.list-status-title {
-    background: none !important;
-    margin: -56px auto 0;
-    height: 72px !important;
-    width: 880px !important
-}
-
-.list-status-title .text {
-    display: none !important
-}
-
-.list-status-title .stats {
-    border-radius: 0 0 26px 0;
+.cover-block:before {
+    content: "";
     display: block;
-    font-size: 0;
-    line-height: 13px !important;
-    height: 26px !important;
-    width: auto;
+    background: var(--pattern);
+	filter: brightness(var(--cfb));
+    height: 100px
+}
+
+/* avatar */
+.status-menu:after {
+    content: "";
     position: absolute;
-    top: 2px;
-    right: 32px !important
-}
-
-.stats a {
-    font: 14px/26px ABeeZee;
-    margin: 0 0 0 6px !important
-}
-
-.stats a i {
-    font-size: 12px;
-    text-align: center;
-    width: 26px
-}
-
-.list-unit .list-stats {
-	background: var(--status);
-    border-radius: 5px;
-    box-shadow: var(--shadow-big);
-    margin: 0 auto 8px;
-	color: var(--t-dark);
-	font: bold 12px ABeeZee;
-    letter-spacing: 0.3px;
-    line-height: 33px;
-    height: 32px;
-    width: 880px;
-    top: 198px
-}
-
-.list-table>tbody:first-of-type {
-    position: absolute;
-    background: none;
-    margin-left: 852px;
-    top: 172px;
-    z-index: 40
-}
-
-.list-table>tbody:first-of-type:after {
-    content: "\f0dc";
-    font: bold 12px/26px FontAwesome;
-    text-align: center;
-    margin: 2px
-}
-
-.list-table>tbody:first-of-type:hover:after {
-    background: var(--hover) !important;
-    color: white !important
-}
-
-.list-table-header {
-    position: absolute;
-    font-size: 0;
-    padding: 2px 0;
-    right: 15px;
-    z-index: -1
-}
-
-.list-table .list-table-header .header-title {
-    background: none;
-    border: none;
-    padding: 0;
-    height: auto
-}
-
-.list-table-header .header-title a {
-    background: var(--bg2);
+    background: url(https://i.ibb.co/XkZnFDg/ava-scan-lines.png) no-repeat center / 160px, var(--ava), var(--bg);
+	/* url(https://i.imgur.com/UFJrE8b.png) no-repeat center / 190px */
+    border: 8px solid var(--bg2);
+    border-radius: 50%;
     box-shadow: var(--shadow-small);
-    border-radius: 13px;
-    color: var(--text) !important;
-    font: 11px/27px ABeeZee;
-    text-align: center;
-    text-indent: -18px;
-    margin-left: -25px;
-    height: 26px;
-    width: 0;
-    left: 12px;
-    overflow: hidden;
-    transition: width 0.2s !important;
-    opacity: 0
-}
-
-.list-table-header .header-title a:hover {
-    background: var(--hover) !important;
-    color: white !important;
-    transform: rotate(-2deg) scale(1.1);
-    transition: none !important
-}
-
-tbody:first-of-type:hover .header-title a {
-    width: 90px;
+    height: 150px;
+    width: 150px;
+    top: -51px;
+    left: -8px;
     opacity: 1
 }
 
-tbody:first-of-type:hover .header-title.progress a {
-    width: 100px
+.fixed .status-menu:after {
+    box-shadow: var(--shadow-small);
+    height: 48px;
+    width: 48px;
+	top: 0
 }
 
-.list-table-header .header-title a .sort-icon {
-    position: absolute;
-    left: 50%;
-    font-size: 10px;
-    line-height: 10px;
-    color: var(--accent) !important
-}
-
-.sort-icon.fa-sort-asc {
-    top: 2px
-}
-
-.sort-icon.fa-sort-desc {
-    bottom: 2px
-}
-
-.header-title.finished a,
-.header-title.mal_score a,
-.header-title.started a,
-.header-title.title a {
-    font-size: 0 !important
-}
-
-.header-title.title a:after {
-    content: "Title";
-    font-size: 11px !important
-}
-
-.progress+.header-title.started a:after {
-    content: "Started";
-    font-size: 11px !important
-}
-
-.progress+.started+.header-title.finished a:after {
-    content: "Finished";
-    font-size: 11px !important
-}
-
-.tags+.header-title.started a:after {
-    content: "Aired";
-    font-size: 11px !important
-}
-
-.header-title.mal_score a:after {
-    content: "Rank";
-    font-size: 11px !important
-}
-
-.tags+.started+.header-title.finished {
-    display: none !important
-}
-
-.progress+.started+.header-title.finished {
-    display: none !important
-}
-
-[data-query*="status\":7"] .progress+.started+.header-title.finished,
-[data-query*="status\":2"] .progress+.started+.header-title.finished {
-    display: table-cell !important
-}
-
-[data-query*="status\":6"] .header-title.score,
-[data-query*="status\":6"] .progress+.header-title.started,
-[data-query*="status\":6"] .header-title.progress {
-    display: none !important
-}
-
-.started+.finished+.header-title.started {
-    display: none !important
-}
-
-.header-title.tags {
+#cover-image-container {
     display: none !important
 }
 
@@ -777,7 +366,7 @@ tbody:first-of-type:hover .header-title.progress a {
     letter-spacing: 1px;
     text-transform: uppercase;
 	/* overflow: hidden; */
-    white-space: nowrap;
+    white-space: nowrap
 }
 
 .status-button:after {
@@ -793,7 +382,7 @@ tbody:first-of-type:hover .header-title.progress a {
     position: relative
 }
 
-.status-menu-container .status-menu .status-button:not(.on)::after {
+.status-menu-container .status-menu .status-button:not(.on):after {
     content: "";
     position: absolute;
     height: 4px;
@@ -805,7 +394,7 @@ tbody:first-of-type:hover .header-title.progress a {
     transition: transform 0.2s ease-in-out !important
 }
 
-.status-menu-container .status-menu .status-button:not(.on):hover::after {
+.status-menu-container .status-menu .status-button:not(.on):hover:after {
     transform-origin: left;
     transform: scaleX(1)
 }
@@ -827,10 +416,7 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .status-menu .status-button:before {
-    display: block
-}
-
-.status-button:before {
+    display: block;
     color: var(--status)
 }
 
@@ -920,6 +506,419 @@ tbody:first-of-type:hover .header-title.progress a {
     transition: 0.3s !important
 }
 
+.header .header-title,
+.header-info,
+.icon-menu,
+.list-menu-float .icon-menu,
+.list-table>tbody:first-of-type:after,
+.stats a {
+    display: inline-block;
+    background: var(--bg2) !important;
+    border-radius: 13px;
+    box-shadow: var(--shadow-small);
+    color: var(--text) !important;
+    font: 0/26px ABeeZee;
+    text-indent: 0;
+    height: 26px;
+    width: 26px !important;
+    overflow: hidden;
+    transition: none !important;
+    white-space: nowrap
+}
+
+.header .header-title:hover,
+.icon-menu:hover,
+.list-menu-float .icon-menu:hover,
+.stats a:hover {
+    background: var(--theme) !important;
+    color: white !important
+}
+
+.header .header-title {
+    position: absolute !important;
+    top: 110px;
+    left: 166px;
+    order: 1;
+    z-index: 1
+}
+
+.header .header-title:before {
+    content: "\f015";
+    display: inline-block;
+    background: none !important;
+    font: bold 12px/26px FontAwesome;
+    text-align: center !important;
+    width: 26px
+}
+
+.header .header-title:hover:before {
+    color: white !important
+}
+
+.list-menu-float {
+    position: relative;
+    border: none;
+    font-size: 0;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 296px;
+    height: 0;
+    width: 880px;
+    pointer-events: none;
+    z-index: 38
+}
+
+.list-menu-float * {
+    pointer-events: all
+}
+
+.list-menu-float .icon-menu {
+    margin-right: 6px;
+    top: 74px
+}
+
+.list-menu-float .icon-menu svg.icon {
+    max-height: 13px;
+    max-width: 13px;
+    top: 7px !important;
+    left: 7px !important;
+    fill: var(--text)
+}
+
+.list-menu-float .icon-menu:hover svg.icon {
+    fill: white
+}
+
+.list-menu-float .icon-menu.statistics:after {
+    content: "\f080";
+    display: block;
+    font: bold 12px/26px FontAwesome;
+    color: var(--text);
+    text-align: center;
+    height: 26px;
+    width: 26px
+}
+
+.list-menu-float .icon-menu.statistics svg.icon-statistics {
+    display: none !important
+}
+
+[data-owner="1"] .list-menu-float .icon-menu.profile {
+    position: absolute;
+    background: none !important;
+    border-radius: 50%;
+    box-shadow: none;
+    font-size: 0;
+    height: 150px;
+    width: 150px !important;
+    top: -43px;
+    left: 98px
+}
+
+.btn-menu a.username {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    top: -7px;
+    left: 0;
+    z-index: 36
+}
+
+[data-owner=""] .icon-menu.profile:before {
+    content: "\f007";
+    display: block;
+    position: absolute;
+    color: var(--text);
+    font: bold 14px/26px FontAwesome;
+    text-align: center;
+    height: 26px;
+    width: 26px;
+    top: 0;
+    left: 0
+}
+
+[data-owner=""] .icon-menu.profile:hover:before {
+    color: white
+}
+
+.icon-menu.setting {
+    overflow: visible
+}
+
+.icon-menu.setting .text {
+    height: 26px !important;
+    width: 220px !important;
+    left: 0 !important;
+    overflow: visible;
+    pointer-events: none;
+    z-index: -1
+}
+
+.icon-menu.setting:hover .text {
+    pointer-events: auto;
+    transition: width 0.2s !important
+}
+
+.icon-menu.setting .text a {
+    position: absolute !important;
+    background: var(--bg2) !important;
+    border: none !important;
+    border-radius: 13px;
+    box-shadow: var(--shadow-small);
+    color: var(--text) !important;
+    font: 11px/27px ABeeZee !important;
+    text-indent: 22px;
+    height: 26px !important;
+    width: 0 !important;
+    top: 0 !important;
+    left: 1px !important;
+    overflow: hidden;
+    transition: width 0.1s !important;
+    white-space: nowrap;
+    opacity: 0 !important
+}
+
+.icon-menu.setting:hover .text a {
+    width: 120px !important;
+    opacity: 1 !important
+}
+
+.icon-menu.setting:hover .text .link-list-setting {
+    left: 98px !important
+}
+
+.icon-menu.setting .text a:hover {
+    background: var(--theme) !important;
+    color: white !important;
+    transition: none !important
+}
+
+.list-menu-float .icon-menu.anime-list,
+.list-menu-float .icon-menu.export,
+.list-menu-float .icon-menu.export+form,
+.list-menu-float .icon-menu.logout,
+.list-menu-float .icon-menu.manga-list,
+.list-menu-float .icon-menu.quick-add {
+    display: none !important
+}
+
+.list-unit .list-status-title {
+    background: none;
+    margin: -56px auto 0;
+    height: 72px;
+    width: 880px
+}
+
+.list-status-title .text {
+    display: none !important
+}
+
+.list-unit .list-status-title .stats {
+    display: block;
+    position: absolute;
+    border-radius: 0 0 26px 0;
+    font-size: 0;
+    line-height: 13px;
+    height: 26px;
+    width: auto;
+    top: 2px;
+    right: 32px
+}
+
+.list-unit .list-status-title .stats a {
+    margin: 0 0 0 6px
+}
+
+.list-unit .list-status-title .stats a i {
+    font-size: 12px;
+	line-height: 26px;
+    text-align: center;
+    width: 26px
+}
+
+#advanced-options-button .fa-filter:before {
+    content: "\e17c"
+}
+
+.list-unit .list-stats {
+    background: linear-gradient(to right, transparent 1%, var(--status), var(--status), var(--status), var(--status), transparent 99%);
+    margin: 0 auto 8px;
+	color: var(--t-dark);
+	font: bold 12px ABeeZee;
+    letter-spacing: 0.3px;
+    line-height: 33px;
+    height: 32px;
+    width: 880px;
+    top: 198px
+}
+
+.all_anime .list-stats {
+    background: linear-gradient(to right, transparent 1%, var(--completed), var(--dropped), var(--planned), var(--onhold), var(--watching), transparent 99%)
+}
+
+.watching .list-stats {
+    background: linear-gradient(to bottom right, transparent 1%, var(--watching), var(--watching), var(--completed), var(--completed), transparent 99%)
+}
+
+.list-unit .list-stats a {
+    position: relative;
+    font-size: 0 !important;
+    line-height: 0;
+    width: 20px;
+    right: 60px
+}
+
+.list-unit .list-stats a .fa-solid:before {
+    content: "\f356";
+    color: var(--t-dark);
+    font-size: 11px;
+    line-height: 33px
+}
+
+.list-table>tbody:first-of-type {
+    position: absolute;
+    background: none;
+    margin-left: 852px;
+    top: 172px;
+    z-index: 40
+}
+
+.list-table>tbody:first-of-type:after {
+    content: "\f0dc";
+    font: bold 12px/26px FontAwesome;
+    text-align: center;
+    margin: 2px
+}
+
+.list-table>tbody:first-of-type:hover:after {
+    background: var(--theme) !important;
+    color: white !important
+}
+
+.list-table-header {
+    position: absolute;
+    font-size: 0;
+    padding: 2px 0;
+    right: 15px;
+    z-index: -1
+}
+
+.list-table .list-table-header .header-title {
+    background: none;
+    border: none;
+    padding: 0;
+    height: auto
+}
+
+.list-table-header .header-title a {
+    background: var(--bg2);
+    box-shadow: var(--shadow-small);
+    border-radius: 13px;
+    color: var(--text) !important;
+    font: 11px/27px ABeeZee;
+    text-align: center;
+    text-indent: -18px;
+    margin-left: -25px;
+    height: 26px;
+    width: 0;
+    left: 12px;
+    overflow: hidden;
+    transition: width 0.2s !important;
+    opacity: 0
+}
+
+.list-table-header .header-title a:hover {
+    background: var(--theme) !important;
+    color: white !important;
+    transform: rotate(-2deg) scale(1.1);
+    transition: none !important
+}
+
+tbody:first-of-type:hover .header-title a {
+    width: 90px;
+    opacity: 1
+}
+
+tbody:first-of-type:hover .header-title.progress a,
+tbody:first-of-type:hover .progress+.header-title.started a,
+tbody:first-of-type:hover .progress+.started+.header-title.finished a {
+    width: 100px
+}
+
+.list-table-header .header-title a .sort-icon {
+    position: absolute;
+    color: var(--accent) !important;
+    font-size: 10px;
+    line-height: 10px;
+    left: 50%
+}
+
+.sort-icon.fa-sort-up {
+    top: 2px
+}
+
+.sort-icon.fa-sort-down {
+    bottom: 2px
+}
+
+.header-title.finished a,
+.header-title.mal_score a,
+.header-title.started a,
+.header-title.title a {
+    font-size: 0 !important
+}
+
+.header-title.title a:after {
+    content: "Title";
+    font-size: 11px !important
+}
+
+.progress+.header-title.started a:after {
+    content: "Started";
+    font-size: 11px !important
+}
+
+.progress+.started+.header-title.finished a:after {
+    content: "Finished";
+    font-size: 11px !important
+}
+
+.tags+.header-title.started a:after {
+    content: "Aired";
+    font-size: 11px !important
+}
+
+.header-title.mal_score a:after {
+    content: "Rank";
+    font-size: 11px !important
+}
+
+.tags+.started+.header-title.finished {
+    display: none !important
+}
+
+.progress+.started+.header-title.finished {
+    display: none !important
+}
+
+[data-query*="status\":7"] .progress+.started+.header-title.finished,
+[data-query*="status\":2"] .progress+.started+.header-title.finished {
+    display: table-cell !important
+}
+
+[data-query*="status\":6"] .header-title.score,
+[data-query*="status\":6"] .progress+.header-title.started,
+[data-query*="status\":6"] .header-title.progress {
+    display: none !important
+}
+
+.header-title.tags,
+.started+.finished+.header-title.started {
+    display: none !important
+}
+
 .list-item {
     display: inline-block;
     background: none !important;
@@ -970,109 +969,6 @@ tbody:first-of-type:hover .header-title.progress a {
     text-decoration: none !important
 }
 
-.data.title>a:before {
-    content: "";
-    position: absolute;
-    background: center/cover no-repeat var(--bg);
-    border: none;
-    border-radius: 4px 4px 10px 10px;
-    box-shadow: var(--shadow-big);
-    height: 200px;
-    width: 150px;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    transition: 0.1s !important;
-    opacity: 1;
-    z-index: -1
-}
-
-.data.status {
-    position: absolute;
-    background: var(--status) !important;
-    border-radius: 4px 4px 0 0;
-    height: 40px;
-    width: 150px !important;
-    opacity: 0.8
-}
-
-.data.score {
-    position: absolute;
-    background: var(--lower);
-    border-radius: 0 0 6px 0;
-    height: 28px;
-    width: 57.5px;
-    right: 0;
-    bottom: 0;
-    left: inherit;
-    z-index: 1;
-    order: 0
-}
-
-.data.score:hover {
-    z-index: 101
-}
-
-.list-table .data.score a {
-    display: block;
-    background: none;
-    border: none;
-	border-radius: 0 0 5px 0;
-    box-shadow: none;
-    color: var(--gray) !important;
-    font: bold 14px/27px Advent Pro !important;
-    height: 26px;
-    width: 58px !important;
-	margin: 2px -1px;
-}
-
-.data.score select {
-    display: block;
-    position: absolute;
-    background: var(--bg2) !important;
-    border-radius: 0 0 6px 0;
-    color: var(--gray);
-	border: none;
-    font: bold 14px/27px Advent Pro;
-    padding: 0 0 0 19px;
-    height: 18px;
-    width: 56px;
-    top: 5px;
-    left: 0px;
-    outline: none;
-    z-index: 102
-}
-
-.data.score select>option {
-    display: block
-}
-
-.data.mal_score {
-    display: none !important
-}
-
-[data-query*="\":17"] .data.mal_score,
-[data-query*="\":-17"] .data.mal_score {
-    display: block !important;
-    position: absolute;
-    background: var(--status);
-    border-radius: 4px;
-    box-shadow: var(--shadow-small);
-    color: var(--t-dark);
-    font: bold 12px/20px Advent Pro !important;
-    height: 20px;
-    width: 26px;
-    right: 16px;
-    bottom: -13px;
-    z-index: 200
-}
-
-[data-query*="\":17"] .data.mal_score,
-[data-query*="\":-17"] .data.mal_score {
-    right: 8px;
-    transform: rotate(-5deg)
-}
-
 .data.title {
     position: relative;
     padding: 0 !important;
@@ -1098,6 +994,32 @@ tbody:first-of-type:hover .header-title.progress a {
     color: white !important
 }
 
+.data.status {
+    position: absolute;
+    background: var(--status) !important;
+    border-radius: 4px 4px 0 0;
+    height: 40px;
+    width: 150px !important;
+    opacity: 0.8
+}
+
+.data.title>a:before {
+    content: "";
+    position: absolute;
+    background: center/cover no-repeat var(--bg);
+    border: none;
+    border-radius: 4px 4px 10px 10px;
+    box-shadow: var(--shadow-big);
+    height: 200px;
+    width: 150px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.1s !important;
+    opacity: 1;
+    z-index: -1
+}
+
 /* airing */
 .content-status,
 .rewatching {
@@ -1115,11 +1037,11 @@ tbody:first-of-type:hover .header-title.progress a {
     width: 150px;
     top: 40px;
     left: 0;
-    opacity: 0.8
+    opacity: 0.9
 }
 
-.list-table-data:hover .content-status,
-.list-table-data:hover .rewatching {
+.list-item:hover .content-status,
+.list-item:hover .rewatching {
     transform: scaleY(1.015)
 }
 
@@ -1134,87 +1056,41 @@ tbody:first-of-type:hover .header-title.progress a {
     visibility: hidden
 }
 
-.add-edit-more {
+.data.season {
     position: absolute;
-    color: transparent;
-    font: 11px/40px Segou UI;
-    margin-right: -2px !important;
-    padding: 2px 10px 0;
-    top: 135px;
-    right: 2px;
-    transition: 0.1s ease-out !important;
-    opacity: 0;
-    z-index: 10
+    background: var(--upper);
+    border: none;
+    border-radius: 0;
+    letter-spacing: 0.5px;
+    padding: 0 !important;
+    min-height: 23px;
+    height: 23px;
+    width: 90px;
+    right: inherit;
+    bottom: 28px;
+    transition: 0.1s;
+    opacity: 1;
+    order: 13;
+    z-index: 1
 }
 
-.add-edit-more:hover {
-    opacity: 1
+.data.season span a,
+.data.season span a:hover {
+    color: var(--gray) !important
 }
 
-.add-edit-more span {
-    display: inline-block;
+.data.season a {
+    font-size: 10px;
+    line-height: 24px
+}
+
+.plantowatch~.data.season:empty:after {
+    content: "Not available";
     position: relative;
-    top: -2.5px
-}
-
-.add-edit-more span a {
-    background: var(--bg);
-    border-radius: 3px;
-    box-shadow: var(--shadow-small);
-    line-height: 14px;
-    text-align: center;
-    padding: 4px;
-    height: 14px;
-    width: 14px;
-    overflow: hidden;
-    vertical-align: middle
-}
-
-.add-edit-more span a:before {
-    border-radius: 3px
-}
-
-.add-edit-more span a:hover:after {
-    color: white
-}
-
-.list-table .add-edit-more .add a,
-.list-table .add-edit-more .edit a,
-.list-table .add-edit-more .more a {
-    color: var(--text) !important;
-    font-size: 0 !important
-}
-
-.add-edit-more .add a:after {
-    content: "\f055";
-    font: bold 12px/14px FontAwesome !important
-}
-
-.add-edit-more .edit a:after {
-    content: "\f013";
-    font: bold 12px/14px FontAwesome !important
-}
-
-.add-edit-more .more a:after {
-    content: "\f05a";
-    font: bold 12px/14px FontAwesome !important
-}
-
-.add-edit-more span {
-    transform: skewY(10deg) scale(.75);
-    transition: 0.2s !important
-}
-
-.add-edit-more:hover span {
-    transform: skewY(0deg) scale(1)
-}
-
-.add-edit-more span:hover {
-    transform: rotate(-5deg) scale(1.1)
-}
-
-.add-edit-more span:hover a:before {
-    background: var(--status)
+    color: var(--gray) !important;
+    font-size: 10px;
+    line-height: 24px;
+    padding: 0 !important
 }
 
 .data.type {
@@ -1316,41 +1192,76 @@ tbody:first-of-type:hover .header-title.progress a {
     outline: none
 }
 
-.data.season {
+.data.score {
     position: absolute;
-    background: var(--upper);
+    background: var(--lower);
+    border-radius: 0 0 6px 0;
+    height: 28px;
+    width: 57.5px;
+    right: 0;
+    bottom: 0;
+    left: inherit;
+    z-index: 1;
+    order: 0
+}
+
+.data.score:hover {
+    z-index: 101
+}
+
+.list-table .data.score a {
+    display: block;
+    background: none;
     border: none;
-    border-radius: 0;
-    letter-spacing: 0.5px;
-    padding: 0 !important;
-    min-height: 23px;
-    height: 23px;
-    width: 90px;
-    right: inherit;
-    bottom: 28px;
-    transition: 0.1s;
-    opacity: 1;
-    order: 13;
-    z-index: 1
-}
-
-.data.season span a,
-.data.season span a:hover {
-    color: var(--gray) !important
-}
-
-.data.season a {
-    font-size: 10px;
-    line-height: 24px
-}
-
-.plantowatch~.data.season:empty:after {
-    content: "Not available";
-    position: relative;
+	border-radius: 0 0 5px 0;
+    box-shadow: none;
     color: var(--gray) !important;
-    font-size: 10px;
-    line-height: 24px;
-    padding: 0 !important
+    font: bold 14px/27px Advent Pro !important;
+    height: 26px;
+    width: 58px !important;
+	margin: 2px -1px;
+}
+
+.data.score select {
+    display: block;
+    position: absolute;
+    background: var(--i-grain-2), var(--lower) !important;
+    border-radius: 0 0 6px 0;
+    color: var(--gray);
+	border: none;
+    font: bold 14px/27px Advent Pro;
+    padding: 0 0 0 19px;
+    height: 18px;
+    width: 56px;
+    top: 5px;
+    left: 0;
+    outline: none;
+    z-index: 102
+}
+
+.data.score select>option {
+    display: block
+}
+
+.data.mal_score {
+    display: none !important
+}
+
+[data-query*="\":17"] .data.mal_score,
+[data-query*="\":-17"] .data.mal_score {
+    display: block !important;
+    position: absolute;
+    background: var(--status);
+    border-radius: 4px;
+    box-shadow: var(--shadow-small);
+    color: var(--t-dark);
+    font: bold 12px/20px Advent Pro !important;
+    height: 20px;
+    width: 26px;
+    right: 8px;
+    bottom: -13px;
+    transform: rotate(-5deg);
+    z-index: 200
 }
 
 .data.tags {
@@ -1371,7 +1282,14 @@ tbody:first-of-type:hover .header-title.progress a {
 .list-table .data.tags .edit {
     position: absolute;
     background: var(--bg);
+    box-shadow: var(--shadow-small);
+    border-radius: 3px;
     font-size: 0;
+    padding: 4px 5px;
+    height: auto;
+    width: auto;
+    top: 145px;
+    right: -114px;
     transition: 0.1s !important;
     opacity: 0
 }
@@ -1382,6 +1300,7 @@ tbody:first-of-type:hover .header-title.progress a {
 
 .data.tags .edit:after {
     content: "\f040";
+	color: white !important;
     font: bold 12px/14px FontAwesome
 }
 
@@ -1392,25 +1311,6 @@ tbody:first-of-type:hover .header-title.progress a {
 
 .list-table .data.tags .edit:hover {
     transform: skewY(0deg) scale(1)
-}
-
-.list-table .data.tags .edit {
-    background: var(--status);
-    box-shadow: var(--shadow-small);
-    border-radius: 3px;
-    padding: 4px 5px;
-    height: auto;
-    width: auto;
-    top: 145px;
-    right: -114px
-}
-
-.list-table .tags .edit {
-    border: none !important
-}
-
-.list-table .tags .edit:after {
-    color: white !important
 }
 
 .list-table .data.tags .edit:before {
@@ -1443,7 +1343,7 @@ tbody:first-of-type:hover .header-title.progress a {
     z-index: 5
 }
 
-.list-table-data:hover .data.tags textarea {
+.list-item:hover .data.tags textarea {
     transform: scaleX(1.00028) scaleY(1.00056)
 }
 
@@ -1467,6 +1367,10 @@ tbody:first-of-type:hover .header-title.progress a {
     left: 200px
 }
 
+.data.score:hover~.data.tags a[href*="%2B"] {
+    opacity: 0
+}
+
 @keyframes dashed {
     0% {
         background-position: 0 0, 100px 0, 0 0, 0 0
@@ -1474,10 +1378,6 @@ tbody:first-of-type:hover .header-title.progress a {
     100% {
         background-position: 100px 0, 0 0, 0 0, 0 0
     }
-}
-
-.data.score:hover~.data.tags a[href*="%2B"] {
-    opacity: 0
 }
 
 .data.tags a[href*="Gem"] {
@@ -1500,15 +1400,80 @@ tbody:first-of-type:hover .header-title.progress a {
     z-index: -100;
 }
 
-.list-table-data:hover .data.tags a[href*=Gem] {
+.list-item:hover .data.tags a[href*=Gem] {
     opacity: 1
 }
 
-.data.tags a[href*="Winter"],
-.data.tags a[href*="Spring"],
-.data.tags a[href*="Summer"],
-.data.tags a[href*="Fall"] {
-    display: none !important
+
+.add-edit-more {
+    position: absolute;
+    color: transparent;
+    font: 10px/40px Segou UI !important;
+    margin-right: 0 !important;
+    padding: 2px 10px 0;
+    top: 135px;
+    right: 0;
+    transition: 0.1s ease-out !important;
+    opacity: 0;
+    z-index: 10
+}
+
+.add-edit-more:hover {
+    opacity: 1
+}
+
+.add-edit-more span {
+    display: inline-block;
+    position: relative;
+    top: -2.5px
+}
+
+.add-edit-more span a {
+    background: var(--bg);
+    border-radius: 3px;
+    box-shadow: var(--shadow-small);
+    font-size: 0 !important;
+    line-height: 14px;
+    text-align: center;
+    padding: 4px;
+    height: 14px;
+    width: 14px;
+    overflow: hidden;
+    vertical-align: middle
+}
+
+.add-edit-more span a:after {
+    color: var(--text) !important;
+    font: bold 12px/14px FontAwesome !important
+}
+
+.add-edit-more span a:hover:after {
+    color: white !important
+}
+
+.add-edit-more .add a:after {
+    content: "\f055"
+}
+
+.add-edit-more .edit a:after {
+    content: "\f013"
+}
+
+.add-edit-more .more a:after {
+    content: "\f05a"
+}
+
+.add-edit-more span {
+    transform: skewY(10deg) scale(.75);
+    transition: 0.2s !important
+}
+
+.add-edit-more:hover span {
+    transform: skewY(0deg) scale(1)
+}
+
+.add-edit-more span:hover {
+    transform: rotate(-5deg) scale(1.1)
 }
 
 .data.airing-finished,
@@ -1605,7 +1570,8 @@ tbody:first-of-type:hover .header-title.progress a {
 }
 
 .more-info a:hover {
-    color: var(--accent)
+    color: var(--accent);
+    text-decoration: none !important
 }
 
 .more-content {
@@ -1661,12 +1627,8 @@ span[itemprop="ratingValue"]:hover {
     display: inline-block;
     position: relative;
     transform: perspective(1px) translateZ(0);
-    transition-property: color !important;
-    transition-duration: 0.1s !important
-}
-
-.header a.header-title {
-    position: absolute
+    transition-duration: 0.1s !important;
+    transition-property: color !important
 }
 
 .header a.header-title:after,
@@ -1677,21 +1639,22 @@ span[itemprop="ratingValue"]:hover {
 .add-edit-more span a:before {
     content: "";
     position: absolute;
-    background: var(--hover);
+    background: var(--theme);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     transform: scaleY(0);
     transform-origin: 50% 100%;
-    transition-property: transform !important;
-    transition-duration: 0.1s !important;
-    transition-timing-function: ease-out !important;
+    transition-property: transform;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
     z-index: -1
 }
 
 .add-edit-more span a:before {
-    background: var(--status)
+    background: var(--status);
+    border-radius: 3px
 }
 
 .header a.header-title:hover,
@@ -1701,6 +1664,10 @@ span[itemprop="ratingValue"]:hover {
 .list-status-title .stats a:hover,
 .add-edit-more span a:hover {
     background: var(--bg) !important;
+    color: white !important
+}
+
+.list-menu-float .icon-menu.statistics:hover:after {
     color: white !important
 }
 
@@ -1779,14 +1746,59 @@ span[itemprop="ratingValue"]:hover {
 }
 
 #advanced-options {
-    background: var(--bg);
+    background: var(--theme);
     border: none;
-    border-radius: 16px;
+    border-radius: 16px 64px 32px 32px;
     box-shadow: var(--shadow-big);
     color: var(--text);
-    padding: 32px 0;
+    padding: 0;
     width: 880px;
     top: 64px
+}
+
+#advanced-options:after,
+#advanced-options:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 16px 64px 32px 32px;
+    z-index: -1
+}
+
+#advanced-options:before {
+    background: var(--bg);
+    box-shadow: var(--shadow-small);
+    height: 571px;
+    width: 881px;
+    top: -4px;
+    transform: scale(1.015)
+}
+
+#advanced-options:after {
+    background: var(--theme);
+    height: 564px;
+    width: 880px;
+    top: 0;
+    transform: scale(1)
+}
+
+#advanced-options .filter,
+#advanced-options .sort {
+    position: relative;
+    background: var(--bg);
+    padding: 24px 0 0;
+    transform: scale(0.98)
+}
+
+#advanced-options .filter {
+    border-radius: 16px 64px 0 0;
+    top: 4px
+}
+
+#advanced-options .sort {
+    border-radius: 0 0 32px 32px;
+    padding-bottom: 24px;
+    top: -2px
 }
 
 #advanced-options .advanced-options-button,
@@ -1802,11 +1814,6 @@ span[itemprop="ratingValue"]:hover {
     padding-bottom: 0
 }
 
-#advanced-options .filter,
-#advanced-options .sort {
-    padding-bottom: 32px
-}
-
 #advanced-options,
 #advanced-options .filter-widget .widget-header,
 #advanced-options .sort-widget .widget-header,
@@ -1815,15 +1822,11 @@ span[itemprop="ratingValue"]:hover {
     font: 14px ABeeZee
 }
 
-#advanced-options [class*="-widget"] .widget-header {
-    border: none !important
-}
-
 #advanced-options [class*="-widget"] .widget-header:after {
     content: "";
     display: block;
     position: relative;
-    background: var(--hover);
+    background: var(--theme);
     float: right;
     padding: 11px 0;
     height: 100%;
@@ -1857,82 +1860,22 @@ div#advanced-options {
 }
 
 #advanced-options {
-    border-radius: 16px 64px 32px 32px;
-    padding: 0
-}
-
-#advanced-options:after,
-#advanced-options:before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 16px 64px 32px 32px;
-    z-index: -1
-}
-
-#advanced-options:before {
-    background: var(--bg);
-    box-shadow: var(--shadow-small);
-    height: 571px;
-    width: 881px;
-    top: -4px;
-    transform: scale(1.015)
-}
-
-#advanced-options:after {
-    background: var(--hover);
-    height: 564px;
-    width: 880px;
-    top: 0;
-    transform: scale(1)
-}
-
-#advanced-options .filter,
-#advanced-options .sort {
-    position: relative;
-    background: var(--bg);
-    padding: 24px 0 0;
-    transform: scale(0.98)
-}
-
-#advanced-options .filter {
-    border-radius: 16px 64px 0 0;
-    top: 4px
-}
-
-#advanced-options .sort {
-    border-radius: 0 0 32px 32px;
-    padding-bottom: 24px;
-    top: -2px
-}
-
-#advanced-options {
     position: fixed;
     top: calc(50% - 285px)
 }
 
 #advanced-options .advanced-options-header {
     display: inline-block;
-    box-sizing: border-box;
-    font-size: 16px;
-    text-align: right;
-    line-height: 26px;
-    padding-bottom: 7.5px;
-    height: 100%;
-    width: 232px
-}
-
-#advanced-options .advanced-options-header .description {
-    display: none !important
-}
-
-#advanced-options .advanced-options-header {
     position: relative;
-    background: var(--hover);
+    background: var(--theme);
+    box-sizing: border-box;
     border-radius: 6px;
     color: white;
+    font-size: 16px;
     text-align: center;
+    line-height: 26px;
     padding-bottom: 0;
+    height: 100%;
     width: 90px;
     left: 142px;
     transform: rotate(-1deg)
@@ -1950,6 +1893,10 @@ div#advanced-options {
     margin-left: 2px
 }
 
+#advanced-options .advanced-options-header .description {
+    display: none !important
+}
+
 #advanced-options [class*="-widget"] {
     font-size: 0;
     line-height: 1;
@@ -1962,7 +1909,6 @@ div#advanced-options {
 }
 
 #advanced-options [class*="-widget"] .widget-header {
-    border-right: 2px solid var(--accent);
     text-align: right;
     line-height: 32px;
     margin-right: 7.5px;
@@ -2100,7 +2046,7 @@ div#advanced-options {
 }
 
 #advanced-options .sort-widget input[type=radio]:not(:disabled):checked+label {
-    background: var(--hover) !important;
+    background: var(--theme) !important;
     border-color: var(--accent) !important;
     color: var(--bg) !important
 }
@@ -2128,7 +2074,7 @@ div#tu_settings .tu_buttons>.tu_button {
 
 #advanced-options .advanced-options-button a:hover,
 div#tu_settings .tu_buttons>.tu_button:hover {
-    background: var(--hover) !important;
+    background: var(--theme) !important;
     color: white;
     transform: rotate(-2deg) scale(1.1)
 }
@@ -2179,7 +2125,7 @@ div#tu_settings .tu_table_div {
 
 div#tu_settings .tu_buttons {
     position: relative !important;
-    background: var(--hover);
+    background: var(--theme);
     border-radius: 5px;
     padding: 15px 0 !important;
     bottom: inherit !important
@@ -2223,8 +2169,12 @@ div#tu_settings .tu_buttons>.tu_button {
     border-radius: 8px
 }
 
+#fancybox-inner {
+    border-radius: 10px
+}
+
 #fancybox-wrap[style*="320px;"] #fancybox-outer {
-    background: var(--hover) !important;
+    background: var(--theme) !important;
     border-radius: 8px 32px 16px 16px;
     box-shadow: 0 0 0 5px var(--bg);
     height: 90px;
@@ -2269,59 +2219,54 @@ div#tu_settings .tu_buttons>.tu_button {
 }
 
 #fancybox-wrap[style*="320px;"] input[type="button"]:hover {
-    background: var(--hover) !important;
+    background: var(--theme) !important;
     color: white;
     transform: rotate(-1deg) scale(1.1)
 }
 
 footer {
-    margin: 0 auto;
-    height: 82px;
-    width: 50%
+    margin: -43px auto;
+    height: 82px
 }
 
 #footer-block {
-    position: relative;
-    background: var(--hover);
+    background: none;
     border-radius: 5px;
-    box-shadow: var(--shadow-big);
-    margin: -43px auto 20px;
-    padding: 8px 0;
-    height: 0;
-    width: 375px !important;
-    left: 0;
-    transform: skewY(2deg) scale(.75);
-    transition: 0.2s !important;
-    opacity: 0
+    margin: 0 auto;
+    padding: 0;
+    height: 48px;
+    width: 375px !important
 }
 
 #footer-block:after {
     content: "";
     display: block;
     position: relative;
-    background: var(--bg1);
+    background: color-mix(in srgb, var(--bg1), transparent 20%);
     border-radius: 0 5px 5px 0;
     box-shadow: var(--shadow-big);
-    height: 0;
-    width: 32px;
-    top: -100%;
-    left: 100%;
-    transform: skewY(2deg) scale(.75);
-    transition: 0.2s !important;
-    opacity: 0
-}
-
-footer:hover #footer-block,
-footer:hover #footer-block:after {
     height: 32px;
-    transform: skewY(0deg) scale(1);
-    opacity: 0.9
+    width: 32px;
+    top: -40px;
+    left: 0;
+    transform: skewY(2deg) scale(0);
+    transition: 0.2s !important;
+    opacity: 0;
+    z-index: -10
 }
 
 #copyright {
+    background: var(--theme);
+    border-radius: 5px;
+    box-shadow: var(--shadow-big);
     color: var(--t-dark);
     font: 8.5px/16px ABeeZee;
-    padding: 0
+    padding: 8px 0;
+    height: 32px;
+    width: 375px !important;
+    transform: skewY(2deg) scale(.75);
+    transition: 0.2s !important;
+    opacity: 0
 }
 
 #copyright:before {
@@ -2331,9 +2276,9 @@ footer:hover #footer-block:after {
 }
 
 #copyright:after {
-    content: "4.1";
+    content: "4.2";
     position: absolute;
-    background: var(--hover);
+    background: var(--theme);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -2341,47 +2286,24 @@ footer:hover #footer-block:after {
     height: 32px;
     width: 32px;
     top: 8px;
-    left: 100%;
-    z-index: 1
+    left: 0;
+    transition: 0.2s !important
 }
 
-#copyright,
-#copyright:after,
-#copyright:before {
-    visibility: hidden
+#footer-block:hover #copyright,
+#footer-block:hover:after {
+    transform: skewY(0deg) scale(1);
+    opacity: 1
 }
 
-footer:hover #copyright,
-footer:hover #copyright:after,
-footer:hover #copyright:before {
-    visibility: visible
-}
-
-@keyframes pattern {
-    from {
-        background-position: 0 0
-    }
-    to {
-        background-position: var(--dimension)
-    }
-}
-
-@keyframes avatar {
-    0% {
-        background-position: var(--leftright) var(--startend)
-    }
-    50% {
-        background-position: var(--leftright) var(--distance)
-    }
-    100% {
-        background-position: var(--leftright) var(--startend)
-    }
+#footer-block:hover #copyright:after,
+#footer-block:hover:after {
+    left: 100%
 }
 
 .data.status.watching,
 .status-button.watching:after,
 .watching+.title .add-edit-more span:hover a:before,
-.watching .list-stats,
 .watching~.tags .edit,
 [data-query*="\":14"] .watching .airing-finished,
 [data-query*="\":-14"] .watching .airing-finished,
@@ -2390,9 +2312,8 @@ footer:hover #copyright:before {
     background: linear-gradient(to bottom right, var(--watching), var(--completed)) !important
 }
 
-.all_anime>div+.list-stats,
 .status-button.all_anime.on:after {
-    background: linear-gradient(to right, var(--completed), var(--dropped), var(--planned), var(--onhold), var(--watching)) !important
+    background: linear-gradient(to right, transparent 1%, var(--watching), var(--dropped), var(--planned), var(--onhold), var(--watching), transparent 99%) !important
 }
 
 ::-webkit-scrollbar {
@@ -2421,7 +2342,7 @@ footer:hover #copyright:before {
 }
 
 [data-query*="status\":7"] {
-    --scrollbar: linear-gradient(to bottom, var(--planned), var(--completed)) !important
+    --scrollbar: linear-gradient(to bottom, var(--planned), var(--watching)) !important
 }
 
 [data-query*="status\":1"] {
