@@ -1,0 +1,209 @@
+/* Monday to Sunday */
+.data.tags a[href$="=mon"],
+.data.tags a[href$="=tue"],
+.data.tags a[href$="=wed"],
+.data.tags a[href$="=thu"],
+.data.tags a[href$="=fri"],
+.data.tags a[href$="=sat"],
+.data.tags a[href$="=sun"] {
+    position: absolute;
+    left: 178px !important;
+    top: 4px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tdbg);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow-big) !important;
+  	overflow: hidden;
+}
+.data.tags a[href$="mon"]:hover,
+.data.tags a[href$="tue"]:hover,
+.data.tags a[href$="wed"]:hover,
+.data.tags a[href$="thu"]:hover,
+.data.tags a[href$="fri"]:hover,
+.data.tags a[href$="sat"]:hover,
+.data.tags a[href$="sun"]:hover {
+    width: 80px;
+    left: 116px !important;
+}
+.data.tags a[href$="=mon"] {
+  background: hsl(149, 63%, 66%);}
+.data.tags a[href$="=tue"] {
+  background: hsl(185, 65%, 69%);}
+.data.tags a[href$="=wed"] {
+  background: hsl(250, 55%, 70%);}
+.data.tags a[href$="=thu"] {
+  background: hsl(307, 55%, 61%);}
+.data.tags a[href$="=fri"] {
+  background: hsl(360, 72%, 65%);}
+.data.tags a[href$="=sat"] {
+  background: hsl(27, 95%, 69%);}
+.data.tags a[href$="=sun"] {
+  background: hsl(60, 74%, 73%);
+}
+.data.tags a[href$="=mon"]:before,
+.data.tags a[href$="=tue"]:before,
+.data.tags a[href$="=wed"]:before,
+.data.tags a[href$="=thu"]:before,
+.data.tags a[href$="=fri"]:before,
+.data.tags a[href$="=sat"]:before,
+.data.tags a[href$="=sun"]:before {
+  font: bold 11px/32px Segoe UI;
+  font-variant: normal;
+  letter-spacing: 0.1em;
+  color: var(--t-dark);
+  margin-left: 1.5px;
+}
+.data.tags a[href$="=mon"]:before {
+  content: "Monday"; }
+.data.tags a[href$="=tue"]:before {
+  content: "Tuesday"; }
+.data.tags a[href$="=wed"]:before {
+  content: "Wednesday"; }
+.data.tags a[href$="=thu"]:before {
+  content: "Thursday"; }
+.data.tags a[href$="=fri"]:before {
+  content: "Friday"; }
+.data.tags a[href$="=sat"]:before {
+  content: "Saturday"; }
+.data.tags a[href$="=sun"]:before {
+  content: "Sunday";
+}
+/* Where */
+.data.tags a[href$="=Where"] {
+	--tbgc: hsl(215, 79%, 66%);
+    position: absolute;
+    left: 178px !important;
+    top: 40px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow);
+}
+/* inf */
+.data.tags a[href$="=inf"] {
+	--tbgc: hsl(240, 20%, 20%);
+    position: absolute;
+    left: 178px !important;
+    top: 76px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow);
+}
+/* pp */
+.data.tags a[href$="=pp"] {
+	--tbgc: hsl(330, 66%, 66%);
+    position: absolute;
+    left: 178px !important;
+    top: 112px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow);
+}
+
+/* Ded */
+.data.tags a[href$="=Ded"] {
+	--tbgc: hsl(350, 62%, 53%);
+    position: absolute;
+    left: 178px !important;
+    top: 148px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow);
+}
+/* Unko */
+.data.tags a[href$="=Unko"] {
+	--tbgc: hsl(40, 80%, 66%);
+    position: absolute;
+    left: 178px !important;
+    top: 184px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow);
+}
+.data.tags a[href$="=Where"]:before {
+  font: bold 13px/32px FontAwesome;
+  color: var(--t-dark);
+  content: "\f059";
+}
+.data.tags a[href$="=Unko"]:before {
+  font: bold 14px/31px FontAwesome;
+  color: var(--t-dark);
+  content: "\f2fe";
+}
+.data.tags a[href$="=Ded"]:before {
+  font: bold 14px/32px FontAwesome;
+  color: var(--t-dark);
+  content: "\f54c";
+}
+.data.tags a[href$="=inf"]:before {
+  font: bold 12px/32px FontAwesome;
+  color: #f8f8ff;
+  content: "\f534";
+}
+.data.tags a[href$="=pp"]:before {
+  font: bold 13px/32px FontAwesome;
+  color: var(--t-dark);
+  content: "\e0d2"; /*e356*/
+}
+/* tooltip */
+.data.tags a[href$="=Where"]::after,
+.data.tags a[href$="=Unko"]::after,
+.data.tags a[href$="=Ded"]::after,
+.data.tags a[href$="=inf"]::after,
+.data.tags a[href$="=pp"]::after {
+  position: absolute;
+  top: 50%;
+  left: -75px;
+  z-index: 100;
+  width: 140px;
+  padding: 6px;
+  background: var(--bg2);
+  box-shadow: var(--shadow);
+  border-radius: 4px;
+  border:  solid 1px var(--tbgc);
+  color: var(--text-dim);
+  font: bold 12px ABeeZee;
+  text-align: center;
+  white-space: pre-wrap;
+  opacity: 0;
+  line-height: 1.3em;
+  transform: translateY(-50%) translateX(-50%);
+  transition: left 0.25s ease, opacity .35s ease-in;
+  pointer-events: none;
+}
+.data.tags a:hover::after {
+  left: -85px;
+  opacity: 1;
+}
+/* tags descriptions */
+.data.tags a[href$="=Where"]:after {
+  content: "Cant find\a anywhere online,\a No English subs"
+}
+.data.tags a[href$="=Unko"]:after {
+  content: "Shit show"
+}
+.data.tags a[href$="=Ded"]:after {
+  content: "Author died,\a Studio bankrupted,\a Cancelled, \"Covid\" etc"
+}
+.data.tags a[href$="=inf"]:after {
+  content: "Forever airing,\a Will never end"
+}
+.data.tags a[href$="=pp"]:after {
+  content: "Airing postponed due to production issues"
+}
