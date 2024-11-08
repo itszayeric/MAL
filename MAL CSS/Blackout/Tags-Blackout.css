@@ -1,0 +1,130 @@
+/* days airing tags */
+.data.tags span a[href$="=mon"],
+.data.tags span a[href$="=tue"],
+.data.tags span a[href$="=wed"],
+.data.tags span a[href$="=thu"],
+.data.tags span a[href$="=fri"],
+.data.tags span a[href$="=sat"],
+.data.tags span a[href$="=sun"],
+.data.tags span a[href$="=A"],
+.data.tags span a[href$="=B"],
+.data.tags span a[href$="=C"],
+.data.tags span a[href$="=D"],
+.data.tags span a[href$="=E"],
+.data.tags span a[href$="=F"],
+.data.tags span a[href$="=G"],
+.data.tags span a[href$="=H"],
+.data.tags span a[href$="=I"],
+.data.tags span a[href$="=J"],
+.data.tags span a[href$="=K"],
+.data.tags span a[href$="=L"],
+.data.tags span a[href$="=M"],
+.data.tags span a[href$="=N"],
+.data.tags span a[href$="=Where"],
+.data.tags span a[href$="=Unko"],
+.data.tags span a[href$="=Ded"],
+.data.tags span a[href$="=inf"] {
+    display: inline-flex;
+    font-size: 0rem !important;
+    padding-left: 1.5rem;
+    text-overflow: ellipsis;
+}
+.data.tags a[href$="=mon"]:after {
+    color: rgba(255, 123, 123, 1);
+    content: "\f401  Monday";
+    font-size: 3rem; }
+.data.tags a[href$="=tue"]:after {
+    color: rgb(255, 164, 115, 1);
+    content: "\f401  Tuesday";
+    font-size: 3rem; }
+.data.tags a[href$="=wed"]:after {
+    color: rgba(253, 205, 132, 1);
+    content: "\f401  Wednesday";
+    font-size: 3rem; }
+.data.tags a[href$="=thu"]:after {
+    color: rgba(204, 209, 115, 1);
+    content: "\f401  Thursday";
+    font-size: 3rem; }
+.data.tags a[href$="=fri"]:after {
+    color: rgba(151, 226, 243, 1);
+    content: "\f401  Friday";
+    font-size: 3rem; }
+.data.tags a[href$="=sat"]:after {
+    color: rgba(178, 158, 245, 1);
+    content: "\f401  Saturday";
+    font-size: 3rem; }
+.data.tags a[href$="=sun"]:after {
+    color: rgba(255, 148, 205, 1);
+    content: "\f401  Sunday";
+    font-size: 3rem; }
+.data.tags a[href$="=A"]:after {
+    content: "\f3a5";
+    font-size: 3rem; }
+.data.tags a[href$="=B"]:after {
+    content: "\f3a5";
+    font-size: 3rem; }
+.data.tags a[href$="=C"]:after {
+    content: "\f3a5";
+    font-size: 3rem; }
+.data.tags a[href$="=D"]:after {
+    content: "\f3a5";
+    font-size: 3rem; }
+.data.tags a[href$="=E"]:after {
+    content: "\f004";
+    font-size: 3rem; }
+.data.tags a[href$="=F"]:after {
+    content: "\e367";
+    font-size: 3rem; }
+.data.tags a[href$="=G"]:after {
+    content: "\f6df";
+    font-size: 3rem; }
+.data.tags a[href$="=H"]:after {
+    content: "\f3a5";
+    font-size: 3rem; }
+.data.tags a[href$="=I"]:after {
+    content: "\f004";
+    font-size: 3rem; }
+.data.tags a[href$="=J"]:after {
+    content: "\e367";
+    font-size: 3rem; }
+.data.tags a[href$="=K"]:after {
+    content: "\e28b";
+    font-size: 3rem; }
+.data.tags a[href$="=L"]:after {
+    content: "\f06a";
+    font-size: 3rem; }
+.data.tags a[href$="=M"]:after {
+    content: "\e12e";
+    font-size: 3rem; }
+.data.tags a[href$="=N"]:after {
+    content: "\f801";
+    font-size: 3rem; }
+.data.tags a[href$="=Where"]:after {
+    content: "\f059";
+    font-size: 3rem; }
+.data.tags a[href$="=Unko"]:after {
+    content: "\f2fe";
+    font-size: 3rem; }
+.data.tags a[href$="=Ded"]:after {
+    content: "\f54c";
+    font-size: 3rem; }
+.data.tags a[href$="=inf"]:after {
+    content: "\f534";
+    font-size: 3rem; 
+}
+.data.tags a:hover::after {
+        opacity: 1;
+}
+    /* tags descriptions */
+    .data.tags a[href$="=Where"]:hover::after {
+        content: "\f059  Cant find anywhere online, No subs/TL";
+    }
+    .data.tags a[href$="=Unko"]:hover::after {
+        content: "\f2fe  Shitshow";
+    }
+    .data.tags a[href$="=Ded"]:hover::after {
+        content: "\f54c  Author died, Studio bankrupted, Cancelled, etc";
+    }
+    .data.tags a[href$="=inf"]:hover::after {
+        content: "\f534  Forever airing, Will never end";
+    }
