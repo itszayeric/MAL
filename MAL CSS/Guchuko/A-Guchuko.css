@@ -4,6 +4,7 @@
 @\import "https://fonts.googleapis.com/css?family=Advent+Pro";
 @\import "https://fonts.googleapis.com/css?family=Amatic+SC";
 @\import "https://shishiohub.github.io/Covers/datatitlebefore.css";
+@\import "https://itszayeric.github.io/MAL/MAL%20CSS/Guchuko/Tags-Guchuko.css";
 
 :root {
     --bg: #191919;
@@ -1074,7 +1075,6 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     background: var(--upper);
     border: none;
     border-radius: 0;
-    letter-spacing: 0.5px;
     padding: 0 !important;
     min-height: 23px;
     height: 23px;
@@ -1110,7 +1110,6 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     border-radius: 0;
     color: var(--gray);
     font-size: 10px !important;
-    letter-spacing: 1px;
     line-height: 24px;
     padding: 0 !important;
     height: 23px;
@@ -1420,48 +1419,32 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     position: absolute;
     color: var(--text) !important;
     font: 0 Segou UI;
-    text-align: center;
+	text-align: center;
     height: 0;
     top: 36px;
     left: 148px;
-    z-index: 3
+    z-index: 3;
+	filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
-.notes .text:after {
+.notes .text:before {
     content: "\f086";
     display: flex;
     position: absolute;
-    background: var(--status);
+    background: linear-gradient(90deg,var(--status)65%, transparent 100%);
     border-radius: 3px 0 0 3px;
-    box-shadow: -2px 2px 2px rgba(50, 55, 65, .1);
     color: white;
     font: bold 13px FontAwesome;
-    height: 22px;
-    width: 32px;
+    height: 18px;
+    width: 40px;
     top: 14px;
     left: -30px;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(0deg)
+	padding: 4px 0px 0px 8px;
+    clip-path: polygon(100% 0%, 80% 50%, 100% 100%, 0 100%, 0% 50%, 0 0) !important;
 }
 
 .watching+.title .notes .text:after {
     background: linear-gradient(to right, var(--completed), var(--watching))
-}
-
-.notes .text:before {
-    content: "\f02e";
-    display: block;
-    position: absolute;
-    background: linear-gradient(to bottom, var(--status) 20%, transparent 70%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font: bold 30px FontAwesome;
-    height: 50px;
-    width: 30px !important;
-    pointer-events: none;
-    transform: rotate(-90deg)
 }
 
 .notes .text:empty {
