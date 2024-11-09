@@ -207,3 +207,73 @@
 .data.tags a[href$="=pp"]:after {
   content: "Airing postponed due to production issues"
 }
+
+.data.tags a[href$="tag=1"],
+.data.tags a[href$="tag=2"],
+.data.tags a[href$="tag=3"],
+.data.tags a[href$="tag=4"],
+.data.tags a[href$="tag=5"],
+.data.tags a[href$="tag=6"],
+.data.tags a[href$="tag=7"],
+.data.tags a[href$="tag=8"],
+.data.tags a[href$="tag=9"],
+.data.tags a[href$="tag=10"] {
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(5,5,5,.1) 1%, var(--bg2) 70%);
+    border-radius: 3px;
+    color: var(--status) !important;
+    font: bold 11px/23px Advent Pro, FontAwesome;
+    height: 23px;
+    width: 31px;
+    top: -14px;
+    left: 212px;
+    pointer-events: none;
+    transition: 0.2s !important
+}
+.list-item:hover .data.tags a[href$="tag=1"],
+.list-item:hover .data.tags a[href$="tag=2"],
+.list-item:hover .data.tags a[href$="tag=3"],
+.list-item:hover .data.tags a[href$="tag=4"],
+.list-item:hover .data.tags a[href$="tag=5"],
+.list-item:hover .data.tags a[href$="tag=6"],
+.list-item:hover .data.tags a[href$="tag=7"],
+.list-item:hover .data.tags a[href$="tag=8"],
+.list-item:hover .data.tags a[href$="tag=9"],
+.list-item:hover .data.tags a[href$="tag=10"] {
+    background: linear-gradient(to bottom, rgba(5,5,5,.1), var(--bg2) 0%);
+    box-shadow: var(--shadow)
+}
+.data.tags a[href$="tag=1"]:after,
+.data.tags a[href$="tag=2"]:after,
+.data.tags a[href$="tag=3"]:after,
+.data.tags a[href$="tag=4"]:after,
+.data.tags a[href$="tag=5"]:after,
+.data.tags a[href$="tag=6"]:after,
+.data.tags a[href$="tag=7"]:after,
+.data.tags a[href$="tag=8"]:after,
+.data.tags a[href$="tag=9"]:after,
+.data.tags a[href$="tag=10"]:after {
+    content: "\f021";
+    display: inline-block;
+    margin-left: 4px
+}
+.list-item:hover .data.tags a[href$="tag=1"]:after,
+.list-item:hover .data.tags a[href$="tag=2"]:after,
+.list-item:hover .data.tags a[href$="tag=3"]:after,
+.list-item:hover .data.tags a[href$="tag=4"]:after,
+.list-item:hover .data.tags a[href$="tag=5"]:after,
+.list-item:hover .data.tags a[href$="tag=6"]:after,
+.list-item:hover .data.tags a[href$="tag=7"]:after,
+.list-item:hover .data.tags a[href$="tag=8"]:after,
+.list-item:hover .data.tags a[href$="tag=9"]:after,
+.list-item:hover .data.tags a[href$="tag=10"]:after {
+    animation: spin 2s infinite linear
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
