@@ -15,7 +15,7 @@
     background: var(--tdbg);
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow-big) !important;
-  	overflow: hidden;
+    overflow: hidden;
 }
 .data.tags a[href$="mon"]:hover,
 .data.tags a[href$="tue"]:hover,
@@ -51,28 +51,34 @@
 .data.tags a[href$="=sun"]:before {
   font: bold 11px/32px Segoe UI;
   font-variant: normal;
-  letter-spacing: 0.1em;
   color: var(--t-dark);
   margin-left: 1.5px;
 }
 .data.tags a[href$="=mon"]:before {
-  content: "Monday"; }
+  content: "Monday";
+  letter-spacing: 1.6px;}
 .data.tags a[href$="=tue"]:before {
-  content: "Tuesday"; }
+  content: "Tuesday";
+  letter-spacing: 1.6px; }
 .data.tags a[href$="=wed"]:before {
-  content: "Wednesday"; }
+  content: "Wednesday";
+  letter-spacing: 1.5px; }
 .data.tags a[href$="=thu"]:before {
-  content: "Thursday"; }
+  content: "Thursday";
+  letter-spacing: 1.6px; }
 .data.tags a[href$="=fri"]:before {
-  content: "Friday"; }
+  content: "Friday";
+  letter-spacing: 1.7px; }
 .data.tags a[href$="=sat"]:before {
-  content: "Saturday"; }
+  content: "Saturday";
+  letter-spacing: 1.5px;  }
 .data.tags a[href$="=sun"]:before {
   content: "Sunday";
-}
+  letter-spacing: 1.6px;
+ }
 /* Where */
 .data.tags a[href$="=Where"] {
-	--tbgc: hsl(215, 79%, 66%);
+    --tbgc: hsl(215, 79%, 66%);
     position: absolute;
     left: 178px !important;
     top: 40px !important;
@@ -85,7 +91,7 @@
 }
 /* inf */
 .data.tags a[href$="=inf"] {
-	--tbgc: hsl(240, 20%, 20%);
+    --tbgc: hsl(240, 20%, 20%);
     position: absolute;
     left: 178px !important;
     top: 76px !important;
@@ -98,7 +104,7 @@
 }
 /* pp */
 .data.tags a[href$="=pp"] {
-	--tbgc: hsl(330, 66%, 66%);
+    --tbgc: hsl(330, 66%, 66%);
     position: absolute;
     left: 178px !important;
     top: 112px !important;
@@ -109,10 +115,9 @@
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow);
 }
-
 /* Ded */
 .data.tags a[href$="=Ded"] {
-	--tbgc: hsl(350, 62%, 53%);
+    --tbgc: hsl(350, 62%, 53%);
     position: absolute;
     left: 178px !important;
     top: 148px !important;
@@ -125,7 +130,7 @@
 }
 /* Unko */
 .data.tags a[href$="=Unko"] {
-	--tbgc: hsl(40, 80%, 66%);
+    --tbgc: hsl(40, 80%, 66%);
     position: absolute;
     left: 178px !important;
     top: 184px !important;
