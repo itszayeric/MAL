@@ -68,10 +68,10 @@
   letter-spacing: 1.6px; }
 .data.tags a[href$="=fri"]:before {
   content: "Friday";
-  letter-spacing: 1.7px; }
+  letter-spacing: 1.8px; }
 .data.tags a[href$="=sat"]:before {
   content: "Saturday";
-  letter-spacing: 1.5px;  }
+  letter-spacing: 1.6px;  }
 .data.tags a[href$="=sun"]:before {
   content: "Sunday";
   letter-spacing: 1.6px;
