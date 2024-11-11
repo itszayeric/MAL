@@ -1,4 +1,5 @@
-/* Clarity (R22)  ➜  Guchuko (4.4) | Modded by sunnysummerday */
+/* Clarity (R22) by VL  ➜ 
+Guchuko (4.4ᵃ) by Sunnysummerday */
 
 @\import "https://fonts.googleapis.com/css?family=ABeeZee";
 @\import "https://fonts.googleapis.com/css?family=Advent+Pro";
@@ -32,20 +33,19 @@
 
 /* All Anime */
 [data-query*="status\":7"] {
-	--pattern: url(https://i.imgur.com/OCsE8CX.png) repeat center/32px;
-	--cfb: 1;
+	--pattern: url(https://i.imgur.com/o2J04NP.png) repeat top/450px;
+	--cfb: 0.3;
 	--bgw: url(https://i.imgur.com/Dboy6PM.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url(https://i.imgur.com/vFwArBr.png) no-repeat center / 170px;
+	--ava: url(https://i.imgur.com/jFMb5Tq.png) no-repeat center / 151px;
 }
 
-/* Watching */
 [data-query*="status\":1"] {
-	--pattern: url(https://i.imgur.com/GfJsxV5.png) repeat center/290px auto;
-	--cfb: 1;
+	--pattern: url(https://i.imgur.com/HTETi7M.png) repeat top left/350px auto;
+	--cfb: 0.6;
 	--bgw: url(https://i.imgur.com/qfYVgLM.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url(https://i.imgur.com/6cUTlU0.png) no-repeat center / 155px;
+	--ava: url(https://i.imgur.com/dC4QUyN.png) no-repeat center / 151px;
 }
 
 /* Completed */
@@ -54,7 +54,7 @@
 	--cfb: 1.2;
 	--bgw: url(https://i.imgur.com/s7n5YvD.png) repeat center/300px;
 	--bfb: 0;
-	--ava: url(https://i.imgur.com/3g21seD.png) no-repeat center / 155px;
+	--ava: url(https://i.imgur.com/vlrKgcb.png) no-repeat center / 151px;
 }
 
 /* Onhold */
@@ -63,7 +63,7 @@
 	--cfb: 1.1;
 	--bgw: url(https://i.imgur.com/EI4gryh.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url(https://i.imgur.com/ilsbPcD.png) no-repeat center / 165px;
+	--ava: url(https://i.imgur.com/a55St98.png) no-repeat center / 151px;
 }
 
 /* Dropped */
@@ -72,7 +72,7 @@
 	--cfb: 0.9;
 	--bgw: url(https://i.imgur.com/SlhTIeA.png) repeat center/auto;
 	--bfb: 0.1;
-	--ava: url(https://i.imgur.com/xxbYaXi.png) no-repeat center / 165px;
+	--ava: url(https://i.imgur.com/3YWWgWm.png) no-repeat center / 151px;
 }
 
 /* Planned */
@@ -81,7 +81,7 @@
 	--cfb: 1;
 	--bgw: url(https://i.imgur.com/71EGjun.png) repeat center/110px;
 	--bfb: 0.1;
-	--ava: url(https://i.imgur.com/fOta5Mv.png) no-repeat center / 145px;
+	--ava: url(https://i.imgur.com/EJ4v2J7.png) no-repeat center / 151px;
 }
 
 /* categories */
@@ -108,6 +108,9 @@
 }
 
 /* background */
+body {
+    font-family: ABeeZee
+}
 body::before,
 body::after {
 	content: "";
@@ -121,7 +124,6 @@ body::after {
 }
 body::before {
  	background: var(--bgw) fixed !important;
-    font-family: ABeeZee
 }
 
 body::after {
@@ -317,7 +319,7 @@ body.ownlist.manga footer {
     box-shadow: var(--shadow-small);
     height: 48px;
     width: 48px;
-	top: 0
+    top: 0
 }
 
 #cover-image-container {
@@ -748,7 +750,7 @@ body.ownlist.manga footer {
 
 .list-unit .list-status-title .stats a i {
     font-size: 12px;
-	line-height: 26px;
+    line-height: 26px;
     text-align: center;
     width: 26px
 }
@@ -943,7 +945,7 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
 .list-table-data {
     display: block;
     position: relative;
-    background: var(--bg2) !important;
+    background: var(--bg2);
     border-radius: 4px 4px 6px 6px;
     box-shadow: var(--shadow-big);
     min-height: 228px;
@@ -987,8 +989,7 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     position: relative;
     padding: 0 !important;
     height: auto;
-    width: 150px;
-    order: 12
+    width: 150px
 }
 
 .data.title>.link {
@@ -1073,28 +1074,22 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
 .data.season {
     position: absolute;
     background: var(--upper);
-    border: none;
     border-radius: 0;
-    padding: 0 !important;
-    min-height: 23px;
+    font-size: 10px !important;
+    letter-spacing: 0.5px;
+    line-height: 24px;
     height: 23px;
     width: 90px;
     right: inherit;
     bottom: 28px;
     transition: 0.1s;
     opacity: 1;
-    order: 13;
     z-index: 1
 }
 
 .data.season span a,
 .data.season span a:hover {
     color: var(--gray) !important
-}
-
-.data.season a {
-    font-size: 10px;
-    line-height: 24px
 }
 
 .data.season:empty:after {
@@ -1106,25 +1101,30 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
 
 .data.type {
     position: absolute;
-    background: var(--i-grain-2), var(--upper) !important;
+    background: var(--upper);
     border-radius: 0;
     color: var(--gray);
     font-size: 10px !important;
+    letter-spacing: 0.5px;
     line-height: 24px;
     padding: 0 !important;
     height: 23px;
     width: 60px;
     right: 0;
-    bottom: 28px;
-    order: 14
-}
-
-.plantowatch~.data.type {
-    margin-right: 0
+    bottom: 28px
 }
 
 .icon-watch {
     display: none !important
+}
+
+.data.progress,
+.data.progress>div[class^="progress"],
+.data.progress span,
+.data.progress .icon-add-episode {
+    display: flex !important;
+    align-items: center;
+    justify-content: center
 }
 
 .data.progress {
@@ -1133,32 +1133,14 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     border-radius: 0 0 0 6px;
     line-height: 28px;
     height: 28px;
-    width: 92.5px;
+    width: 90px;
     bottom: 0;
-    left: 0;
-    order: 15
+    left: 0
 }
 
-.data.progress>div[class^="progress"] {
-    margin-left: 8px
-}
-
-.data.progress span:only-child {
-    margin-left: -2px
-}
-
-[data-owner=""] .data.progress>div[class^="progress"] {
-    margin-left: 0
-}
-
-[data-owner=""] .data.progress span:only-child {
-    margin-left: 4px
-}
-
-.data.progress a.link {
-    margin-right: -28px;
-    padding: 0 31px 0 0;
-    pointer-events: visible
+.data.progress span {
+    margin-top: 0.5px;
+    pointer-events: none
 }
 
 .data.progress a,
@@ -1166,40 +1148,62 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     color: var(--gray) !important
 }
 
-.data.progress span {
-    display: inline-flex;
-    pointer-events: none
+.data.progress span+span {
+    padding-left: 3px
+}
+
+.data.progress a.link {
+    margin-right: -27px;
+    padding: 0 30px 0 12px;
+    pointer-events: visible
+}
+
+.data.progress a.link.edit-disabled {
+    padding-left: 0
 }
 
 .data.progress .icon-add-episode {
     font-size: 10px;
-    margin: 0 0 0 2px;
-    padding: 8px 8px 8px 0
+    margin: 0 0 0.5px 6px;
+    padding: 0 10px 0 0;
+    height: 28px
 }
 
 .list-table .list-table-data a.icon-add-episode:not(.edit-disabled):hover {
     color: var(--status) !important;
-    font-size: 13px
+    font-size: 14px
 }
 
 .data.progress span:only-of-type:after {
-    content: " \f058";
+    content: "\f058";
     color: var(--completed);
     font-family: FontAwesome;
     font-weight: bold;
-    margin-left: 3px
+    margin-left: 4px
+}
+
+.data.progress span:only-child {
+    margin-left: 4px
 }
 
 .data.progress input {
-    background: var(--bg1);
+    background: var(--light);
     border-radius: 13px;
     border: none;
     color: var(--text);
     font: 11px ABeeZee;
     text-align: center;
+    margin-left: 12px;
     height: 20px;
     width: 20px !important;
     outline: none
+}
+
+.data.score,
+.list-table .data.score a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center
 }
 
 .data.score {
@@ -1207,7 +1211,7 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     background: var(--lower);
     border-radius: 0 0 6px 0;
     height: 28px;
-    width: 57.5px;
+    width: 60px;
     right: 0;
     bottom: 0;
     left: inherit;
@@ -1220,16 +1224,10 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
 }
 
 .list-table .data.score a {
-    display: block;
-    background: none;
-    border: none;
-	border-radius: 0 0 5px 0;
-    box-shadow: none;
     color: var(--gray) !important;
-    font: bold 14px/27px Advent Pro !important;
-    height: 26px;
-    width: 58px !important;
-	margin: 2px -1px;
+    font: bold 14.5px/28px Advent Pro !important;
+    height: 28px;
+    width: 60px !important
 }
 
 .data.score select {
@@ -1238,19 +1236,23 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     background: var(--i-grain-2), var(--lower) !important;
     border-radius: 0 0 6px 0;
     color: var(--gray);
-	border: none;
-    font: bold 14px/27px Advent Pro;
-    padding: 0 0 0 19px;
-    height: 18px;
-    width: 56px;
-    top: 5px;
+    font: bold 14.5px/28px Advent Pro;
+    padding: 0 0 1px 18.5px;
+    height: 28px;
+    width: 60px;
     left: 0;
     outline: none;
     z-index: 102
 }
 
-.data.score select>option {
-    display: block
+.data.score select option {
+    background: var(--bg);
+    color: var(--text)
+}
+
+.data.score select option:checked {
+    background: var(--status);
+    color: white
 }
 
 .data.mal_score {
@@ -1311,7 +1313,7 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
 
 .data.tags .edit:after {
     content: "\f02c";
-	color: white;
+    color: white;
     font: bold 12px FontAwesome
 }
 
@@ -1321,7 +1323,7 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
 
 .list-table .data.tags .edit:hover {
     transform: skewY(0deg) scale(1);
-	opacity: 1
+    opacity: 1
 }
 
 .list-table .data.tags .edit:before {
@@ -1358,93 +1360,46 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     transform: scaleX(1.00028) scaleY(1.00056)
 }
 
-.data.tags a[href*="%2B"] {
-    position: absolute;
-    font-size: 0;
-    height: 3px;
-    width: 140px;
-    top: 220px;
-    left: 201px;
-    pointer-events: none
-}
-
-.data.tags a[href*="%2B"] {
-    animation: dashed 5s linear infinite reverse;
-    background: none, linear-gradient(90deg, var(--status) 50%, transparent 50%), none, none;
-    background-size: 0 0, 10px 2.5px, 0 0, 0 0;
-    border-radius: 0 0 6px 6px;
-    height: 2.5px;
-    top: 223px;
-    left: 200px
-}
-
-.data.score:hover~.data.tags a[href*="%2B"] {
-    opacity: 0
-}
-
-@keyframes dashed {
-    0% {
-        background-position: 0 0, 100px 0, 0 0, 0 0
-    }
-    100% {
-        background-position: 100px 0, 0 0, 0 0, 0 0
-    }
-}
-
-.data.tags a[href*="Gem"] {
-    --pad: 5px;
-    --width: 100%;
-    content: "";
-    display: block;
-    position: absolute;
-    background: linear-gradient(100deg, #70c8ed, #f46592, #8c7dd0, #ffc46c, #70d0b6);
-    border-radius: 10px;
-    padding: var(--pad);
-    height: 228px;
-    width: 150px;
-    top: -5px;
-    left: 191px;
-    -webkit-mask: linear-gradient(0deg, #000 calc(2*var(--pad)), #0000 0) 50% var(--pad)/calc(100% - 2*var(--width)) 100% repeat-y, linear-gradient(-90deg, #000 calc(2*var(--pad)), #0000 0) var(--pad) 50%/100% calc(100% - 2*var(--width)) repeat-x, linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    mask-composite: exclude;
-    pointer-events: none;
-    opacity: 0.65;
-    z-index: -100;
-}
-
-.list-item:hover .data.tags a[href*=Gem] {
-    opacity: 1
-}
-
 .notes .text {
     position: absolute;
     color: var(--text) !important;
-    font: 0 Segou UI;
-	text-align: center;
+    font: 0 Segoe UI;
+    letter-spacing: 0.5px;
+    text-align: center;
     height: 0;
-    top: 36px;
+    top: 50px;
     left: 148px;
     z-index: 3;
-	filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(-1px 2px 1px rgba(0, 0, 0, .2));
 }
 
-.notes .text:before {
+.notes .text:after {
     content: "\f086";
-    display: flex;
     position: absolute;
-    background: linear-gradient(90deg,var(--status)65%, transparent 100%);
+    background: var(--status);
     border-radius: 3px 0 0 3px;
     color: white;
-    font: bold 13px FontAwesome;
-    height: 18px;
-    width: 40px;
-    top: 14px;
-    left: -30px;
-	padding: 4px 0px 0px 8px;
-    clip-path: polygon(100% 0%, 80% 50%, 100% 100%, 0 100%, 0% 50%, 0 0) !important;
+    font: bold 13px/22px FontAwesome;
+    text-align: center;
+    height: 22px;
+    width: 32px;
+    left: -30px
 }
 
 .watching+.title .notes .text:after {
     background: linear-gradient(to right, var(--completed), var(--watching))
+}
+
+.notes .text:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, var(--status) 30%, transparent 110%);
+    border-radius: 3px;
+    height: 22px;
+    width: 28px !important;
+    left: -7px;
+    clip-path: polygon(100% 0%, 72.5% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    pointer-events: none
 }
 
 .notes .text:empty {
@@ -1454,7 +1409,7 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
 .notes .text:hover {
     background: var(--bg);
     font: 12px ABeeZee;
- 	color: var(--text-dim) !important;
+ 	color: var(--text-dim);
     padding: 8px;
     top: 40px;
     left: 0;
@@ -1475,7 +1430,7 @@ tbody:first-of-type:hover .progress+.started+.header-title.finished a {
     position: absolute;
     background: var(--bg);
     border: none;
-	color: var(--text);
+    color: var(--text);
     height: 121px !important;
     width: 134px !important;
     padding: 8px;
@@ -2410,7 +2365,7 @@ footer {
 }
 
 #copyright:after {
-    content: "4.4";
+    content: "4.4ᵃ";
     position: absolute;
     background: var(--bg-accent);
     -webkit-background-clip: text;
