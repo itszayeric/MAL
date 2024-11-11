@@ -213,6 +213,54 @@
   content: "Airing postponed due to production issues"
 }
 
+.data.tags a[href*="%2B"] {
+    position: absolute;
+    animation: dashed 5s linear infinite reverse;
+    background: none, linear-gradient(90deg, var(--status) 50%, transparent 50%), none, none;
+    background-size: 0 0, 10px 2.5px, 0 0, 0 0;
+    border-radius: 0 0 6px 6px;
+    font-size: 0;
+    height: 2.5px;
+    width: 140px;
+    top: 223.5px;
+    left: 200px;
+    pointer-events: none;
+    z-index: 102
+}
+
+@keyframes dashed {
+    0% {
+        background-position: 0 0, 100px 0, 0 0, 0 0
+    }
+    100% {
+        background-position: 100px 0, 0 0, 0 0, 0 0
+    }
+}
+
+.data.tags a[href*="Gem"] {
+    --pad: 5px;
+    --width: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    background: linear-gradient(100deg, #70c8ed, #f46592, #8c7dd0, #ffc46c, #70d0b6);
+    border-radius: 10px;
+    padding: var(--pad);
+    height: 228px;
+    width: 150px;
+    top: -5px;
+    left: 191px;
+    -webkit-mask: linear-gradient(0deg, #000 calc(2*var(--pad)), #0000 0) 50% var(--pad)/calc(100% - 2*var(--width)) 100% repeat-y, linear-gradient(-90deg, #000 calc(2*var(--pad)), #0000 0) var(--pad) 50%/100% calc(100% - 2*var(--width)) repeat-x, linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.65;
+    z-index: -100;
+}
+
+.list-item:hover .data.tags a[href*=Gem] {
+    opacity: 1
+}
+
 .data.tags a[href$="tag=1"],
 .data.tags a[href$="tag=2"],
 .data.tags a[href$="tag=3"],
