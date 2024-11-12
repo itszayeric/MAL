@@ -34,18 +34,19 @@ Guchuko (4.4ᵃ) by Sunnysummerday */
 /* All Anime */
 [data-query*="status\":7"] {
 	--pattern: url(https://i.imgur.com/o2J04NP.png) repeat top/450px;
-	--cfb: 0.3;
+	--cfb: 0.25;
 	--bgw: url(https://i.imgur.com/Dboy6PM.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url(https://i.imgur.com/jFMb5Tq.png) no-repeat center / 151px;
+	--ava: url(https://i.imgur.com/934mCt0.png) no-repeat center / 155px;
 }
 
+/* Watching */
 [data-query*="status\":1"] {
 	--pattern: url(https://i.imgur.com/HTETi7M.png) repeat top left/350px auto;
 	--cfb: 0.6;
 	--bgw: url(https://i.imgur.com/qfYVgLM.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url(https://i.imgur.com/dC4QUyN.png) no-repeat center / 151px;
+	--ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 155px;
 }
 
 /* Completed */
@@ -54,34 +55,34 @@ Guchuko (4.4ᵃ) by Sunnysummerday */
 	--cfb: 1.2;
 	--bgw: url(https://i.imgur.com/s7n5YvD.png) repeat center/300px;
 	--bfb: 0;
-	--ava: url(https://i.imgur.com/vlrKgcb.png) no-repeat center / 151px;
+	--ava: url(https://i.imgur.com/SbVdG3j.png) no-repeat center / 155px;
 }
 
 /* Onhold */
 [data-query*="status\":3"] {
 	--pattern: url(https://i.imgur.com/7kTOmdE.png) repeat center/220px;
-	--cfb: 1.1;
+	--cfb: 1.15;
 	--bgw: url(https://i.imgur.com/EI4gryh.png) repeat center/auto;
 	--bfb: 0;
-	--ava: url(https://i.imgur.com/a55St98.png) no-repeat center / 151px;
+	--ava: url(https://i.imgur.com/uKWyl0l.png) no-repeat center / 155px;
 }
 
 /* Dropped */
 [data-query*="status\":4"] {
 	--pattern: url(https://i.imgur.com/sTTfpjt.png) repeat center/600px;
-	--cfb: 0.9;
+	--cfb: 0.95;
 	--bgw: url(https://i.imgur.com/SlhTIeA.png) repeat center/auto;
 	--bfb: 0.1;
-	--ava: url(https://i.imgur.com/3YWWgWm.png) no-repeat center / 151px;
+	--ava: url(https://i.imgur.com/YdPFMfQ.png) no-repeat center / 155px;
 }
 
 /* Planned */
 [data-query*="status\":6"] {
 	--pattern: url(https://i.imgur.com/SfILbfB.png) repeat center/280px;
-	--cfb: 1;
+	--cfb: 1.05;
 	--bgw: url(https://i.imgur.com/71EGjun.png) repeat center/110px;
 	--bfb: 0.1;
-	--ava: url(https://i.imgur.com/EJ4v2J7.png) no-repeat center / 151px;
+	--ava: url(https://i.imgur.com/BVYVms4.png) no-repeat center / 155px;
 }
 
 /* categories */
@@ -330,7 +331,7 @@ body.ownlist.manga footer {
     position: relative;
 	background: var(--i-grain-3) repeat, var(--t-dark) !important;
     border: none;
-    box-shadow: 0px 0px 5px rgba(5,5,5,0.2);
+    box-shadow: 0px 0px 5px 2px rgba(5,5,5,.1);
     height: 64px;
     width: 100%;
     z-index: 35
