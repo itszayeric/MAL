@@ -360,9 +360,9 @@
     box-shadow: 0 0 0 4px var(--bg) inset;
     font-size: 0;
     height: 235.5px;
-    width: 158px;
+    width: 157.5px;
     top: -45.5px;
-    left: -6px;
+    left: -5.5px;
     pointer-events: none;
     z-index: 3
 }
