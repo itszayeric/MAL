@@ -7,8 +7,8 @@
 .data.tags a[href$="=sat"],
 .data.tags a[href$="=sun"] {
     position: absolute;
-    left: 178px !important;
-    top: 4px !important;
+    left: -18px !important;
+    top: -35px !important;
     width: 18px;
     height: 32px;
     padding: 0;
@@ -26,7 +26,7 @@
 .data.tags a[href$="sat"]:hover,
 .data.tags a[href$="sun"]:hover {
     width: 80px;
-    left: 116px !important;
+    left: -80px !important;
 }
 
 .data.tags a[href$="=mon"] {
@@ -85,8 +85,8 @@
 .data.tags a[href$="=Where"] {
     --tbgc: hsl(215, 79%, 66%);
     position: absolute;
-    left: 178px !important;
-    top: 40px !important;
+    left: -18px !important;
+    top: 1px !important;
     width: 18px;
     height: 32px;
     padding: 0;
@@ -98,8 +98,8 @@
 .data.tags a[href$="=inf"] {
     --tbgc: hsl(240, 20%, 20%);
     position: absolute;
-    left: 178px !important;
-    top: 76px !important;
+    left: -18px !important;
+    top: 37px !important;
     width: 18px;
     height: 32px;
     padding: 0;
@@ -111,8 +111,8 @@
 .data.tags a[href$="=pp"] {
     --tbgc: hsl(330, 66%, 66%);
     position: absolute;
-    left: 178px !important;
-    top: 112px !important;
+    left: -18px !important;
+    top: 73px !important;
     width: 18px;
     height: 32px;
     padding: 0;
@@ -124,8 +124,8 @@
 .data.tags a[href$="=Ded"] {
     --tbgc: hsl(350, 62%, 53%);
     position: absolute;
-    left: 178px !important;
-    top: 148px !important;
+    left: -18px !important;
+    top: 109px !important;
     width: 18px;
     height: 32px;
     padding: 0;
@@ -137,8 +137,8 @@
 .data.tags a[href$="=Unko"] {
     --tbgc: hsl(40, 80%, 66%);
     position: absolute;
-    left: 178px !important;
-    top: 184px !important;
+    left: -18px !important;
+    top: 145px !important;
     width: 18px;
     height: 32px;
     padding: 0;
