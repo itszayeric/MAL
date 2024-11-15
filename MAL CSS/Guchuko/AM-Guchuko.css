@@ -1347,7 +1347,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .data.chapter input,
 .data.progress input,
 .data.volume input {
-    background: var(--dark);
+    background: var(--bg1);
     border-radius: 13px;
     border: none;
     color: var(--text);
@@ -1604,7 +1604,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     top: 50px;
     left: 148px;
     z-index: 4;
-    filter: drop-shadow(-1px 2px 1px rgba(0, 0, 0, .2));
+    filter: drop-shadow(-1px 2px 1px rgba(5, 5, 5, .25));
 }
 
 .notes .text:after {
@@ -2796,7 +2796,7 @@ background: var(--i-grain-2) !important;}
 .data.chapter {
 background: no-repeat var(--i-grain-2) center 0px / 110px 26px !important;}
 .data.volume {
-background: no-repeat var(--i-grain-2) center 3.5px / 110px 26px !important;}
+background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 
 /* test */
 .data.title [href^="/anime/29978/"] {
