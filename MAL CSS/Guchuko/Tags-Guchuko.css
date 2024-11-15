@@ -286,7 +286,7 @@
 .data.tags a[href$="tag=9"],
 .data.tags a[href$="tag=10"] {
     position: absolute;
-    background: linear-gradient(to bottom, rgba(var(--alpha), .1) 1%, var(--bg-alt) 65%);
+    background: linear-gradient(to bottom, var(--bg) 1%, var(--bg1) 65%);
     border-radius: 3px;
     color: var(--status) !important;
     font: bold 11px/21px Advent Pro, FontAwesome;
@@ -309,7 +309,7 @@
 .list-table-data:hover .data.tags a[href$="tag=8"],
 .list-table-data:hover .data.tags a[href$="tag=9"],
 .list-table-data:hover .data.tags a[href$="tag=10"] {
-    background: linear-gradient(to bottom, rgba(var(--alpha), .1), var(--bg-alt) 0%);
+    background: linear-gradient(to bottom, var(--bg), var(--bg1) 0%);
     box-shadow: var(--shadow)
 }
 
@@ -357,12 +357,12 @@
     position: absolute;
     border: 2px solid var(--status);
     border-radius: 10px 10px 12px 12px;
-    box-shadow: 0 0 0 4px var(--bg-alt) inset;
+    box-shadow: 0 0 0 4px var(--bg1) inset;
     font-size: 0;
     height: 235.5px;
-    width: 157.5px;
+    width: 158px;
     top: -45.5px;
-    left: -5.5px;
+    left: -6px;
     pointer-events: none;
     z-index: 3
 }
@@ -371,7 +371,7 @@
     content: "\e41c";
     display: flex;
     position: absolute;
-    color: var(--bg-alt);
+    color: var(--bg2);
     font: bold 56px FontAwesome;
     -webkit-text-stroke: 2px var(--status);
     height: 56px;
