@@ -1,3 +1,20 @@
+/* fonts */
+@\import "https://fonts.googleapis.com/css?family=ABeeZee";
+@\import "https://fonts.googleapis.com/css?family=Advent+Pro";
+@\import "https://fonts.googleapis.com/css?family=Amatic+SC";
+/* anime covers */
+@\import "https://shishiohub.github.io/Covers/datatitlebefore.css";
+/* main code */
+@\import "https://itszayeric.github.io/MAL/MAL%20CSS/Guchuko/AM-Guchuko.css";
+/* tags */
+@\import "https://itszayeric.github.io/MAL/MAL%20CSS/Guchuko/Tags-Guchuko.css";
+/* manga covers */
+@\import "https://malscraper.azurewebsites.net/covers/manga/karmashizzle/presets/datatitlebefore";
+
+
+===================================================================================
+
+
 /* Clarity (R22) by VL  ➜ 
 Guchuko (4.7) by Sunnysummerday */
 
@@ -1874,7 +1891,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 
 /* sort by aired */
 .data.airing-started {
-    background: var(--bg) !important;
+    background: var(--bg2) !important;
     border-bottom: 1px dashed var(--status) !important;
     border-radius: 5px 5px 0 0;
   	font: bold 14px/31px segoe ui;
@@ -2240,6 +2257,11 @@ span[itemprop="ratingValue"]:hover {
 [data-work="manga"] #advanced-options .filter-widget:last-of-type .widget-header:after {
     border-radius: 2px 2px 0 0;
     top: -13px
+}
+
+div#advanced-options[style$="none;"] {
+    display: block !important;
+    transform: rotate(-5deg) scale(0)
 }
 
 div#advanced-options[style$="block;"] {
