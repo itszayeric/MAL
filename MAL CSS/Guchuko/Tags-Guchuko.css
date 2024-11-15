@@ -17,6 +17,7 @@
     box-shadow: var(--shadow-big) !important;
     overflow: hidden;
 }
+
 .data.tags a[href$="mon"]:hover,
 .data.tags a[href$="tue"]:hover,
 .data.tags a[href$="wed"]:hover,
@@ -27,6 +28,7 @@
     width: 80px;
     left: 116px !important;
 }
+
 .data.tags a[href$="=mon"] {
   background: hsl(149, 63%, 66%);}
 .data.tags a[href$="=tue"] {
@@ -42,6 +44,7 @@
 .data.tags a[href$="=sun"] {
   background: hsl(60, 74%, 73%);
 }
+
 .data.tags a[href$="=mon"]:before,
 .data.tags a[href$="=tue"]:before,
 .data.tags a[href$="=wed"]:before,
@@ -54,6 +57,7 @@
   color: var(--t-dark);
   margin-left: 1.5px;
 }
+
 .data.tags a[href$="=mon"]:before {
   content: "Monday";
   letter-spacing: 1.6px;}
@@ -76,6 +80,7 @@
   content: "Sunday";
   letter-spacing: 1.6px;
  }
+ 
 /* Where */
 .data.tags a[href$="=Where"] {
     --tbgc: hsl(215, 79%, 66%);
@@ -141,6 +146,7 @@
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow);
 }
+
 .data.tags a[href$="=Where"]:before {
   font: bold 13px/32px FontAwesome;
   color: var(--t-dark);
@@ -166,6 +172,7 @@
   color: var(--t-dark);
   content: "\e0d2"; /*e356*/
 }
+
 /* tooltip */
 .data.tags a[href$="=Where"]::after,
 .data.tags a[href$="=Unko"]::after,
@@ -192,10 +199,12 @@
   transition: left 0.25s ease, opacity .35s ease-in;
   pointer-events: none;
 }
+
 .data.tags a:hover::after {
   left: -85px;
   opacity: 1;
 }
+
 /* tags descriptions */
 .data.tags a[href$="=Where"]:after {
   content: "Cant find\a anywhere online,\a No English subs"
@@ -213,7 +222,8 @@
   content: "Airing postponed due to production issues"
 }
 
-.data.tags a[href*="%2B"] {
+/* + */
+.data.tags a[href$="tag=%2B"] {
     position: absolute;
     animation: dashed 5s linear infinite reverse;
     background: none, linear-gradient(90deg, var(--status) 50%, transparent 50%), none, none;
@@ -221,11 +231,15 @@
     border-radius: 0 0 6px 6px;
     font-size: 0;
     height: 2.5px;
-    width: 140px;
-    top: 223.5px;
-    left: 200px;
+    width: 142px;
+    top: 183.5px;
+    left: 4px;
     pointer-events: none;
-    z-index: 102
+    z-index: 0
+}
+
+[data-work="manga"] .data.tags a[href$="tag=%2B"] {
+    width: 102px
 }
 
 @keyframes dashed {
@@ -237,30 +251,30 @@
     }
 }
 
+/* Gem */
 .data.tags a[href*="Gem"] {
-    --pad: 5px;
-    --width: 100%;
     content: "";
     display: block;
     position: absolute;
     background: linear-gradient(100deg, #70c8ed, #f46592, #8c7dd0, #ffc46c, #70d0b6);
     border-radius: 10px;
-    padding: var(--pad);
+    padding: 5px;
     height: 228px;
     width: 150px;
-    top: -5px;
-    left: 191px;
-    -webkit-mask: linear-gradient(0deg, #000 calc(2*var(--pad)), #0000 0) 50% var(--pad)/calc(100% - 2*var(--width)) 100% repeat-y, linear-gradient(-90deg, #000 calc(2*var(--pad)), #0000 0) var(--pad) 50%/100% calc(100% - 2*var(--width)) repeat-x, linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    top: -45px;
+    left: -5px;
+    -webkit-mask: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0) content-box;
     mask-composite: exclude;
     pointer-events: none;
     opacity: 0.65;
-    z-index: -100;
+    z-index: -100
 }
 
-.list-item:hover .data.tags a[href*=Gem] {
+.list-table-data:hover .data.tags a[href*=Gem] {
     opacity: 1
 }
 
+/* Rewatch */
 .data.tags a[href$="tag=1"],
 .data.tags a[href$="tag=2"],
 .data.tags a[href$="tag=3"],
@@ -272,30 +286,33 @@
 .data.tags a[href$="tag=9"],
 .data.tags a[href$="tag=10"] {
     position: absolute;
-    background: linear-gradient(to bottom, rgba(5,5,5,.1) 1%, var(--bg2) 70%);
+    background: linear-gradient(to bottom, rgba(var(--alpha), .1) 1%, var(--bg-alt) 65%);
     border-radius: 3px;
     color: var(--status) !important;
-    font: bold 11px/23px Advent Pro, FontAwesome;
-    height: 23px;
+    font: bold 11px/21px Advent Pro, FontAwesome;
+    height: 21px;
     width: 31px;
-    top: -14px;
-    left: 212px;
+    top: -52px;
+    left: 16px;
     pointer-events: none;
-    transition: 0.2s !important
+    transition: 0.2s !important;
+    z-index: 4
 }
-.list-item:hover .data.tags a[href$="tag=1"],
-.list-item:hover .data.tags a[href$="tag=2"],
-.list-item:hover .data.tags a[href$="tag=3"],
-.list-item:hover .data.tags a[href$="tag=4"],
-.list-item:hover .data.tags a[href$="tag=5"],
-.list-item:hover .data.tags a[href$="tag=6"],
-.list-item:hover .data.tags a[href$="tag=7"],
-.list-item:hover .data.tags a[href$="tag=8"],
-.list-item:hover .data.tags a[href$="tag=9"],
-.list-item:hover .data.tags a[href$="tag=10"] {
-    background: linear-gradient(to bottom, rgba(5,5,5,.1), var(--bg2) 0%);
+
+.list-table-data:hover .data.tags a[href$="tag=1"],
+.list-table-data:hover .data.tags a[href$="tag=2"],
+.list-table-data:hover .data.tags a[href$="tag=3"],
+.list-table-data:hover .data.tags a[href$="tag=4"],
+.list-table-data:hover .data.tags a[href$="tag=5"],
+.list-table-data:hover .data.tags a[href$="tag=6"],
+.list-table-data:hover .data.tags a[href$="tag=7"],
+.list-table-data:hover .data.tags a[href$="tag=8"],
+.list-table-data:hover .data.tags a[href$="tag=9"],
+.list-table-data:hover .data.tags a[href$="tag=10"] {
+    background: linear-gradient(to bottom, rgba(var(--alpha), .1), var(--bg-alt) 0%);
     box-shadow: var(--shadow)
 }
+
 .data.tags a[href$="tag=1"]:after,
 .data.tags a[href$="tag=2"]:after,
 .data.tags a[href$="tag=3"]:after,
@@ -310,18 +327,20 @@
     display: inline-block;
     margin-left: 4px
 }
-.list-item:hover .data.tags a[href$="tag=1"]:after,
-.list-item:hover .data.tags a[href$="tag=2"]:after,
-.list-item:hover .data.tags a[href$="tag=3"]:after,
-.list-item:hover .data.tags a[href$="tag=4"]:after,
-.list-item:hover .data.tags a[href$="tag=5"]:after,
-.list-item:hover .data.tags a[href$="tag=6"]:after,
-.list-item:hover .data.tags a[href$="tag=7"]:after,
-.list-item:hover .data.tags a[href$="tag=8"]:after,
-.list-item:hover .data.tags a[href$="tag=9"]:after,
-.list-item:hover .data.tags a[href$="tag=10"]:after {
+
+.list-table-data:hover .data.tags a[href$="tag=1"]:after,
+.list-table-data:hover .data.tags a[href$="tag=2"]:after,
+.list-table-data:hover .data.tags a[href$="tag=3"]:after,
+.list-table-data:hover .data.tags a[href$="tag=4"]:after,
+.list-table-data:hover .data.tags a[href$="tag=5"]:after,
+.list-table-data:hover .data.tags a[href$="tag=6"]:after,
+.list-table-data:hover .data.tags a[href$="tag=7"]:after,
+.list-table-data:hover .data.tags a[href$="tag=8"]:after,
+.list-table-data:hover .data.tags a[href$="tag=9"]:after,
+.list-table-data:hover .data.tags a[href$="tag=10"]:after {
     animation: spin 2s infinite linear
 }
+
 @keyframes spin {
     from {
         transform: rotate(0deg)
@@ -329,4 +348,76 @@
     to {
         transform: rotate(360deg)
     }
+}
+
+/* Poifect */
+.data.tags a[href$="tag=100"] {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 2px solid var(--status);
+    border-radius: 10px 10px 12px 12px;
+    box-shadow: 0 0 0 4px var(--bg-alt) inset;
+    font-size: 0;
+    height: 235.5px;
+    width: 157.5px;
+    top: -45.5px;
+    left: -5.5px;
+    pointer-events: none;
+    z-index: 3
+}
+
+.data.tags a[href$="tag=100"]:before {
+    content: "\e41c";
+    display: flex;
+    position: absolute;
+    color: var(--bg-alt);
+    font: bold 56px FontAwesome;
+    -webkit-text-stroke: 2px var(--status);
+    height: 56px;
+    width: 56px;
+    top: 195px;
+    left: 110px;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-15deg)
+}
+
+.data.tags a[href$="tag=100"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--lower);
+    border-radius: 4px;
+    height: 18px;
+    width: 25px;
+    top: 209px;
+    left: 112px;
+    z-index: -1
+}
+
+[data-work="manga"] .data.tags a[href$="tag=100"]:before {
+    top: 185px
+}
+
+[data-work="manga"] .data.tags a[href$="tag=100"]:after {
+    background: var(--upper);
+    top: 197.5px;
+    left: 121.5px
+}
+
+[data-work="anime"][data-query*="\":17"] .data.tags a[href$="tag=100"]:before,
+[data-work="anime"][data-query*="\":17"] .data.tags a[href$="tag=100"]:after,
+[data-work="anime"][data-query*="\":-17"] .data.tags a[href$="tag=100"]:before,
+[data-work="anime"][data-query*="\":-17"] .data.tags a[href$="tag=100"]:after,
+[data-work="manga"][data-query*="\":15"] .data.tags a[href$="tag=100"]:before,
+[data-work="manga"][data-query*="\":15"] .data.tags a[href$="tag=100"]:after,
+[data-work="manga"][data-query*="\":-15"] .data.tags a[href$="tag=100"]:before,
+[data-work="manga"][data-query*="\":-15"] .data.tags a[href$="tag=100"]:after {
+    display: none
+}
+
+.data.score:hover~.data.tags a[href$="tag=100"]:before,
+.data.score:hover~.data.tags a[href$="tag=100"]:after {
+    display: none
 }
