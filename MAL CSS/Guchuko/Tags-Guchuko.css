@@ -357,7 +357,7 @@
     position: absolute;
     border: 2px solid var(--status);
     border-radius: 10px 10px 12px 12px;
-    box-shadow: 0 0 0 4px var(--bg1) inset;
+    box-shadow: 0 0 0 4px var(--bg) inset;
     font-size: 0;
     height: 235.5px;
     width: 158px;
