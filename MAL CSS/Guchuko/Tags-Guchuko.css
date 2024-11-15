@@ -371,7 +371,7 @@
     content: "\e41c";
     display: flex;
     position: absolute;
-    color: var(--bg2);
+    color: #fefefe !important;
     font: bold 56px FontAwesome;
     -webkit-text-stroke: 2px var(--status);
     height: 56px;
