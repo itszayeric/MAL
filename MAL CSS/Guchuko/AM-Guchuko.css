@@ -2790,9 +2790,13 @@ body.ownlist #fancybox-overlay {
 	transform: scaleX(1.002) scaleY(1.0015);
 }
 
-.data.type, .data.season, .data.score, .data.progress, .data.chapter, .data.volume {
-	background: var(--i-grain-2) !important;
-	background-size: contain !important; }
+/* grain for stuff */
+.data.type, .data.season, .data.score, .data.progress {
+background: var(--i-grain-2) !important;}
+.data.chapter {
+background: no-repeat var(--i-grain-2) center 0px / 110px 26px !important;}
+.data.volume {
+background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 
 /* test */
 .data.title [href^="/anime/29978/"] {
