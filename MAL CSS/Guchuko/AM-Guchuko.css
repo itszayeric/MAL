@@ -1,3 +1,20 @@
+/* fonts */
+@\import "https://fonts.googleapis.com/css?family=ABeeZee";
+@\import "https://fonts.googleapis.com/css?family=Advent+Pro";
+@\import "https://fonts.googleapis.com/css?family=Amatic+SC";
+/* anime covers */
+@\import "https://shishiohub.github.io/Covers/datatitlebefore.css";
+/* main code */
+@\import "https://itszayeric.github.io/MAL/MAL%20CSS/Guchuko/AM-Guchuko.css";
+/* tags */
+@\import "https://itszayeric.github.io/MAL/MAL%20CSS/Guchuko/Tags-Guchuko.css";
+/* manga covers */
+@\import "https://malscraper.azurewebsites.net/covers/manga/karmashizzle/presets/datatitlebefore";
+
+
+===================================================================================
+
+
 /* Clarity (R22) by VL  ➜ 
 Guchuko (4.7) by Sunnysummerday */
 
@@ -1154,6 +1171,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 
 /* airing */
 .content-status,
+.reading,
 .rewatching {
     position: absolute;
     background: var(--cc2);
@@ -1173,6 +1191,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .list-table-data:hover .content-status,
+.list-table-data:hover .rereading,
 .list-table-data:hover .rewatching {
     transform: scaleY(1.015)
 }
@@ -1184,7 +1203,11 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 [data-query*="order\":3"] .rewatching,
 [data-query*="order\":-3"] .rewatching,
 [data-query*="order2\":3"] .rewatching,
-[data-query*="order2\":-3"] .rewatching {
+[data-query*="order2\":-3"] .rewatching,
+[data-query*="order\":3"] .rereading,
+[data-query*="order\":-3"] .rereading,
+[data-query*="order2\":3"] .rereading,
+[data-query*="order2\":-3"] .rereading {
     visibility: hidden
 }
 
@@ -1328,6 +1351,11 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .list-table .list-table-data a.icon-add-volume:not(.edit-disabled):hover {
     color: var(--status) !important;
     font-size: 14px
+}
+
+.completed~.data .icon-add-chapter,
+.completed~.data .icon-add-volume {
+    display: none !important
 }
 
 .data.chapter span:only-of-type:after,
@@ -1894,8 +1922,8 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .data.airing-started:after {
     content: "\f401";
     position: absolute;
-    -webkit-text-stroke: 1px var(--t-dark);
-    color: var(--status);
+    -webkit-text-stroke: 1px var(--status);
+    color: var(--t-dark);
     font: bold 25px FontAwesome;
     top: -16px;
     left: -8px;
@@ -1905,8 +1933,8 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .data.airing-finished:after {
     content: "\f253";
     position: absolute;
-    -webkit-text-stroke: 1px var(--status);
-    color: var(--t-dark);
+    -webkit-text-stroke: 1px var(--t-dark);
+    color: var(--status);
     font: bold 25px FontAwesome;
     top: 16px;
     right: -10px;
