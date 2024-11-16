@@ -2,13 +2,13 @@
 .data .score-8 {
     --c-icon: "\f521";
     --rated: 22, 5%, 20%, .2;
-    --hrd: 70deg
+    --hrd: 120deg
 }
 
 .data .score-9 {
     --c-icon: "\f521";
     --rated: 40, 5%, 20%, .2;
-    --hrd: 120deg
+    --hrd: 70deg
 }
 
 .data .score-10 {
