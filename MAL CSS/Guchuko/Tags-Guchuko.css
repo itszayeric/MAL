@@ -1,42 +1,42 @@
 .data .score-8 {
-	--cicon: "\f521";
-  	--rated: 22, 5%, 20%, .2;
-	--r-bg: radial-gradient(ellipse farthest-corner at left top, hsl(40, 100%, 92%) 0%, hsl(40, 100%, 84%) 8%, hsl(24, 84%, 55%) 25%, hsl(22, 80%, 42%) 62.5%, hsl(22, 80%, 30%) 100%);
+    --cicon: "\f521";
+    --rated: 22, 5%, 20%, .2;
+    --r-bg: radial-gradient(ellipse farthest-corner at left top, hsl(40, 100%, 92%) 0%, hsl(40, 100%, 84%) 8%, hsl(24, 84%, 55%) 25%, hsl(22, 80%, 42%) 62.5%, hsl(22, 80%, 30%) 100%);
 }
 
 .data .score-9 {
-	--cicon: "\f521";
-  	--rated: 40, 5%, 20%, .2;
-	--r-bg: radial-gradient(ellipse farthest-corner at left top, hsl(0, 0%, 100%) 0%, hsl(180, 0%, 93%) 8%, hsl(180, 0%, 85%) 25%, hsl(180, 0%, 45%) 62.5%, hsl(180, 0%, 25%) 100%);
+    --cicon: "\f521";
+    --rated: 40, 5%, 20%, .2;
+    --r-bg: radial-gradient(ellipse farthest-corner at left top, hsl(0, 0%, 100%) 0%, hsl(180, 0%, 93%) 8%, hsl(180, 0%, 85%) 25%, hsl(180, 0%, 45%) 62.5%, hsl(180, 0%, 25%) 100%);
 }
 
 .data .score-10 {
-	--cicon: "\f521";
-	--rated: 45, 5%, 20%, .2;
-	--r-bg: radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, hsla(60, 100%, 84%, 1) 8%, hsla(44, 94%, 60%, 1) 25%, hsla(42, 80%, 33%, 1) 62.5%, hsla(42, 80%, 30%, 1) 100%);
+    --cicon: "\f521";
+    --rated: 45, 5%, 20%, .2;
+    --r-bg: radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, hsla(60, 100%, 84%, 1) 8%, hsla(44, 94%, 60%, 1) 25%, hsla(42, 80%, 33%, 1) 62.5%, hsla(42, 80%, 30%, 1) 100%);
 }
 
 .data .score-label::before,
 .data .score-label::after {
-	content: var(--cicon);
-	position: absolute;
-	z-index: 40;
-	opacity: 1;
-	filter: drop-shadow(1px 2px 1px hsla(var(--rated)));
+    content: var(--cicon);
+    position: absolute;
+    z-index: 40;
+    opacity: 1;
+    filter: drop-shadow(1px 2px 1px hsla(var(--rated)));
 }
 
 .data .score-label::before {
-  font-size: 0
+    font-size: 0
 }
 
 .data .score-label::after {
     left: 18px;
     bottom: 188px;
     height: 65px;
- 	width: 65px;
+    width: 65px;
     background: var(--r-bg);
     color: transparent;
-	-webkit-background-clip: text;
+    -webkit-background-clip: text;
     background-clip: text;
     font: bold 40px fontawesome;
     transform: rotate(39deg);
