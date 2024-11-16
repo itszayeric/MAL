@@ -1,28 +1,29 @@
+/* crown for score 8,9,10 */
 .data .score-8 {
-    --cicon: "\f521";
+    --c-icon: "\f521";
     --rated: 22, 5%, 20%, .2;
-    --r-bg: radial-gradient(ellipse farthest-corner at left top, hsl(40, 100%, 92%) 0%, hsl(40, 100%, 84%) 8%, hsl(24, 84%, 55%) 25%, hsl(22, 80%, 40%) 62.5%, hsl(22, 80%, 30%) 100%);
+	--hrd: 70deg
 }
 
 .data .score-9 {
-    --cicon: "\f521";
+    --c-icon: "\f521";
     --rated: 40, 5%, 20%, .2;
-    --r-bg: radial-gradient(ellipse farthest-corner at left top, hsl(0, 0%, 100%) 0%, hsl(180, 0%, 93%) 8%, hsl(180, 0%, 85%) 25%, hsl(180, 0%, 45%) 62.5%, hsl(180, 0%, 25%) 100%);
+	--hrd: 120deg
 }
 
 .data .score-10 {
-    --cicon: "\f521";
+    --c-icon: "\f521";
     --rated: 45, 5%, 20%, .2;
-    --r-bg: radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, hsla(60, 100%, 84%, 1) 8%, hsla(44, 94%, 60%, 1) 25%, hsla(42, 80%, 35%, 1) 62.5%, hsla(42, 80%, 30%, 1) 100%);
+	--hrd: 0deg
 }
 
 .data .score-label::before,
 .data .score-label::after {
-    content: var(--cicon);
+    content: var(--c-icon);
     position: absolute;
-    z-index: 40;
     opacity: 1;
     filter: drop-shadow(1px 2px 1px hsla(var(--rated)));
+    z-index: 40;
 }
 
 .data .score-label::before {
@@ -34,14 +35,14 @@
     bottom: 188px;
     height: 65px;
     width: 65px;
-    background: var(--r-bg);
-    color: transparent;
-    -webkit-background-clip: text;
+    background: no-repeat url(https://i.imgur.com/yto2uaN.png) top / 45px !important;
     background-clip: text;
     font: bold 40px fontawesome;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--bg);
+    filter: hue-rotate(var(--hrd));
     transform: rotate(39deg);
     pointer-events: none;
-    z-index: 40
 }
 
 [data-work="manga"] .data .score-label::after {
@@ -49,14 +50,14 @@
     bottom: 188px;
     height: 65px;
     width: 65px;
-    background: var(--r-bg);
-    color: transparent;
-    -webkit-background-clip: text;
+    background: no-repeat url(https://i.imgur.com/yto2uaN.png) top / 45px !important;
     background-clip: text;
     font: bold 40px fontawesome;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--bg);
+    filter: hue-rotate(var(--hrd));
     transform: rotate(39deg);
     pointer-events: none;
-    z-index: 40
 }
 
 /* Monday to Sunday */
