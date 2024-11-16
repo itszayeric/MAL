@@ -1330,11 +1330,6 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     font-size: 14px
 }
 
-.completed~.data .icon-add-chapter,
-.completed~.data .icon-add-volume {
-    display: none !important
-}
-
 .data.chapter span:only-of-type:after,
 .data.progress span:only-of-type:after,
 .data.volume span:only-of-type:after {
