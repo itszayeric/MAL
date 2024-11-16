@@ -1154,6 +1154,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 
 /* airing */
 .content-status,
+.rereading,
 .rewatching {
     position: absolute;
     background: var(--cc2);
@@ -1173,6 +1174,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .list-table-data:hover .content-status,
+.list-table-data:hover .rereading,
 .list-table-data:hover .rewatching {
     transform: scaleY(1.015)
 }
@@ -1184,7 +1186,11 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 [data-query*="order\":3"] .rewatching,
 [data-query*="order\":-3"] .rewatching,
 [data-query*="order2\":3"] .rewatching,
-[data-query*="order2\":-3"] .rewatching {
+[data-query*="order2\":-3"] .rewatching,
+[data-query*="order\":3"] .rereading,
+[data-query*="order\":-3"] .rereading,
+[data-query*="order2\":3"] .rereading,
+[data-query*="order2\":-3"] .rereading {
     visibility: hidden
 }
 
@@ -1328,6 +1334,11 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .list-table .list-table-data a.icon-add-volume:not(.edit-disabled):hover {
     color: var(--status) !important;
     font-size: 14px
+}
+
+.completed~.data .icon-add-chapter,
+.completed~.data .icon-add-volume {
+    display: none !important
 }
 
 .data.chapter span:only-of-type:after,
