@@ -36,7 +36,8 @@
     height: 65px;
     width: 65px;
     background: no-repeat url(https://i.imgur.com/yto2uaN.png) top / 45px !important;
-    background-clip: text !important;
+    -webkit-background-clip: text !important;
+	background-clip: text;
     font: bold 40px fontawesome;
     color: transparent;
     -webkit-text-stroke: 1.5px var(--bg);
@@ -51,7 +52,8 @@
     height: 65px;
     width: 65px;
     background: no-repeat url(https://i.imgur.com/yto2uaN.png) top / 45px !important;
-    background-clip: text !important;
+    -webkit-background-clip: text !important;
+	background-clip: text;
     font: bold 40px fontawesome;
     color: transparent;
     -webkit-text-stroke: 1.5px var(--bg);
