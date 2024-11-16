@@ -1,32 +1,32 @@
 /* crown for score 8,9,10 */
 .data .score-8 {
     --c-icon: "\f521";
-    --rated: 22, 5%, 20%, .2;
     --hrd: 120deg
 }
 
 .data .score-9 {
     --c-icon: "\f521";
-    --rated: 40, 5%, 20%, .2;
     --hrd: 70deg
 }
 
 .data .score-10 {
     --c-icon: "\f521";
-    --rated: 45, 5%, 20%, .2;
     --hrd: 0deg
 }
 
 .data .score-label::before,
-.data .score-label::after {
+.data .score-label::after,
+[data-work="manga"] .data .score-label::before,
+[data-work="manga"] .data .score-label::after {
     content: var(--c-icon);
     position: absolute;
     opacity: 1;
-    filter: drop-shadow(1px 2px 1px hsla(var(--rated)));
+    filter: drop-shadow(1px 2px 2px rgba(5,5,5,.25));
     z-index: 40;
 }
 
-.data .score-label::before {
+.data .score-label::before ,
+[data-work="manga"] .data .score-label::before {
     font-size: 0
 }
 
