@@ -2,19 +2,19 @@
 .data .score-8 {
     --c-icon: "\f521";
     --rated: 22, 5%, 20%, .2;
-	--hrd: 70deg
+    --hrd: 70deg
 }
 
 .data .score-9 {
     --c-icon: "\f521";
     --rated: 40, 5%, 20%, .2;
-	--hrd: 120deg
+    --hrd: 120deg
 }
 
 .data .score-10 {
     --c-icon: "\f521";
     --rated: 45, 5%, 20%, .2;
-	--hrd: 0deg
+    --hrd: 0deg
 }
 
 .data .score-label::before,
@@ -37,7 +37,7 @@
     width: 65px;
     background: no-repeat url(https://i.imgur.com/yto2uaN.png) top / 45px !important;
     -webkit-background-clip: text !important;
-	background-clip: text;
+    background-clip: text !important;
     font: bold 40px fontawesome;
     color: transparent;
     -webkit-text-stroke: 1.5px var(--bg);
@@ -53,7 +53,7 @@
     width: 65px;
     background: no-repeat url(https://i.imgur.com/yto2uaN.png) top / 45px !important;
     -webkit-background-clip: text !important;
-	background-clip: text;
+    background-clip: text !important;
     font: bold 40px fontawesome;
     color: transparent;
     -webkit-text-stroke: 1.5px var(--bg);
