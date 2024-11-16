@@ -40,7 +40,23 @@
     background-clip: text;
     font: bold 40px fontawesome;
     transform: rotate(39deg);
-    pointer-events: none
+    pointer-events: none;
+    z-index: 40
+}
+
+[data-work="manga"] .data .score-label::after {
+    left: -2px;
+    bottom: 188px;
+    height: 65px;
+    width: 65px;
+    background: var(--r-bg);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font: bold 40px fontawesome;
+    transform: rotate(39deg);
+    pointer-events: none;
+    z-index: 40
 }
 
 /* Monday to Sunday */
