@@ -1154,7 +1154,6 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 
 /* airing */
 .content-status,
-.reading,
 .rewatching {
     position: absolute;
     background: var(--cc2);
@@ -1174,7 +1173,6 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .list-table-data:hover .content-status,
-.list-table-data:hover .rereading,
 .list-table-data:hover .rewatching {
     transform: scaleY(1.015)
 }
@@ -1186,11 +1184,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 [data-query*="order\":3"] .rewatching,
 [data-query*="order\":-3"] .rewatching,
 [data-query*="order2\":3"] .rewatching,
-[data-query*="order2\":-3"] .rewatching,
-[data-query*="order\":3"] .rereading,
-[data-query*="order\":-3"] .rereading,
-[data-query*="order2\":3"] .rereading,
-[data-query*="order2\":-3"] .rereading {
+[data-query*="order2\":-3"] .rewatching {
     visibility: hidden
 }
 
