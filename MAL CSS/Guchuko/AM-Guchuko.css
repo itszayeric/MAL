@@ -350,8 +350,7 @@ a:hover {
 .status-menu:after {
     content: "";
     position: absolute;
-    background: url(https://i.imgur.com/rY8gJlA.png) no-repeat center/175px, var(--ava), var(--bg);
-	/* url(https://i.ibb.co/XkZnFDg/ava-scan-lines.png) no-repeat center / 160px, url(https://i.imgur.com/UFJrE8b.png) no-repeat center / 190px */
+    background: var(--ava), var(--bg);
     border: 8px solid var(--bg2);
     border-radius: 50%;
     box-shadow: var(--shadow-small);
