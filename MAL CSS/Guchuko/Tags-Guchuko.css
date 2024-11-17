@@ -137,6 +137,19 @@
   letter-spacing: 1.6px;
  }
  
+ /* Days */
+.data.tags a[href$="=Days"] {
+    --tbgc: hsl(100, 62%, 63%);
+    position: absolute;
+    left: -18px !important;
+    top: -35px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tbgc);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow);
+}
 /* Where */
 .data.tags a[href$="=Where"] {
     --tbgc: hsl(215, 79%, 66%);
@@ -206,7 +219,11 @@
     box-shadow: var(--shadow);
     z-index: 4;
 }
-
+.data.tags a[href$="=Days"]:before {
+  font: bold 13px/32px FontAwesome;
+  color: var(--t-dark);
+  content: "\f736";
+}
 .data.tags a[href$="=Where"]:before {
   font: bold 13px/32px FontAwesome;
   color: var(--t-dark);
@@ -234,6 +251,7 @@
 }
 
 /* tooltip */
+.data.tags a[href$="=Days"]::after,
 .data.tags a[href$="=Where"]::after,
 .data.tags a[href$="=Unko"]::after,
 .data.tags a[href$="=Ded"]::after,
@@ -266,6 +284,9 @@
 }
 
 /* tags descriptions */
+.data.tags a[href$="=Days"]:after {
+  content: "Airing days for every week of the current season";
+}
 .data.tags a[href$="=Where"]:after {
   content: "Cant find\a anywhere online,\a No English subs"
 }
