@@ -17,10 +17,8 @@
     --hrd: 0deg
 }
 
-.data .score-label::before,
-.data .score-label::after,
-[data-work="manga"] .data .score-label::before,
-[data-work="manga"] .data .score-label::after {
+.data .score-label:before,
+.data .score-label:after {
     content: var(--c-icon);
     position: absolute;
     opacity: 1; 
@@ -28,11 +26,10 @@
     filter: drop-shadow(1.5px 1.5px 2px rgba(5,5,5,.2)) !important;
 }
 
-.data .score-label:before,
-[data-work="manga"] .data .score-label:before {
+.data .score-label:before {
     font-size: 0 !important
 }
-.data .score-label::after {
+.data .score-label:after {
     left: 28px;
     bottom: 200px;
     height: 50px;
@@ -47,9 +44,9 @@
     pointer-events: none;
 }
 
-[data-work="manga"] .data .score-label::after {
+[data-work="manga"] .data .score-label:after {
     left: 8px;
-    bottom: 201px;
+    bottom: 201px
 }
 
 /* Monday to Sunday */
