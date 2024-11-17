@@ -1,19 +1,22 @@
 /* crown for score 8,9,10 */
 .data .score-8 {
     --c-icon: "\f521";
-    --cbgc: hsl(329, 91%, 48%);
+    --cbgc1: hsl(329, 91%, 66%);
+    --cbgc2: hsl(329, 91%, 20%);
     --hrd: 120deg
 }
 
 .data .score-9 {
     --c-icon: "\f521";
-    --cbgc: hsl(275, 91%, 48%);
+    --cbgc1: hsl(275, 91%, 66%);
+    --cbgc2: hsl(275, 91%, 20%);
     --hrd: 70deg
 }
 
 .data .score-10 {
     --c-icon: "\f521";
-    --cbgc: hsl(190, 91%, 48%);
+    --cbgc1: hsl(190, 91%, 66%);
+    --cbgc2: hsl(190, 91%, 20%);
     --hrd: 0deg
 }
 
@@ -34,7 +37,8 @@
     bottom: 200px;
     height: 50px;
     width: 50px;
-    background: url(https://i.imgur.com/eAmPXeQ.png) top / 45px, var(--cbgc) !important;
+    background: url(https://i.imgur.com/eAmPXeQ.png) top / 45px,
+		radial-gradient(circle at 30% 20%, var(--cbgc1) 30%,  50%, var(--cbgc2) 100%) 0px 0px / 50px 55px no-repeat no-repeat !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     font: bold 35px fontawesome;
@@ -427,7 +431,7 @@
     content: "\e41c";
     display: flex;
     position: absolute;
-    color: #fefefe !important;
+    color: var(--white) !important;
     font: bold 56px FontAwesome;
     -webkit-text-stroke: 2px var(--status);
     height: 56px;
