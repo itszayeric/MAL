@@ -149,6 +149,7 @@
     background: var(--tbgc);
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow);
+    z-index: 4;
 }
 /* Where */
 .data.tags a[href$="=Where"] {
@@ -162,6 +163,7 @@
     background: var(--tbgc);
     border-radius: 5px 0 0 5px;
     box-shadow: var(--shadow);
+    z-index: 4;
 }
 /* inf */
 .data.tags a[href$="=inf"] {
@@ -285,7 +287,7 @@
 
 /* tags descriptions */
 .data.tags a[href$="=Days"]:after {
-  content: "Airing days for every week of the current season";
+  content: "Airing days for the current season";
 }
 .data.tags a[href$="=Where"]:after {
   content: "Cant find\a anywhere online,\a No English subs"
