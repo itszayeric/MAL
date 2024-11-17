@@ -1621,7 +1621,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .notes .text:after {
     content: "\f086";
     position: absolute;
-    background: var(--status);
+    background: none !important;
     border-radius: 3px 0 0 3px;
     color: var(--white);
     font: bold 13px/22px FontAwesome;
@@ -1639,12 +1639,12 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .notes .text:before {
     content: "";
     position: absolute;
-    background: linear-gradient(to right, var(--status) 30%, transparent 110%);
+    background: linear-gradient(to right, var(--status) 65%, transparent 110%);
     border-radius: 3px;
     height: 22px;
-    width: 28px !important;
-    left: -7px;
-    clip-path: polygon(100% 0%, 72.5% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    width: 47px !important;
+    left: -30px;
+    clip-path: polygon(100% 0%, 82% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
     pointer-events: none
 }
 
