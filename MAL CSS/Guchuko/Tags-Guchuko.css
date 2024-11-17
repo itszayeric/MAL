@@ -28,9 +28,9 @@
     filter: drop-shadow(1.5px 1.5px 2px rgba(5,5,5,.2)) !important;
 }
 
-.data .score-label::before ,
-[data-work="manga"] .data .score-label::before {
-    font-size: 0 !important:
+.data .score-label:before,
+[data-work="manga"] .data .score-label:before {
+    font-size: 0 !important
 }
 .data .score-label::after {
     left: 28px;
