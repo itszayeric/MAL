@@ -81,12 +81,10 @@ Guchuko (5.0) by Sunnysummerday */
 }
 
 /* categories */
-.status-button.all_anime:before,
-[data-work="manga"] .status-button.all_anime:before {
+.status-button.all_anime:before {
     content: "\e3a4  Alll";
 }
-.status-button.watching:before,
-.status-button.reading:before {
+.status-button.watching:before {
     content: "\f599  Neow";
 }
 .status-button.completed:before {
@@ -98,10 +96,29 @@ Guchuko (5.0) by Sunnysummerday */
 .status-button.dropped:before {
     content: "\e379  Nope";
 }
-.status-button.plantowatch:before,
+.status-button.plantowatch:before {
+    content: "\e39b  Soon";
+}
+
+[data-work="manga"] .status-button.all_anime:before {
+    content: "\e3a4  Alll";
+}
+.status-button.reading:before {
+    content: "\f599  Neow";
+}
+[data-work="manga"] .status-button.completed:before {
+    content: "\e389  Done";
+}
+[data-work="manga"] .status-button.onhold:before {
+    content: "\f11a  Halt";
+}
+[data-work="manga"] .status-button.dropped:before {
+    content: "\e379  Nope";
+}
 .status-button.plantoread:before {
     content: "\e39b  Soon";
 }
+
 [data-work="anime"] .status-menu .status-button:before,
 [data-work="manga"] .status-menu .status-button:before {
     font-size: 27px;
