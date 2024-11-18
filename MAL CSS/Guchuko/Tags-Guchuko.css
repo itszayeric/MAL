@@ -4,7 +4,7 @@
 	content: "";
 	display: flex;
 	position: absolute;
-	background: url(https://i.imgur.com/eAmPXeQ.png) bottom / 60px 60px, var(--status);
+	background: url(https://i.imgur.com/eAmPXeQ.png) 50% 100% / 50px 50px, var(--status) !important;
 	-webkit-background-clip: text !important;
 	background-clip: text;
 	color: transparent;
