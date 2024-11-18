@@ -1,5 +1,5 @@
 /* Clarity (R22) by VL  ➜ 
-Guchuko (4.7) by Sunnysummerday */
+Guchuko (5.0) by Sunnysummerday */
 
 :root {
     --bg: #191919;
@@ -81,15 +81,11 @@ Guchuko (4.7) by Sunnysummerday */
 }
 
 /* categories */
-.status-button.all_anime:before {
-    content: "\e3a4  Alll";
-}
+.status-button.all_anime:before,
 [data-work="manga"] .status-button.all_anime:before {
     content: "\e3a4  Alll";
 }
-.status-button.watching:before {
-    content: "\f599  Neow";
-}
+.status-button.watching:before,
 .status-button.reading:before {
     content: "\f599  Neow";
 }
@@ -102,9 +98,7 @@ Guchuko (4.7) by Sunnysummerday */
 .status-button.dropped:before {
     content: "\e379  Nope";
 }
-.status-button.plantowatch:before {
-    content: "\e39b  Soon";
-}
+.status-button.plantowatch:before,
 .status-button.plantoread:before {
     content: "\e39b  Soon";
 }
@@ -117,8 +111,8 @@ Guchuko (4.7) by Sunnysummerday */
 body {
     font-family: ABeeZee
 }
-body::before,
-body::after {
+body:before,
+body:after {
 	content: "";
 	position: fixed;
 	bottom: 0;
@@ -128,11 +122,11 @@ body::after {
 	height: 100%;
 	pointer-events: none;
 }
-body::before {
+body:before {
  	background: var(--bgw) fixed !important;
 }
 
-body::after {
+body:after {
 	background: rgba(0,0,0,1) !important;
   	opacity: var(--bfb)
 }
@@ -498,6 +492,7 @@ a:hover {
 }
 
 #search-box.open {
+    animation: jello-ish 0.8s;
     background: var(--bg1);
     box-shadow: inset 0 1px 4px rgba(0,0,0,.7);
     border: 2px solid var(--bg1);
@@ -538,6 +533,10 @@ a:hover {
     line-height: 30px
 }
 
+.open~#search-button i {
+    animation: jello-ish 0.8s
+}
+
 #search-box:after {
     content: "";
     position: absolute;
@@ -566,11 +565,13 @@ a:hover {
 }
 
 .header .header-title,
+.header .icon-menu,
 .header-info,
-.icon-menu,
-.list-menu-float .icon-menu,
-.list-table>tbody:first-of-type:after,
-.stats a {
+.list-menu-float .icon-menu:not(.profile, .setting),
+[data-owner=""] .list-menu-float .icon-menu.profile,
+.list-menu-float .icon-menu.setting:after,
+.stats a,
+.list-table>tbody:first-of-type:after {
     display: inline-block;
     background: var(--bg2) !important;
     border-radius: 13px;
@@ -586,11 +587,41 @@ a:hover {
 }
 
 .header .header-title:hover,
-.icon-menu:hover,
-.list-menu-float .icon-menu:hover,
-.stats a:hover {
+.header .icon-menu:hover,
+.list-menu-float .icon-menu:not(.profile, .setting):hover,
+[data-owner=""] .list-menu-float .icon-menu.profile:hover,
+.list-menu-float .icon-menu.setting:hover:after,
+.stats a:hover,
+.list-table>tbody:first-of-type:hover:after {
     background: var(--bg-accent) !important;
     color: var(--white) !important
+}
+
+.header .header-title:hover,
+.header .icon-menu:hover,
+.list-menu-float .icon-menu:not(.profile, .setting):hover,
+[data-owner=""] .list-menu-float .icon-menu.profile:hover,
+.list-menu-float .icon-menu.setting:hover:after,
+.list-menu-float .statistics:hover:after,
+.stats a:hover,
+.list-table>tbody:first-of-type:hover:after {
+    animation: jello-ish 0.8s
+}
+
+@keyframes jello-ish {
+    0%,
+    100% {
+        transform: scale(1)
+    }
+    10% {
+        transform: scale(1.125, .875)
+    }
+    30% {
+        transform: scale(.875, 1.125)
+    }
+    50% {
+        transform: scale(1.05, .95)
+    }
 }
 
 .header .header-title {
@@ -636,6 +667,14 @@ a:hover {
     top: 74px
 }
 
+.list-menu-float .icon-menu.setting {
+    display: inline-block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    transition: none !important
+}
+
 .list-menu-float .icon-menu svg.icon {
     max-height: 13px;
     max-width: 13px;
@@ -667,8 +706,15 @@ a:hover {
     display: none !important
 }
 
+.list-menu-float .icon-menu.setting:after {
+    content: "\f013";
+    position: absolute;
+    font: bold 12px/26px FontAwesome;
+    text-align: center
+}
+
 .list-menu-float .setting svg.icon-setting {
-    transform: scale(1.1)
+    display: none !important
 }
 
 [data-owner="1"] .list-menu-float .profile {
@@ -818,7 +864,8 @@ a:hover {
 }
 
 .list-unit .list-stats {
-    background: linear-gradient(to right, transparent 1%, var(--bg-status), var(--bg-status), var(--bg-status), var(--bg-status), transparent 99%);
+    animation: bounceInUp 0.6s;
+    background: linear-gradient(to right, transparent 1%, var(--status), var(--status), var(--status), var(--status), transparent 99%);
 	color: var(--t-dark);
 	font: bold 12px ABeeZee;
     letter-spacing: 0.3px;
@@ -827,6 +874,37 @@ a:hover {
     height: 32px;
     width: 880px;
     top: 198px
+}
+
+@keyframes bounceInUp {
+    0% {
+        transform: translate3d(0, 200%, 0);
+        opacity: 0
+    }
+    60% {
+        transform: translate3d(0, -10px, 0) scaleY(.9);
+        opacity: 1
+    }
+    75% {
+        transform: translate3d(0, 5px, 0) scaleY(.95)
+    }
+    90% {
+        transform: translate3d(0, -2.5px, 0) scaleY(.985)
+    }
+    to {
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0)
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
 }
 
 .all_anime .list-stats {
@@ -867,11 +945,6 @@ a:hover {
     margin: 2px
 }
 
-.list-table>tbody:first-of-type:hover:after {
-    background: var(--bg-accent) !important;
-    color: var(--white) !important
-}
-
 .list-table-header {
     position: absolute;
     font-size: 0;
@@ -900,15 +973,14 @@ a:hover {
     width: 0;
     left: 12px;
     overflow: hidden;
-    transition: width 0.2s !important;
+    transition: width 0.2s, transform 0.1s !important;
     opacity: 0
 }
 
 .list-table-header .header-title a:hover {
     background: var(--bg-accent) !important;
-    color: var(--white) !important;
-    transform: rotate(-2deg) scale(1.1);
-    transition: none !important
+    color: white !important;
+    transform: rotate(-2deg) scale(1.1)
 }
 
 tbody:first-of-type:hover .header-title a {
@@ -1112,8 +1184,9 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .data.title>.link {
     display: inline-block !important;
 	color: var(--t-dark) !important;
-	font: bold 14px/40px ABeeZee !important;
+	font: bold 14px/39px ABeeZee !important;
     padding: 0 12px;
+    height: 40px;
     max-width: 126px;
     overflow: hidden;
     overflow: -moz-hidden-unscrollable;
@@ -1609,7 +1682,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     position: absolute;
     color: var(--text) !important;
     font: 0 Segoe UI;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.25px;
     text-align: center;
     height: 0;
     top: 50px;
@@ -1621,7 +1694,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .notes .text:after {
     content: "\f086";
     position: absolute;
-    background: none !important;
+    background: none;
     border-radius: 3px 0 0 3px;
     color: var(--white);
     font: bold 13px/22px FontAwesome;
@@ -1677,6 +1750,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     background: var(--bg);
     border: none;
     color: var(--text);
+    font-size: 12px;
     height: 121px !important;
     width: 134px !important;
     padding: 8px;
@@ -1712,7 +1786,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     width: 22px;
     top: 50px;
     left: 118px;
-    align-items: center;
+    align-items: baseline;
     cursor: pointer;
     justify-content: center;
     transition: 0.15s !important;
@@ -1723,7 +1797,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .notes .text:empty+.edit:after {
     content: "\f044";
     color: var(--white);
-    font: bold 12px FontAwesome
+    font: bold 12px/21px FontAwesome
 }
 
 .notes .text:empty+.edit {
@@ -1807,7 +1881,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 
 .add-edit-more span {
     transform: skewY(10deg) scale(.75);
-    transition: 0.2s !important
+    transition: 0.15s !important
 }
 
 .add-edit-more:hover span {
@@ -1905,9 +1979,9 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .data.airing-started:after {
     content: "\f401";
     position: absolute;
-    -webkit-text-stroke: 1px var(--status);
     color: var(--t-dark);
     font: bold 25px FontAwesome;
+    -webkit-text-stroke: 1px var(--status);
     top: -16px;
     left: -8px;
     transform: rotate(-20deg)
@@ -1916,9 +1990,9 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .data.airing-finished:after {
     content: "\f253";
     position: absolute;
-    -webkit-text-stroke: 1px var(--t-dark);
     color: var(--status);
     font: bold 25px FontAwesome;
+    -webkit-text-stroke: 1px var(--t-dark);
     top: 16px;
     right: -10px;
     transform: rotate(20deg)
@@ -2001,8 +2075,7 @@ span[itemprop="ratingValue"]:hover {
 
 .header .icon-menu,
 .header a.header-title,
-.list-menu-float .icon-menu:not(.profile,
-.setting),
+.list-menu-float .icon-menu:not(.profile, .setting),
 [data-owner=""] .list-menu-float .icon-menu.profile,
 .list-status-title .stats a,
 .add-edit-more span a {
@@ -2015,22 +2088,21 @@ span[itemprop="ratingValue"]:hover {
 
 .header .icon-menu:after,
 .header a.header-title:after,
-.list-menu-float .icon-menu:not(.profile,
-.setting):before,
+.list-menu-float .icon-menu:not(.profile, .setting):before,
 [data-owner=""] .list-menu-float .icon-menu.profile:after,
 .list-status-title .stats a:before,
 .add-edit-more span a:before {
     content: "";
     position: absolute;
     background: var(--bg-accent);
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: -.5px;
+    right: -.5px;
+    bottom: -.5px;
+    left: -.5px;
     transform: scaleY(0);
     transform-origin: 50% 100%;
     transition-property: transform;
-    transition-duration: 0.1s;
+    transition-duration: 0.15s;
     transition-timing-function: ease-out;
     z-index: -1
 }
@@ -2042,8 +2114,7 @@ span[itemprop="ratingValue"]:hover {
 
 .header .icon-menu:hover,
 .header a.header-title:hover,
-.list-menu-float .icon-menu:not(.profile,
-.setting):hover,
+.list-menu-float .icon-menu:not(.profile, .setting):hover,
 [data-owner=""] .list-menu-float .icon-menu.profile:hover,
 .list-status-title .stats a:hover,
 .add-edit-more span a:hover {
@@ -2057,8 +2128,7 @@ span[itemprop="ratingValue"]:hover {
 
 .header .icon-menu:hover:after,
 .header a.header-title:hover:after,
-.list-menu-float .icon-menu:not(.profile,
-.setting):hover:before,
+.list-menu-float .icon-menu:not(.profile, .setting):hover:before,
 [data-owner=""] .list-menu-float .icon-menu.profile:hover:after,
 .list-status-title .stats a:hover:before,
 .add-edit-more span a:hover:before {
@@ -2265,6 +2335,48 @@ div#advanced-options {
     transition: 0.1s !important
 }
 
+div#advanced-options[style$="block;"] {
+    animation: popupIn 0.8s
+}
+
+div#advanced-options[style$="none;"] {
+    animation: popupOut 0.6s
+}
+
+@keyframes popupIn {
+    0% {
+        transform: rotate(-5deg) scale3d(.5, .5, .5)
+    }
+    20% {
+        transform: scale3d(1.015, 1.015, 1.015)
+    }
+    40% {
+        transform: scale3d(.925, .925, .925)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes popupOut {
+    0% {
+        transform: scale(1)
+    }
+    20% {
+        transform: scale3d(.925, .925, .925)
+    }
+    40% {
+        opacity: 1
+    }
+    60% {
+        transform: rotate(2deg) scale3d(1.05, 1.05, 1.05)
+    }
+    to {
+        transform: rotate(5deg) scale3d(.25, .25, .25);
+        opacity: 0
+    }
+}
+
 #advanced-options {
     position: fixed;
     top: calc(50% - 285px)
@@ -2348,7 +2460,7 @@ div#advanced-options {
 }
 
 #advanced-options [class*="-widget"] select {
-    background: transparent url("https://i.imgur.com/5zEy8bX.png") no-repeat center right / 24px auto;
+    background: transparent url("https://i.imgur.com/eYovmyv.png") no-repeat center right / 24px auto;
     padding-right: 24px
 }
 
@@ -2477,7 +2589,7 @@ div#tu_settings .tu_buttons>.tu_button {
     height: 28px;
     width: 86px;
     cursor: pointer;
-    transition: 0.025s !important
+    transition: transform 0.15s !important
 }
 
 #advanced-options .advanced-options-button a:hover,
@@ -2619,7 +2731,7 @@ div#tu_settings .tu_buttons>.tu_button {
     padding: 0 12px;
     height: 28px;
     cursor: pointer;
-    transition: 0.025s !important
+    transition: transform 0.15s !important
 }
 
 #fancybox-wrap[style*="320px;"] input[type="button"]:nth-child(2) {
@@ -2684,7 +2796,7 @@ footer {
 }
 
 #copyright:after {
-    content: "4.7";
+    content: "5.0";
     position: absolute;
     background: var(--bg-accent);
     -webkit-background-clip: text;
@@ -2790,10 +2902,6 @@ footer {
 body.ownlist #fancybox-overlay {
     background: var(--i-grain) !important;
     opacity: 0.7 !important;
-}
-/* Dropdown arrow */
-#advanced-options [class*="-widget"] select {
-	background-image: url(https://i.imgur.com/eYovmyv.png);
 }
 
 /* Fix for card tilt */
