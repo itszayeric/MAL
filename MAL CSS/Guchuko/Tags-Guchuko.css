@@ -1,3 +1,62 @@
+/* FontAwesome */
+.data.tags a[href*="tag=%23"] {font-size: 0;pointer-events: none;}
+.data.tags a[href*="tag=%23"]:before {
+	content: "";
+	display: flex;
+	position: absolute;
+	background: var(--bg-status);
+	background-clip: text;
+	color: transparent;
+	font: normal 35px FontAwesome;
+	-webkit-text-stroke: 1.5px black;
+	height: 60px;
+	width: 60px;
+	top: -82px;
+	left: 115px;
+	align-items: flex-end;
+	justify-content: center;
+	transform: rotate(10deg);
+	z-index: 5; } /* # */
+
+/* Bold font */
+.data.tags a[href*="tag=%23%23"]:before {font-weight: bold;} /* ## */
+
+/* 45px font */
+.data.tags a[href*="tag=%23%2B"]:before {font-size: 45px;-webkit-text-stroke-width: 2px;} /* #+ */
+.data.tags a[href*="tag=%23%23%2B"]:before {font-size: 45px;-webkit-text-stroke-width: 2px;} /* ##+ */
+
+/* 25px font */
+.data.tags a[href*="tag=%23-"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* #- */
+.data.tags a[href*="tag=%23%23-"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* ##- */
+
+/* # */
+.data.tags a[href*="tag=%23"]:before {
+    animation: flip 0.8s
+}
+
+@keyframes flip {
+    0% {
+        animation-timing-function: ease-out;
+        transform: perspective(800px) scaleX(1) translateZ(0) rotateY(-1turn) rotate(10deg)
+    }
+    40% {
+        animation-timing-function: ease-out;
+        transform: perspective(800px) scaleX(1) translateZ(150px) rotateY(-190deg) rotate(10deg)
+    }
+    50% {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scaleX(1) translateZ(150px) rotateY(-170deg) rotate(10deg)
+    }
+    80% {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg) rotate(10deg)
+    }
+    to {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scaleX(1) translateZ(0) rotateY(0deg) rotate(10deg)
+    }
+}
+
 /* crown for score 8,9,10 */
 .data .score-8 {
     --c-icon: "\f521";
@@ -32,9 +91,10 @@
 .data .score-label:before {
     font-size: 0 !important
 }
+
 .data .score-label:after {
-    left: 28px;
-    bottom: 200px;
+    left: -108px;
+    bottom: 198px;
     height: 50px;
     width: 50px;
     background: url(https://i.imgur.com/eAmPXeQ.png) top / 45px,
@@ -44,13 +104,13 @@
     font: bold 35px fontawesome;
     color: transparent;
     -webkit-text-stroke: 1.5px black;
-    transform: rotate(35deg);
+    transform: rotate(-20deg);
     pointer-events: none;
 }
 
 [data-work="manga"] .data .score-label:after {
-    left: 8px;
-    bottom: 201px
+    left: -128px;
+    bottom: 198px
 }
 
 /* Monday to Sunday */
@@ -136,6 +196,26 @@
   content: "Sunday";
   letter-spacing: 1.6px;
  }
+ 
+ /* 'Airing' day */
+.data.tags a[href$="day"]:before {
+    color: var(--status);
+    font: bold 30px Amatic SC;
+    letter-spacing: 1px;
+    text-shadow: -1px 1px 0 var(--t-dark),
+      1px -1px 0 var(--t-dark),
+      -1px -1px 0 var(--t-dark),
+      1px 1px 0 var(--t-dark);
+    -webkit-text-stroke: 0
+}
+.data.tags a[href$="Mon"]:before {content: "Mon";color: hsl(149, 63%, 66%);}
+.data.tags a[href$="Tue"]:before {content: "Tue";color: hsl(185, 65%, 69%);}
+.data.tags a[href$="Wed"]:before {content: "Wed";color: hsl(250, 55%, 70%);}
+.data.tags a[href$="Thu"]:before {content: "Thu";color: hsl(307, 55%, 61%);}
+.data.tags a[href$="Fri"]:before {content: "Fri";color: hsl(360, 72%, 65%);}
+.data.tags a[href$="Sat"]:before {content: "Sat";color: hsl(27, 95%, 69%);}
+.data.tags a[href$="Sun"]:before {content: "Sun";color: hsl(60, 74%, 73%);}
+ 
  
  /* Days */
 .data.tags a[href$="=Days"] {
@@ -303,34 +383,6 @@
 }
 .data.tags a[href$="=pp"]:after {
   content: "Airing postponed due to production issues"
-}
-
-/* # */
-.data.tags a[href*="tag=%23"]:before {
-    animation: flip 0.8s
-}
-
-@keyframes flip {
-    0% {
-        animation-timing-function: ease-out;
-        transform: perspective(800px) scaleX(1) translateZ(0) rotateY(-1turn) rotate(10deg)
-    }
-    40% {
-        animation-timing-function: ease-out;
-        transform: perspective(800px) scaleX(1) translateZ(150px) rotateY(-190deg) rotate(10deg)
-    }
-    50% {
-        animation-timing-function: ease-in;
-        transform: perspective(800px) scaleX(1) translateZ(150px) rotateY(-170deg) rotate(10deg)
-    }
-    80% {
-        animation-timing-function: ease-in;
-        transform: perspective(800px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg) rotate(10deg)
-    }
-    to {
-        animation-timing-function: ease-in;
-        transform: perspective(800px) scaleX(1) translateZ(0) rotateY(0deg) rotate(10deg)
-    }
 }
 
 /* + */
