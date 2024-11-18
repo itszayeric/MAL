@@ -120,28 +120,25 @@
 .data.tags a[href$="Violin"]:before {content: "\f8ed";}
 /* Other */
 .data.tags a[href$="!"]:before {content: "\f4a5";}
-.data.tags a[href$="%3C3"]:before, /* <3 */
 .data.tags a[href$="%3F"]:before {content: "\e1e3";} /* Question mark */
 .data.tags a[href$="Biohazard"]:before {content: "\f780";}
 .data.tags a[href$="Cards"]:before {content: "\e3ed";}
-.data.tags a[href$="Cool"]:before {content: "\f892";}
 .data.tags a[href$="Crown"]:before {content: "\f521";}
 .data.tags a[href$="CrownWeb"]:before {content: "\e682";}
 .data.tags a[href$="Dice"]:before {content: "\f522";}
 .data.tags a[href$="Eyes"]:before {content: "\f55f";}
-.data.tags a[href$="Fav"]:before {content: "\f004";}
 .data.tags a[href$="Gamepad"]:before {content: "\f11b";}
 .data.tags a[href$="Ghost"]:before {content: "\f6e2";}
 .data.tags a[href$="Glasses"]:before {content: "\f5f5";}
-.data.tags a[href$="Heart"]:before {content: "\f004";color: #f07698;}
+.data.tags a[href$="%3C3"]:before, /* <3 */
 .data.tags a[href$="Love"]:before,
+.data.tags a[href$="Heart"]:before {content: "\f004";color: #f07698;}
 .data.tags a[href$="Luchador"]:before {content: "\f455";color: #f07698;}
 .data.tags a[href$="Moped"]:before {content: "\e3b9";}
 .data.tags a[href$="NoFace"]:before {content: "\f6e2";color: #414141;}
 .data.tags a[href$="Party"]:before {content: "\e31b";}
 .data.tags a[href$="Pirate"]:before {content: "\f714";}
 .data.tags a[href$="Puzzle"]:before {content: "\f12e";}
-.data.tags a[href$="Retro"]:before {content: "\f401";}
 .data.tags a[href$="Robot"]:before {content: "\e04b";}
 .data.tags a[href$="RobotHead"]:before {content: "\f544";}
 .data.tags a[href$="RobotX"]:before {content: "\e4a7";}
@@ -150,10 +147,12 @@
 .data.tags a[href$="Shuttle"]:before {content: "\f197";}
 .data.tags a[href$="Skull"]:before {content: "\f54c";}
 .data.tags a[href$="Suunglasses"]:before,
+.data.tags a[href$="Cool"]:before {content: "\f892";}
 .data.tags a[href$="Swords"]:before {content: "\f71d";}
 .data.tags a[href$="Trash"]:before {content: "\f2ed";}
 .data.tags a[href$="Trees"]:before {content: "\f724";}
 .data.tags a[href$="TV"]:before,
+.data.tags a[href$="Retro"]:before {content: "\f401";}
 .data.tags a[href$="Weed"]:before {content: "\f55f";}
 .data.tags a[href$="Witch"]:before {content: "\f6e7";}
 .data.tags a[href$="Zzz"]:before {content: "\f880";}
@@ -194,10 +193,10 @@
 /* Weather */
 .data.tags a[href$="Bolt"]:before {content: "\f0e7";}
 .data.tags a[href$="Clouds"]:before {content: "\f744";}
-.data.tags a[href$="CloudyMoon"]:before,
 .data.tags a[href$="CloudySuun"]:before,
 .data.tags a[href$="Dayy"]:before {content: "\f746";}
 .data.tags a[href$="Lightning"]:before {content: "\e0b7";}
+.data.tags a[href$="CloudyMoon"]:before,
 .data.tags a[href$="Night"]:before {content: "\f745";}
 .data.tags a[href$="Rain"]:before {content: "\f738";}
 .data.tags a[href$="Snowflake"]:before {content: "\f2dc";}
