@@ -43,7 +43,7 @@
     background-clip: text !important;
     font: bold 35px fontawesome;
     color: transparent;
-    -webkit-text-stroke: 1.5px var(--bg);
+    -webkit-text-stroke: 1.5px black;
     transform: rotate(35deg);
     pointer-events: none;
 }
@@ -454,9 +454,9 @@
     content: "\e41c";
     display: flex;
     position: absolute;
-    color: var(--white) !important;
+    color: var(--status) !important;
     font: bold 56px FontAwesome;
-    -webkit-text-stroke: 2px var(--status);
+    -webkit-text-stroke: 1.5px black;
     height: 56px;
     width: 56px;
     top: 195px;
