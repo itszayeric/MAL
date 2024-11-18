@@ -1,34 +1,3 @@
-/* FontAwesome */
-.data.tags a[href*="tag=%23"] {font-size: 0;pointer-events: none;}
-.data.tags a[href*="tag=%23"]:before {
-	content: "";
-	display: flex;
-	position: absolute;
-	background: var(--bg-status);
-	background-clip: text;
-	color: transparent;
-	font: normal 35px FontAwesome;
-	-webkit-text-stroke: 1.5px black;
-	height: 60px;
-	width: 60px;
-	top: -82px;
-	left: 115px;
-	align-items: flex-end;
-	justify-content: center;
-	transform: rotate(10deg);
-	z-index: 5; } /* # */
-
-/* Bold font */
-.data.tags a[href*="tag=%23%23"]:before {font-weight: bold;} /* ## */
-
-/* 45px font */
-.data.tags a[href*="tag=%23%2B"]:before {font-size: 45px;-webkit-text-stroke-width: 2px;} /* #+ */
-.data.tags a[href*="tag=%23%23%2B"]:before {font-size: 45px;-webkit-text-stroke-width: 2px;} /* ##+ */
-
-/* 25px font */
-.data.tags a[href*="tag=%23-"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* #- */
-.data.tags a[href*="tag=%23%23-"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* ##- */
-
 /* # */
 .data.tags a[href*="tag=%23"]:before {
     animation: flip 0.8s
@@ -98,7 +67,7 @@
     height: 50px;
     width: 50px;
     background: url(https://i.imgur.com/eAmPXeQ.png) top / 45px,
-		radial-gradient(circle at 30% 20%, var(--cbgc1) 30%,  50%, var(--cbgc2) 100%) 0px 0px / 50px 55px no-repeat no-repeat !important;
+		radial-gradient(circle at 70% 20%, var(--cbgc1) 30%,  50%, var(--cbgc2) 100%) 0px 0px / 50px 55px no-repeat no-repeat !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     font: bold 35px fontawesome;
@@ -211,7 +180,7 @@
     -webkit-text-stroke: 0;
     pointer-events: auto;
 }
-.data.tags a[href$="Mon"]:before {
+.data.tags a[href$="Mon" s]:before {
     content: "Mon";color: hsl(149, 63%, 66%);
     text-shadow: 0px 0px 0 hsl(149, 50%, 50%),
                  1px 1px 0 hsl(149, 40%, 45%),
@@ -219,7 +188,7 @@
                  3px 3px 0 hsl(149, 20%, 30%),
                  4px 4px 0 hsl(149, 10%, 20%),
                  5px 5px 0 hsl(149, 5%, 15%);}
-.data.tags a[href$="Tue"]:before {
+.data.tags a[href$="Tue" s]:before {
     content: "Tue";color: hsl(185, 65%, 69%);
     text-shadow: 0px 0px 0 hsl(185, 50%, 50%),
                  1px 1px 0 hsl(185, 40%, 45%),
@@ -227,7 +196,7 @@
                  3px 3px 0 hsl(185, 20%, 30%),
                  4px 4px 0 hsl(185, 10%, 20%),
                  5px 5px 0 hsl(185, 5%, 15%);}
-.data.tags a[href$="Wed"]:before {
+.data.tags a[href$="Wed" s]:before {
     content: "Wed";color: hsl(250, 55%, 70%);
     text-shadow: 0px 0px 0 hsl(250, 50%, 50%),
                  1px 1px 0 hsl(250, 40%, 45%),
@@ -235,7 +204,7 @@
                  3px 3px 0 hsl(250, 20%, 30%),
                  4px 4px 0 hsl(250, 10%, 20%),
                  5px 5px 0 hsl(250, 5%, 15%);}
-.data.tags a[href$="Thu"]:before {
+.data.tags a[href$="Thu" s]:before {
     content: "Thu";color: hsl(307, 55%, 61%);
     text-shadow: 0px 0px 0 hsl(307, 50%, 50%),
                  1px 1px 0 hsl(307, 40%, 45%),
@@ -243,7 +212,7 @@
                  3px 3px 0 hsl(307, 20%, 30%),
                  4px 4px 0 hsl(307, 10%, 20%),
                  5px 5px 0 hsl(307, 5%, 15%);}
-.data.tags a[href$="Fri"]:before {
+.data.tags a[href$="Fri" s]:before {
     content: "Fri";color: hsl(360, 72%, 65%);
     text-shadow: 0px 0px 0 hsl(360, 50%, 50%),
                  1px 1px 0 hsl(360, 40%, 45%),
@@ -251,7 +220,7 @@
                  3px 3px 0 hsl(360, 20%, 30%),
                  4px 4px 0 hsl(360, 10%, 20%),
                  5px 5px 0 hsl(360, 5%, 15%);}
-.data.tags a[href$="Sat"]:before {
+.data.tags a[href$="Sat" s]:before {
     content: "Sat";color: hsl(27, 95%, 69%);
     text-shadow: 0px 0px 0 hsl(27, 50%, 50%),
                  1px 1px 0 hsl(27, 40%, 45%),
@@ -259,7 +228,7 @@
                  3px 3px 0 hsl(27, 20%, 30%),
                  4px 4px 0 hsl(27, 10%, 20%),
                  5px 5px 0 hsl(27, 5%, 15%);}
-.data.tags a[href$="Sun"]:before {
+.data.tags a[href$="Sun" s]:before {
     content: "Sun";color: hsl(60, 74%, 73%);
     text-shadow: 0px 0px 0 hsl(60, 50%, 50%),
                  1px 1px 0 hsl(60, 40%, 45%),
