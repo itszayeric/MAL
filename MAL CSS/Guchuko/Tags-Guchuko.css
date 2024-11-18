@@ -305,6 +305,34 @@
   content: "Airing postponed due to production issues"
 }
 
+/* # */
+.data.tags a[href*="tag=%23"]:before {
+    animation: flip 0.8s
+}
+
+@keyframes flip {
+    0% {
+        animation-timing-function: ease-out;
+        transform: perspective(800px) scaleX(1) translateZ(0) rotateY(-1turn) rotate(10deg)
+    }
+    40% {
+        animation-timing-function: ease-out;
+        transform: perspective(800px) scaleX(1) translateZ(150px) rotateY(-190deg) rotate(10deg)
+    }
+    50% {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scaleX(1) translateZ(150px) rotateY(-170deg) rotate(10deg)
+    }
+    80% {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg) rotate(10deg)
+    }
+    to {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scaleX(1) translateZ(0) rotateY(0deg) rotate(10deg)
+    }
+}
+
 /* + */
 .data.tags a[href$="tag=%2B"] {
     position: absolute;
@@ -367,9 +395,10 @@
 .data.tags a[href$="tag=7"],
 .data.tags a[href$="tag=8"],
 .data.tags a[href$="tag=9"],
-.data.tags a[href$="tag=10"] {
+.data.tags a[href$="tag=10"],
+.data.tags a[href$="tag=10%2B"] {
     position: absolute;
-    background: linear-gradient(to bottom, var(--bg) 1%, var(--bg1) 65%);
+    background: linear-gradient(to bottom, var(--bg) 1%, var(--bg1) 60%);
     border-radius: 3px;
     color: var(--status) !important;
     font: bold 11px/21px Advent Pro, FontAwesome;
@@ -382,6 +411,10 @@
     z-index: 4
 }
 
+.data.tags a[href$="tag=10%2B"] {
+    width: 37px
+}
+
 .list-table-data:hover .data.tags a[href$="tag=1"],
 .list-table-data:hover .data.tags a[href$="tag=2"],
 .list-table-data:hover .data.tags a[href$="tag=3"],
@@ -391,7 +424,8 @@
 .list-table-data:hover .data.tags a[href$="tag=7"],
 .list-table-data:hover .data.tags a[href$="tag=8"],
 .list-table-data:hover .data.tags a[href$="tag=9"],
-.list-table-data:hover .data.tags a[href$="tag=10"] {
+.list-table-data:hover .data.tags a[href$="tag=10"],
+.list-table-data:hover .data.tags a[href$="tag=10%2B"] {
     background: linear-gradient(to bottom, var(--bg), var(--bg1) 0%);
     box-shadow: var(--shadow)
 }
@@ -405,7 +439,8 @@
 .data.tags a[href$="tag=7"]:after,
 .data.tags a[href$="tag=8"]:after,
 .data.tags a[href$="tag=9"]:after,
-.data.tags a[href$="tag=10"]:after {
+.data.tags a[href$="tag=10"]:after,
+.data.tags a[href$="tag=10%2B"]:after {
     content: "\f021";
     display: inline-block;
     margin-left: 4px
@@ -420,7 +455,8 @@
 .list-table-data:hover .data.tags a[href$="tag=7"]:after,
 .list-table-data:hover .data.tags a[href$="tag=8"]:after,
 .list-table-data:hover .data.tags a[href$="tag=9"]:after,
-.list-table-data:hover .data.tags a[href$="tag=10"]:after {
+.list-table-data:hover .data.tags a[href$="tag=10"]:after,
+.list-table-data:hover .data.tags a[href$="tag=10%2B"]:after {
     animation: spin 2s infinite linear
 }
 
