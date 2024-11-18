@@ -4,7 +4,8 @@
 	content: "";
 	display: flex;
 	position: absolute;
-	background: var(--bg-status);
+	background: url(https://i.imgur.com/eAmPXeQ.png) top / 60px 60px;
+	-webkit-background-clip: text !important;
 	background-clip: text;
 	color: transparent;
 	font: normal 35px FontAwesome;
@@ -128,45 +129,40 @@
     pointer-events: auto;
 }
 .data.tags a[href$="mon"]:before {
-    content: "Mon";color: hsl(149, 63%, 66%);
-    text-shadow: 0px 0px 0 hsl(149, 50%, 50%),
-                 1px 1px 0 hsl(149, 40%, 45%),
-                 2px 2px 0 hsl(149, 30%, 40%),
-                 3px 3px 0 hsl(149, 20%, 30%),
-                 4px 4px 0 hsl(149, 10%, 20%),
-                 5px 5px 0 hsl(149, 5%, 15%);}
+    content: "Mon";color: hsl(139, 63%, 66%);
+    text-shadow: 0px 0px 0 hsl(139, 50%, 50%),
+                 1px 1px 0 hsl(139, 40%, 45%),
+                 2px 2px 0 hsl(139, 30%, 40%),
+                 3px 3px 0 hsl(139, 20%, 30%),
+                 4px 4px 0 hsl(139, 10%, 20%)}
 .data.tags a[href$="tue"]:before {
     content: "Tue";color: hsl(185, 65%, 69%);
     text-shadow: 0px 0px 0 hsl(185, 50%, 50%),
                  1px 1px 0 hsl(185, 40%, 45%),
                  2px 2px 0 hsl(185, 30%, 40%),
                  3px 3px 0 hsl(185, 20%, 30%),
-                 4px 4px 0 hsl(185, 10%, 20%),
-                 5px 5px 0 hsl(185, 5%, 15%);}
+                 4px 4px 0 hsl(185, 10%, 20%)}
 .data.tags a[href$="wed"]:before {
     content: "Wed";color: hsl(250, 55%, 70%);
     text-shadow: 0px 0px 0 hsl(250, 50%, 50%),
                  1px 1px 0 hsl(250, 40%, 45%),
                  2px 2px 0 hsl(250, 30%, 40%),
                  3px 3px 0 hsl(250, 20%, 30%),
-                 4px 4px 0 hsl(250, 10%, 20%),
-                 5px 5px 0 hsl(250, 5%, 15%);}
+                 4px 4px 0 hsl(250, 10%, 20%)}
 .data.tags a[href$="thu"]:before {
-    content: "Thu";color: hsl(307, 55%, 61%);
-    text-shadow: 0px 0px 0 hsl(307, 50%, 50%),
-                 1px 1px 0 hsl(307, 40%, 45%),
-                 2px 2px 0 hsl(307, 30%, 40%),
-                 3px 3px 0 hsl(307, 20%, 30%),
-                 4px 4px 0 hsl(307, 10%, 20%),
-                 5px 5px 0 hsl(307, 5%, 15%);}
+    content: "Thu";color: hsl(317, 60%, 62%);
+    text-shadow: 0px 0px 0 hsl(317, 50%, 50%),
+                 1px 1px 0 hsl(317, 40%, 45%),
+                 2px 2px 0 hsl(317, 30%, 40%),
+                 3px 3px 0 hsl(317, 20%, 30%),
+                 4px 4px 0 hsl(317, 10%, 20%)}
 .data.tags a[href$="fri"]:before {
     content: "Fri";color: hsl(360, 72%, 65%);
     text-shadow: 0px 0px 0 hsl(360, 50%, 50%),
                  1px 1px 0 hsl(360, 40%, 45%),
                  2px 2px 0 hsl(360, 30%, 40%),
                  3px 3px 0 hsl(360, 20%, 30%),
-                 4px 4px 0 hsl(360, 10%, 20%),
-                 5px 5px 0 hsl(360, 5%, 15%);}
+                 4px 4px 0 hsl(360, 10%, 20%)}
 .data.tags a[href$="sat"]:before {
     content: "Sat";color: hsl(27, 95%, 69%);
     text-shadow: 0px 0px 0 hsl(27, 50%, 50%),
@@ -176,13 +172,12 @@
                  4px 4px 0 hsl(27, 10%, 20%),
                  5px 5px 0 hsl(27, 5%, 15%);}
 .data.tags a[href$="sun"]:before {
-    content: "Sun";color: hsl(60, 74%, 73%);
-    text-shadow: 0px 0px 0 hsl(60, 50%, 50%),
-                 1px 1px 0 hsl(60, 40%, 45%),
-                 2px 2px 0 hsl(60, 30%, 40%),
-                 3px 3px 0 hsl(60, 20%, 30%),
-                 4px 4px 0 hsl(60, 10%, 20%),
-                 5px 5px 0 hsl(60, 5%, 15%);
+    content: "Sun";color: hsl(50, 74%, 73%);
+    text-shadow: 0px 0px 0 hsl(50, 50%, 50%),
+                 1px 1px 0 hsl(50, 40%, 45%),
+                 2px 2px 0 hsl(50, 30%, 40%),
+                 3px 3px 0 hsl(50, 20%, 30%),
+                 4px 4px 0 hsl(50, 10%, 20%);
 }
  
  /* Days */
@@ -560,3 +555,87 @@
 .data.score:hover~.data.tags a[href$="tag=100"]:after {
     display: none
 }
+
+/* Monday to Sunday 
+.data.tags a[href$="=mon"],
+.data.tags a[href$="=tue"],
+.data.tags a[href$="=wed"],
+.data.tags a[href$="=thu"],
+.data.tags a[href$="=fri"],
+.data.tags a[href$="=sat"],
+.data.tags a[href$="=sun"] {
+    position: absolute;
+    left: -18px !important;
+    top: -35px !important;
+    width: 18px;
+    height: 32px;
+    padding: 0;
+    background: var(--tdbg);
+    border-radius: 5px 0 0 5px;
+    box-shadow: var(--shadow-big) !important;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.data.tags a[href$="mon"]:hover,
+.data.tags a[href$="tue"]:hover,
+.data.tags a[href$="wed"]:hover,
+.data.tags a[href$="thu"]:hover,
+.data.tags a[href$="fri"]:hover,
+.data.tags a[href$="sat"]:hover,
+.data.tags a[href$="sun"]:hover {
+    width: 80px;
+    left: -80px !important;
+}
+
+.data.tags a[href$="=mon"] {
+  background: hsl(149, 63%, 66%);}
+.data.tags a[href$="=tue"] {
+  background: hsl(185, 65%, 69%);}
+.data.tags a[href$="=wed"] {
+  background: hsl(250, 55%, 70%);}
+.data.tags a[href$="=thu"] {
+  background: hsl(307, 55%, 61%);}
+.data.tags a[href$="=fri"] {
+  background: hsl(360, 72%, 65%);}
+.data.tags a[href$="=sat"] {
+  background: hsl(27, 95%, 69%);}
+.data.tags a[href$="=sun"] {
+  background: hsl(60, 74%, 73%);
+}
+
+.data.tags a[href$="=mon"]:before,
+.data.tags a[href$="=tue"]:before,
+.data.tags a[href$="=wed"]:before,
+.data.tags a[href$="=thu"]:before,
+.data.tags a[href$="=fri"]:before,
+.data.tags a[href$="=sat"]:before,
+.data.tags a[href$="=sun"]:before {
+  font: bold 11px/32px Segoe UI;
+  font-variant: normal;
+  color: var(--t-dark);
+  margin-left: 1.5px;
+}
+
+.data.tags a[href$="=mon"]:before {
+  content: "Monday";
+  letter-spacing: 1.6px;}
+.data.tags a[href$="=tue"]:before {
+  content: "Tuesday";
+  letter-spacing: 1.6px; }
+.data.tags a[href$="=wed"]:before {
+  content: "Wednesday";
+  letter-spacing: 1.5px; }
+.data.tags a[href$="=thu"]:before {
+  content: "Thursday";
+  letter-spacing: 1.6px; }
+.data.tags a[href$="=fri"]:before {
+  content: "Friday";
+  letter-spacing: 1.8px; }
+.data.tags a[href$="=sat"]:before {
+  content: "Saturday";
+  letter-spacing: 1.6px;  }
+.data.tags a[href$="=sun"]:before {
+  content: "Sunday";
+  letter-spacing: 1.6px;
+ } */
