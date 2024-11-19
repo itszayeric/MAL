@@ -117,6 +117,7 @@
 .data.tags a[href$="Cards"]:before {content: "\e3ed";}
 .data.tags a[href$="Crown"]:before {content: "\f521";}
 .data.tags a[href$="Dice"]:before {content: "\f522";}
+.data.tags a[href$="Eye1"]:before {content: "\f06e";}
 .data.tags a[href$="Eyes"]:before {content: "\e367";}
 .data.tags a[href$="Gem"]:before {content: "\f3a5";}
 .data.tags a[href$="Fire1"]:before {content: "\f06d";}
@@ -127,10 +128,15 @@
 .data.tags a[href$="%3C3"]:before, /* <3 */
 .data.tags a[href$="Love"]:before,
 .data.tags a[href$="Heart"]:before {content: "\f004";}
+.data.tags a[href$="Heartbreak"]:before {content: "\f7a9";}
 .data.tags a[href$="Luchador"]:before {content: "\f455";}
 .data.tags a[href$="Moped"]:before {content: "\e3b9";}
+.data.tags a[href$="Mustache"]:before {content: "\e5bc";}
 .data.tags a[href$="NoFace"]:before {content: "\f6e2";}
 .data.tags a[href$="Party"]:before {content: "\e31b";}
+.data.tags a[href$="Peace"]:before {content: "\f67c";}
+.data.tags a[href$="Peeking"]:before {content: "\e481";}
+.data.tags a[href$="Pickaxe"]:before {content: "\e5bf";}
 .data.tags a[href$="Pirate"]:before {content: "\f714";}
 .data.tags a[href$="Puzzle"]:before {content: "\f12e";}
 .data.tags a[href$="Robot"]:before {content: "\e04b";}
@@ -142,6 +148,7 @@
 .data.tags a[href$="Skull"]:before {content: "\f54c";}
 .data.tags a[href$="Suunglasses"]:before,
 .data.tags a[href$="Cool"]:before {content: "\f892";}
+.data.tags a[href$="Spiral"]:before {content: "\e008";}
 .data.tags a[href$="Swords"]:before {content: "\f71d";}
 .data.tags a[href$="Trash"]:before {content: "\f2ed";}
 .data.tags a[href$="Trees"]:before {content: "\f724";}
@@ -149,6 +156,7 @@
 .data.tags a[href$="Retro"]:before {content: "\f401";}
 .data.tags a[href$="Weed"]:before {content: "\f55f";}
 .data.tags a[href$="Witch"]:before {content: "\f6e7";}
+.data.tags a[href$="YinYang"]:before {content: "\f6ad";}
 .data.tags a[href$="Zzz"]:before {content: "\f880";}
 /* Space */
 .data.tags a[href$="*"]:before,
@@ -188,10 +196,12 @@
 .data.tags a[href$="Lightning"]:before {content: "\e0b7";}
 .data.tags a[href$="CloudyMoon"]:before,
 .data.tags a[href$="Night"]:before {content: "\f745";}
+.data.tags a[href$="Moon2"]:before {content: "\f699";}
 .data.tags a[href$="Rain"]:before {content: "\f738";}
 .data.tags a[href$="Snowflake"]:before {content: "\f2dc";}
 .data.tags a[href$="Snowflakes"]:before {content: "\f7cf";}
 .data.tags a[href$="Suuun"]:before {content: "\f185";}
+.data.tags a[href$="Sunburst"]:before {content: "\f666";}
 .data.tags a[href$="Umbrella"]:before {content: "\f0e9";}
 .data.tags a[href$="Wave"]:before {content: "\e65b";}
 .data.tags a[href$="WinterHat"]:before {content: "\f7a8";}
