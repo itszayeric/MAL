@@ -123,7 +123,7 @@
 .data.tags a[href$="Dice"]:before {content: "\f522";}
 .data.tags a[href$="Eye1"]:before {content: "\f06e";}
 .data.tags a[href$="Eyes"]:before {content: "\e367";}
-.data.tags a[href$="Gem"]:before {content: "\f3a5";}
+.data.tags a[href$="Diamond"]:before {content: "\f3a5";}
 .data.tags a[href$="Fire1"]:before {content: "\f06d";}
 .data.tags a[href$="Fire2"]:before {content: "\f7e4";}
 .data.tags a[href$="Gamepad"]:before {content: "\f11b";}
@@ -212,9 +212,18 @@
 .data.tags a[href$="Umbrella"]:before {content: "\f0e9";}
 .data.tags a[href$="Wave"]:before {content: "\e65b";}
 .data.tags a[href$="WinterHat"]:before {content: "\f7a8";}
+/* Hands */
+.data.tags a[href$="Hand"]:before {content: "\f256";}
+.data.tags a[href$="Handshake"]:before {content: "\f2b5";}
+.data.tags a[href$="HandPointUp"]:before {content: "\f0a6";}
+.data.tags a[href$="HandWave"]:before {content: "\e1a7";}
+.data.tags a[href$="HandSpock"]:before {content: "\f259";}
+.data.tags a[href$="HandPeace"]:before {content: "\f25b";}
+.data.tags a[href$="HandBird"]:before {content: "\f806";}
+.data.tags a[href$="ThumbUp"]:before {content: "\f164";}
+.data.tags a[href$="ThumbDown"]:before {content: "\f165";}
 
 /*
-.data.tags a[href$=""]:before {content: "\";}
 .data.tags a[href$=""]:before {content: "\";}
 .data.tags a[href$=""]:before {content: "\";}
 .data.tags a[href$=""]:before {content: "\";}
