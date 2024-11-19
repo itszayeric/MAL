@@ -69,6 +69,8 @@
 .data.tags a[href*="%20WhiteRed%20"]:before {color: white;-webkit-text-stroke-color: #fa6b52;} /* WhiteRed */
 .data.tags a[href*="%20WhiteYellow%20"]:before {color: white;-webkit-text-stroke-color: #ffea8c;} /* WhiteYellow */
 
+/* Black inside */
+.data.tags a[href*="%20BlackStatus%20"]:before {color: black;-webkit-text-stroke-color: var(--status);} /* BlackStatus */
 /* Glow */
 .data.tags a[href*="%20Glow%20"]:before {text-shadow: 0 0 10px var(--status);} /* Glow */
 .data.tags a[href*="%20GlowBlack%20"]:before {text-shadow: 0 0 10px #414141;} /* GlowBlack */
@@ -173,6 +175,10 @@
 .data.tags a[href$="fri"]:before,
 .data.tags a[href$="sat"]:before,
 .data.tags a[href$="sun"]:before {
+    top: -57px;
+  	left: 125px;
+    height: 35px;
+    width: 35px;
     color: var(--status);
     font: bold 25px Barlow Condensed !important;
     letter-spacing: 1px;
@@ -208,7 +214,7 @@
                  3px 3px 0 hsla(317, 20%, 30%, 8),
                  4px 4px 0 hsla(317, 10%, 20%, 1)}
 .data.tags a[href$="fri"]:before {
-    content: "Fri";color: hsl(360, 72%, 65%);
+    content: "Fri";color: hsl(360, 79%, 65%);
     text-shadow: 0px 0px 0 hsla(360, 50%, 50%, 2),
                  1px 1px 0 hsla(360, 40%, 45%, 4),
                  2px 2px 0 hsla(360, 30%, 40%, 6),
@@ -471,7 +477,7 @@
     width: 31px;
     top: -52px;
     left: 26px;
-    pointer-events: none;
+    pointer-events: auto;
     transition: 0.2s !important;
     z-index: 4
 }
