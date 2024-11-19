@@ -116,9 +116,11 @@
 .data.tags a[href$="Biohazard"]:before {content: "\f780";}
 .data.tags a[href$="Cards"]:before {content: "\e3ed";}
 .data.tags a[href$="Crown"]:before {content: "\f521";}
-.data.tags a[href$="CrownWeb"]:before {content: "\e682";}
 .data.tags a[href$="Dice"]:before {content: "\f522";}
-.data.tags a[href$="Eyes"]:before {content: "\f55f";}
+.data.tags a[href$="Eyes"]:before {content: "\e367";}
+.data.tags a[href$="Gem"]:before {content: "\f3a5";}
+.data.tags a[href$="Fire1"]:before {content: "\f06d";}
+.data.tags a[href$="Fire2"]:before {content: "\f7e4";}
 .data.tags a[href$="Gamepad"]:before {content: "\f11b";}
 .data.tags a[href$="Ghost"]:before {content: "\f6e2";}
 .data.tags a[href$="Glasses"]:before {content: "\f5f5";}
@@ -159,24 +161,24 @@
 .data.tags a[href$="8bit"]:before {content: "\f8f6";}
 .data.tags a[href$="Alien"]:before {content: "\e04a";}
 .data.tags a[href$="Astronaut"]:before {content: "\f4fb";}
-.data.tags a[href$="Biking"]:before {content: "\f84a";}
-.data.tags a[href$="Bowling"]:before {content: "\f436";}
 .data.tags a[href$="Comet"]:before {content: "\e003";}
-.data.tags a[href$="Dumbbell"]:before {content: "\f44b";}
-.data.tags a[href$="Golf"]:before {content: "\e3ac";}
-.data.tags a[href$="Medal"]:before {content: "\f5a2";}
 .data.tags a[href$="Moon"]:before {content: "\f755";}
-.data.tags a[href$="Ping-pong"]:before {content: "\f45d";}
 .data.tags a[href$="Planet"]:before {content: "\e020";}
 .data.tags a[href$="Raygun"]:before,
 .data.tags a[href$="SciFi"]:before {content: "\e025";}
-.data.tags a[href$="Soccer"]:before {content: "\f1e3";}
 .data.tags a[href$="Telescope"]:before {content: "\e03e";}
 .data.tags a[href$="UFO"]:before {content: "\e047";}
 /* Sports */
 .data.tags a[href$="Baseball"]:before {content: "\f433";}
+.data.tags a[href$="Biking"]:before {content: "\f84a";}
 .data.tags a[href$="Basketball"]:before {content: "\f434";}
+.data.tags a[href$="Bowling"]:before {content: "\f436";}
+.data.tags a[href$="Dumbbell"]:before {content: "\f44b";}
+.data.tags a[href$="Golf"]:before {content: "\e3ac";}
 .data.tags a[href$="Judo"]:before {content: "\e3d1";}
+.data.tags a[href$="Medal"]:before {content: "\f5a2";}
+.data.tags a[href$="Ping-pong"]:before {content: "\f45d";}
+.data.tags a[href$="Soccer"]:before {content: "\f1e3";}
 .data.tags a[href$="Tennis"]:before {content: "\f45e";color: #ffe480;}
 .data.tags a[href$="Volleyball"]:before {content: "\f45f";}
 /* Weather */
@@ -190,9 +192,9 @@
 .data.tags a[href$="Rain"]:before {content: "\f738";}
 .data.tags a[href$="Snowflake"]:before {content: "\f2dc";}
 .data.tags a[href$="Snowflakes"]:before {content: "\f7cf";}
+.data.tags a[href$="Suuun"]:before {content: "\f185";}
 .data.tags a[href$="Umbrella"]:before {content: "\f0e9";}
 .data.tags a[href$="Wave"]:before {content: "\e65b";}
 .data.tags a[href$="WinterHat"]:before {content: "\f7a8";}
-
 
 /* .data.tags a[href$=""]:before {content: "\";} */
