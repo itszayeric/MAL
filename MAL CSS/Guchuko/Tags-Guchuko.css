@@ -30,6 +30,57 @@
 .data.tags a[href*="tag=%23-"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* #- */
 .data.tags a[href*="tag=%23%23-"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* ##- */
 
+/* Colours */
+.data.tags a[href*="%20Black%20"]:before {color: #414141;} /* Black */
+  .data.tags a[href*="%20Black-%20"]:before {color: #656565;} /* Black- */
+  .data.tags a[href*="%20Black%2B%20"]:before {color: #202020;} /* Black+ */
+.data.tags a[href*="%20Blue%20"]:before {color: #6ad2fc;} /* Blue */
+  .data.tags a[href*="%20Blue-%20"]:before {color: #9be3ff;} /* Blue- */
+  .data.tags a[href*="%20Blue%2B%20"]:before {color: #00a7ed;} /* Blue+ */
+.data.tags a[href*="%20Brown%20"]:before {color: #b4a08c;} /* Brown */
+  .data.tags a[href*="%20Brown-%20"]:before {color: #ecdfc8;} /* Brown- */
+  .data.tags a[href*="%20Brown%2B%20"]:before {color: #80694b;} /* Brown+ */
+.data.tags a[href*="%20Green%20"]:before {color: #85e0c8;} /* Green */
+  .data.tags a[href*="%20Green-%20"]:before {color: #b0f8d2;} /* Green- */
+  .data.tags a[href*="%20Green%2B%20"]:before {color: #73cd91;} /* Green+ */
+.data.tags a[href*="%20Orange%20"]:before {color: #ffbc64;} /* Orange */
+  .data.tags a[href*="%20Orange-%20"]:before {color: #ffd680;} /* Orange- */
+  .data.tags a[href*="%20Orange%2B%20"]:before {color: #ff743c;} /* Orange+ */
+.data.tags a[href*="%20Pink%20"]:before {color: #f07698;} /* Pink */ 
+  .data.tags a[href*="%20Pink-%20"]:before {color: #ffa5c8;} /* Pink- */
+  .data.tags a[href*="%20Pink%2B%20"]:before {color: #e40a64;} /* Pink+ */
+.data.tags a[href*="%20Purple%20"]:before {color: #9282d2;} /* Purple */
+  .data.tags a[href*="%20Purple-%20"]:before {color: #c6bced;} /* Purple- */
+  .data.tags a[href*="%20Purple%2B%20"]:before {color: #7360b7;} /* Purple+ */
+.data.tags a[href*="%20Red%20"]:before {color: #fa6b52;} /* Red */
+  .data.tags a[href*="%20Red-%20"]:before {color: #fa8e89;} /* Red- */
+  .data.tags a[href*="%20Red%2B%20"]:before {color: #c84943;} /* Red+ */
+.data.tags a[href*="%20Yellow%20"]:before {color: #ffea8c;} /* Yellow */
+
+/* White inside with coloured outline */
+.data.tags a[href*="%20White%20"]:before {color: white;-webkit-text-stroke-color: var(--status);} /* White */
+.data.tags a[href*="%20WhiteBlack%20"]:before {color: white;-webkit-text-stroke-color: #414141;} /* WhiteBlack */
+.data.tags a[href*="%20WhiteBlue%20"]:before {color: white;-webkit-text-stroke-color: #6ad2fc;} /* WhiteBlue */
+.data.tags a[href*="%20WhiteBrown%20"]:before {color: white;-webkit-text-stroke-color: #b4a08c;} /* WhiteBrown */
+.data.tags a[href*="%20WhiteGreen%20"]:before {color: white;-webkit-text-stroke-color: #85e0c8;} /* WhiteGreen */
+.data.tags a[href*="%20WhiteOrange%20"]:before {color: white;-webkit-text-stroke-color: #ffbc64;} /* WhiteOrange */
+.data.tags a[href*="%20WhitePink%20"]:before {color: white;-webkit-text-stroke-color: #f07698;} /* WhitePink */
+.data.tags a[href*="%20WhitePurple%20"]:before {color: white;-webkit-text-stroke-color: #9282d2;} /* WhitePurple */
+.data.tags a[href*="%20WhiteRed%20"]:before {color: white;-webkit-text-stroke-color: #fa6b52;} /* WhiteRed */
+.data.tags a[href*="%20WhiteYellow%20"]:before {color: white;-webkit-text-stroke-color: #ffea8c;} /* WhiteYellow */
+
+/* Glow */
+.data.tags a[href*="%20Glow%20"]:before {text-shadow: 0 0 10px var(--status);} /* Glow */
+.data.tags a[href*="%20GlowBlack%20"]:before {text-shadow: 0 0 10px #414141;} /* GlowBlack */
+.data.tags a[href*="%20GlowBlue%20"]:before {text-shadow: 0 0 10px #6ad2fc;} /* GlowBlue */
+.data.tags a[href*="%20GlowBrown%20"]:before {text-shadow: 0 0 10px #b4a08c;} /* GlowBrown */
+.data.tags a[href*="%20GlowGreen%20"]:before {text-shadow: 0 0 10px #85e0c8;} /* GlowGreen */
+.data.tags a[href*="%20GlowOrange%20"]:before {text-shadow: 0 0 10px #ffbc64;} /* GlowOrange */
+.data.tags a[href*="%20GlowPink%20"]:before {text-shadow: 0 0 10px #f07698;} /* GlowPink */
+.data.tags a[href*="%20GlowPurple%20"]:before {text-shadow: 0 0 10px #9282d2;} /* GlowPurple */
+.data.tags a[href*="%20GlowRed%20"]:before {text-shadow: 0 0 10px #fa6b52;} /* GlowRed */
+.data.tags a[href*="%20GlowYellow%20"]:before {text-shadow: 0 0 10px #ffea8c;} /* GlowYellow */
+
 /* # */
 .data.tags a[href*="tag=%23"]:before {
     animation: flip 0.8s
