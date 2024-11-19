@@ -1,5 +1,5 @@
 /* FontAwesome */
-.data.tags a[href*="tag=%23"] {font-size: 0;pointer-events: none;}
+.data.tags a[href*="tag=%23"] {font-size: 0;pointer-events: auto;}
 .data.tags a[href*="tag=%23"]:before {
 	content: "";
 	display: flex;
@@ -152,7 +152,7 @@
     height: 50px;
     width: 50px;
     background: url(https://i.imgur.com/eAmPXeQ.png) top / 45px,
-		radial-gradient(circle at 70% 20%, var(--cbgc1) 30%,  50%, var(--cbgc2) 100%) 0px 0px / 50px 55px no-repeat no-repeat !important;
+		radial-gradient(circle at 70% 0%, var(--cbgc1) 43%,  50%, var(--cbgc2) 100%) 0px 0px / 50px 55px no-repeat no-repeat !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     font: bold 35px fontawesome;
