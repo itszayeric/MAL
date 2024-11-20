@@ -52,6 +52,7 @@
     .data.tags a[href*="%20%3D%3D%20"]:before {align-items: center;top: -73px;} /* " == " */
     
     /* Outline size */
+    .data.tags a[href*="%20B05%20"]:before {-webkit-text-stroke-width: 0.5px;} /* " B05 " */
     .data.tags a[href*="%20B1%20"]:before {-webkit-text-stroke-width: 1px;} /* " B1 " */
     .data.tags a[href*="%20B15%20"]:before {-webkit-text-stroke-width: 1.5px;} /* " B15 " */
     .data.tags a[href*="%20B2%20"]:before {-webkit-text-stroke-width: 2px;} /* " B2 " */
