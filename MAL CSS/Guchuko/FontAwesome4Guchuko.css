@@ -104,7 +104,7 @@
 .data.tags a[href$="Teddy"]:before {content: "\e3cf";}
 .data.tags a[href$="Tomato"]:before {content: "\e330";}
 .data.tags a[href$="Unicorn"]:before {content: "\f727";}
-.data.tags a[href$="Wave"]:before {content: "\e65b";}
+.data.tags a[href$="W4ve"]:before {content: "\e65b";}
 .data.tags a[href$="Weed"]:before {content: "\f55f";}
 .data.tags a[href$="Wine"]:before {content: "\f4e3";}
 .data.tags a[href$="Worm"]:before {content: "\e599";}
@@ -118,7 +118,7 @@
 .data.tags a[href$="Night"]:before {content: "\f745";}
 /* Hands */
 .data.tags a[href$="Hand"]:before {content: "\f256";}
-.data.tags a[href$="HandBird"]:before {content: "\f806";}
+.data.tags a[href$="HandB1rd"]:before {content: "\f806";}
 .data.tags a[href$="HandFist"]:before {content: "\f6de";}
 .data.tags a[href$="HandFistB"]:before {content: "\f255";}
 .data.tags a[href$="HandPeace"]:before {content: "\f25b";}
