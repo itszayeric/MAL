@@ -235,6 +235,7 @@
 .data.tags a[href$="Pinata"]:before {content: "\e3c3";}
 .data.tags a[href$="Pirate"]:before {content: "\f714";}
 .data.tags a[href$="Poison"]:before {content: "\f6e0";}
+.data.tags a[href$="Poop"]:before {content: "\f2fe";}
 .data.tags a[href$="Puzzle"]:before {content: "\f12e";}
 .data.tags a[href$="Robot"]:before {content: "\e04b";}
 .data.tags a[href$="RobotX"]:before {content: "\e4a7";}
@@ -286,6 +287,7 @@
 .data.tags a[href$="Basketball"]:before {content: "\f434";}
 .data.tags a[href$="Judo"]:before {content: "\e3d1";}
 .data.tags a[href$="PingPong"]:before {content: "\f45d";}
+.data.tags a[href$="Swim"]:before {content: "\f5c4";}
 .data.tags a[href$="Tennis"]:before {content: "\f45e";}
 .data.tags a[href$="Volleyball"]:before {content: "\f45f";}
 /* Transportation */
