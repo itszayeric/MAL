@@ -178,30 +178,30 @@
 .data.tags a[href*="%20DropYellow%20"]:before {text-shadow: -2px 2px 0 #ffea8c;} /* DropYellow */
 
 /* Black inside */
-.data.tags a[href*="%20BlackStatus%20"]:before {color: black;-webkit-text-stroke-color: var(--status);} /* BlackStatus */
-.data.tags a[href*="%20BlackWhite%20"]:before {color: black;-webkit-text-stroke-color: var(--white);} /* WhiteBlack */
-.data.tags a[href*="%20BlackBlue%20"]:before {color: Black;-webkit-text-stroke-color: #6ad2fc;} /* BlackBlue */
-  .data.tags a[href*="%20BlackBlue-%20"]:before {color: Black;-webkit-text-stroke-color: #9be3ff;} /* BlackBlue- */
-  .data.tags a[href*="%20BlackBlue%2B%20"]:before {color: Black;-webkit-text-stroke-color: #00a7ed;} /* BlackBlue+ */
-.data.tags a[href*="%20BlackBrown%20"]:before {color: Black;-webkit-text-stroke-color: #b4a08c;} /* BlackBrown */
-  .data.tags a[href*="%20BlackBrown-%20"]:before {color: Black;-webkit-text-stroke-color: #ecdfc8;} /* BlackBrown- */
-  .data.tags a[href*="%20BlackBrown%2B%20"]:before {color: Black;-webkit-text-stroke-color: #80694b;} /* BlackBrown+ */
-.data.tags a[href*="%20BlackGreen%20"]:before {color: Black;-webkit-text-stroke-color: #85e0c8;} /* BlackGreen */
-  .data.tags a[href*="%20BlackGreen-%20"]:before {color: Black;-webkit-text-stroke-color: #b0f8d2;} /* BlackGreen- */
-  .data.tags a[href*="%20BlackGreen%2B%20"]:before {color: Black;-webkit-text-stroke-color: #73cd91;} /* BlackGreen+ */
-.data.tags a[href*="%20BlackOrange%20"]:before {color: Black;-webkit-text-stroke-color: #ffbc64;} /* BlackOrange */
-  .data.tags a[href*="%20BlackOrange-%20"]:before {color: Black;-webkit-text-stroke-color: #ffd680;} /* BlackOrange- */
-  .data.tags a[href*="%20BlackOrange%2B%20"]:before {color: Black;-webkit-text-stroke-color: #ff743c;} /* BlackOrange+ */
-.data.tags a[href*="%20BlackPink%20"]:before {color: Black;-webkit-text-stroke-color: #f07698;} /* BlackPink */ 
-  .data.tags a[href*="%20BlackPink-%20"]:before {color: Black;-webkit-text-stroke-color: #ffa5c8;} /* BlackPink- */
-  .data.tags a[href*="%20BlackPink%2B%20"]:before {color: Black;-webkit-text-stroke-color: #e40a64;} /* BlackPink+ */
-.data.tags a[href*="%20BlackPurple%20"]:before {color: Black;-webkit-text-stroke-color: #9282d2;} /* BlackPurple */
-  .data.tags a[href*="%20BlackPurple-%20"]:before {color: Black;-webkit-text-stroke-color: #c6bced;} /* BlackPurple- */
-  .data.tags a[href*="%20BlackPurple%2B%20"]:before {color: Black;-webkit-text-stroke-color: #7360b7;} /* BlackPurple+ */
-.data.tags a[href*="%20BlackRed%20"]:before {color: Black;-webkit-text-stroke-color: #fa6b52;} /* BlackRed */
-  .data.tags a[href*="%20BlackRed-%20"]:before {color: Black;-webkit-text-stroke-color: #fa8e89;} /* BlackRed- */
-  .data.tags a[href*="%20BlackRed%2B%20"]:before {color: Black;-webkit-text-stroke-color: #c84943;} /* BlackRed+ */
-.data.tags a[href*="%20BlackYellow%20"]:before {color: Black;-webkit-text-stroke-color: #ffea8c;} /* BlackYellow */
+.data.tags a[href*="%20BlackStatus%20"]:before {color: #050505;-webkit-text-stroke-color: var(--status);} /* BlackStatus */
+.data.tags a[href*="%20BlackWhite%20"]:before {color: #050505;-webkit-text-stroke-color: var(--white);} /* WhiteBlack */
+.data.tags a[href*="%20BlackBlue%20"]:before {color: #050505;-webkit-text-stroke-color: #6ad2fc;} /* BlackBlue */
+  .data.tags a[href*="%20BlackBlue-%20"]:before {color: #050505;-webkit-text-stroke-color: #9be3ff;} /* BlackBlue- */
+  .data.tags a[href*="%20BlackBlue%2B%20"]:before {color: #050505;-webkit-text-stroke-color: #00a7ed;} /* BlackBlue+ */
+.data.tags a[href*="%20BlackBrown%20"]:before {color: #050505;-webkit-text-stroke-color: #b4a08c;} /* BlackBrown */
+  .data.tags a[href*="%20BlackBrown-%20"]:before {color: #050505;-webkit-text-stroke-color: #ecdfc8;} /* BlackBrown- */
+  .data.tags a[href*="%20BlackBrown%2B%20"]:before {color: #050505;-webkit-text-stroke-color: #80694b;} /* BlackBrown+ */
+.data.tags a[href*="%20BlackGreen%20"]:before {color: #050505;-webkit-text-stroke-color: #85e0c8;} /* BlackGreen */
+  .data.tags a[href*="%20BlackGreen-%20"]:before {color: #050505;-webkit-text-stroke-color: #b0f8d2;} /* BlackGreen- */
+  .data.tags a[href*="%20BlackGreen%2B%20"]:before {color: #050505;-webkit-text-stroke-color: #73cd91;} /* BlackGreen+ */
+.data.tags a[href*="%20BlackOrange%20"]:before {color: #050505;-webkit-text-stroke-color: #ffbc64;} /* BlackOrange */
+  .data.tags a[href*="%20BlackOrange-%20"]:before {color: #050505;-webkit-text-stroke-color: #ffd680;} /* BlackOrange- */
+  .data.tags a[href*="%20BlackOrange%2B%20"]:before {color: #050505;-webkit-text-stroke-color: #ff743c;} /* BlackOrange+ */
+.data.tags a[href*="%20BlackPink%20"]:before {color: #050505;-webkit-text-stroke-color: #f07698;} /* BlackPink */ 
+  .data.tags a[href*="%20BlackPink-%20"]:before {color: #050505;-webkit-text-stroke-color: #ffa5c8;} /* BlackPink- */
+  .data.tags a[href*="%20BlackPink%2B%20"]:before {color: #050505;-webkit-text-stroke-color: #e40a64;} /* BlackPink+ */
+.data.tags a[href*="%20BlackPurple%20"]:before {color: #050505;-webkit-text-stroke-color: #9282d2;} /* BlackPurple */
+  .data.tags a[href*="%20BlackPurple-%20"]:before {color: #050505;-webkit-text-stroke-color: #c6bced;} /* BlackPurple- */
+  .data.tags a[href*="%20BlackPurple%2B%20"]:before {color: #050505;-webkit-text-stroke-color: #7360b7;} /* BlackPurple+ */
+.data.tags a[href*="%20BlackRed%20"]:before {color: #050505;-webkit-text-stroke-color: #fa6b52;} /* BlackRed */
+  .data.tags a[href*="%20BlackRed-%20"]:before {color: #050505;-webkit-text-stroke-color: #fa8e89;} /* BlackRed- */
+  .data.tags a[href*="%20BlackRed%2B%20"]:before {color: #050505;-webkit-text-stroke-color: #c84943;} /* BlackRed+ */
+.data.tags a[href*="%20BlackYellow%20"]:before {color: #050505;-webkit-text-stroke-color: #ffea8c;} /* BlackYellow */
 
 /* # */
 .data.tags a[href*="tag=%23"]:before {
@@ -307,7 +307,7 @@
     background: var(--bg2);
     box-shadow: 1.5px 1px 2px 2px rgba(5,5,5,.5);
     overflow: hidden;
-    z-index: 4;
+    z-index: 6;
     transform: rotate(10deg);
     text-align: center;
 }
