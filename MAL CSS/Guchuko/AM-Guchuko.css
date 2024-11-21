@@ -1285,7 +1285,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .data.season,
-[data-work="manga"] {
+[data-work="manga"] .data.genre{
     position: absolute;
     border-radius: 0;
     font-size: 10px !important;
