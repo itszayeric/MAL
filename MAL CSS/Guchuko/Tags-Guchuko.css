@@ -91,6 +91,34 @@
   .data.tags a[href*="%20Red%2B%20"]:before {color: #c84943;} /* Red+ */
 .data.tags a[href*="%20Yellow%20"]:before {color: #ffea8c;} /* Yellow */
 
+/* Color with white outline */
+.data.tags a[href*="%20Whitee%20"]:before {color: var(--status);-webkit-text-stroke-color: white;} /* White */
+.data.tags a[href*="%20BlackWhitee%20"]:before {color: #414141;-webkit-text-stroke-color: white;} /* WhiteBlack */
+  .data.tags a[href*="%20WhiteBlackk-%20"]:before {color: #656565;-webkit-text-stroke-color: white;} /* WhiteBlack- */
+  .data.tags a[href*="%20WhiteBlackk%2B%20"]:before {color: #202020;-webkit-text-stroke-color: white;} /* WhiteBlack+ */
+.data.tags a[href*="%20WhiteBluee%20"]:before {color: #6ad2fc;-webkit-text-stroke-color: white;} /* WhiteBlue */
+  .data.tags a[href*="%20WhiteBluee-%20"]:before {color: #9be3ff;-webkit-text-stroke-color: white;} /* WhiteBlue- */
+  .data.tags a[href*="%20WhiteBluee%2B%20"]:before {color: #00a7ed;-webkit-text-stroke-color: white;} /* WhiteBlue+ */
+.data.tags a[href*="%20WhiteBrownn%20"]:before {color: #b4a08c;-webkit-text-stroke-color: white;} /* WhiteBrown */
+  .data.tags a[href*="%20WhiteBrownn-%20"]:before {color: #ecdfc8;-webkit-text-stroke-color: white;} /* WhiteBrown- */
+  .data.tags a[href*="%20WhiteBrownn%2B%20"]:before {color: #80694b;-webkit-text-stroke-color: white;} /* WhiteBrown+ */
+.data.tags a[href*="%20WhiteGreenn%20"]:before {color: #85e0c8;-webkit-text-stroke-color: white;} /* WhiteGreen */
+  .data.tags a[href*="%20WhiteGreenn-%20"]:before {color: #b0f8d2;-webkit-text-stroke-color: white;} /* WhiteGreen- */
+  .data.tags a[href*="%20WhiteGreenn%2B%20"]:before {color: #73cd91;-webkit-text-stroke-color: white;} /* WhiteGreen+ */
+.data.tags a[href*="%20WhiteOrangee%20"]:before {color: #ffbc64;-webkit-text-stroke-color: white;} /* WhiteOrange */
+  .data.tags a[href*="%20WhiteOrangee-%20"]:before {color: #ffd680;-webkit-text-stroke-color: white;} /* WhiteOrange- */
+  .data.tags a[href*="%20WhiteOrangee%2B%20"]:before {color: #ff743c;-webkit-text-stroke-color: white;} /* WhiteOrange+ */
+.data.tags a[href*="%20WhitePinkk%20"]:before {color: #f07698;-webkit-text-stroke-color: white;} /* WhitePink */ 
+  .data.tags a[href*="%20WhitePinkk-%20"]:before {color: #ffa5c8;-webkit-text-stroke-color: white;} /* WhitePink- */
+  .data.tags a[href*="%20WhitePinkk%2B%20"]:before {color: #e40a64;-webkit-text-stroke-color: white;} /* WhitePink+ */
+.data.tags a[href*="%20WhitePurplee%20"]:before {color: #9282d2;-webkit-text-stroke-color: white;} /* WhitePurple */
+  .data.tags a[href*="%20WhitePurplee-%20"]:before {color: #c6bced;-webkit-text-stroke-color: white;} /* WhitePurple- */
+  .data.tags a[href*="%20WhitePurplee%2B%20"]:before {color: #7360b7;-webkit-text-stroke-color: white;} /* WhitePurple+ */
+.data.tags a[href*="%20WhiteRedd%20"]:before {color: #fa6b52;-webkit-text-stroke-color: white;} /* WhiteRed */
+  .data.tags a[href*="%20WhiteRedd-%20"]:before {color: #fa8e89;-webkit-text-stroke-color: white;} /* WhiteRed- */
+  .data.tags a[href*="%20WhiteRedd%2B%20"]:before {color: #c84943;-webkit-text-stroke-color: white;} /* WhiteRed+ */
+.data.tags a[href*="%20WhiteYelloww%20"]:before {color: #ffea8c;-webkit-text-stroke-color: white;} /* WhiteYellow */
+
 /* White with coloured outline */
 .data.tags a[href*="%20White%20"]:before {color: white;-webkit-text-stroke-color: var(--status);} /* White */
 .data.tags a[href*="%20WhiteBlack%20"]:before {color: white;-webkit-text-stroke-color: #414141;} /* WhiteBlack */
@@ -177,8 +205,10 @@
 .data.tags a[href*="%20DropWhite%20"]:before {text-shadow: -2px 2px 0 white;} /* DropWhite */
 .data.tags a[href*="%20DropYellow%20"]:before {text-shadow: -2px 2px 0 #ffea8c;} /* DropYellow */
 
-/* Black inside */
+/* Black with color outline */
 .data.tags a[href*="%20BlackStatus%20"]:before {color: #050505;-webkit-text-stroke-color: var(--status);} /* BlackStatus */
+  .data.tags a[href*="%20BlackBlack-%20"]:before {color: white;-webkit-text-stroke-color: #656565;} /* WhiteBlack- */
+  .data.tags a[href*="%20BlackBlack%2B%20"]:before {color: white;-webkit-text-stroke-color: #202020;} /* WhiteBlack+ */
 .data.tags a[href*="%20BlackWhite%20"]:before {color: #050505;-webkit-text-stroke-color: var(--white);} /* WhiteBlack */
 .data.tags a[href*="%20BlackBlue%20"]:before {color: #050505;-webkit-text-stroke-color: #6ad2fc;} /* BlackBlue */
   .data.tags a[href*="%20BlackBlue-%20"]:before {color: #050505;-webkit-text-stroke-color: #9be3ff;} /* BlackBlue- */
@@ -310,6 +340,7 @@
     z-index: 6;
     transform: rotate(10deg);
     text-align: center;
+    animation: flip 0.8s
 }
 
 .data.tags a[href$="=mon"] {
