@@ -1,3 +1,18 @@
+/* fonts */
+@\import "https://fonts.googleapis.com/css?family=ABeeZee|Advent+Pro|Amatic+SC";
+/* anime covers */
+@\import "https://shishiohub.github.io/Covers/datatitlebefore.css";
+/* manga covers */
+@\import "https://malscraper.azurewebsites.net/covers/manga/karmashizzle/presets/datatitlebefore";
+/* main code */
+@\import "https://itszayeric.github.io/MAL/MAL%20CSS/Guchuko/AM-Guchuko.css";
+/* tags */
+@\import "https://itszayeric.github.io/MAL/MAL%20CSS/Guchuko/Tags-Guchuko.css";
+@\import "https://itszayeric.github.io/MAL/MAL%20CSS/Guchuko/FontAwesome4Guchuko.css";
+
+===================================================================================
+
+
 /* Clarity (R22) by VL  ➜ 
 Guchuko (5.0) by Sunnysummerday */
 
@@ -1119,7 +1134,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     position: relative;
     background: var(--bg2);
     border-radius: 4px 4px 6px 6px;
-    box-shadow: var(--shadow-big);
+    box-shadow: 0px 4px 5px 0px rgba(5,5,5,.5);
     min-height: 228px;
     max-width: 150px;
     transition: 0.2s ease-out;
