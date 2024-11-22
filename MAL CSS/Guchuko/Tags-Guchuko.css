@@ -327,10 +327,10 @@
 .data.tags a[href$="=sun"] {
     display: block;
     position: absolute;
-    left: 110px !important;
-    top: -50px !important;
-    width: 45px;
-    height: 24px;
+    left: 115px !important;
+    top: -51px !important;
+    width: 40px;
+    height: 22px;
     padding: 0;
     border: 2px solid var(--tdbg);
     border-radius: 5px;
@@ -367,7 +367,7 @@
 .data.tags a[href$="=sat"]:before,
 .data.tags a[href$="=sun"]:before {
   display: inline;
-  font: bold 20px/22px Barlow Condensed;
+  font: bold 20px/20px Barlow Condensed;
   color: var(--tdbg);
   letter-spacing: 0.5px;
 }
