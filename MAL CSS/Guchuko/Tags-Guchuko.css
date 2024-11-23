@@ -99,6 +99,33 @@
   .data.tags a[href*="%20Red%2B%20"]:before {color: #c84943;} /* Red+ */
 .data.tags a[href*="%20Yellow%20"]:before {color: #ffea8c;} /* Yellow */
 
+/* Outline colours */
+.data.tags a[href*="%20bBlack%20"]:before {-webkit-text-stroke-color: #414141;} /* bBlack */
+  .data.tags a[href*="%20bBlack-%20"]:before {-webkit-text-stroke-color: #656565;} /* bBlack- */
+  .data.tags a[href*="%20bBlack%2B%20"]:before {-webkit-text-stroke-color: #202020;} /* bBlack+ */
+.data.tags a[href*="%20bBlue%20"]:before {-webkit-text-stroke-color: #6ad2fc;} /* bBlue */
+  .data.tags a[href*="%20bBlue-%20"]:before {-webkit-text-stroke-color: #9be3ff;} /* bBlue- */
+  .data.tags a[href*="%20bBlue%2B%20"]:before {-webkit-text-stroke-color: #00a7ed;} /* bBlue+ */
+.data.tags a[href*="%20bBrown%20"]:before {-webkit-text-stroke-color: #b4a08c;} /* bBrown */
+  .data.tags a[href*="%20bBrown-%20"]:before {-webkit-text-stroke-color: #ecdfc8;} /* bBrown- */
+  .data.tags a[href*="%20bBrown%2B%20"]:before {-webkit-text-stroke-color: #80694b;} /* bBrown+ */
+.data.tags a[href*="%20bGreen%20"]:before {-webkit-text-stroke-color: #85e0c8;} /* bGreen */
+  .data.tags a[href*="%20bGreen-%20"]:before {-webkit-text-stroke-color: #b0f8d2;} /* bGreen- */
+  .data.tags a[href*="%20bGreen%2B%20"]:before {-webkit-text-stroke-color: #73cd91;} /* bGreen+ */
+.data.tags a[href*="%20bOrange%20"]:before {-webkit-text-stroke-color: #ffbc64;} /* bOrange */
+  .data.tags a[href*="%20bOrange-%20"]:before {-webkit-text-stroke-color: #ffd680;} /* bOrange- */
+  .data.tags a[href*="%20bOrange%2B%20"]:before {-webkit-text-stroke-color: #ff743c;} /* bOrange+ */
+.data.tags a[href*="%20bPink%20"]:before {-webkit-text-stroke-color: #f07698;} /* bPink */ 
+  .data.tags a[href*="%20bPink-%20"]:before {-webkit-text-stroke-color: #ffa5c8;} /* bPink- */
+  .data.tags a[href*="%20bPink%2B%20"]:before {-webkit-text-stroke-color: #e40a64;} /* bPink+ */
+.data.tags a[href*="%20bPurple%20"]:before {-webkit-text-stroke-color: #9282d2;} /* bPurple */
+  .data.tags a[href*="%20bPurple-%20"]:before {-webkit-text-stroke-color: #c6bced;} /* bPurple- */
+  .data.tags a[href*="%20bPurple%2B%20"]:before {-webkit-text-stroke-color: #7360b7;} /* bPurple+ */
+.data.tags a[href*="%20bRed%20"]:before {-webkit-text-stroke-color: #fa6b52;} /* bRed */
+  .data.tags a[href*="%20bRed-%20"]:before {-webkit-text-stroke-color: #fa8e89;} /* bRed- */
+  .data.tags a[href*="%20bRed%2B%20"]:before {-webkit-text-stroke-color: #c84943;} /* bRed+ */
+.data.tags a[href*="%20bYellow%20"]:before {-webkit-text-stroke-color: #ffea8c;} /* bYellow */
+
 /* Color with white outline */
 .data.tags a[href*="%20Whitee%20"]:before {color: var(--status);-webkit-text-stroke-color: white;} /* White */
 .data.tags a[href*="%20BlackWhitee%20"]:before {color: #414141;-webkit-text-stroke-color: white;} /* WhiteBlack */
