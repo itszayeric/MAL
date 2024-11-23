@@ -764,10 +764,10 @@
 .list-table-data:hover .data.tags a[href$="tag=9"]:after,
 .list-table-data:hover .data.tags a[href$="tag=10"]:after,
 .list-table-data:hover .data.tags a[href$="tag=10%2B"]:after {
-    animation: spin 2s infinite linear
+    animation: sp1n 2s infinite linear
 }
 
-@keyframes spin {
+@keyframes sp1n {
     from {
         transform: rotate(0deg)
     }
