@@ -44,6 +44,122 @@
 .data.tags a[href*="%20Spin%20"]:before {animation: flip .8s 0s, spin-tag 2s linear .8s infinite;} /* Spin (Use with " = ") */
 .data.tags a[href*="%20Tilt%20"]:before {animation: flip .8s 0s, tilt-tag 2s linear .8s infinite;} /* Tilt */
 
+@keyframes flip {
+    0% {
+        animation-timing-function: ease-out;
+        transform: perspective(800px) scaleX(1) translateZ(0) rotateY(-1turn) rotate(10deg)
+    }
+    40% {
+        animation-timing-function: ease-out;
+        transform: perspective(800px) scaleX(1) translateZ(150px) rotateY(-190deg) rotate(10deg)
+    }
+    50% {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scaleX(1) translateZ(150px) rotateY(-170deg) rotate(10deg)
+    }
+    80% {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg) rotate(10deg)
+    }
+    to {
+        animation-timing-function: ease-in;
+        transform: perspective(800px) scaleX(1) translateZ(0) rotateY(0deg) rotate(10deg)
+    }
+}
+
+@keyframes bounce-tag {
+    0%,
+    100%,
+    70% {
+        transform: rotate(10deg) scale(1) translateY(0)
+    }
+    10% {
+        transform: rotate(10deg) scale(1.1, .9) translateY(0)
+    }
+    30% {
+        transform: rotate(10deg) scale(.9, 1.1) translateY(-10px)
+    }
+    50% {
+        transform: rotate(10deg) scale(1.05, .95) translateY(0)
+    }
+    60% {
+        transform: rotate(10deg) scale(1) translateY(-5px)
+    }
+}
+
+@keyframes fade-tag {
+    0%,
+    100% {
+        opacity: 0;
+        transform: rotate(10deg) translate3d(0, 5px, 0)
+    }
+    25% {
+        opacity: 1;
+        transform: rotate(15deg) translateZ(0)
+    }
+    50% {
+        opacity: 1
+    }
+    75% {
+        opacity: 0;
+        transform: rotate(-7.5deg) translate3d(0, -5px, 0)
+    }
+}
+
+@keyframes pulse-tag {
+    0%,
+    100% {
+        transform: rotate(10deg)
+    }
+    50% {
+        transform: rotate(10deg) scale(1.125)
+    }
+}
+
+@keyframes slime-tag {
+    0%,
+    100% {
+        transform: rotate(10deg) scale(1, 1)
+    }
+    25% {
+        transform: rotate(10deg) scale(.9, 1.1) translateY(-2px)
+    }
+    50% {
+        transform: rotate(10deg) scale(1, 1) translateY(-2px)
+    }
+    75% {
+        transform: rotate(10deg) scale(1.1, .9)
+    }
+}
+
+@keyframes spin-tag {
+    0% {
+        transform: rotate(10deg)
+    }
+    50% {
+        transform: rotate(190deg) scale(.85)
+    }
+    100% {
+        transform: rotate(370deg)
+    }
+}
+
+@keyframes tilt-tag {
+    0%,
+    100% {
+        transform: rotate(10deg) scale(1) translateX(0)
+    }
+    25% {
+        transform: rotate(20deg) scale(.9) translateX(5px)
+    }
+    50% {
+        transform: rotate(10deg) scale(1) translateX(0)
+    }
+    75% {
+        transform: rotate(0deg) scale(.9) translateX(-5px)
+    }
+}
+
 
   /* -- Advanced --------------------- */
   /* --------------------------------- */
@@ -312,9 +428,6 @@
     .data.tags a[href*="%20dropYellow%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #ffea8c);} /* dropYellow */
 
   /* --------------------------------- */
-
-/* Compressed */
-@keyframes flip{0%{animation-timing-function:ease-out;transform:perspective(800px) scaleX(1) translateZ(0) rotateY(-1turn) rotate(10deg)}40%{animation-timing-function:ease-out;transform:perspective(800px) scaleX(1) translateZ(150px) rotateY(-190deg) rotate(10deg)}50%{animation-timing-function:ease-in;transform:perspective(800px) scaleX(1) translateZ(150px) rotateY(-170deg) rotate(10deg)}80%{animation-timing-function:ease-in;transform:perspective(800px) scale3d(.95,.95,.95) translateZ(0) rotateY(0deg) rotate(10deg)}to{animation-timing-function:ease-in;transform:perspective(800px) scaleX(1) translateZ(0) rotateY(0deg) rotate(10deg)}}@keyframes bounce-tag{0%,100%,70%{transform:rotate(10deg) scale(1) translateY(0)}10%{transform:rotate(10deg) scale(1.1,.9) translateY(0)}30%{transform:rotate(10deg) scale(.9,1.1) translateY(-10px)}50%{transform:rotate(10deg) scale(1.05,.95) translateY(0)}60%{transform:rotate(10deg) scale(1) translateY(-5px)}}@keyframes fade-tag{0%,100%{opacity:0;transform:rotate(10deg) translate3d(0,5px,0)}25%{opacity:1;transform:rotate(15deg) translateZ(0)}50%{opacity:1}75%{opacity:0;transform:rotate(-7.5deg) translate3d(0,-5px,0)}}@keyframes pulse-tag{0%,100%{transform:rotate(10deg)}50%{transform:rotate(10deg) scale(1.125)}}@keyframes slime-tag{0%,100%{transform:rotate(10deg) scale(1,1)}25%{transform:rotate(10deg) scale(.9, 1.1) translateY(-2px)}50%{transform:rotate(10deg) scale(1,1) translateY(-2px)}75%{transform:rotate(10deg) scale(1.1,.9)}}@keyframes spin-tag{0%{transform:rotate(10deg)}50%{transform:rotate(190deg) scale(.85)}100%{transform:rotate(370deg)}}@keyframes tilt-tag{0%,100%{transform:rotate(10deg) scale(1) translateX(0)}25%{transform:rotate(20deg) scale(.9) translateX(5px)}50%{transform:rotate(10deg) scale(1) translateX(0)}75%{transform:rotate(0deg) scale(.9) translateX(-5px)}}
 
 
 /* # */
@@ -847,72 +960,3 @@
 .data.score:hover~.data.tags a[href$="tag=100"]:after {
     display: none
 }
-
-/*
-.data.tags a[href$="mon"]:before,
-.data.tags a[href$="tue"]:before,
-.data.tags a[href$="wed"]:before,
-.data.tags a[href$="thu"]:before,
-.data.tags a[href$="fri"]:before,
-.data.tags a[href$="sat"]:before,
-.data.tags a[href$="sun"]:before {
-    top: -57px;
-  	left: 125px;
-    height: 35px;
-    width: 35px;
-    color: var(--status);
-    font: bold 25px Barlow Condensed !important;
-    letter-spacing: 1px;
-    -webkit-text-stroke: 0 !important;
-    pointer-events: auto;
-}
-.data.tags a[href$="mon"]:before {
-    content: "Mon";color: hsl(139, 63%, 66%);
-    text-shadow: 0px 0px 0 hsla(139, 50%, 50%, .2),
-                 1px 1px 0 hsla(139, 40%, 45%, .4),
-                 2px 2px 0 hsla(139, 30%, 40%, .6),
-                 3px 3px 0 hsla(139, 20%, 30%, .8),
-                 4px 4px 0 hsla(139, 10%, 20%, 1)}
-.data.tags a[href$="tue"]:before {
-    content: "Tue";color: hsl(185, 65%, 69%);
-    text-shadow: 0px 0px 0 hsla(185, 50%, 50%, 2),
-                 1px 1px 0 hsla(185, 40%, 45%, 4),
-                 2px 2px 0 hsla(185, 30%, 40%, 6),
-                 3px 3px 0 hsla(185, 20%, 30%, 8),
-                 4px 4px 0 hsla(185, 10%, 20%, 1)}
-.data.tags a[href$="wed"]:before {
-    content: "Wed";color: hsl(250, 55%, 70%);
-    text-shadow: 0px 0px 0 hsla(250, 50%, 50%, 2),
-                 1px 1px 0 hsla(250, 40%, 45%, 4),
-                 2px 2px 0 hsla(250, 30%, 40%, 6),
-                 3px 3px 0 hsla(250, 20%, 30%, 8),
-                 4px 4px 0 hsla(250, 10%, 20%, 1)}
-.data.tags a[href$="thu"]:before {
-    content: "Thu";color: hsl(317, 60%, 62%);
-    text-shadow: 0px 0px 0 hsla(317, 50%, 50%, 2),
-                 1px 1px 0 hsla(317, 40%, 45%, 4),
-                 2px 2px 0 hsla(317, 30%, 40%, 6),
-                 3px 3px 0 hsla(317, 20%, 30%, 8),
-                 4px 4px 0 hsla(317, 10%, 20%, 1)}
-.data.tags a[href$="fri"]:before {
-    content: "Fri";color: hsl(360, 79%, 65%);
-    text-shadow: 0px 0px 0 hsla(360, 50%, 50%, 2),
-                 1px 1px 0 hsla(360, 40%, 45%, 4),
-                 2px 2px 0 hsla(360, 30%, 40%, 6),
-                 3px 3px 0 hsla(360, 20%, 30%, 8),
-                 4px 4px 0 hsla(360, 10%, 20%, 1)}
-.data.tags a[href$="sat"]:before {
-    content: "Sat";color: hsl(27, 95%, 69%);
-    text-shadow: 0px 0px 0 hsla(27, 50%, 50%, 2),
-                 1px 1px 0 hsla(27, 40%, 45%, 4),
-                 2px 2px 0 hsla(27, 30%, 40%, 6),
-                 3px 3px 0 hsla(27, 20%, 30%, 8),
-                 4px 4px 0 hsla(27, 10%, 20%, 1)}
-.data.tags a[href$="sun"]:before {
-    content: "Sun";color: hsl(50, 74%, 73%);
-    text-shadow: 0px 0px 0 hsla(50, 50%, 50%, 2),
-                 1px 1px 0 hsla(50, 40%, 45%, 4),
-                 2px 2px 0 hsla(50, 30%, 40%, 6),
-                 3px 3px 0 hsla(50, 20%, 30%, 8),
-                 4px 4px 0 hsla(50, 10%, 20%, 1);
-} */
