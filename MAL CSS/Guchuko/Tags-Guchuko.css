@@ -36,6 +36,13 @@
 .data.tags a[href*="tag=%23%23-"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* ##- */
 .data.tags a[href*="%20-%20"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* " - " */
 
+/* Animations */
+.data.tags a[href*="%20Bounce%20"]:before {animation: flip .8s 0s, bounce-tag 1.2s .8s infinite;} /* Bounce */
+.data.tags a[href*="%20Fade%20"]:before {animation: flip .8s 0s, fade-tag 1.2s linear .8s infinite;} /* Fade */
+.data.tags a[href*="%20Pulse%20"]:before {animation: flip .8s 0s, pulse-tag 1s .8s infinite;} /* Pulse */
+.data.tags a[href*="%20Slime%20"]:before {animation: flip .8s 0s, slime-tag 1.2s linear .8s infinite;} /* Slime */
+.data.tags a[href*="%20Spin%20"]:before {animation: flip .8s 0s, spin-tag 2s linear .8s infinite;} /* Spin (Use with " = ") */
+.data.tags a[href*="%20Tilt%20"]:before {animation: flip .8s 0s, tilt-tag 2s linear .8s infinite;} /* Tilt */
 
   /* -- Advanced --------------------- */
   /* --------------------------------- */
@@ -232,6 +239,76 @@
   .data.tags a[href*="%20BlackRed-%20"]:before {color: #050505;-webkit-text-stroke-color: #fa8e89;} /* BlackRed- */
   .data.tags a[href*="%20BlackRed%2B%20"]:before {color: #050505;-webkit-text-stroke-color: #c84943;} /* BlackRed+ */
 .data.tags a[href*="%20BlackYellow%20"]:before {color: #050505;-webkit-text-stroke-color: #ffea8c;} /* BlackYellow */
+
+
+/* -- Alternatives ----------------- */
+  /* --------------------------------- */
+
+  /* glow and drop (lowercase - always appears behind gradient icons, but might have issues) */
+
+    /* glow */
+    .data.tags a[href*="%20glow%20"]:before {filter: drop-shadow(0 0 0.14em var(--status));} /* glow */
+    .data.tags a[href*="%20glowBlack%20"]:before {filter: drop-shadow(0 0 0.14em #414141bf);} /* glowBlack */
+      .data.tags a[href*="%20glowBlack-%20"]:before {filter: drop-shadow(0 0 0.14em #656565bf);} /* glowBlack- */
+      .data.tags a[href*="%20glowBlack%2B%20"]:before {filter: drop-shadow(0 0 0.14em #202020bf);} /* glowBlack+ */
+    .data.tags a[href*="%20glowBlue%20"]:before {filter: drop-shadow(0 0 0.14em #6ad2fcbf);} /* glowBlue */
+      .data.tags a[href*="%20glowBlue-%20"]:before {filter: drop-shadow(0 0 0.14em #9be3ffbf);} /* glowBlue- */
+      .data.tags a[href*="%20glowBlue%2B%20"]:before {filter: drop-shadow(0 0 0.14em #00a7edbf);} /* glowBlue+ */
+    .data.tags a[href*="%20glowBrown%20"]:before {filter: drop-shadow(0 0 0.14em #b4a08cbf);} /* glowBrown */
+      .data.tags a[href*="%20glowBrown-%20"]:before {filter: drop-shadow(0 0 0.14em #ecdfc8bf);} /* glowBrown- */
+      .data.tags a[href*="%20glowBrown%2B%20"]:before {filter: drop-shadow(0 0 0.14em #80694bbf);} /* glowBrown+ */
+    .data.tags a[href*="%20glowGreen%20"]:before {filter: drop-shadow(0 0 0.14em #85e0c8bf);} /* glowGreen */
+      .data.tags a[href*="%20glowGreen-%20"]:before {filter: drop-shadow(0 0 0.14em #b0f8d2bf);} /* glowGreen- */
+      .data.tags a[href*="%20glowGreen%2B%20"]:before {filter: drop-shadow(0 0 0.14em #73cd91bf);} /* glowGreen+ */
+    .data.tags a[href*="%20glowOrange%20"]:before {filter: drop-shadow(0 0 0.14em #ffbc64bf);} /* glowOrange */
+      .data.tags a[href*="%20glowOrange-%20"]:before {filter: drop-shadow(0 0 0.14em #ffd680bf);} /* glowOrange- */
+      .data.tags a[href*="%20glowOrange%2B%20"]:before {filter: drop-shadow(0 0 0.14em #ff743cbf);} /* glowOrange+ */
+    .data.tags a[href*="%20glowPink%20"]:before {filter: drop-shadow(0 0 0.14em #f07698bf);} /* glowPink */ 
+      .data.tags a[href*="%20glowPink-%20"]:before {filter: drop-shadow(0 0 0.14em #ffa5c8bf);} /* glowPink- */
+      .data.tags a[href*="%20glowPink%2B%20"]:before {filter: drop-shadow(0 0 0.14em #e40a64bf);} /* glowPink+ */
+    .data.tags a[href*="%20glowPurple%20"]:before {filter: drop-shadow(0 0 0.14em #9282d2bf);} /* glowPurple */
+      .data.tags a[href*="%20glowPurple-%20"]:before {filter: drop-shadow(0 0 0.14em #c6bcedbf);} /* glowPurple- */
+      .data.tags a[href*="%20glowPurple%2B%20"]:before {filter: drop-shadow(0 0 0.14em #7360b7bf);} /* glowPurple+ */
+    .data.tags a[href*="%20glowRed%20"]:before {filter: drop-shadow(0 0 0.14em #fa6b52bf);} /* glowRed */
+      .data.tags a[href*="%20glowRed-%20"]:before {filter: drop-shadow(0 0 0.14em #fa8e89bf);} /* glowRed- */
+      .data.tags a[href*="%20glowRed%2B%20"]:before {filter: drop-shadow(0 0 0.14em #c84943bf);} /* glowRed+ */
+    .data.tags a[href*="%20glowWhite%20"]:before {filter: drop-shadow(0 0 0.14em whitebf);} /* glowWhite */
+    .data.tags a[href*="%20glowYellow%20"]:before {filter: drop-shadow(0 0 0.14em #ffea8cbf);} /* glowYellow */
+    
+    /* drop (Solid offset drop shadow) */
+    .data.tags a[href*="%20drop%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 var(--status));} /* drop */
+    .data.tags a[href*="%20dropBlack%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #414141);} /* dropBlack */
+      .data.tags a[href*="%20dropBlack-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #656565);} /* dropBlack- */
+      .data.tags a[href*="%20dropBlack%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #202020);} /* dropBlack+ */
+    .data.tags a[href*="%20dropBlue%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #6ad2fc);} /* dropBlue */
+      .data.tags a[href*="%20dropBlue-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #9be3ff);} /* dropBlue- */
+      .data.tags a[href*="%20dropBlue%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #00a7ed);} /* dropBlue+ */
+    .data.tags a[href*="%20dropBrown%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #b4a08c);} /* dropBrown */
+      .data.tags a[href*="%20dropBrown-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #ecdfc8);} /* dropBrown- */
+      .data.tags a[href*="%20dropBrown%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #80694b);} /* dropBrown+ */
+    .data.tags a[href*="%20dropGreen%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #85e0c8);} /* dropGreen */
+      .data.tags a[href*="%20dropGreen-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #b0f8d2);} /* dropGreen- */
+      .data.tags a[href*="%20dropGreen%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #73cd91);} /* dropGreen+ */
+    .data.tags a[href*="%20dropOrange%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #ffbc64);} /* dropOrange */
+      .data.tags a[href*="%20dropOrange-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #ffd680);} /* dropOrange- */
+      .data.tags a[href*="%20dropOrange%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #ff743c);} /* dropOrange+ */
+    .data.tags a[href*="%20dropPink%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #f07698);} /* dropPink */ 
+      .data.tags a[href*="%20dropPink-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #ffa5c8);} /* dropPink- */
+      .data.tags a[href*="%20dropPink%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #e40a64);} /* dropPink+ */
+    .data.tags a[href*="%20dropPurple%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #9282d2);} /* dropPurple */
+      .data.tags a[href*="%20dropPurple-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #c6bced);} /* dropPurple- */
+      .data.tags a[href*="%20dropPurple%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #7360b7);} /* dropPurple+ */
+    .data.tags a[href*="%20dropRed%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #fa6b52);} /* dropRed */
+      .data.tags a[href*="%20dropRed-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #fa8e89);} /* dropRed- */
+      .data.tags a[href*="%20dropRed%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #c84943);} /* dropRed+ */
+    .data.tags a[href*="%20dropWhite%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 white);} /* dropWhite */
+    .data.tags a[href*="%20dropYellow%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #ffea8c);} /* dropYellow */
+
+  /* --------------------------------- */
+
+/* Compressed */
+@keyframes flip{0%{animation-timing-function:ease-out;transform:perspective(800px) scaleX(1) translateZ(0) rotateY(-1turn) rotate(10deg)}40%{animation-timing-function:ease-out;transform:perspective(800px) scaleX(1) translateZ(150px) rotateY(-190deg) rotate(10deg)}50%{animation-timing-function:ease-in;transform:perspective(800px) scaleX(1) translateZ(150px) rotateY(-170deg) rotate(10deg)}80%{animation-timing-function:ease-in;transform:perspective(800px) scale3d(.95,.95,.95) translateZ(0) rotateY(0deg) rotate(10deg)}to{animation-timing-function:ease-in;transform:perspective(800px) scaleX(1) translateZ(0) rotateY(0deg) rotate(10deg)}}@keyframes bounce-tag{0%,100%,70%{transform:rotate(10deg) scale(1) translateY(0)}10%{transform:rotate(10deg) scale(1.1,.9) translateY(0)}30%{transform:rotate(10deg) scale(.9,1.1) translateY(-10px)}50%{transform:rotate(10deg) scale(1.05,.95) translateY(0)}60%{transform:rotate(10deg) scale(1) translateY(-5px)}}@keyframes fade-tag{0%,100%{opacity:0;transform:rotate(10deg) translate3d(0,5px,0)}25%{opacity:1;transform:rotate(15deg) translateZ(0)}50%{opacity:1}75%{opacity:0;transform:rotate(-7.5deg) translate3d(0,-5px,0)}}@keyframes pulse-tag{0%,100%{transform:rotate(10deg)}50%{transform:rotate(10deg) scale(1.125)}}@keyframes slime-tag{0%,100%{transform:rotate(10deg) scale(1,1)}25%{transform:rotate(10deg) scale(.9, 1.1) translateY(-2px)}50%{transform:rotate(10deg) scale(1,1) translateY(-2px)}75%{transform:rotate(10deg) scale(1.1,.9)}}@keyframes spin-tag{0%{transform:rotate(10deg)}50%{transform:rotate(190deg) scale(.85)}100%{transform:rotate(370deg)}}@keyframes tilt-tag{0%,100%{transform:rotate(10deg) scale(1) translateX(0)}25%{transform:rotate(20deg) scale(.9) translateX(5px)}50%{transform:rotate(10deg) scale(1) translateX(0)}75%{transform:rotate(0deg) scale(.9) translateX(-5px)}}
+
 
 /* # */
 .data.tags a[href*="tag=%23"]:before {
