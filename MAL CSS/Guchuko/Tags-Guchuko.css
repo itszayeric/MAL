@@ -73,6 +73,7 @@
 
 
 /* Colours */
+.data.tags a[href*="%20White%20"]:before {color: var(--white);} /* White */
 .data.tags a[href*="%20Black%20"]:before {color: #414141;} /* Black */
   .data.tags a[href*="%20Black-%20"]:before {color: #656565;} /* Black- */
   .data.tags a[href*="%20Black%2B%20"]:before {color: #202020;} /* Black+ */
@@ -101,7 +102,7 @@
 .data.tags a[href*="%20Yellow%20"]:before {color: #ffea8c;} /* Yellow */
 
 /* Outline colours */
-.data.tags a[href*="%20bWhite%20"]:before {-webkit-text-stroke-color: var(--white);} /* bBlack */
+.data.tags a[href*="%20bWhite%20"]:before {-webkit-text-stroke-color: var(--white);} /* bWhite */
 .data.tags a[href*="%20bBlack%20"]:before {-webkit-text-stroke-color: #414141;} /* bBlack */
   .data.tags a[href*="%20bBlack-%20"]:before {-webkit-text-stroke-color: #656565;} /* bBlack- */
   .data.tags a[href*="%20bBlack%2B%20"]:before {-webkit-text-stroke-color: #202020;} /* bBlack+ */
