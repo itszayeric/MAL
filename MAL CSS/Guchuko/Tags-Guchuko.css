@@ -73,6 +73,7 @@
 
 
 /* Colours */
+.data.tags a[href*="%20Status%20"]:before {color: var(--status);} /* Status */
 .data.tags a[href*="%20White%20"]:before {color: var(--white);} /* White */
 .data.tags a[href*="%20Black%20"]:before {color: #414141;} /* Black */
   .data.tags a[href*="%20Black-%20"]:before {color: #656565;} /* Black- */
@@ -102,6 +103,7 @@
 .data.tags a[href*="%20Yellow%20"]:before {color: #ffea8c;} /* Yellow */
 
 /* Outline colours */
+.data.tags a[href*="%20bStatus%20"]:before {-webkit-text-stroke-color: var(--status);} /* bStatus */
 .data.tags a[href*="%20bWhite%20"]:before {-webkit-text-stroke-color: var(--white);} /* bWhite */
 .data.tags a[href*="%20bBlack%20"]:before {-webkit-text-stroke-color: #414141;} /* bBlack */
   .data.tags a[href*="%20bBlack-%20"]:before {-webkit-text-stroke-color: #656565;} /* bBlack- */
@@ -131,7 +133,7 @@
 .data.tags a[href*="%20bYellow%20"]:before {-webkit-text-stroke-color: #ffea8c;} /* bYellow */
 
 /* Glow */
-.data.tags a[href*="%20Glow%20"]:before {text-shadow: 0 0 10px var(--status);} /* Glow */
+.data.tags a[href*="%20GlowStatus%20"]:before {text-shadow: 0 0 10px var(--status);} /* Glow */
 .data.tags a[href*="%20GlowBlack%20"]:before {text-shadow: 0 0 10px #414141;} /* GlowBlack */
   .data.tags a[href*="%20GlowBlack-%20"]:before {text-shadow: 0 0 10px #656565;} /* GlowBlack- */
   .data.tags a[href*="%20GlowBlack%2B%20"]:before {text-shadow: 0 0 10px #202020;} /* GlowBlack+ */
@@ -160,7 +162,7 @@
 .data.tags a[href*="%20GlowYellow%20"]:before {text-shadow: 0 0 10px #ffea8c;} /* GlowYellow */
 
 /* Drop */
-.data.tags a[href*="%20Drop%20"]:before {text-shadow: -2px 2px 0 var(--status);} /* Drop */
+.data.tags a[href*="%20DropStatus%20"]:before {text-shadow: -2px 2px 0 var(--status);} /* Drop */
 .data.tags a[href*="%20DropBlack%20"]:before {text-shadow: -2px 2px 0 #414141;} /* DropBlack */
   .data.tags a[href*="%20DropBlack-%20"]:before {text-shadow: -2px 2px 0 #656565;} /* DropBlack- */
   .data.tags a[href*="%20DropBlack%2B%20"]:before {text-shadow: -2px 2px 0 #202020;} /* DropBlack+ */
@@ -196,7 +198,7 @@
   /* glow and drop (lowercase - always appears behind gradient icons, but might have issues) */
 
     /* glow */
-    .data.tags a[href*="%20glow%20"]:before {filter: drop-shadow(0 0 0.14em var(--status));} /* glow */
+    .data.tags a[href*="%20glowStatus%20"]:before {filter: drop-shadow(0 0 0.14em var(--status));} /* glow */
     .data.tags a[href*="%20glowBlack%20"]:before {filter: drop-shadow(0 0 0.14em #414141bf);} /* glowBlack */
       .data.tags a[href*="%20glowBlack-%20"]:before {filter: drop-shadow(0 0 0.14em #656565bf);} /* glowBlack- */
       .data.tags a[href*="%20glowBlack%2B%20"]:before {filter: drop-shadow(0 0 0.14em #202020bf);} /* glowBlack+ */
@@ -225,7 +227,7 @@
     .data.tags a[href*="%20glowYellow%20"]:before {filter: drop-shadow(0 0 0.14em #ffea8cbf);} /* glowYellow */
     
     /* drop (Solid offset drop shadow) */
-    .data.tags a[href*="%20drop%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 var(--status));} /* drop */
+    .data.tags a[href*="%20dropStatus%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 var(--status));} /* drop */
     .data.tags a[href*="%20dropBlack%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #414141);} /* dropBlack */
       .data.tags a[href*="%20dropBlack-%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #656565);} /* dropBlack- */
       .data.tags a[href*="%20dropBlack%2B%20"]:before {filter: drop-shadow(-0.05em 0.05em 0 #202020);} /* dropBlack+ */
