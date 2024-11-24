@@ -395,12 +395,12 @@
     --tbgc: hsl(100, 62%, 63%);
     position: absolute;
     left: -18px !important;
-    top: -35px !important;
+    top: 0px !important;
     width: 18px;
-    height: 32px;
+    height: 20px;
     padding: 0;
     background: var(--tbgc);
-    border-radius: 5px 0 0 5px;
+    border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
     z-index: 4;
 }
@@ -409,12 +409,12 @@
     --tbgc: hsl(215, 79%, 66%);
     position: absolute;
     left: -18px !important;
-    top: 1px !important;
+    top: 23px !important;
     width: 18px;
-    height: 32px;
+    height: 20px;
     padding: 0;
     background: var(--tbgc);
-    border-radius: 5px 0 0 5px;
+    border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
     z-index: 4;
 }
@@ -423,12 +423,12 @@
     --tbgc: hsl(240, 20%, 20%);
     position: absolute;
     left: -18px !important;
-    top: 37px !important;
+    top: 46px !important;
     width: 18px;
-    height: 32px;
+    height: 20px;
     padding: 0;
     background: var(--tbgc);
-    border-radius: 5px 0 0 5px;
+    border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
     z-index: 4;
 }
@@ -437,12 +437,12 @@
     --tbgc: hsl(330, 66%, 66%);
     position: absolute;
     left: -18px !important;
-    top: 73px !important;
+    top: 69px !important;
     width: 18px;
-    height: 32px;
+    height: 20px;
     padding: 0;
     background: var(--tbgc);
-    border-radius: 5px 0 0 5px;
+    border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
     z-index: 4;
 }
@@ -451,12 +451,12 @@
     --tbgc: hsl(350, 62%, 53%);
     position: absolute;
     left: -18px !important;
-    top: 109px !important;
+    top: 93px !important;
     width: 18px;
-    height: 32px;
+    height: 20px;
     padding: 0;
     background: var(--tbgc);
-    border-radius: 5px 0 0 5px;
+    border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
     z-index: 4;
 }
@@ -465,42 +465,42 @@
     --tbgc: hsl(40, 80%, 66%);
     position: absolute;
     left: -18px !important;
-    top: 145px !important;
+    top: 116px !important;
     width: 18px;
-    height: 32px;
+    height: 20px;
     padding: 0;
     background: var(--tbgc);
-    border-radius: 5px 0 0 5px;
+    border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
     z-index: 4;
 }
 .data.tags a[href$="=Days"]:before {
-  font: bold 13px/32px FontAwesome;
+  font: bold 13px/20px FontAwesome;
   color: var(--t-dark);
   content: "\f736";
 }
 .data.tags a[href$="=Where"]:before {
-  font: bold 13px/32px FontAwesome;
+  font: bold 13px/20px FontAwesome;
   color: var(--t-dark);
   content: "\f059";
 }
 .data.tags a[href$="=Unko"]:before {
-  font: bold 14px/31px FontAwesome;
+  font: bold 14px/20px FontAwesome;
   color: var(--t-dark);
   content: "\f2fe";
 }
 .data.tags a[href$="=Ded"]:before {
-  font: bold 14px/32px FontAwesome;
+  font: bold 14px/20px FontAwesome;
   color: var(--t-dark);
   content: "\f54c";
 }
 .data.tags a[href$="=inf"]:before {
-  font: bold 12px/32px FontAwesome;
+  font: bold 12px/20px FontAwesome;
   color: #f8f8ff;
   content: "\f534";
 }
 .data.tags a[href$="=pp"]:before {
-  font: bold 13px/32px FontAwesome;
+  font: bold 13px/20px FontAwesome;
   color: var(--t-dark);
   content: "\e0d2"; /*e356*/
 }
@@ -533,7 +533,12 @@
   pointer-events: none;
 }
 
-.data.tags a:hover::after {
+.data.tags a[href$="=Days"]:hover:after,
+.data.tags a[href$="=Where"]:hover:after,
+.data.tags a[href$="=Unko"]:hover:after,
+.data.tags a[href$="=Ded"]:hover:after,
+.data.tags a[href$="=inf"]:hover:after,
+.data.tags a[href$="=pp"]:hover:after {
   left: -85px;
   opacity: 1;
 }
