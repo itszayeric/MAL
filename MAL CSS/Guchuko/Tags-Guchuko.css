@@ -85,9 +85,9 @@
 .data.tags a[href*="%20Blue%20"]:before {color: #6ad2fc;} /* Blue */
   .data.tags a[href*="%20Blue-%20"]:before {color: #9be3ff;} /* Blue- */
   .data.tags a[href*="%20Blue%2B%20"]:before {color: #00a7ed;} /* Blue+ */
-.data.tags a[href*="%20Brown%20"]:before {color: #B89169;} /* Brown */
+.data.tags a[href*="%20Brown%20"]:before {color: #BE8A60;} /* Brown */
   .data.tags a[href*="%20Brown-%20"]:before {color: #EED4A8;} /* Brown- */
-  .data.tags a[href*="%20Brown%2B%20"]:before {color: #A57C46;} /* Brown+ */
+  .data.tags a[href*="%20Brown%2B%20"]:before {color: #945C4B;} /* Brown+ */
 .data.tags a[href*="%20Green%20"]:before {color: #7EFF70;} /* Green */
   .data.tags a[href*="%20Green-%20"]:before {color: #9BFF99;} /* Green- */
   .data.tags a[href*="%20Green%2B%20"]:before {color: #4AE463;} /* Green+ */
