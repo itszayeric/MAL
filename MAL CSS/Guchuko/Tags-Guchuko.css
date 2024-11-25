@@ -496,7 +496,7 @@
 }
 .data.tags a[href$="=inf"]:before {
   font: bold 12px/20px FontAwesome;
-  color: #f8f8ff;
+  color: var(--white);
   content: "\f534";
 }
 .data.tags a[href$="=pp"]:before {
@@ -557,7 +557,8 @@
   content: "Author died,\a Studio bankrupted,\a Cancelled, \"Covid\" etc"
 }
 .data.tags a[href$="=inf"]:after {
-  content: "Forever airing,\a Will never end"
+  content: "Forever airing,\a Will never end";
+  color: var(--white);
 }
 .data.tags a[href$="=pp"]:after {
   content: "Airing postponed due to production issues"
