@@ -1698,7 +1698,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 
 .notes .text {
     position: absolute;
-    color: var(--text) !important;
+    color: var(--text-dim) !important;
     font: 0 Segoe UI;
     letter-spacing: 0.25px;
     text-align: center;
@@ -1712,30 +1712,30 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .notes .text:after {
     content: "\f086";
     position: absolute;
-    background: none;
-    border-radius: 3px 0 0 3px;
+    background: none !important;
     color: var(--white);
     font: bold 13px/22px FontAwesome;
-    text-align: center;
-    height: 22px;
-    width: 32px;
+    top: -1px;
     left: -30px
 }
 
-.reading+.title .notes .text:after,
-.watching+.title .notes .text:after {
-    background: linear-gradient(to right, var(--completed), var(--watching))
-}
-
 .notes .text:before {
+  --f: 5px; /* folded part*/
+  --r: 10px; /* ribbon shape */
+  --t: 5px; /* the top offset */
     content: "";
     position: absolute;
-    background: linear-gradient(to right, var(--status) 65%, transparent 110%);
-    border-radius: 3px;
-    height: 22px;
-    width: 47px !important;
-    left: -30px;
-    clip-path: polygon(100% 0%, 82% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    top: 0px !important;
+    width: 40px !important;
+    height: 22px !important;
+    padding: 2px 2px;
+    inset: var(--t) calc(-1*var(--f)) auto auto;
+    clip-path: 
+    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f)/2));
+    background: var(--bg-status);
+    box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
     pointer-events: none
 }
 
@@ -2946,3 +2946,16 @@ background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 .data.title [href^="/anime/29978/"]:after {
 	content: "";
 }
+
+/* Increase cover size by 10% 
+.list-block {width: 955px;}
+.list-table {margin-top: 4px;}
+.list-status-title .stats {right: -5.5px !important;} /* 'Stats' & 'Filter' buttons 
+.list-table > tbody:first-of-type {margin-left: 927px !important;} /* 'Sort' button 
+.list-unit .list-stats {margin-bottom: 12px;} /* Stats 
+.list-item {margin: 0;}
+.list-table-data {margin: 20.5px 20.5px 28.5px;transform: scale(1.1); } /* Covers 
+.list-table-data:hover {transform: rotate(-1deg) scale(1.2);}
+.more-info {position: relative;top: -16px;left: 11.5px;transform: scale(1.1);}
+footer {margin-top: -47.5px;} 
+*/
