@@ -1704,7 +1704,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     text-align: center;
     height: 0;
     top: 50px;
-    left: 151px;
+    left: 120px;
     z-index: 4;
     filter: drop-shadow(-1px 2px 2px rgba(5, 5, 5, .3));
 }
@@ -1714,8 +1714,8 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     position: absolute;
     background: none !important;
     color: var(--white);
-    font: bold 13px/20px FontAwesome;
-    left: -22px
+    font: bold 13px/18px FontAwesome;
+    left: 10px
 }
 
 .notes .text:before {
@@ -1723,10 +1723,10 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     position: absolute;
     top: 0px !important;
     width: 35px !important;
-    height: 22px !important;
+    height: 24px !important;
     clip-path: polygon(18% 40%, 0 0, 100% 0, 100% 80%, 85% 100%, 85% 80%, 0% 80%);
     background: var(--status);
-    box-shadow: 0 -5.5px 0 inset #0007;
+    box-shadow: 0 -5px 0 inset #0007;
     border-radius: 0 3px 0px 0;
     pointer-events: none
 }
