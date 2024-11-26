@@ -37,6 +37,7 @@
 .data.tags a[href*="%20-%20"]:before {font-size: 25px;-webkit-text-stroke-width: 1px;} /* " - " */
 
 /* Animations */
+.data.tags a[href*="%23"]:before {animation: flip .8s 0s;} /* Flip */
 .data.tags a[href*="%20Bounce%20"]:before {animation: flip .8s 0s, bounce-tag 1.2s .8s infinite;} /* Bounce */
 .data.tags a[href*="%20Fade%20"]:before {animation: flip .8s 0s, fade-tag 1.2s linear .8s infinite;} /* Fade */
 .data.tags a[href*="%20Pulse%20"]:before {animation: flip .8s 0s, pulse-tag 1s .8s infinite;} /* Pulse */
