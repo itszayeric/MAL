@@ -1714,8 +1714,8 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     position: absolute;
     background: none !important;
     color: var(--white);
-    font: bold 13px/18px FontAwesome;
-    left: 10px
+    font: bold 13px/22px FontAwesome;
+    left: 11px
 }
 
 .notes .text:before {
@@ -1723,7 +1723,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     position: absolute;
     top: 0px !important;
     width: 35px !important;
-    height: 24px !important;
+    height: 26px !important;
     clip-path: polygon(18% 40%, 0 0, 100% 0, 100% 80%, 85% 100%, 85% 80%, 0% 80%);
     background: var(--status);
     box-shadow: 0 -5px 0 inset #0007;
