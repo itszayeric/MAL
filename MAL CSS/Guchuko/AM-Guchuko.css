@@ -1704,7 +1704,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     text-align: center;
     height: 0;
     top: 50px;
-    left: 148px;
+    left: 151px;
     z-index: 4;
     filter: drop-shadow(-1px 2px 2px rgba(5, 5, 5, .3));
 }
@@ -1714,28 +1714,20 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     position: absolute;
     background: none !important;
     color: var(--white);
-    font: bold 13px/22px FontAwesome;
-    left: -21px
+    font: bold 13px/20px FontAwesome;
+    left: -22px
 }
 
 .notes .text:before {
-  --f: 5px; /* folded part*/
-  --r: 10px; /* ribbon shape */
-  --t: 5px; /* the top offset */
     content: "";
     position: absolute;
     top: 0px !important;
-    width: 40px !important;
+    width: 35px !important;
     height: 22px !important;
-    padding: 2px 2px;
-    inset: var(--t) calc(-1*var(--f)) auto auto;
-    clip-path: 
-    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
-      calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
-      var(--r) calc(50% - var(--f)/2));
-    background: var(--bg-status);
-    box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
-    border-radius: 0 3px 3px 0;
+    clip-path: polygon(18% 40%, 0 0, 100% 0, 100% 80%, 85% 100%, 85% 80%, 0% 80%);
+    background: var(--status);
+    box-shadow: 0 -5.5px 0 inset #0007;
+    border-radius: 0 3px 0px 0;
     pointer-events: none
 }
 
