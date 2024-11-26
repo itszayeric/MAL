@@ -1714,7 +1714,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     position: absolute;
     background: none !important;
     color: var(--white);
-    font: bold 13px/23px FontAwesome;
+    font: bold 13px/22px FontAwesome;
     left: -21px
 }
 
