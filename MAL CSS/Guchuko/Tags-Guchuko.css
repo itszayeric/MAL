@@ -362,7 +362,7 @@
 }
 /* inf */
 .data.tags a[href$="=inf"] {
-    --tbgc: hsl(240, 20%, 50%);
+    --tbgc: hsl(240, 20%, 75%);
     position: absolute;
     left: -18px !important;
     top: 46px !important;
@@ -370,7 +370,7 @@
     height: 20px;
     padding: 0;
     background: hsl(240, 20%, 25%);
-    border-right: 1px dashed var(--text-dim);
+    border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
     z-index: 4;
@@ -424,7 +424,7 @@
 .data.tags a[href$="=Days"]:before {
   font: bold 13px/20px FontAwesome;
   color: var(--tbgc);
-  content: "\f736";
+  content: "\e28b";
 }
 .data.tags a[href$="=Where"]:before {
   font: bold 13px/20px FontAwesome;
@@ -443,7 +443,7 @@
 }
 .data.tags a[href$="=inf"]:before {
   font: bold 12px/20px FontAwesome;
-  color: var(--white);
+  color: var(--tbgc);
   content: "\f534";
 }
 .data.tags a[href$="=pp"]:before {
