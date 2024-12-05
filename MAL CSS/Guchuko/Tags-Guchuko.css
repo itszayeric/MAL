@@ -545,7 +545,7 @@
     display: block;
     position: absolute;
     background: linear-gradient(100deg, #70c8ed, #f46592, #8c7dd0, #ffc46c, #70d0b6);
-    border-radius: 8px;
+    border-radius: 8px 8px 10px 10px;
     padding: 5px;
     height: 228px;
     width: 150px;
