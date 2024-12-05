@@ -330,9 +330,9 @@
   content: "SUN";
 } 
  
- /* Days */
+/* Days */
 .data.tags a[href$="=Days"] {
-    --tbgc: hsl(100, 62%, 65%);
+    --tbgc: hsl(100, 62%, 70%);
     position: absolute;
     left: -18px !important;
     top: 0px !important;
@@ -347,7 +347,7 @@
 }
 /* Where */
 .data.tags a[href$="=Where"] {
-    --tbgc: hsl(215, 79%, 65%);
+    --tbgc: hsl(215, 79%, 70%);
     position: absolute;
     left: -18px !important;
     top: 23px !important;
@@ -362,7 +362,7 @@
 }
 /* inf */
 .data.tags a[href$="=inf"] {
-    --tbgc: hsl(240, 20%, 20%);
+    --tbgc: hsl(240, 20%, 50%);
     position: absolute;
     left: -18px !important;
     top: 46px !important;
@@ -377,7 +377,7 @@
 }
 /* pp */
 .data.tags a[href$="=pp"] {
-    --tbgc: hsl(330, 66%, 65%);
+    --tbgc: hsl(330, 66%, 70%);
     position: absolute;
     left: -18px !important;
     top: 69px !important;
@@ -392,7 +392,7 @@
 }
 /* Ded */
 .data.tags a[href$="=Ded"] {
-    --tbgc: hsl(350, 62%, 55%);
+    --tbgc: hsl(350, 62%, 65%);
     position: absolute;
     left: -18px !important;
     top: 93px !important;
@@ -407,7 +407,7 @@
 }
 /* Unko */
 .data.tags a[href$="=Unko"] {
-    --tbgc: hsl(40, 80%, 65%);
+    --tbgc: hsl(40, 80%, 70%);
     position: absolute;
     left: -18px !important;
     top: 116px !important;
@@ -420,6 +420,7 @@
     box-shadow: var(--shadow);
     z-index: 4;
 }
+
 .data.tags a[href$="=Days"]:before {
   font: bold 13px/20px FontAwesome;
   color: var(--tbgc);
@@ -504,7 +505,6 @@
 }
 .data.tags a[href$="=inf"]:after {
   content: "Forever airing,\a Will never end";
-  color: var(--text-dim);
 }
 .data.tags a[href$="=pp"]:after {
   content: "Airing postponed due to production issues"
