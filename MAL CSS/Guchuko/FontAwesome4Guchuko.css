@@ -76,6 +76,7 @@
 .data.tags a[href$="Pineapple"]:before {content: "\e31f";}
 .data.tags a[href$="Ping-pong"]:before {content: "\f45d";}
 .data.tags a[href$="Plane"]:before {content: "\e22d";}
+.data.tags a[href$="PaperPlane"]:before {content: "\f1d8";}
 .data.tags a[href$="Planet"]:before {content: "\e020";}
 .data.tags a[href$="Pretzel"]:before {content: "\e441";}
 .data.tags a[href$="Pumpkin"]:before {content: "\f707";}
@@ -212,6 +213,7 @@
   .data.tags a[href$="OakLeaf"]:before {content: "\f6f7";}
 .data.tags a[href$="Seedling"]:before {content: "\f4d8";}
 .data.tags a[href$="Tree"]:before {content: "\f1bb";}
+  .data.tags a[href$="XmasTree"]:before {content: "\f7db";}
   .data.tags a[href$="PalmTree"]:before {content: "\f82b";}
   .data.tags a[href$="Tropical"]:before {content: "\f811";}
 .data.tags a[href$="Trees"]:before {content: "\f724";}
