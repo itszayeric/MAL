@@ -332,14 +332,15 @@
  
 /* Days */
 .data.tags a[href$="=Days"] {
-    --tbgc: hsl(100, 62%, 66%);
+    --tbgc: hsl(100, 62%, 30%);
+    --tbgc1: hsl(100, 62%, 50%);
     position: absolute;
     left: -18px !important;
     top: 0px !important;
     width: 18px;
     height: 20px;
     padding: 0;
-    background: hsl(100, 62%, 35%);
+    background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
@@ -347,14 +348,15 @@
 }
 /* Where */
 .data.tags a[href$="=Where"] {
-    --tbgc: hsl(215, 79%, 66%);
+    --tbgc: hsl(215, 79%, 30%);
+    --tbgc1: hsl(215, 79%, 60%);
     position: absolute;
     left: -18px !important;
     top: 23px !important;
     width: 18px;
     height: 20px;
     padding: 0;
-    background: hsl(215, 79%, 35%);
+    background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
@@ -362,14 +364,15 @@
 }
 /* inf */
 .data.tags a[href$="=inf"] {
-    --tbgc: hsl(240, 20%, 72%);
+    --tbgc: hsl(240, 20%, 30%);
+    --tbgc1: hsl(240, 20%, 60%);
     position: absolute;
     left: -18px !important;
     top: 46px !important;
     width: 18px;
     height: 20px;
     padding: 0;
-    background: hsl(240, 20%, 25%);
+    background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
@@ -377,14 +380,15 @@
 }
 /* pp */
 .data.tags a[href$="=pp"] {
-    --tbgc: hsl(330, 66%, 66%);
+    --tbgc: hsl(330, 66%, 30%);
+    --tbgc1: hsl(330, 66%, 60%);
     position: absolute;
     left: -18px !important;
     top: 69px !important;
     width: 18px;
     height: 20px;
     padding: 0;
-    background: hsl(330, 66%, 35%);
+    background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
@@ -392,14 +396,15 @@
 }
 /* Ded */
 .data.tags a[href$="=Ded"] {
-    --tbgc: hsl(350, 62%, 66%);
+    --tbgc: hsl(350, 62%, 30%);
+    --tbgc1: hsl(350, 62%, 60%);
     position: absolute;
     left: -18px !important;
     top: 93px !important;
     width: 18px;
     height: 20px;
     padding: 0;
-    background: hsl(350, 62%, 30%);
+    background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
@@ -407,14 +412,15 @@
 }
 /* Unko */
 .data.tags a[href$="=Unko"] {
-    --tbgc: hsl(40, 80%, 66%);
+    --tbgc: hsl(40, 80%, 30%);
+    --tbgc1: hsl(40, 80%, 60%);
     position: absolute;
     left: -18px !important;
     top: 116px !important;
     width: 18px;
     height: 20px;
     padding: 0;
-    background: hsl(40, 80%, 35%);
+    background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
@@ -469,7 +475,7 @@
   box-shadow: var(--shadow-small);
   border-radius: 4px;
   border: none;
-  color: var(--tbgc);
+  color: var(--tbgc1);
   font: bold 12px ABeeZee;
   text-align: center;
   white-space: pre-wrap;
