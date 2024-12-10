@@ -2928,15 +2928,14 @@ background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 /* HnK manga cover */
 .data.title [href^="/manga/44489/"]:before {background: url(https://i.imgur.com/kCRUx1I.jpeg) no-repeat 50% 50% / auto 140% !important;}
 
-/* Increase cover size by 10% 
-.list-block {width: 955px;}
-.list-table {margin-top: 4px;}
-.list-status-title .stats {right: -5.5px !important;} /* 'Stats' & 'Filter' buttons 
-.list-table > tbody:first-of-type {margin-left: 927px !important;} /* 'Sort' button 
-.list-unit .list-stats {margin-bottom: 12px;} /* Stats 
-.list-item {margin: 0;}
-.list-table-data {margin: 20.5px 20.5px 28.5px;transform: scale(1.1); } /* Covers 
-.list-table-data:hover {transform: rotate(-1deg) scale(1.2);}
-.more-info {position: relative;top: -16px;left: 11.5px;transform: scale(1.1);}
-footer {margin-top: -47.5px;} 
-*/
+/* Temporary fix for extra space on right side when window is too small */
+@media (width <= 1250px) {
+.header {width: 1060px}
+.header .header-menu {position: absolute;margin-left: 0;top: 0 !important;left: 206px;}
+.header .header-title {left: 206px;}
+.list-menu-float {padding-left: 238px;width: 822px}
+[data-owner="1"] .list-menu-float .profile {left: 40px;}
+.btn-menu a.username {left: -166px;}
+body:before, body:after, .cover-block, .status-menu-container {min-width: 1060px;}
+.list-block{padding-left: 80px; !important}
+}
