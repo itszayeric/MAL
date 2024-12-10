@@ -2929,7 +2929,7 @@ background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 .data.title [href^="/manga/44489/"]:before {background: url(https://i.imgur.com/kCRUx1I.jpeg) no-repeat 50% 50% / auto 140% !important;}
 
 /* Temporary fix for extra space on right side when window is too small */
-@media (width <= 1250px) {
+@media (width <= 1280px) {
 .header {width: 1060px}
 .header .header-menu {position: absolute;margin-left: 0;top: 0 !important;left: 206px;}
 .header .header-title {left: 206px;}
@@ -2937,5 +2937,5 @@ background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 [data-owner="1"] .list-menu-float .profile {left: 40px;}
 .btn-menu a.username {left: -166px;}
 body:before, body:after, .cover-block, .status-menu-container {min-width: 1060px;}
-.list-block{padding-left: 80px; !important}
+.list-block{padding-left: 90px; !important}
 }
