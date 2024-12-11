@@ -2937,5 +2937,15 @@ background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 [data-owner="1"] .list-menu-float .profile {left: 40px;}
 .btn-menu a.username {left: -166px;}
 body:before, body:after, .cover-block, .status-menu-container {min-width: 1060px;}
-.list-block{padding-left: 90px; !important}
+.list-block {width: 1060px;}
+.list-unit .list-stats {margin: 0 auto 21px;}
+.list-table {
+	display: grid;
+	margin: 13px auto;
+	gap: 26px;
+	grid-template-columns: repeat(5, 150px);
+	justify-content: center;}
+.list-item {margin: 0;}
+.list-table > tbody:first-of-type {margin-left: 942px;}
+footer {margin: -30px auto 0;width: 1060px;}
 }
