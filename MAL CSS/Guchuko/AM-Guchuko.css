@@ -1295,6 +1295,36 @@ body.manga .list-table-data:hover:before {
     opacity: 0.7
 }
 
+[data-query*="status\":7"] .data.title:before {
+    content: "";
+    position: absolute;
+    background: none;
+    border-radius: 10px;
+    top: -5px;
+    left: -5px;
+    height: 238px;
+    width: 160px;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    opacity: 0;
+    z-index: -101;
+    animation: rainbow 3s infinite;
+}
+
+[data-query*="status\":7"] .list-item .list-table-data:hover .data.title:before {
+    background: linear-gradient(180deg, var(--watching) 25%, var(--planned) 100%) !important;
+    opacity: 1
+}
+
+@keyframes rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
 .data.title {
     position: relative;
     padding: 0 !important;
