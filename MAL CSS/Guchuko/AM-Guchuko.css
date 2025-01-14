@@ -1,5 +1,5 @@
 /* Clarity (R22) by VL  ➜ 
-Guchuko (5.0) by Sunnysummerday */
+Guchuko (6.0) by Sunnysummerday */
 
 :root {
     --bg: #191919;
@@ -111,18 +111,22 @@ body.manga .status-menu .status-button:before {
 
 /* background */
 body {
-    font-family: ABeeZee
+    position: relative;
+    background-color: var(--bg) !important;
+    font-family: ABeeZee;
+    min-height: 100%
 }
-body:before,
-body:after {
-	content: "";
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: -11;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
+
+body:after,
+body:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10
 }
 body:before {
  	background: var(--bgw) fixed !important;
@@ -131,6 +135,13 @@ body:before {
 body:after {
 	background: rgba(0,0,0,1) !important;
   	opacity: var(--bfb)
+}
+
+.cover-block,
+.status-menu-container,
+body:after,
+body:before {
+    min-width: 1060px
 }
 
 a {
@@ -152,7 +163,7 @@ a:hover {
 .list-block {
     margin: 64px auto 0;
     min-height: 0;
-    width: 880px
+    width: 1060px
 }
 
 .status-menu-container.fixed+.list-block {
@@ -160,11 +171,16 @@ a:hover {
 }
 
 .list-unit {
-    width: 100% !important
+    width: 100%
 }
 
 .list-table {
-    border: none !important
+    display: grid;
+    border: none;
+    margin: 13px auto;
+    gap: 36px;
+    grid-template-columns: repeat(5, 150px);
+    justify-content: center
 }
 
 #recaptcha-terms,
@@ -239,18 +255,17 @@ a:hover {
 
 .header {
     display: flex;
-    margin-top: 64px;
-    height: 36px;
-    width: 980px
+    height: 100px;
+    width: 1060px
 }
 
 .header .header-menu {
     display: flex;
-    position: static;
-    margin-left: 165px;
+    position: absolute;
     height: 26px;
-    width: auto;
-    transition: 0.1s !important
+    top: 64px !important;
+    left: 206px;
+    width: auto
 }
 
 .header .header-info {
@@ -342,6 +357,16 @@ a:hover {
     height: 100px
 }
 
+.cover-block:after {
+    content: "";
+    position: absolute;
+    box-shadow: inset 0 20px 20px -20px var(--bg-alt), inset 0 -20px 20px -20px var(--bg-alt);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
 /* avatar */
 .status-menu:after {
     content: "";
@@ -355,6 +380,36 @@ a:hover {
     top: -51px;
     left: -8px;
     opacity: 1
+}
+
+.status-menu-container .status-menu:before {
+    content: "";
+    position: absolute;
+    background: var(--bg-accent);
+    box-shadow: var(--shadow-small);
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    top: -43px;
+    left: 0;
+    transform: scale(1.15)
+}
+
+.fixed .status-menu:before {
+    left: -47px;
+    transform: scale(0)
+}
+
+.status-menu-container:not(.fixed) .status-menu:after {
+    border-style: double
+}
+
+.status-menu-container:not(.fixed) .status-menu:after {
+    box-shadow: inset 0 0 10px var(--bg-alt)
+}
+
+.status-menu-container.fixed .status-menu:after {
+    box-shadow: inset 0 0 5px var(--bg-alt), var(--shadow-small)
 }
 
 .fixed .status-menu:after {
@@ -396,7 +451,8 @@ a:hover {
 }
 
 .status-menu-container .status-menu,
-.status-menu:after {
+.status-menu:after,
+.status-menu:before {
     transition: 0.25s !important
 }
 
@@ -459,7 +515,7 @@ a:hover {
 }
 
 .status-menu-container .status-menu .status-button:not(.all_anime.on):hover {
-    transform: rotate(-1deg) scale(1.1)
+    transform: rotate3d(0, 0, 1, -1deg) scale(1.1)
 }
 
 .status-menu-container .status-menu .status-button:not(.all_anime.on):after {
@@ -478,6 +534,13 @@ a:hover {
 /* all anime text color */
 .status-button.all_anime:before {
     color: var(--text-dim)
+}
+
+.status-menu .status-button:not(.all_anime):before {
+    background: var(--bg-status);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0.001em 0.001em 0 var(--status))
 }
 
 .status-menu-container .search-container {
@@ -628,8 +691,8 @@ a:hover {
 
 .header .header-title {
     position: absolute !important;
-    top: 110px;
-    left: 166px;
+    top: 174px;
+    left: 206px;
     order: 1;
     z-index: 1
 }
@@ -653,9 +716,9 @@ a:hover {
     font-size: 0;
     text-align: left;
     margin: 0 auto;
-    padding-left: 296px;
+    padding-left: 238px;
     height: 0;
-    width: 880px;
+    width: 822px;
     pointer-events: none;
     z-index: 25
 }
@@ -728,7 +791,7 @@ a:hover {
     height: 150px;
     width: 150px !important;
     top: -43px;
-    left: 98px
+    left: 40px
 }
 
 .btn-menu a.username {
@@ -738,7 +801,7 @@ a:hover {
     height: 150px;
     width: 150px;
     top: -7px;
-    left: 0;
+    left: -166px;
     z-index: 30
 }
 
@@ -757,6 +820,40 @@ a:hover {
 
 [data-owner=""] .list-menu-float .profile:hover:before {
     color: var(--white)
+}
+
+[data-owner="1"] a.profile:before,
+a.username:before {
+    content: "";
+    display: flex;
+    position: absolute;
+    background: var(--bg-accent);
+    background-clip: text;
+    border-radius: 50%;
+    color: transparent;
+    font: 0 FontAwesome;
+    -webkit-text-stroke: 3px var(--bg-alt);
+    height: 150px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transform: rotate3d(0, 0, 1, 10deg);
+    transition: 0.25s;
+    opacity: 0.9
+}
+
+[data-owner="1"] a.profile:hover:before,
+a.username:hover:before {
+    animation: slime-tag 0.4s linear;
+    box-shadow: inset 0 0 20px var(--accent);
+    font-size: 60px
+}
+
+[data-owner="1"] a.profile:hover:before,
+a.username:hover:before {
+    content: var(--avatar-hover);
+    font-weight: var(--normal-bold)
 }
 
 .list-menu-float .setting {
@@ -818,12 +915,12 @@ a:hover {
     display: none !important
 }
 
-.list-menu-float .quick-add,
-[data-work="anime"] .list-menu-float .anime-list,
-[data-work="manga"] .list-menu-float .manga-list,
-.list-menu-float .logout,
 .list-menu-float .export,
-.list-menu-float .export+form {
+.list-menu-float .export+form,
+.list-menu-float .logout,
+.list-menu-float .quick-add,
+body.anime .list-menu-float .anime-list,
+body.manga .list-menu-float .manga-list {
     display: none !important
 }
 
@@ -866,7 +963,7 @@ a:hover {
 }
 
 .list-unit .list-stats {
-    animation: bounceInUp 0.6s;
+    animation: bounce-stats 0.6s;
     background: linear-gradient(to right, transparent 1%, var(--status), var(--status), var(--status), var(--status), transparent 99%);
 	color: var(--t-dark);
 	font: bold 12px ABeeZee;
@@ -878,7 +975,7 @@ a:hover {
     top: 198px
 }
 
-@keyframes bounceInUp {
+@keyframes bounce-stats {
     0% {
         transform: translate3d(0, 200%, 0);
         opacity: 0
@@ -894,17 +991,6 @@ a:hover {
         transform: translate3d(0, -2.5px, 0) scaleY(.985)
     }
     to {
-        transform: translateZ(0)
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0)
-    }
-    to {
-        opacity: 1;
         transform: translateZ(0)
     }
 }
@@ -935,7 +1021,7 @@ a:hover {
 .list-table>tbody:first-of-type {
     position: absolute;
     background: none;
-    margin-left: 852px;
+    margin-left: 942px;
     top: 172px;
     z-index: 25
 }
@@ -982,7 +1068,7 @@ a:hover {
 .list-table-header .header-title a:hover {
     background: var(--bg-accent) !important;
     color: white !important;
-    transform: rotate(-2deg) scale(1.1)
+    transform: rotate3d(0, 0, 1, -2deg) scale(1.1)
 }
 
 tbody:first-of-type:hover .header-title a {
@@ -990,7 +1076,7 @@ tbody:first-of-type:hover .header-title a {
     opacity: 1
 }
 
-[data-work="manga"] tbody:first-of-type:hover .tags+.demographic+.header-title.started a,
+body.manga tbody:first-of-type:hover .tags+.demographic+.header-title.started a,
 tbody:first-of-type:hover .header-title.chapters a,
 tbody:first-of-type:hover .header-title.progress a,
 tbody:first-of-type:hover .header-title.volumes a,
@@ -1050,7 +1136,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     content: "Aired"
 }
 
-[data-work="manga"] .tags+.demographic+.header-title.started a:after {
+body.manga .tags+.demographic+.header-title.started a:after {
     content: "Published"
 }
 
@@ -1092,11 +1178,24 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 .volumes+.type {
     display: none !important
 }
-*
+
+.list-table>tbody:nth-of-type(2n+1) {
+    background-color: transparent
+}
+
 .list-item {
-    display: inline-block;
-    background: none !important;
-    margin: 13px
+    animation: item 0.4s
+}
+
+@keyframes item {
+    from {
+        opacity: 0;
+        transform: rotate3d(0, 1, 0, 40deg) scale(1.05) translate(-10px, 0)
+    }
+    to {
+        opacity: 1;
+        transform: rotate3d(0, 0, 0, 0) translate(0, 0)
+    }
 }
 
 .list-table-data {
@@ -1112,12 +1211,12 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .list-table-data:hover {
-    transform: rotate(-1deg) scale(1.1)
+    transform: rotate3d(0, 0, 1, -1deg) scale(1.1)
 }
 
 .list-table-data:hover+.more-info .more-content {
-    left: 174px;
-    transform: rotate(-1deg)
+    left: 178px;
+    transform: rotate3d(0, 0, 1, -1deg)
 }
 
 .list-table-data:after {
@@ -1131,7 +1230,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     z-index: -1
 }
 
-[data-work="manga"] .list-table-data:after {
+body.manga .list-table-data:after {
     border-radius: 0 0 6px 0;
     height: 51px;
     width: 42px;
@@ -1151,7 +1250,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     z-index: 0
 }
 
-[data-work="manga"] .list-table-data:before {
+body.manga .list-table-data:before {
     border-radius: 0 0 0 6px;
     height: 51px;
     width: 110px
@@ -1161,8 +1260,8 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     transform: scaleX(1.0015)
 }
 
-[data-work="manga"] .list-table-data:hover:after,
-[data-work="manga"] .list-table-data:hover:before {
+body.manga .list-table-data:hover:after,
+body.manga .list-table-data:hover:before {
     transform: scaleX(1.005)
 }
 
@@ -1174,6 +1273,26 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 
 .list-table .list-table-data .data a {
     text-decoration: none !important
+}
+
+.data.title:before {
+    content: "";
+    position: absolute;
+    background: var(--bg-alt);
+    border-radius: 6px 6px 8px 8px;
+    top: -5px;
+    left: -5px;
+    height: 238px;
+    width: 160px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-out;
+    z-index: -11
+}
+
+.list-table-data:hover .data.title:before {
+    background: var(--bg-status);
+    opacity: 0.7
 }
 
 .data.title {
@@ -1208,6 +1327,12 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     height: 40px;
     width: 150px !important;
     opacity: 0.8
+}
+
+@supports (-moz-appearance: none) {
+    .list-table-data:hover .data.status {
+        transform: scaleX(1.0025) scaleY(1.015)
+    }
 }
 
 .data.title>a:before {
@@ -1270,7 +1395,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .data.season,
-[data-work="manga"] .data.genre {
+body.manga .data.genre {
     position: absolute;
     border-radius: 0;
     font-size: 10px !important;
@@ -1282,7 +1407,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     z-index: 1
 }
 
-[data-work="manga"] .data.genre {
+body.manga .data.genre {
     display: none
 }
 
@@ -1312,7 +1437,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     bottom: 28px
 }
 
-[data-work="manga"] .data.type {
+body.manga .data.type {
     display: none
 }
 
@@ -1510,7 +1635,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     bottom: 0
 }
 
-[data-work="manga"] .data.score {
+body.manga .data.score {
     height: 51px;
     width: 40px
 }
@@ -1522,7 +1647,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     width: 60px !important
 }
 
-[data-work="manga"] .list-table .data.score a {
+body.manga .list-table .data.score a {
     line-height: 51px !important;
     height: 51px
 }
@@ -1547,7 +1672,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     outline: none
 }
 
-[data-work="manga"] .data.score select {
+body.manga .data.score select {
     background: var(--upper);
     border-radius: 0 0 6px 0;
     border: none;
@@ -1573,10 +1698,10 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     display: none !important
 }
 
-[data-work="anime"][data-query*="\":17"] .data.mal_score,
-[data-work="anime"][data-query*="\":-17"] .data.mal_score,
-[data-work="manga"][data-query*="\":15"] .data.mal_score,
-[data-work="manga"][data-query*="\":-15"] .data.mal_score {
+body.anime[data-query*="\":17"] .data.mal_score,
+body.anime[data-query*="\":-17"] .data.mal_score,
+body.manga[data-query*="\":15"] .data.mal_score,
+body.manga[data-query*="\":-15"] .data.mal_score {
     display: block !important;
     position: absolute;
     background: var(--bg-status);
@@ -1588,15 +1713,15 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     width: 26px;
     right: 8px;
     bottom: -13px;
-    transform: rotate(-5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
     z-index: 50
 }
 
-[data-work="manga"][data-query*="\":15"] .data.mal_score,
-[data-work="manga"][data-query*="\":-15"] .data.mal_score {
+body.manga[data-query*="\":15"] .data.mal_score,
+body.manga[data-query*="\":-15"] .data.mal_score {
     right: 7px;
     bottom: -7px;
-    transform: rotate(0)
+    transform: none
 }
 
 .data.tags {
@@ -1632,23 +1757,21 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .list-table .data.tags .edit {
-    transform: skewY(20deg) scale(.7)
+    transform: rotate3d(1, 1, 1, 35deg) scale(.7)
 }
 
 .list-table .data.tags .edit:hover {
-    transform: skewY(0deg) scale(1);
+    transform: rotate3d(0, 0, 0, 0) scale(1);
     opacity: 1
 }
 
 .list-table .data.tags .edit:before {
     content: "";
-    display: block;
     position: absolute;
     height: 42px;
     width: 42px;
     top: -10px;
-    left: -10px;
-    opacity: 0
+    left: -10px
 }
 
 .data.tags textarea {
@@ -1795,11 +1918,11 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .notes .text:empty+.edit {
-    transform: skewY(-20deg) scale(.7)
+    transform: rotate3d(1, 1, 1, -35deg) scale(.7)
 }
 
 .notes .text:empty+.edit:hover {
-    transform: skewY(0) scale(1);
+    transform: rotate3d(0, 0, 0, 0) scale(1);
     opacity: 1
 }
 
@@ -1874,16 +1997,16 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
 }
 
 .add-edit-more span {
-    transform: skewY(10deg) scale(.75);
+    transform: rotate3d(1, 1, 1, 17.5deg) scale(.75);
     transition: 0.15s !important
 }
 
 .add-edit-more:hover span {
-    transform: skewY(0deg) scale(1)
+    transform: rotate3d(0, 0, 0, 0) scale(1)
 }
 
 .add-edit-more span:hover {
-    transform: rotate(-5deg) scale(1.1)
+    transform: rotate3d(0, 0, 1, -5deg) scale(1.1)
 }
 
 .data.airing-finished,
@@ -1929,14 +2052,10 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     top: 157px
 }
 
-[data-work="anime"][data-query*="\":14"] .data.airing-started,
-[data-work="anime"][data-query*="\":-14"] .data.airing-started,
-[data-work="anime"][data-query*="\":14"] .data.airing-finished,
-[data-work="anime"][data-query*="\":-14"] .data.airing-finished,
-[data-work="manga"][data-query*="\":12"] .data.airing-started,
-[data-work="manga"][data-query*="\":-12"] .data.airing-started,
-[data-work="manga"][data-query*="\":12"] .data.airing-finished,
-[data-work="manga"][data-query*="\":-12"] .data.airing-finished {
+body.anime[data-query*="14,"] .data.airing-started,
+body.anime[data-query*="14,"] .data.airing-finished,
+body.manga[data-query*="12,"] .data.airing-started,
+body.manga[data-query*="12,"] .data.airing-finished {
     display: block !important;
     position: absolute
 }
@@ -1978,7 +2097,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     -webkit-text-stroke: 1px var(--status);
     top: -16px;
     left: -8px;
-    transform: rotate(-20deg)
+    transform: rotate3d(0, 0, 1, -20deg)
 }
 
 .data.airing-finished:after {
@@ -1989,10 +2108,10 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     -webkit-text-stroke: 1px var(--t-dark);
     top: 16px;
     right: -10px;
-    transform: rotate(20deg)
+    transform: rotate3d(0, 0, 1, 20deg)
 }
 
-[data-work="manga"] .data.airing-started:after {
+body.manga .data.airing-started:after {
     content: "\f6b8"
 }
 
@@ -2032,7 +2151,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     padding: 10px !important;
     width: 243px;
     top: -238px;
-    left: 166px;
+    left: 170px;
     transition: 0.2s ease-out;
     opacity: 0.95
 }
@@ -2047,7 +2166,7 @@ tbody:first-of-type:hover .volumes+.type+.started+.header-title.finished a {
     width: 16px;
     top: 22px;
     left: -8px;
-    transform: rotate(45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
     transition: 0.2s ease-out;
     opacity: 0.75;
     z-index: -1
@@ -2075,9 +2194,8 @@ span[itemprop="ratingValue"]:hover {
 .add-edit-more span a {
     display: inline-block;
     position: relative;
-    transform: perspective(1px) translateZ(0);
-    transition-duration: 0.1s !important;
-    transition-property: color !important
+    transform: rotate3d(0, 0, 0, 0);
+    transition: color 0.1s !important
 }
 
 .header .icon-menu:after,
@@ -2095,9 +2213,7 @@ span[itemprop="ratingValue"]:hover {
     left: -.5px;
     transform: scaleY(0);
     transform-origin: 50% 100%;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease-out;
+    transition: transform 0.15s ease-out;
     z-index: -1
 }
 
@@ -2130,7 +2246,12 @@ span[itemprop="ratingValue"]:hover {
 }
 
 .list-unit .loading-space {
-    margin: 22px 0
+    position: absolute;
+    margin: 22px 0;
+    width: 60px;
+    left: calc(50% - 30px);
+    pointer-events: none;
+    z-index: 1
 }
 
 .list-unit .loading-space #loading-spinner {
@@ -2231,11 +2352,11 @@ span[itemprop="ratingValue"]:hover {
     transform: scale(1)
 }
 
-[data-work="manga"] #advanced-options:before {
+body.manga #advanced-options:before {
     height: 517px
 }
 
-[data-work="manga"] #advanced-options:after {
+body.manga #advanced-options:after {
     height: 510px
 }
 
@@ -2311,7 +2432,7 @@ span[itemprop="ratingValue"]:hover {
     top: -13px
 }
 
-[data-work="manga"] #advanced-options .filter-widget:last-of-type .widget-header:after {
+body.manga #advanced-options .filter-widget:last-of-type .widget-header:after {
     border-radius: 2px 2px 0 0;
     top: -13px
 }
@@ -2390,7 +2511,7 @@ div#advanced-options[style$="none;"] {
     height: 100%;
     width: 90px;
     left: 142px;
-    transform: rotate(-1deg)
+    transform: rotate3d(0, 0, 1, -1deg)
 }
 
 .filter .advanced-options-header:after {
@@ -2590,7 +2711,7 @@ div#tu_settings .tu_buttons>.tu_button {
 div#tu_settings .tu_buttons>.tu_button:hover {
     background: var(--bg-accent) !important;
     color: var(--white);
-    transform: rotate(-2deg) scale(1.1)
+    transform: rotate3d(0, 0, 1, -2deg) scale(1.1)
 }
 
 #advanced-options .advanced-options-button {
@@ -2735,12 +2856,13 @@ div#tu_settings .tu_buttons>.tu_button {
 #fancybox-wrap[style*="320px;"] input[type="button"]:hover {
     background: var(--bg-accent) !important;
     color: var(--white);
-    transform: rotate(-1deg) scale(1.1)
+    transform: rotate3d(0, 0, 1, -1deg) scale(1.1)
 }
 
 footer {
-    margin: -43px auto;
-    height: 82px
+    margin: 34px auto 0;
+    height: 82px;
+    width: 1060px
 }
 
 #footer-block {
@@ -2756,14 +2878,14 @@ footer {
     content: "";
     display: block;
     position: relative;
-    background: color-mix(in srgb, var(--bg1), transparent 20%);
+    background: var(--bg);
     border-radius: 0 5px 5px 0;
     box-shadow: var(--shadow-big);
     height: 32px;
     width: 32px;
     top: -40px;
     left: 0;
-    transform: skewY(2deg) scale(0);
+    transform: rotate3d(1, 1, 1, 3.5deg) scale(0);
     transition: 0.2s !important;
     opacity: 0;
     z-index: -10
@@ -2778,7 +2900,7 @@ footer {
     padding: 8px 0;
     height: 32px;
     width: 375px !important;
-    transform: skewY(2deg) scale(.75);
+    transform: rotate3d(1, 1, 1, 3.5deg) scale(.75);
     transition: 0.2s !important;
     opacity: 0
 }
@@ -2790,7 +2912,7 @@ footer {
 }
 
 #copyright:after {
-    content: "5.0";
+    content: "6.0";
     position: absolute;
     background: var(--bg-accent);
     -webkit-background-clip: text;
@@ -2806,7 +2928,7 @@ footer {
 
 #footer-block:hover #copyright,
 #footer-block:hover:after {
-    transform: skewY(0deg) scale(1);
+    transform: rotate3d(0, 0, 0, 0) scale(1);
     opacity: 1
 }
 
@@ -2912,40 +3034,10 @@ background: no-repeat var(--i-grain-2) center 0px / 110px 26px !important;}
 background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 
 /* test */
-.data.title [href^="/anime/29978/"] {
-	font-size: 0 !important;
-	pointer-events: none !important;
-}
-.data.title [href^="/anime/29978/"]:before {
-	background: url(https://i.imgur.com/ir4mMs7.gif) no-repeat center / cover !important;
-}
-.data.title [href^="/anime/29978/"]:after {
-	content: "";
-}
+.data.title [href^="/anime/29978/"] {font-size: 0 !important;pointer-events: none !important;}
+.data.title [href^="/anime/29978/"]:before {background: url(https://i.imgur.com/ir4mMs7.gif) no-repeat center / cover !important;}
+.data.title [href^="/anime/29978/"]:after {content: "";}
 
 /* HnK anime cover */
-.data.title [href^="/anime/35557/"]:before {background: url(https://i.imgur.com/kCRUx1I.jpeg) no-repeat 50% 50% / auto 140% !important;}
-/* HnK manga cover */
+.data.title [href^="/anime/35557/"]:before,
 .data.title [href^="/manga/44489/"]:before {background: url(https://i.imgur.com/kCRUx1I.jpeg) no-repeat 50% 50% / auto 140% !important;}
-
-/* Temporary fix for extra space on right side when window is too small */
-@media (width <= 1280px) {
-.header {width: 1060px}
-.header .header-menu {position: absolute;margin-left: 0;top: 0 !important;left: 206px;}
-.header .header-title {left: 206px;}
-.list-menu-float {padding-left: 238px;width: 822px}
-[data-owner="1"] .list-menu-float .profile {left: 40px;}
-.btn-menu a.username {left: -166px;}
-body:before, body:after, .cover-block, .status-menu-container {min-width: 1060px;}
-.list-block {width: 1060px;}
-.list-unit .list-stats {margin: 0 auto 21px;}
-.list-table {
-	display: grid;
-	margin: 13px auto;
-	gap: 26px;
-	grid-template-columns: repeat(5, 150px);
-	justify-content: center;}
-.list-item {margin: 0;}
-.list-table > tbody:first-of-type {margin-left: 942px;}
-footer {margin: -30px auto 0;width: 1060px;}
-}
