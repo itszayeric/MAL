@@ -125,14 +125,12 @@ body.manga .status-menu .status-button:before {
 html {
     height: 100%
 }
-
 body {
     position: relative;
     background-color: var(--bg) !important;
     font-family: ABeeZee;
     min-height: 100%
 }
-
 body:after,
 body:before {
     content: "";
@@ -147,7 +145,6 @@ body:before {
 body:before {
  	background: var(--bgw) fixed !important;
 }
-
 body:after {
 	background: rgba(0,0,0,1) !important;
   	opacity: var(--bfb)
@@ -3064,11 +3061,6 @@ footer {
 body.ownlist #fancybox-overlay {
     background: var(--i-grain) !important;
     opacity: 0.7 !important;
-}
-
-/* Fix for card tilt */
-.list-table-data:hover .data.tags textarea {
-	transform: scaleX(1.002) scaleY(1.0015);
 }
 
 /* grain for stuff */
