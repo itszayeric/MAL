@@ -1878,7 +1878,8 @@ body.manga[data-query*="\":-15"] .data.mal_score {
     background: var(--status);
     box-shadow: 0 -5px 0 inset #0007;
     border-radius: 0 3px 0px 0;
-    pointer-events: none
+    pointer-events: none;
+    filter: saturate(150%)
 }
 
 .notes .text:empty {
