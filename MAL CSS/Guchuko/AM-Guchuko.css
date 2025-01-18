@@ -3092,6 +3092,6 @@ background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
     background: url(https://i.imgur.com/s4b1sPe.jpg) no-repeat 17px center/auto 205px;
     opacity: 1;
     pointer-events: none;
-    filter: grayscale(70%);
+    filter: saturate(50%);
     animation: rainbow 15s linear infinite;
 }
