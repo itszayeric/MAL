@@ -15,15 +15,15 @@ Guchuko (6.0) by Sunnysummerday */
     --upper: #333;
     --lower: #222;
     --watching: #6ad2fc;
-    --watching2: hsl(197, 96%, 60%);
+    --watching2: hsl(197, 90%, 48%);
     --completed: #85e0c8;
-    --completed2: hsl(164, 59%, 60%);
+    --completed2: hsl(164, 59%, 45%);
     --onhold: #ffd680;
-    --onhold2: hsl(41, 100%, 64%);
+    --onhold2: hsl(41, 90%, 52%);
     --dropped: #f07698;
-    --dropped2: hsl(343, 80%, 60%);
+    --dropped2: hsl(343, 80%, 50%);
     --planned: #9282d2;
-    --planned2: hsl(252, 47%, 56%);
+    --planned2: hsl(252, 47%, 45%);
     --shadow: 0 0 5px rgba(5, 5, 5, .2);
     --shadow-big: 0 1px 2px 0 rgba(10, 10, 10, .5), 0 3px 6px 2px rgba(5, 5, 5, .25);
     --shadow-small: 0 1px 2px rgba(0, 0, 0, .15);
@@ -1315,7 +1315,7 @@ body.manga .list-table-data:hover:before {
 
 .list-table-data:hover .data.title:before {
     background: var(--bg-status);
-    opacity: 0.7
+    opacity: 0.65
 }
 
 [data-query*="status\":7"] .data.title:before {
@@ -1336,7 +1336,7 @@ body.manga .list-table-data:hover:before {
 
 [data-query*="status\":7"] .list-item .list-table-data:hover .data.title:before {
     background: linear-gradient(180deg, var(--watching) 25%, var(--planned) 100%) !important;
-    opacity: 1
+    opacity: 0.65
 }
 
 @keyframes rainbow {
@@ -1889,7 +1889,7 @@ body.manga[data-query*="\":-15"] .data.mal_score {
     box-shadow: 0 -5px 0 inset #0007;
     border-radius: 0 3px 0px 0;
     pointer-events: none;
-    filter: saturate(150%)
+    filter: saturate(130%)
 }
 
 .notes .text:empty {
