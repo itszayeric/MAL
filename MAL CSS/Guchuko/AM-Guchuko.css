@@ -1322,7 +1322,7 @@ body.manga .list-table-data:hover:before {
     content: "";
     position: absolute;
     background: none;
-    border-radius: 10px;
+    border-radius: 6px 6px 8px 8px;
     top: -5px;
     left: -5px;
     height: 238px;
@@ -1334,7 +1334,7 @@ body.manga .list-table-data:hover:before {
     animation: rainbow 3s linear infinite;
 }
 
-[data-query*="status\":7"] .list-item .list-table-data:hover .data.title:before {
+[data-query*="status\":7"] .list-table-data:hover .data.title:before {
     background: linear-gradient(180deg, var(--watching) 25%, var(--planned) 100%) !important;
     opacity: 0.65
 }
