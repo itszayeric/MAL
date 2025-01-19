@@ -219,7 +219,7 @@ a:hover {
 .completed,
 .completed~.data {
     --status: var(--completed);
-    --status:2 var(--completed2);
+    --status2: var(--completed2);
     --bg-status: var(--completed)
 }
 
