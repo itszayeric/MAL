@@ -19,11 +19,11 @@ Guchuko (6.0) by Sunnysummerday */
     --completed: #85e0c8;
     --completed2: hsl(164, 59%, 60%);
     --onhold: #ffd680;
-    --onhold: hsl(41, 100%, 64%);
+    --onhold2: hsl(41, 100%, 64%);
     --dropped: #f07698;
-    --dropped: hsl(343, 80%, 60%);
+    --dropped2: hsl(343, 80%, 60%);
     --planned: #9282d2;
-    --planned: hsl(252, 47%, 56%);
+    --planned2: hsl(252, 47%, 56%);
     --shadow: 0 0 5px rgba(5, 5, 5, .2);
     --shadow-big: 0 1px 2px 0 rgba(10, 10, 10, .5), 0 3px 6px 2px rgba(5, 5, 5, .25);
     --shadow-small: 0 1px 2px rgba(0, 0, 0, .15);
@@ -34,66 +34,66 @@ Guchuko (6.0) by Sunnysummerday */
 
 /* All Anime */
 [data-query*="status\":7"] {
-	--pattern: url(https://i.imgur.com/o2J04NP.png) repeat top/450px;
-	--cfb: 0.25;
-	--bgw: url(https://i.imgur.com/Dboy6PM.png) repeat center/auto;
-	--bfb: 0;
-	--ava: url(https://i.imgur.com/934mCt0.png) no-repeat center / 155px;
+    --pattern: url(https://i.imgur.com/o2J04NP.png) repeat top/450px;
+    --cfb: 0.25;
+    --bgw: url(https://i.imgur.com/Dboy6PM.png) repeat center/auto;
+    --bfb: 0;
+    --ava: url(https://i.imgur.com/934mCt0.png) no-repeat center / 155px;
     --avatar-hover: "\e3a4";
     --normal-bold: bold;
 }
 
 /* Watching */
 [data-query*="status\":1"] {
-	--pattern: url(https://i.imgur.com/HTETi7M.png) repeat top left/350px auto;
-	--cfb: 0.6;
-	--bgw: url(https://i.imgur.com/qfYVgLM.png) repeat center/auto;
-	--bfb: 0;
-	--ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 155px;
+    --pattern: url(https://i.imgur.com/HTETi7M.png) repeat top left/350px auto;
+    --cfb: 0.6;
+    --bgw: url(https://i.imgur.com/qfYVgLM.png) repeat center/auto;
+    --bfb: 0;
+    --ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 155px;
     --avatar-hover: "\f599";
     --normal-bold: bold;
 }
 
 /* Completed */
 [data-query*="status\":2"] {
-	--pattern: url(https://i.imgur.com/SiEUTjJ.png) repeat center/350px;
-	--cfb: 1.2;
-	--bgw: url(https://i.imgur.com/s7n5YvD.png) repeat center/300px;
-	--bfb: 0;
-	--ava: url(https://i.imgur.com/SbVdG3j.png) no-repeat center / 155px;
+    --pattern: url(https://i.imgur.com/SiEUTjJ.png) repeat center/350px;
+    --cfb: 1.2;
+    --bgw: url(https://i.imgur.com/s7n5YvD.png) repeat center/300px;
+    --bfb: 0;
+    --ava: url(https://i.imgur.com/SbVdG3j.png) no-repeat center / 155px;
     --avatar-hover: "\e389";
     --normal-bold: bold;
 }
 
 /* Onhold */
 [data-query*="status\":3"] {
-	--pattern: url(https://i.imgur.com/GfJsxV5.png) repeat bottom right/400px;
-	--cfb: 1.1;
-	--bgw: url(https://i.imgur.com/EI4gryh.png) repeat center/auto;
-	--bfb: 0;
-	--ava: url(https://i.imgur.com/uKWyl0l.png) no-repeat center / 155px;
+    --pattern: url(https://i.imgur.com/GfJsxV5.png) repeat bottom right/400px;
+    --cfb: 1.1;
+    --bgw: url(https://i.imgur.com/EI4gryh.png) repeat center/auto;
+    --bfb: 0;
+    --ava: url(https://i.imgur.com/uKWyl0l.png) no-repeat center / 155px;
     --avatar-hover: "\f11a";
     --normal-bold: bold;
 }
 
 /* Dropped */
 [data-query*="status\":4"] {
-	--pattern: url(https://i.imgur.com/sTTfpjt.png) repeat center/600px;
-	--cfb: 0.95;
-	--bgw: url(https://i.imgur.com/SlhTIeA.png) repeat center/auto;
-	--bfb: 0.1;
-	--ava: url(https://i.imgur.com/YdPFMfQ.png) no-repeat center / 155px;
+    --pattern: url(https://i.imgur.com/sTTfpjt.png) repeat center/600px;
+    --cfb: 0.95;
+    --bgw: url(https://i.imgur.com/SlhTIeA.png) repeat center/auto;
+    --bfb: 0.1;
+    --ava: url(https://i.imgur.com/YdPFMfQ.png) no-repeat center / 155px;
     --avatar-hover: "\e379";
     --normal-bold: bold;
 }
 
 /* Planned */
 [data-query*="status\":6"] {
-	--pattern: url(https://i.imgur.com/SfILbfB.png) repeat center/280px;
-	--cfb: 1.05;
-	--bgw: url(https://i.imgur.com/71EGjun.png) repeat center/110px;
-	--bfb: 0.1;
-	--ava: url(https://i.imgur.com/BVYVms4.png) no-repeat center / 155px;
+    --pattern: url(https://i.imgur.com/SfILbfB.png) repeat center/280px;
+    --cfb: 1.05;
+    --bgw: url(https://i.imgur.com/71EGjun.png) repeat center/110px;
+    --bfb: 0.1;
+    --ava: url(https://i.imgur.com/BVYVms4.png) no-repeat center / 155px;
     --avatar-hover: "\e39b";
     --normal-bold: bold;
 }
@@ -148,11 +148,11 @@ body:before {
     z-index: -10
 }
 body:before {
- 	background: var(--bgw) fixed !important;
+    background: var(--bgw) fixed !important;
 }
 body:after {
-	background: rgba(0,0,0,1) !important;
-  	opacity: var(--bfb)
+    background: rgba(0,0,0,1) !important;
+    opacity: var(--bfb)
 }
 
 .cover-block,
@@ -376,7 +376,7 @@ a:hover {
     content: "";
     display: block;
     background: var(--pattern);
-	filter: brightness(var(--cfb));
+    filter: brightness(var(--cfb));
     height: 100px
 }
 
@@ -448,7 +448,7 @@ a:hover {
 
 .status-menu-container {
     position: relative;
-	background: var(--i-grain-3) repeat, var(--t-dark) !important;
+    background: var(--i-grain-3) repeat, var(--t-dark) !important;
     border: none;
     box-shadow: var(--shadow-big);
     height: 64px;
@@ -988,8 +988,8 @@ body.manga .list-menu-float .manga-list {
 .list-unit .list-stats {
     animation: bounce-stats 0.6s;
     background: linear-gradient(to right, transparent 1%, var(--status), var(--status), var(--status), var(--status), transparent 99%);
-	color: var(--t-dark);
-	font: bold 12px ABeeZee;
+    color: var(--t-dark);
+    font: bold 12px ABeeZee;
     letter-spacing: 0.3px;
     line-height: 33px;
     margin: 0 auto 8px;
@@ -1357,8 +1357,8 @@ body.manga .list-table-data:hover:before {
 
 .data.title>.link {
     display: inline-block !important;
-	color: var(--t-dark) !important;
-	font: bold 14px/39px ABeeZee !important;
+    color: var(--t-dark) !important;
+    font: bold 14px/39px ABeeZee !important;
     padding: 0 12px;
     height: 40px;
     max-width: 126px;
@@ -1416,7 +1416,7 @@ body.manga .list-table-data:hover:before {
     font: bold 10px/16px ABeeZee !important;
     letter-spacing: 1px;
     text-align: center;
-	text-transform: uppercase;
+    text-transform: uppercase;
     margin-left: 0;
     padding: 0;
     height: 16px;
@@ -1899,7 +1899,7 @@ body.manga[data-query*="\":-15"] .data.mal_score {
 .notes .text:hover {
     background: var(--bg);
     font: 12px ABeeZee;
- 	color: var(--text-dim);
+    color: var(--text-dim);
     padding: 8px;
     top: 40px;
     left: 0;
@@ -2138,7 +2138,7 @@ body.manga[data-query*="12,"] .data.airing-finished {
     background: var(--bg-status) !important;
     border-top: 1px dashed var(--bg) !important;
     border-radius: 0 0 5px 5px;
-  	font: bold 14px/31px segoe ui;
+    font: bold 14px/31px segoe ui;
     color: var(--t-dark);
     top: 108.5px
 }
