@@ -15,10 +15,15 @@ Guchuko (6.0) by Sunnysummerday */
     --upper: #333;
     --lower: #222;
     --watching: #6ad2fc;
+    --watching2: hsl(197, 96%, 60%);
     --completed: #85e0c8;
+    --completed2: hsl(164, 59%, 60%);
     --onhold: #ffd680;
+    --onhold: hsl(41, 100%, 64%);
     --dropped: #f07698;
+    --dropped: hsl(343, 80%, 60%);
     --planned: #9282d2;
+    --planned: hsl(252, 47%, 56%);
     --shadow: 0 0 5px rgba(5, 5, 5, .2);
     --shadow-big: 0 1px 2px 0 rgba(10, 10, 10, .5), 0 3px 6px 2px rgba(5, 5, 5, .25);
     --shadow-small: 0 1px 2px rgba(0, 0, 0, .15);
@@ -207,24 +212,28 @@ a:hover {
 .watching,
 .watching~.data {
     --status: var(--watching);
+    --status2: var(--watching2);
     --bg-status: linear-gradient(to bottom right, var(--watching), var(--completed))
 }
 
 .completed,
 .completed~.data {
     --status: var(--completed);
+    --status:2 var(--completed2);
     --bg-status: var(--completed)
 }
 
 .onhold,
 .onhold~.data {
     --status: var(--onhold);
+    --status2: var(--onhold2);
     --bg-status: var(--onhold)
 }
 
 .dropped,
 .dropped~.data {
     --status: var(--dropped);
+    --status2: var(--dropped2);
     --bg-status: var(--dropped)
 }
 
@@ -233,6 +242,7 @@ a:hover {
 .plantowatch,
 .plantowatch~.data {
     --status: var(--planned);
+    --status2: var(--planned2);
     --bg-status: var(--planned)
 }
 
@@ -1875,7 +1885,7 @@ body.manga[data-query*="\":-15"] .data.mal_score {
     width: 35px !important;
     height: 26px !important;
     clip-path: polygon(18% 40%, 0 0, 100% 0, 100% 80%, 85% 100%, 85% 80%, 0% 80%);
-    background: var(--status);
+    background: linear-gradient(220deg, var(--status) 20%, var(--status2) 100%);
     box-shadow: 0 -5px 0 inset #0007;
     border-radius: 0 3px 0px 0;
     pointer-events: none;
