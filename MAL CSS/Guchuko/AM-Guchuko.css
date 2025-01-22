@@ -34,8 +34,8 @@ Guchuko (6.0) by Sunnysummerday */
 
 /* All Anime */
 [data-query*="status\":7"] {
-    --pattern: url(https://i.imgur.com/o2J04NP.png) repeat top/450px;
-    --cfb: 0.25;
+    --pattern: url(https://i.imgur.com/ndqe0Yw.png) repeat top/450px;
+    --cfb: 0.51;
     --bgw: url(https://i.imgur.com/Dboy6PM.png) repeat center/auto;
     --bfb: 0;
     --ava: url(https://i.imgur.com/934mCt0.png) no-repeat center / 155px;
