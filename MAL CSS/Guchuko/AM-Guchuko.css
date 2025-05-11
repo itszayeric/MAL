@@ -42,9 +42,9 @@
     --ava: url(https://i.imgur.com/934mCt0.png) no-repeat center / 160px;
     --avatar-hover: "\e3a4";
     --normal-bold: bold;
-    --ao-overlay: url(https://raw.githubusercontent.com/ItsPi3141/discord-fake-avatar-decorations/refs/heads/main/public/decorations/aurora.png);
+    --ao-overlay: url(https://raw.githubusercontent.com/ItsPi3141/discord-fake-avatar-decorations/refs/heads/main/public/decorations/aurora.png) no-repeat 15px center/auto 210px;
     --ao-filter: grayscale(50%) brightness(1.2);
-    --ao-opacity: 1;
+    --ao-opacity: .9;
 }
 
 /* Watching */
@@ -56,7 +56,7 @@
     --ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 160px;
     --avatar-hover: "\f599";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/EY9TBdt.jpg);
+    --ao-overlay: url(https://i.imgur.com/EY9TBdt.jpg) no-repeat 15px center/auto 210px;
     --ao-filter: grayscale(80%);
     --ao-opacity: 1;
 }
@@ -70,7 +70,7 @@
     --ava: url(https://i.imgur.com/SbVdG3j.png) no-repeat center / 160px;
     --avatar-hover: "\e389";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/eEvhZjt.jpg);
+    --ao-overlay: url(https://i.imgur.com/WgDMqU8.jpg) no-repeat 13px center/auto 214px;
     --ao-filter:;
     --ao-opacity: 1;
 }
@@ -84,7 +84,7 @@
     --ava: url(https://i.imgur.com/uKWyl0l.png) no-repeat center / 160px;
     --avatar-hover: "\f11a";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/2fLQiqi.jpg);
+    --ao-overlay: url(https://i.imgur.com/2fLQiqi.jpg) no-repeat 15px center/auto 210px;
     --ao-filter: saturate(1.5) brightness(1.1);
     --ao-opacity: 1;
 }
@@ -98,7 +98,7 @@
     --ava: url(https://i.imgur.com/YdPFMfQ.png) no-repeat center / 160px;
     --avatar-hover: "\e379";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/wXHdzf8.jpg);
+    --ao-overlay: url(https://i.imgur.com/wXHdzf8.jpg) no-repeat 13px center/auto 214px;
     --ao-filter: grayscale(70%) brightness(1.6) hue-rotate(345deg);
     --ao-opacity: 1;
 }
@@ -112,7 +112,7 @@
     --ava: url(https://i.imgur.com/BVYVms4.png) no-repeat center / 160px;
     --avatar-hover: "\e39b";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/yazGQgM.jpg);
+    --ao-overlay: url(https://i.imgur.com/yazGQgM.jpg) no-repeat 15px center/auto 210px;
     --ao-filter: saturate(0.8);
     --ao-opacity: 1;
 }
@@ -434,7 +434,7 @@ a:hover {
     width: 150px;
     top: -43px;
     left: 0;
-    transform: scale(1.16)
+    transform: scale(1.18)
 }
 
 .fixed .status-menu:before {
@@ -459,7 +459,7 @@ a:hover {
 a.username:after {
     content: "";
     position: absolute;
-    background: var(--ao-overlay) no-repeat 16px center/auto 208px;
+    background: var(--ao-overlay);
     height: 240px;
     width: 240px;
     top: -45px;
