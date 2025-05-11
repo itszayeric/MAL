@@ -43,8 +43,8 @@
     --avatar-hover: "\e3a4";
     --normal-bold: bold;
     --ao-overlay: url(https://raw.githubusercontent.com/ItsPi3141/discord-fake-avatar-decorations/refs/heads/main/public/decorations/aurora.png);
-	--ao-filter: grayscale(50%) brightness(1.2);
-	--ao-opacity:;
+    --ao-filter: grayscale(50%) brightness(1.2);
+    --ao-opacity: 1;
 }
 
 /* Watching */
@@ -56,8 +56,9 @@
     --ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 155px;
     --avatar-hover: "\f599";
     --normal-bold: bold;
-	--ao-overlay: url(https://i.imgur.com/EY9TBdt.jpg);
-	--ao-filter: grayscale(80%);
+    --ao-overlay: url(https://i.imgur.com/EY9TBdt.jpg);
+    --ao-filter: grayscale(80%);
+    --ao-opacity: 1;
 }
 
 /* Completed */
@@ -69,8 +70,9 @@
     --ava: url(https://i.imgur.com/SbVdG3j.png) no-repeat center / 155px;
     --avatar-hover: "\e389";
     --normal-bold: bold;
-	--ao-overlay: url(https://i.imgur.com/eEvhZjt.jpg);
-	--ao-filter:;
+    --ao-overlay: url(https://i.imgur.com/eEvhZjt.jpg);
+    --ao-filter:;
+    --ao-opacity: 1;
 }
 
 /* Onhold */
@@ -82,8 +84,9 @@
     --ava: url(https://i.imgur.com/uKWyl0l.png) no-repeat center / 155px;
     --avatar-hover: "\f11a";
     --normal-bold: bold;
-	--ao-overlay: url(https://i.imgur.com/2fLQiqi.jpg);
-	--ao-filter: saturate(1.5) brightness(1.1);
+    --ao-overlay: url(https://i.imgur.com/2fLQiqi.jpg);
+    --ao-filter: saturate(1.5) brightness(1.1);
+    --ao-opacity: 1;
 }
 
 /* Dropped */
@@ -95,8 +98,9 @@
     --ava: url(https://i.imgur.com/YdPFMfQ.png) no-repeat center / 155px;
     --avatar-hover: "\e379";
     --normal-bold: bold;
-	--ao-overlay: url(https://i.imgur.com/wXHdzf8.jpg);
-	--ao-filter: grayscale(70%) brightness(1.6) hue-rotate(345deg);
+    --ao-overlay: url(https://i.imgur.com/wXHdzf8.jpg);
+    --ao-filter: grayscale(70%) brightness(1.6) hue-rotate(345deg);
+    --ao-opacity: 1;
 }
 
 /* Planned */
@@ -108,8 +112,9 @@
     --ava: url(https://i.imgur.com/BVYVms4.png) no-repeat center / 155px;
     --avatar-hover: "\e39b";
     --normal-bold: bold;
-	--ao-overlay: url(https://i.imgur.com/yazGQgM.jpg);
-	--ao-filter: saturate(0.8);
+    --ao-overlay: url(https://i.imgur.com/yazGQgM.jpg);
+    --ao-filter: saturate(0.8);
+    --ao-opacity: 1;
 }
 
 /* categories */
@@ -2538,7 +2543,7 @@ div#advanced-options[style$="none;"] {animation: popupOut .6s;}
 	background: var(--bg-accent);
 	box-sizing: border-box;
 	border-radius: 6px;
-	color: white;
+	color: var(--white);
 	font-size: 16px;
 	line-height: 26px;
 	text-align: center;
@@ -2581,7 +2586,7 @@ div#advanced-options[style$="none;"] {animation: popupOut .6s;}
 #advanced-options [class*="-widget"] select,
 #advanced-options [class*="-widget"] label {
 	background: none;
-	border-color: var(--border) !important;
+	border-color: var(--text-dim) !important;
 	border-radius: 5px;
 	box-sizing: border-box;
 	color: var(--text);
@@ -2606,6 +2611,7 @@ div#advanced-options[style$="none;"] {animation: popupOut .6s;}
 
 #advanced-options input:disabled + label,
 #advanced-options :disabled {
+    background: var(--bg) !important;
 	color: var(--text) !important;
 	opacity: .5; }
 
@@ -2666,18 +2672,18 @@ div#advanced-options[style$="none;"] {animation: popupOut .6s;}
 	width: 92.25px; }
 
 #advanced-options .sort-widget input[type=radio]:not(:disabled) + label {
-	background: var(--light) !important;
-	border-color: var(--light) !important; }
+    background: var(--bg1) !important;
+    border-color: var(--bg1) !important; }
 
 #advanced-options .sort-widget input[type=radio]:not(:disabled):checked + label {
 	background: var(--bg-accent) !important;
 	border: none;
-	color: white;
+    color: var(--white);
 	line-height: 32px; }
 
 #advanced-options .sort-widget input[type=radio]:disabled + label {
 	background: none !important;
-	border-color: var(--border) !important; } /* Disabled buttons */
+    border-color: var(--text-dim) !important; } /* Disabled buttons */
 
 
   /* -- Main buttons ('Apply' & 'Clear') ---------------------
@@ -2685,7 +2691,7 @@ div#advanced-options[style$="none;"] {animation: popupOut .6s;}
 
 #advanced-options .advanced-options-button a,
 div#tu_settings .tu_buttons > .tu_button {
-	background: var(--bg);
+	background: var(--bg2);
 	border-radius: 16px;
 	border: 2px solid var(--bg);
 	box-shadow: var(--shadow-small);
@@ -2701,7 +2707,7 @@ div#tu_settings .tu_buttons > .tu_button {font: 26px/26px ABeeZee;}
 #advanced-options .advanced-options-button a:hover,
 div#tu_settings .tu_buttons > .tu_button:hover {
 	background: var(--bg-accent) !important;
-	color: white;
+    color: var(--white);
 	transform: rotate3d(0,0,1,-2deg) scale(1.1); }
 
 #advanced-options .advanced-options-button {padding: 12px 0 16px 0;}
