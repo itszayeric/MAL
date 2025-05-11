@@ -879,6 +879,7 @@ a.username:after {
     color: var(--white)
 }
 
+/* icon on profile hover */
 [data-owner="1"] a.profile:before,
 a.username:before {
     content: "";
@@ -889,7 +890,7 @@ a.username:before {
     border-radius: 50%;
     color: transparent;
     font: 0 FontAwesome;
-    -webkit-text-stroke: 3px var(--bg-alt);
+    -webkit-text-stroke: 2px var(--bg2);
     height: 150px;
     width: 150px;
     align-items: center;
