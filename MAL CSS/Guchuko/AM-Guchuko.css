@@ -56,7 +56,7 @@
     --ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 160px;
     --avatar-hover: "\f599";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/EY9TBdt.jpg) no-repeat 15px center/auto 210px;
+    --ao-overlay: url(https://i.imgur.com/EY9TBdt.jpg) no-repeat 18px center/auto 204px;
     --ao-filter: grayscale(80%);
     --ao-opacity: 1;
 }
@@ -70,7 +70,7 @@
     --ava: url(https://i.imgur.com/SbVdG3j.png) no-repeat center / 160px;
     --avatar-hover: "\e389";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/WgDMqU8.jpg) no-repeat 13px center/auto 214px;
+    --ao-overlay: url(https://i.imgur.com/WgDMqU8.jpg) no-repeat 15px center/auto 210px;
     --ao-filter:;
     --ao-opacity: 1;
 }
@@ -98,7 +98,7 @@
     --ava: url(https://i.imgur.com/YdPFMfQ.png) no-repeat center / 160px;
     --avatar-hover: "\e379";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/wXHdzf8.jpg) no-repeat 13px center/auto 214px;
+    --ao-overlay: url(https://i.imgur.com/wXHdzf8.jpg) no-repeat 15px center/auto 210px;
     --ao-filter: grayscale(70%) brightness(1.6) hue-rotate(345deg);
     --ao-opacity: 1;
 }
@@ -112,7 +112,7 @@
     --ava: url(https://i.imgur.com/BVYVms4.png) no-repeat center / 160px;
     --avatar-hover: "\e39b";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/yazGQgM.jpg) no-repeat 15px center/auto 210px;
+    --ao-overlay: url(https://i.imgur.com/yazGQgM.jpg) no-repeat 18px center/auto 204px;
     --ao-filter: saturate(0.8);
     --ao-opacity: 1;
 }
@@ -434,7 +434,7 @@ a:hover {
     width: 150px;
     top: -43px;
     left: 0;
-    transform: scale(1.18)
+    transform: scale(1.15)
 }
 
 .fixed .status-menu:before {
