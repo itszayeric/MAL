@@ -2989,6 +2989,17 @@ background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 .data.title [href^="/anime/29978/"] {font-size: 0 !important;pointer-events: none !important;}
 .data.title [href^="/anime/29978/"]:before {background: url(https://i.imgur.com/ir4mMs7.gif) no-repeat center / cover !important;}
 .data.title [href^="/anime/29978/"]:after {content: "";}
+[href^="/anime/29978/"]:after {
+    content: "";
+    position: absolute;
+    background: var(--i-grain-2), url(https://i.imgur.com/w9yuFwW.png);
+    /* box-shadow: 0 23px 0 var(--lower), 0 28px 0 var(--lower); */
+    border-radius: 8px;
+    height: 46px; /* 23 */
+    width: 150px;
+    left: 0;
+    top: 177px;
+    z-index: 10;}
 
 /* HnK anime cover */
 .data.title [href^="/anime/35557/"]:before,
