@@ -13,8 +13,6 @@
     --gray: #a5a5a5;
     --white: #fefefe;
     --dark: #555;
-    --upper: #333;
-    --lower: #222;
     --watching: #6ad2fc;
     --watching2: hsl(197, 90%, 48%);
     --completed: #85e0c8;
@@ -26,7 +24,7 @@
     --planned: #9282d2;
     --planned2: hsl(252, 47%, 45%);
     --shadow: 0 0 5px rgba(5, 5, 5, .2);
-    --shadow-big: 0 1px 2px 0 rgba(10, 10, 10, .5), 0 3px 6px 2px rgba(5, 5, 5, .25);
+    --shadow-big: 0 1px 2px 0 rgba(10, 10, 10, .5), 0 0px 6px 3px rgba(5, 5, 5, .25);
     --shadow-small: 0 1px 2px rgba(0, 0, 0, .15);
     --i-grain: url(https://i.imgur.com/p42nqAy.png);
     --i-grain-2: url(https://i.imgur.com/WHp1EwW.png);
@@ -1281,7 +1279,7 @@ body.manga .tags+.demographic+.header-title.started a:after {
     content: "";
     display: block;
     position: absolute;
-    background: var(--upper);
+    background: var(--bg1);
     height: 25px;
     width: 150px;
     bottom: 26px;
@@ -1300,7 +1298,7 @@ body.manga .list-table-data:after {
     content: "";
     display: block;
     position: absolute;
-    background: var(--lower);
+    background: var(--bg2);
     border-radius: 0 0 6px 6px;
     height: 28px;
     width: 150px;
@@ -1348,6 +1346,7 @@ body.manga .list-table-data:hover:before {
     z-index: -101
 }
 
+/* glass on list item hover */
 .list-table-data:hover .data.title:before {
     background: var(--bg-status);
     opacity: 0.65
@@ -1747,7 +1746,7 @@ body.manga .list-table .data.score a {
 .data.score select {
     display: block;
     position: absolute;
-    background: var(--lower);
+    background: var(--bg2);
     border-radius: 50% 0 6px 50%;
     border: 4px solid transparent;
     border-color: transparent;
@@ -1761,7 +1760,7 @@ body.manga .list-table .data.score a {
 }
 
 body.manga .data.score select {
-    background: var(--upper);
+    background: var(--bg1);
     border-radius: 0 0 6px 0;
     border: none;
     border-left: 4px solid transparent;
