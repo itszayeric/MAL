@@ -348,96 +348,105 @@
     --tbgc: hsl(100, 62%, 30%);
     --tbgc1: hsl(100, 62%, 50%);
     position: absolute;
-    left: -18px !important;
+    left: -5px !important;
     top: 0px !important;
-    width: 18px;
+    width: 20px;
     height: 20px;
-    padding: 0;
+    padding: 0 2px;
     background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
-    z-index: 4;
+    z-index: -14;
 }
 /* Where */
 .data.tags a[href$="=Where"] {
     --tbgc: hsl(215, 79%, 30%);
     --tbgc1: hsl(215, 79%, 60%);
     position: absolute;
-    left: -18px !important;
+    left: -4px !important;
     top: 23px !important;
-    width: 18px;
+    width: 20px;
     height: 20px;
-    padding: 0;
+    padding: 0 2px;
     background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
-    z-index: 4;
+    z-index: -4;
 }
 /* inf */
 .data.tags a[href$="=inf"] {
     --tbgc: hsl(240, 20%, 20%);
     --tbgc1: hsl(240, 20%, 60%);
     position: absolute;
-    left: -18px !important;
+    left: -4px !important;
     top: 46px !important;
-    width: 18px;
+    width: 20px;
     height: 20px;
-    padding: 0;
+    padding: 0 2px;
     background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
-    z-index: 4;
+    z-index: -4;
 }
 /* pp */
 .data.tags a[href$="=pp"] {
     --tbgc: hsl(330, 66%, 30%);
     --tbgc1: hsl(330, 66%, 60%);
     position: absolute;
-    left: -18px !important;
+    left: -4px !important;
     top: 69px !important;
-    width: 18px;
+    width: 20px;
     height: 20px;
-    padding: 0;
+    padding: 0 2px;
     background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
-    z-index: 4;
+    z-index: -4;
 }
 /* Ded */
 .data.tags a[href$="=Ded"] {
     --tbgc: hsl(350, 62%, 30%);
     --tbgc1: hsl(350, 62%, 60%);
     position: absolute;
-    left: -18px !important;
+    left: -4px !important;
     top: 93px !important;
-    width: 18px;
+    width: 20px;
     height: 20px;
-    padding: 0;
+    padding: 0 2px;
     background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
-    z-index: 4;
+    z-index: -4;
 }
 /* Unko */
 .data.tags a[href$="=Unko"] {
     --tbgc: hsl(40, 80%, 30%);
     --tbgc1: hsl(40, 80%, 60%);
     position: absolute;
-    left: -18px !important;
+    left: -4px !important;
     top: 116px !important;
-    width: 18px;
+    width: 20px;
     height: 20px;
-    padding: 0;
+    padding: 0 2px;
     background: var(--tbgc1);
     border-right: 1px dashed var(--tbgc);
     border-radius: 3px 0 0 3px;
     box-shadow: var(--shadow);
-    z-index: 4;
+    z-index: -4;
+}
+
+.list-table-data:hover .data.tags a[href$="=Days"],
+.list-table-data:hover .data.tags a[href$="=Where"],
+.list-table-data:hover .data.tags a[href$="=inf"],
+.list-table-data:hover .data.tags a[href$="=pp"],
+.list-table-data:hover .data.tags a[href$="=Ded"],
+.list-table-data:hover .data.tags a[href$="=Unko"] {
+  left: -24px !important;
 }
 
 .data.tags a[href$="=Days"]:before {
@@ -653,8 +662,8 @@ body.manga .data.tags a[href*="tag=%2B"] {width: 102px;}
 }
 
 @keyframes spin {
-	from {transform: rotate3d(0,0,1,0);}
-	to {transform: rotate3d(0,0,1,360deg);}}
+    from {transform: rotate3d(0,0,1,0);}
+    to {transform: rotate3d(0,0,1,360deg);}}
 
 /* Poifect */
 .data.tags a[href*="tag=100"] {
@@ -678,40 +687,40 @@ body.manga .data.tags a[href*="tag=%2B"] {width: 102px;}
     color: var(--status);
     font: bold 44px FontAwesome;
     -webkit-text-stroke: 1.5px black;
-	height: 44px;
-	width: 44px;
-	top: 205px;
-	left: 102px;
-	align-items: center;
-	justify-content: center; } /* Flex/Height/Width needed for Firefox */
+    height: 44px;
+    width: 44px;
+    top: 205px;
+    left: 102px;
+    align-items: center;
+    justify-content: center; } /* Flex/Height/Width needed for Firefox */
 body.manga .data.tags a[href*="tag=100"]:before {top: 185px;left: 120px;} /* Manga */
 
 /* Bigger '100' tag (100+) */
 .data.tags a[href*="tag=100%2B"]:before {
-	font-size: 56px;
-	-webkit-text-stroke-width: 2px;
+    font-size: 56px;
+    -webkit-text-stroke-width: 2px;
     height: 56px;
     width: 56px;
     top: 195px;
     left: 110px;
-	transform: rotate3d(0,0,1,-15deg); }
+    transform: rotate3d(0,0,1,-15deg); }
 body.manga .data.tags a[href*="tag=100%2B"]:before {top: 185px;left: 110px;} /* Manga */
 
 /* Smaller '100' tag (100-) */
 .data.tags a[href*="tag=100-"]:before {
-	font-size: 30px;
-	-webkit-text-stroke-width: 1.33px;
-	height: 30px;
-	width: 30px;
-	top: 205px;
-	left: 109px; }
+    font-size: 30px;
+    -webkit-text-stroke-width: 1.33px;
+    height: 30px;
+    width: 30px;
+    top: 205px;
+    left: 109px; }
 body.manga .data.tags a[href*="tag=100-"]:before {top: 192px;left: 118px;} /* Manga */
 
 /* Small area behind '100' to block score from showing */
 .data.tags a[href*="tag=100"]:after {
     content: "";
     position: absolute;
-    background: var(--lower);
+    background: var(--bg2);
     border-radius: 4px;
     height: 18px;
     width: 25px;
@@ -720,13 +729,13 @@ body.manga .data.tags a[href*="tag=100-"]:before {top: 192px;left: 118px;} /* Ma
     z-index: -1}
 
 body.manga .data.tags a[href*="tag=100"]:after {
-	background: var(--upper);
-	top: 197.5px;
-	left: 121.5px; }
+    background: var(--bg1);
+    top: 197.5px;
+    left: 121.5px; }
 
 /* Hide '100' when sorted by MAL Score */
 body.anime[data-query*="17,"] a[href*="tag=100"]:before,
 body.anime[data-query*="17,"] a[href*="tag=100"]:after,
 body.manga[data-query*="15,"] a[href*="tag=100"]:before,
 body.manga[data-query*="15,"] a[href*="tag=100"]:after
-	{display: none !important;}
+    {display: none !important;}
