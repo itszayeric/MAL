@@ -2392,7 +2392,7 @@ span[itemprop="ratingValue"]:hover {
 .list-table[data-items="[]"]:before,
 .list-table[data-items="[]"]:after {
     content: "";
-    color: var(--t-dark);
+    color: var(--text);
     font: 16px/32px ABeeZee;
     text-align: center;
     margin: 32px 130px;
@@ -2408,7 +2408,7 @@ span[itemprop="ratingValue"]:hover {
 .list-table[data-items="[]"]:after {
     content: "(ﾉಥ益ಥ）ﾉ ┻━┻";
     position: absolute;
-    background: var(--white);
+    background: var(--i-grain-2),var(--bg2);
     border-radius: 16px;
     height: 32px;
     width: 800px;
