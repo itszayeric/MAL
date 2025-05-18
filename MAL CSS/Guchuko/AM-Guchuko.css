@@ -53,8 +53,8 @@
     --ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 160px;
     --avatar-hover: "\f599";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/EY9TBdt.jpg) no-repeat 18px center/auto 204px;
-    --ao-filter: grayscale(80%);
+    --ao-overlay: url(https://i.imgur.com/YdzhXGw.jpg) no-repeat 18px center/auto 204px;
+    --ao-filter: grayscale(30%);
     --ao-opacity: 1;
 }
 
@@ -2390,18 +2390,17 @@ span[itemprop="ratingValue"]:hover {
 }
 
 .list-table[data-items="[]"]:after {
-    content: "(ﾉಥ益ಥ）ﾉ ┻━┻";
-    display: block;
-    background: var(--bg);
-    border-radius: 16px;
-    color: var(--text);
-    font: 16px/32px ABeeZee;
-    text-align: center;
-    margin: 32px auto;
-    padding: 4px 0;
-    width: 800px
+	content: "(ﾉಥ益ಥ）ﾉ ┻━┻";
+	position: absolute;
+	background: var(--white);
+	border-radius: 16px;
+	color: var(--t-dark);
+	font: 16px/32px ABeeZee;
+	text-align: center;
+	margin: -14px 130px;
+	padding: 4px 0;
+	width: 800px;
 }
-
 
 /* ============================== *\
    Filter popup
