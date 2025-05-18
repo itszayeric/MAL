@@ -2389,17 +2389,29 @@ span[itemprop="ratingValue"]:hover {
     --4: var(--bg)
 }
 
+.list-table[data-items="[]"]:before,
 .list-table[data-items="[]"]:after {
-	content: "(ﾉಥ益ಥ）ﾉ ┻━┻";
-	position: absolute;
-	background: var(--white);
-	border-radius: 16px;
-	color: var(--t-dark);
-	font: 16px/32px ABeeZee;
-	text-align: center;
-	margin: -14px 130px;
-	padding: 4px 0;
-	width: 800px;
+    content: "";
+    color: var(--t-dark);
+    font: 16px/32px ABeeZee;
+    text-align: center;
+    margin: 32px 130px;
+    padding: 4px 0; }
+.list-table[data-items="[]"]:before {
+    position: relative;
+    background: var(--bg-accent);
+    border-radius: 20px;
+    height: 42px;
+    width: 810px;
+    top: -5px;
+    left: -88px; }
+.list-table[data-items="[]"]:after {
+    content: "(ﾉಥ益ಥ）ﾉ ┻━┻";
+    position: absolute;
+    background: var(--white);
+    border-radius: 16px;
+    height: 32px;
+    width: 800px;
 }
 
 /* ============================== *\
