@@ -12,7 +12,6 @@
     --t-dark: #1e1e1e;
     --gray: #a5a5a5;
     --white: #fefefe;
-    --dark: #555;
     --watching: #6ad2fc;
     --watching2: hsl(197, 90%, 48%);
     --completed: #85e0c8;
@@ -648,7 +647,7 @@ a.username:after {
 }
 
 #search-button i {
-    color: var(--dark) !important;
+    color: var(--gray) !important;
     font-size: 18px;
     line-height: 30px
 }
@@ -2992,10 +2991,10 @@ background: no-repeat var(--i-grain-2) center 3px / 110px 26px !important;}
 [href^="/anime/29978/"]:after {
     content: "";
     position: absolute;
-    background: var(--i-grain-2), url(https://i.imgur.com/w9yuFwW.png);
+    background: var(--i-grain-2), url(https://i.imgur.com/Hamo2Yh.png);
     /* box-shadow: 0 23px 0 var(--lower), 0 28px 0 var(--lower); */
-    border-radius: 8px;
-    height: 46px; /* 23 */
+    border-radius:  0 0 8px 8px;
+    height: 51px; /* 23 */
     width: 150px;
     left: 0;
     top: 177px;
