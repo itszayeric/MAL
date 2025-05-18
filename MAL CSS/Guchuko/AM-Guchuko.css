@@ -2400,15 +2400,15 @@ span[itemprop="ratingValue"]:hover {
 .list-table[data-items="[]"]:before {
     position: relative;
     background: var(--bg-accent);
-    border-radius: 20px;
-    height: 42px;
-    width: 810px;
-    top: -5px;
-    left: -88px; }
+    border-radius: 18px;
+    height: 36px;
+    width: 804px;
+    top: -2px;
+    left: -85px; }
 .list-table[data-items="[]"]:after {
     content: "(ﾉಥ益ಥ）ﾉ ┻━┻";
     position: absolute;
-    background: var(--i-grain-2),var(--bg2);
+    background: var(--i-grain-2), var(--bg2);
     border-radius: 16px;
     height: 32px;
     width: 800px;
