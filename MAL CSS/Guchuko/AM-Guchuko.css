@@ -2180,9 +2180,9 @@ body.manga[data-query*="12,"] .data.airing-finished {
 .data.airing-started:after {
     content: "\f401";
     position: absolute;
-    color: var(--t-dark);
+    color: var(--bg-alt);
     font: bold 25px FontAwesome;
-    -webkit-text-stroke: 1px var(--status);
+    -webkit-text-stroke: 1.5px var(--status);
     top: -16px;
     left: -8px;
     transform: rotate3d(0, 0, 1, -20deg)
@@ -2193,7 +2193,7 @@ body.manga[data-query*="12,"] .data.airing-finished {
     position: absolute;
     color: var(--status);
     font: bold 25px FontAwesome;
-    -webkit-text-stroke: 1px var(--t-dark);
+    -webkit-text-stroke: 1.5px var(--bg-alt);
     top: 16px;
     right: -10px;
     transform: rotate3d(0, 0, 1, 20deg)
