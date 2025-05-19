@@ -46,8 +46,8 @@
 
 /* Watching */
 [data-query*="status\":1"] {
-    --pattern: url(https://i.imgur.com/HTETi7M.png) repeat top left/350px auto;
-    --cfb: 0.6;
+    --pattern: url(https://i.imgur.com/WPLQJqJ.png) repeat bottom/300px auto;
+    --cfb: .65;
     --bgw: url(https://i.imgur.com/qfYVgLM.png) repeat center/auto;
     --bfb: 0;
     --ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 160px;
