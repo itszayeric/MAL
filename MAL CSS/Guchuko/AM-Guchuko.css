@@ -25,7 +25,7 @@
     --shadow: 0 0 5px rgba(5, 5, 5, .2);
     --shadow-big: 0 1px 2px 0 rgba(10, 10, 10, .5), 0 0px 6px 3px rgba(5, 5, 5, .25);
     --shadow-small: 0 1px 2px rgba(0, 0, 0, .15);
-	--shadow-inset: inset 0px 0px 3px 2px hsla(0,0%,1%,.3), inset 0px 0px 10px 2px hsla(0,0%,10%,.7);
+    --shadow-inset: inset 0px 0px 3px 2px hsla(0,0%,1%,.3), inset 0px 0px 10px 2px hsla(0,0%,10%,.7);
     --i-grain: url(https://i.imgur.com/p42nqAy.png);
     --i-grain-2: url(https://i.imgur.com/WHp1EwW.png);
     --i-grain-3: url(https://i.imgur.com/ByfCJ9Q.png);
@@ -1055,9 +1055,9 @@ body.manga .list-menu-float .manga-list {
     background: linear-gradient(to right, transparent 1%, var(--completed), var(--dropped), var(--planned), var(--onhold), var(--watching), transparent 99%)
 }
 
-.watching .list-stats {
+/* .watching .list-stats {
     background: linear-gradient(to right, transparent 1%, var(--watching), var(--watching), var(--completed), var(--completed), transparent 99%)
-}
+} */
 
 .list-unit .list-stats a {
     position: relative;
