@@ -654,7 +654,8 @@ a.username:after {
 }
 
 .open~#search-button i {
-    animation: jello-ish 0.8s
+    animation: jello-ish 0.8s;
+    font-size: 14px
 }
 
 #search-box:after {
