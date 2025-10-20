@@ -753,4 +753,5 @@ body.manga[data-query*="15,"] a[href*="tag=100"]:after
 	top: -50px;
 	left: 130px;
 	transform: rotate3d(0,0,1,10deg);
+    filter: saturate(.8);
 	z-index: 5;}
