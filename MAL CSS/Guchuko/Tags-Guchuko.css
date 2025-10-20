@@ -746,7 +746,8 @@ body.manga[data-query*="15,"] a[href*="tag=100"]:after
 	content: "";
 	position: absolute;
 	animation: flip-tag .8s;
-	background: center / contain, center / 100% no-repeat url(https://i.imgur.com/WLlDVbw.png);
+	background: center / contain, center / 100% no-repeat url(https://fonts.gstatic.com/s/e/notoemoji/latest/1f633/512.webp);
+	/* https://i.imgur.com/WLlDVbw.png */
 	height: 30px;
 	width: 30px;
 	top: -50px;
