@@ -739,3 +739,17 @@ body.anime[data-query*="17,"] a[href*="tag=100"]:after,
 body.manga[data-query*="15,"] a[href*="tag=100"]:before,
 body.manga[data-query*="15,"] a[href*="tag=100"]:after
     {display: none !important;}
+
+/* flushed emoji */
+.data.tags a[href*="tag=flush"] {font-size: 0;pointer-events:auto;}
+.data.tags a[href*="tag=flush"]:before {
+	content: "";
+	position: absolute;
+	animation: flip-tag .8s;
+	background: center / contain, center / 100% no-repeat url(https://i.imgur.com/WLlDVbw.png);
+	height: 30px;
+	width: 30px;
+	top: -50px;
+	left: 130px;
+	transform: rotate3d(0,0,1,10deg);
+	z-index: 5;}
