@@ -54,7 +54,7 @@
     --ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 160px;
     --avatar-hover: "\f599";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/YdzhXGw.jpg) no-repeat 18px center/auto 204px;
+    --ao-overlay: url(https://cdn.jsdelivr.net/gh/itspi3141/discord-fake-avatar-decorations@main/public/decorations/lunar_flowers.png) no-repeat 18px center/auto 203px;
     --ao-filter: grayscale(30%);
     --ao-opacity: 1;
 }
