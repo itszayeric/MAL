@@ -40,9 +40,9 @@
     --ava: url(https://i.imgur.com/934mCt0.png) no-repeat center / 160px;
     --avatar-hover: "\e3a4";
     --normal-bold: bold;
-    --ao-overlay: url(https://i.imgur.com/mU7ddvI.jpg) no-repeat 15px center/auto 210px;
-    --ao-filter: grayscale(50%) brightness(1.2);
-    --ao-opacity: .9;
+    --ao-overlay: url(https://i.imgur.com/mU7ddvI.jpg) no-repeat 25px center/auto 190px;
+    --ao-filter: grayscale(10%) brightness(1);
+    --ao-opacity: .7;
 }
 
 /* Watching */
