@@ -40,9 +40,9 @@
     --ava: url(https://i.imgur.com/934mCt0.png) no-repeat center / 160px;
     --avatar-hover: "\e3a4";
     --normal-bold: bold;
-    --ao-overlay: url(https://cdn.jsdelivr.net/gh/itspi3141/discord-fake-avatar-decorations@main/public/decorations/magic_mists.png) no-repeat 25px center/auto 190px;
-    --ao-filter: grayscale(10%) brightness(1);
-    --ao-opacity: .8;
+    --ao-overlay: url(https://i.imgur.com/3yvWuiV.jpg) no-repeat 15px center/auto 210px;
+    --ao-filter: grayscale(50%) brightness(1.2);
+    --ao-opacity: .9;
 }
 
 /* Watching */
@@ -54,7 +54,7 @@
     --ava: url(https://i.imgur.com/pUz9WQB.png) no-repeat center / 160px;
     --avatar-hover: "\f599";
     --normal-bold: bold;
-    --ao-overlay: url(https://cdn.jsdelivr.net/gh/itspi3141/discord-fake-avatar-decorations@main/public/decorations/lunar_flowers.png) no-repeat 18px center/auto 203px;
+    --ao-overlay: url(https://i.imgur.com/GVQA9BV.jpg) no-repeat 18px center/auto 203px;
     --ao-filter: grayscale(30%);
     --ao-opacity: 1;
 }
